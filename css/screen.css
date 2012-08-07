@@ -189,7 +189,7 @@ header h2 a:hover span:nth-child(2n) {
 
 /* line 108, ../sass/screen.scss */
 .about {
-  background-color: #f1fa3e;
+  background-color: #f6ff4d;
   color: #333;
 }
 /* line 111, ../sass/screen.scss */
@@ -206,12 +206,12 @@ header h2 a:hover span:nth-child(2n) {
 .about aside h2 {
   margin: 0 0 15px;
   font: normal 42px/100% "Oswald", sans-serif;
-  text-shadow: #ccd434 -3px 4px 0;
+  text-shadow: #d1d841 -3px 4px 0;
   text-transform: uppercase;
   color: 333;
 }
 
 /* line 128, ../sass/screen.scss */
 img {
-  border: 20px solid #ccd434;
+  border: 20px solid #d1d841;
 }
