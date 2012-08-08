@@ -1,3 +1,4 @@
 $(document).ready(function() {
-    $(".lettering").lettering();
-  });
+  $(".lettering").lettering();
+
+});
