@@ -75,24 +75,17 @@ html {
 }
 
 body {
-  background-color: #222;
+  background-color: #222222;
   margin: 0 auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 article p {
   margin-bottom: 20px;
-}
-
-img {
-  border: 15px solid rgba(51, 51, 51, 0.1);
-}
-
-.bigTitle, .skillsTitle {
-  margin: 0 0 15px;
-  font: normal 42px/100% "Oswald", sans-serif;
-  text-shadow: #d6d658 -3px 4px 0;
-  text-transform: uppercase;
-  color: 333;
 }
 
 .left {
@@ -140,10 +133,6 @@ header h2 {
   text-shadow: #5897d6 -3px 4px 0;
   text-transform: uppercase;
 }
-header h2 a {
-  color: #fff;
-  text-decoration: none;
-}
 header h2 a:hover span:nth-child(2n+1) {
   color: #a4d0fd;
 }
@@ -155,16 +144,12 @@ header h2 a:hover span:nth-child(2n) {
   SITE NAVIGATION  
  *****************/
 .mainNav {
-  background-color: #222;
+  background-color: #222222;
   width: 100%;
   padding: 15px 0;
   font: bold 18px/100% "Oswald", sans-serif;
   text-transform: uppercase;
   z-index: 1000;
-}
-.mainNav a {
-  text-decoration: none;
-  color: #fff;
 }
 .mainNav ul {
   width: 505px;
@@ -211,7 +196,37 @@ header h2 a:hover span:nth-child(2n) {
   overflow: hidden;
 }
 
-.sectionTitle {
+/*
+===============================================================================
+  ABOUT SECTION
+===============================================================================
+*/
+.about {
+  background-color: #ff6759;
+  color: #fff;
+  margin-bottom: 4px;
+  border-bottom: 5px dashed #bf4d42;
+  text-shadow: #d8574b -1px 1px 0;
+  -webkit-box-shadow: #ff6759 0 10px 0 0;
+  -moz-box-shadow: #ff6759 0 10px 0 0;
+  box-shadow: #ff6759 0 10px 0 0;
+}
+.about article {
+  width: 600px;
+  float: left;
+}
+.about aside {
+  width: 320px;
+  float: right;
+}
+.about .bigTitle {
+  margin: 0 0 15px;
+  font: normal 42px/100% "Oswald", sans-serif;
+  text-shadow: #d8574b -3px 4px 0;
+  text-transform: uppercase;
+  color: #333333;
+}
+.about .sectionTitle {
   width: 50%;
   margin: 0 auto 25px;
   font-family: 'Oswald', sans-serif;
@@ -221,26 +236,11 @@ header h2 a:hover span:nth-child(2n) {
   padding: 20px 0;
   text-align: center;
   text-transform: uppercase;
-  background-color: #d6d658;
-  text-shadow: #95953d -3px 4px 0;
+  background-color: #d8574b;
+  text-shadow: #b7493f -3px 4px 0;
 }
-
-/*
-===============================================================================
-  ABOUT SECTION
-===============================================================================
-*/
-.about {
-  background-color: #fcfc68;
-  color: #333333;
-}
-.about article {
-  width: 600px;
-  float: left;
-}
-.about aside {
-  width: 320px;
-  float: right;
+.about img {
+  border: 15px solid #d8574b;
 }
 
 /*****************
@@ -254,22 +254,115 @@ header h2 a:hover span:nth-child(2n) {
 }
 
 .devSkills, .designSkills {
-  width: 44%;
+  width: 260px;
   padding: 15px;
+  -webkit-box-shadow: #cc5247 0 5px 0 0 inset, #cc5247 0 -5px 0 0 inset, #cc5247 5px 0 0 0 inset, #cc5247 -5px 0 0 0 inset;
+  -moz-box-shadow: #cc5247 0 5px 0 0 inset, #cc5247 0 -5px 0 0 inset, #cc5247 5px 0 0 0 inset, #cc5247 -5px 0 0 0 inset;
+  box-shadow: #cc5247 0 5px 0 0 inset, #cc5247 0 -5px 0 0 inset, #cc5247 5px 0 0 0 inset, #cc5247 -5px 0 0 0 inset;
 }
-.devSkills li:nth-child(2), .designSkills li:nth-child(2) {
-  color: #ff6759;
+.devSkills li, .designSkills li {
+  padding: 0 5px;
 }
-.devSkills li:nth-child(3), .designSkills li:nth-child(3) {
-  color: #ba59ff;
+.devSkills li:nth-child(2n+1), .designSkills li:nth-child(2n+1) {
+  background-color: #d8574b;
 }
-.devSkills li:nth-child(4), .designSkills li:nth-child(4) {
-  color: #fca54f;
-}
-.devSkills li:nth-child(5), .designSkills li:nth-child(5) {
-  color: #68b2fc;
+.devSkills li:first-child, .designSkills li:first-child {
+  background-color: transparent;
 }
 
 .skillsTitle {
+  margin: 0 0 15px;
+  font: normal 42px/100% "Oswald", sans-serif;
+  text-shadow: #c24e44 -2px 3px 0;
+  text-transform: uppercase;
+  color: #333333;
   font-size: 24px;
+}
+
+/*
+===============================================================================
+  WORK SECTION
+===============================================================================
+*/
+.work {
+  background-color: #72b27b;
+  color: #fff;
+  text-shadow: #609768 -1px 1px 0;
+  text-shadow: #609768 -1px 1px 0;
+}
+.work article {
+  margin: 0 20px 20px 0;
+  float: left;
+}
+.work article:nth-child(4n+1) {
+  margin: 0 0 20px 0;
+}
+.work .bigTitle {
+  margin: 0 0 15px;
+  font: normal 42px/100% "Oswald", sans-serif;
+  text-shadow: #609768 -3px 4px 0;
+  text-transform: uppercase;
+  color: #333333;
+}
+.work .sectionTitle {
+  width: 50%;
+  margin: 0 auto 25px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 33px;
+  font-weight: 600;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #609768;
+  text-shadow: #518058 -3px 4px 0;
+}
+.work img {
+  border: 10px solid #609768;
+}
+
+/*
+===============================================================================
+  FOOTER
+===============================================================================
+*/
+footer {
+  background-color: #222222;
+  -webkit-box-shadow: #171717 0 10px 0 inset;
+  -moz-box-shadow: #171717 0 10px 0 inset;
+  box-shadow: #171717 0 10px 0 inset;
+  text-shadow: #1c1c1c -1px 1px 0;
+}
+footer .bigTitle {
+  margin: 0 0 15px;
+  font: normal 42px/100% "Oswald", sans-serif;
+  text-shadow: #1c1c1c -3px 4px 0;
+  text-transform: uppercase;
+  color: white;
+}
+footer .sectionTitle {
+  width: 50%;
+  margin: 0 auto 25px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 33px;
+  font-weight: 600;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #1c1c1c;
+  text-shadow: #171717 -3px 4px 0;
+}
+footer article {
+  width: 500px;
+}
+footer a {
+  font-size: 18px;
+  color: #68b2fc;
+}
+footer a:hover span:nth-child(2n+1) {
+  color: #7a7a7a;
+}
+footer a:hover span:nth-child(2n) {
+  color: #b1b1b1;
 }

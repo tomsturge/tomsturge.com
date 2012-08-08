@@ -12,11 +12,12 @@
 
 // Colour variables
 $black: #333;
+$grey: #222;
 $blue: #68b2fc;
-$yellow: #fcfc68;
 $purple: #ba59ff;
 $red: #ff6759;
-$orange: #fca54f;
+$orange: #FFCF58;
+$green: #72B27B;
 
 //Custom mixins
 @mixin sectionTitleBg($color) {
@@ -25,8 +26,36 @@ $orange: #fca54f;
 @mixin flatTextShadow($color, $dx, $dy) {
   @include text-shadow(rgba(shade($color, 15%), 1) $dx $dy 0);
 }
+@mixin multiBoxShadow($color, $p, $d) {
+  @include box-shadow(rgba(shade($color, $p), 1) 0 $d 0 0 inset, 
+                      rgba(shade($color, $p), 1) 0 -#{$d} 0 0 inset,
+                      rgba(shade($color, $p), 1) $d 0 0 0 inset,
+                      rgba(shade($color, $p), 1) -#{$d} 0 0 0 inset);
+}
 
-
+@mixin bigTitle($color, $dx, $dy, $text: $black) {
+  margin: 0 0 15px;
+  font: normal 42px/100% 'Oswald', sans-serif;
+  @include flatTextShadow($color, $dx, $dy);
+  text-transform: uppercase;
+  color: $text;
+}
+@mixin imgBorder($color, $b) { border: $b solid rgba(shade($color, 15%), 1); }
+@mixin sectionTitle($color) {
+  width: 50%;
+  margin: 0 auto 25px;
+  font: {
+    family: 'Oswald', sans-serif;
+    size: 33px;
+    weight: 600;
+  }
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  @include sectionTitleBg($color);
+  @include flatTextShadow(shade($color, 15%), -3px, 4px)
+}
 /*
 ===============================================================================
   GLOBAL SITE STYLING
@@ -41,21 +70,13 @@ html {
 }
 
 body {
-  background-color: #222;
+  background-color: $grey;
   margin: 0 auto;
 }
 
+a { color: inherit; text-decoration: none; }
+
 article p { margin-bottom: 20px; }
-
-img { border: 15px solid rgba($black, .1);}
-
-.bigTitle {
-  margin: 0 0 15px;
-  font: normal 42px/100% 'Oswald', sans-serif;
-  @include flatTextShadow($yellow, -3px, 4px);
-  text-transform: uppercase;
-  color: 333;
-}
 
 .left { float: left; }
 .right { float: right; }
@@ -94,8 +115,6 @@ header {
     @include flatTextShadow($blue, -3px, 4px);
     text-transform: uppercase;
     a {
-      color: #fff;
-      text-decoration: none;
       &:hover span:nth-child(2n+1) {
         color: tint($blue, 40%);
       }
@@ -111,16 +130,12 @@ header {
  *****************/
 
 .mainNav {
-  background-color: #222;
+  background-color: $grey;
   width: 100%;
   padding: 15px 0;
   font: bold 18px/100% 'Oswald', sans-serif;
   text-transform: uppercase;
   z-index: 1000;
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
   ul {
     width: 505px;
     margin: 0 auto;
@@ -144,10 +159,7 @@ header {
         @include flatTextShadow($black, -2px, 3px);
         &:hover {
           background-color: rgba(shade($red, 25%), 1);
-          @include box-shadow(rgba(shade($red, 50%), 1) 0 3px 0 0 inset, 
-                              rgba(shade($red, 50%), 1) 0 -3px 0 0 inset,
-                              rgba(shade($red, 50%), 1) 3px 0 0 0 inset,
-                              rgba(shade($red, 50%), 1) -3px 0 0 0 inset);
+          @include multiBoxShadow($red, 50%, 3px);
           @include text-shadow(none)
         }
       }
@@ -168,21 +180,7 @@ header {
   line-height: 120%;
   overflow: hidden;
 }
-.sectionTitle {
-  width: 50%;
-  margin: 0 auto 25px;
-  font: {
-    family: 'Oswald', sans-serif;
-    size: 33px;
-    weight: 600;
-  }
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  text-transform: uppercase;
-  @include sectionTitleBg($yellow);
-  @include flatTextShadow(shade($yellow, 30%), -3px, 4px)
-}
+
 
 /*
 ===============================================================================
@@ -191,8 +189,12 @@ header {
 */
 
 .about {
-  background-color: $yellow;
-  color: $black;
+  background-color: $red;
+  color: #fff;
+  margin-bottom: 4px;
+  border-bottom: 5px dashed shade($red, 25%);
+  @include flatTextShadow($red, -1px, 1px);
+  @include box-shadow($red 0 10px 0 0);
   article {
     width: 600px;
     float: left;
@@ -201,7 +203,18 @@ header {
     width: 320px;
     float: right;
   }
+  .bigTitle {
+    @include bigTitle($red, -3px, 4px)
+  }
+  .sectionTitle {
+    @include sectionTitle($red);
+  }
+  img { 
+    @include imgBorder($red, 15px);
+  }
 } 
+
+
 
 /*****************
   SKILL LISTS  
@@ -215,22 +228,80 @@ header {
 }
 
 .devSkills, .designSkills {
-  width: 44%;
+  width: 260px;
   padding: 15px;
-  li:nth-child(2) {
-    color: $red;
+  @include multiBoxShadow($red, 20%, 5px);
+  li {
+    padding: 0 5px;
   }
-  li:nth-child(3) {
-    color: $purple;
+  li:nth-child(2n+1) {
+    background-color: shade($red, 15%);
   }
-  li:nth-child(4) {
-    color: $orange;
-  }
-  li:nth-child(5) {
-    color: $blue;
+  li:first-child {
+    background-color: transparent;
   }
 }
 .skillsTitle {
-  @extend .bigTitle;
+  @include bigTitle(shade($red, 10%), -2px, 3px);
   font-size: 24px;
+}
+
+/*
+===============================================================================
+  WORK SECTION
+===============================================================================
+*/
+
+.work {
+  background-color: $green;
+  color: #fff;
+  @include flatTextShadow($green, -1px, 1px);
+  @include flatTextShadow($green, -1px, 1px);
+  article {
+    margin: 0 20px 20px 0;
+    float: left;
+    &:nth-child(4n+1) {
+      margin: 0 0 20px 0;
+    }
+  }
+  .bigTitle {
+    @include bigTitle($green, -3px, 4px)
+  }
+  .sectionTitle {
+    @include sectionTitle($green);
+  }
+  img { 
+    @include imgBorder($green, 10px);
+  }
+}
+
+/*
+===============================================================================
+  FOOTER
+===============================================================================
+*/
+
+footer {
+  background-color: $grey;
+  @include box-shadow(shade($grey, 30%) 0 10px 0 inset);
+  @include flatTextShadow($grey, -1px, 1px);
+  .bigTitle {
+    @include bigTitle($grey, -3px, 4px, #fff)
+  }
+  .sectionTitle {
+    @include sectionTitle($grey);
+  }
+  article {
+    width: 500px;
+  }
+  a {
+    font-size: 18px;
+    color: $blue;
+    &:hover span:nth-child(2n+1) {
+      color: tint($grey, 40%);
+    }
+    &:hover span:nth-child(2n) {
+      color: tint($grey,65%);
+    }
+  }
 }
