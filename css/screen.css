@@ -6,7 +6,6 @@
   Site: Portfolio of Thomas Sturge
 ===============================================================================
 */
-/* line 17, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,45 +27,37 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -76,7 +67,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   GLOBAL SITE STYLING
 ===============================================================================
 */
-/* line 35, ../sass/screen.scss */
 html {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
@@ -84,24 +74,20 @@ html {
   color: #fff;
 }
 
-/* line 42, ../sass/screen.scss */
 body {
   background-color: #222;
   margin: 0 auto;
 }
 
-/* line 47, ../sass/screen.scss */
 article p {
   margin-bottom: 20px;
 }
 
-/* line 51, ../sass/screen.scss */
 img {
-  border: 15px solid #d6d658;
+  border: 15px solid rgba(51, 51, 51, 0.1);
 }
 
-/* line 53, ../sass/screen.scss */
-.hShadow {
+.bigTitle, .skillsTitle {
   margin: 0 0 15px;
   font: normal 42px/100% "Oswald", sans-serif;
   text-shadow: #d6d658 -3px 4px 0;
@@ -109,12 +95,19 @@ img {
   color: 333;
 }
 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 /*
 ===============================================================================
   HEADER
 ===============================================================================
 */
-/* line 67, ../sass/screen.scss */
 header {
   background-color: #68b2fc;
   padding: 0 0 30px;
@@ -122,7 +115,6 @@ header {
   color: #fff;
   text-align: center;
 }
-/* line 73, ../sass/screen.scss */
 header h1 {
   width: 720px;
   margin: 0 auto;
@@ -135,7 +127,6 @@ header h1 {
   box-shadow: #5897d6 0 6px 0 -2px;
   font-size: 120px;
 }
-/* line 82, ../sass/screen.scss */
 header h1 em {
   position: absolute;
   top: 15px;
@@ -143,23 +134,19 @@ header h1 em {
   font: normal 90px/100% "Lobster", cursive;
   display: block;
 }
-/* line 89, ../sass/screen.scss */
 header h2 {
   margin: 15px 0 0;
   font-size: 33px;
   text-shadow: #5897d6 -3px 4px 0;
   text-transform: uppercase;
 }
-/* line 94, ../sass/screen.scss */
 header h2 a {
   color: #fff;
   text-decoration: none;
 }
-/* line 97, ../sass/screen.scss */
 header h2 a:hover span:nth-child(2n+1) {
   color: #a4d0fd;
 }
-/* line 100, ../sass/screen.scss */
 header h2 a:hover span:nth-child(2n) {
   color: #cae4fd;
 }
@@ -167,7 +154,6 @@ header h2 a:hover span:nth-child(2n) {
 /*****************
   SITE NAVIGATION  
  *****************/
-/* line 111, ../sass/screen.scss */
 .mainNav {
   background-color: #222;
   width: 100%;
@@ -176,12 +162,10 @@ header h2 a:hover span:nth-child(2n) {
   text-transform: uppercase;
   z-index: 1000;
 }
-/* line 118, ../sass/screen.scss */
 .mainNav a {
   text-decoration: none;
   color: #fff;
 }
-/* line 122, ../sass/screen.scss */
 .mainNav ul {
   width: 505px;
   margin: 0 auto;
@@ -189,7 +173,6 @@ header h2 a:hover span:nth-child(2n) {
   border-top: 1px solid #444;
   border-bottom: 1px solid #444;
 }
-/* line 128, ../sass/screen.scss */
 .mainNav ul li {
   width: 105px;
   padding: 5px 10px;
@@ -197,11 +180,9 @@ header h2 a:hover span:nth-child(2n) {
   float: left;
   overflow: hidden;
 }
-/* line 134, ../sass/screen.scss */
 .mainNav ul li:last-child {
   border-right: none;
 }
-/* line 137, ../sass/screen.scss */
 .mainNav ul li a {
   width: 105px;
   display: block;
@@ -209,7 +190,6 @@ header h2 a:hover span:nth-child(2n) {
   text-align: center;
   text-shadow: #2b2b2b -2px 3px 0;
 }
-/* line 143, ../sass/screen.scss */
 .mainNav ul li a:hover {
   background-color: #bf4d42;
   -webkit-box-shadow: #7f332c 0 3px 0 0 inset, #7f332c 0 -3px 0 0 inset, #7f332c 3px 0 0 0 inset, #7f332c -3px 0 0 0 inset;
@@ -223,7 +203,6 @@ header h2 a:hover span:nth-child(2n) {
   SECTION GENERAL
 ===============================================================================
 */
-/* line 162, ../sass/screen.scss */
 .sectionContainer {
   width: 960px;
   margin: 0 auto;
@@ -232,7 +211,6 @@ header h2 a:hover span:nth-child(2n) {
   overflow: hidden;
 }
 
-/* line 169, ../sass/screen.scss */
 .sectionTitle {
   width: 50%;
   margin: 0 auto 25px;
@@ -252,17 +230,14 @@ header h2 a:hover span:nth-child(2n) {
   ABOUT SECTION
 ===============================================================================
 */
-/* line 191, ../sass/screen.scss */
 .about {
   background-color: #fcfc68;
   color: #333333;
 }
-/* line 194, ../sass/screen.scss */
 .about article {
   width: 600px;
   float: left;
 }
-/* line 198, ../sass/screen.scss */
 .about aside {
   width: 320px;
   float: right;
@@ -271,3 +246,30 @@ header h2 a:hover span:nth-child(2n) {
 /*****************
   SKILL LISTS  
  *****************/
+.skillLists {
+  overflow: hidden;
+}
+.skillLists ul {
+  background-color: rgba(51, 51, 51, 0.1);
+}
+
+.devSkills, .designSkills {
+  width: 44%;
+  padding: 15px;
+}
+.devSkills li:nth-child(2), .designSkills li:nth-child(2) {
+  color: #ff6759;
+}
+.devSkills li:nth-child(3), .designSkills li:nth-child(3) {
+  color: #ba59ff;
+}
+.devSkills li:nth-child(4), .designSkills li:nth-child(4) {
+  color: #fca54f;
+}
+.devSkills li:nth-child(5), .designSkills li:nth-child(5) {
+  color: #68b2fc;
+}
+
+.skillsTitle {
+  font-size: 24px;
+}
