@@ -208,12 +208,8 @@ header h2 a:hover span:nth-child(2n) {
   padding: 8px 0 8px;
   text-align: center;
   text-shadow: #2b2b2b -2px 3px 0;
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
 }
-/* line 144, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .mainNav ul li a:hover {
   background-color: #bf4d42;
   -webkit-box-shadow: #7f332c 0 3px 0 0 inset, #7f332c 0 -3px 0 0 inset, #7f332c 3px 0 0 0 inset, #7f332c -3px 0 0 0 inset;
@@ -227,7 +223,7 @@ header h2 a:hover span:nth-child(2n) {
   SECTION GENERAL
 ===============================================================================
 */
-/* line 163, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 .sectionContainer {
   width: 960px;
   margin: 0 auto;
@@ -236,7 +232,7 @@ header h2 a:hover span:nth-child(2n) {
   overflow: hidden;
 }
 
-/* line 170, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 .sectionTitle {
   width: 50%;
   margin: 0 auto 25px;
@@ -256,17 +252,17 @@ header h2 a:hover span:nth-child(2n) {
   ABOUT SECTION
 ===============================================================================
 */
-/* line 192, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 .about {
   background-color: #fcfc68;
   color: #333333;
 }
-/* line 195, ../sass/screen.scss */
+/* line 194, ../sass/screen.scss */
 .about article {
   width: 600px;
   float: left;
 }
-/* line 199, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 .about aside {
   width: 320px;
   float: right;

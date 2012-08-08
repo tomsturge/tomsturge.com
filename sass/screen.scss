@@ -140,7 +140,6 @@ header {
         padding: 8px 0 8px;
         text-align: center;
         @include flatTextShadow($black, -2px, 3px);
-        @include transition-duration(0.5s);
         &:hover {
           background-color: rgba(shade($red, 25%), 1);
           @include box-shadow(rgba(shade($red, 50%), 1) 0 3px 0 0 inset, 
