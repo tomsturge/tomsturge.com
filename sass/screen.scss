@@ -3,8 +3,8 @@
 
 // Colour variables
 $black: #333;
-$lightBlue: #599eff;
-$yellow: #f1ff59;
+$lightBlue: #68b2fc;
+$yellow: #fcfc68;
 
 //Custom mixins
 @mixin sectionTitleBg($color) {
@@ -13,6 +13,13 @@ $yellow: #f1ff59;
 @mixin flatTextShadow($color, $dx, $dy) {
   @include text-shadow(rgba(shade($color, 15%), 1) $dx $dy 0);
 }
+
+
+/*
+ ******************************************************************************
+ * GLOBAL SITE STYLING
+ ******************************************************************************
+*/
 
 html {
   font-family: 'Source Sans Pro', sans-serif;
@@ -26,6 +33,12 @@ body {
   margin: 0 auto;
 }
 
+/*
+ ******************************************************************************
+ * HEADER
+ ******************************************************************************
+*/
+ 
 header {
   background-color: $lightBlue;
   padding: 0 0 30px;
@@ -107,6 +120,12 @@ header {
   }
 }
 
+/*
+ ******************************************************************************
+ * SECTION GENERAL
+ ******************************************************************************
+*/
+
 .sectionContainer {
   width: 960px;
   margin: 0 auto;
@@ -129,6 +148,12 @@ header {
   @include sectionTitleBg($yellow);
   @include flatTextShadow(shade($yellow, 30%), -3px, 4px)
 }
+
+/*
+ ******************************************************************************
+ * ABOUT SECTION
+ ******************************************************************************
+*/
 
 .about {
   background-color: $yellow;

@@ -1,4 +1,3 @@
-/* line 17, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,50 +19,46 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 17, ../sass/screen.scss */
+/*
+ ******************************************************************************
+ * GLOBAL SITE STYLING
+ ******************************************************************************
+*/
 html {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
@@ -71,34 +66,35 @@ html {
   color: #fff;
 }
 
-/* line 24, ../sass/screen.scss */
 body {
   background-color: #222;
   margin: 0 auto;
 }
 
-/* line 29, ../sass/screen.scss */
+/*
+ ******************************************************************************
+ * HEADER
+ ******************************************************************************
+*/
 header {
-  background-color: #599eff;
+  background-color: #68b2fc;
   padding: 0 0 30px;
   font-family: 'Oswald', sans-serif;
   color: #fff;
   text-align: center;
 }
-/* line 35, ../sass/screen.scss */
 header h1 {
   width: 720px;
   margin: 0 auto;
   padding: 100px 0 25px;
   position: relative;
   border-bottom: 6px solid #fff;
-  text-shadow: #4b86d8 -5px 8px 0;
-  -webkit-box-shadow: #4b86d8 0px 6px 0 -2px;
-  -moz-box-shadow: #4b86d8 0px 6px 0 -2px;
-  box-shadow: #4b86d8 0px 6px 0 -2px;
+  text-shadow: #5897d6 -5px 8px 0;
+  -webkit-box-shadow: #5897d6 0px 6px 0 -2px;
+  -moz-box-shadow: #5897d6 0px 6px 0 -2px;
+  box-shadow: #5897d6 0px 6px 0 -2px;
   font-size: 120px;
 }
-/* line 44, ../sass/screen.scss */
 header h1 em {
   position: absolute;
   top: 15px;
@@ -106,28 +102,23 @@ header h1 em {
   font: normal 90px/100% "Lobster", cursive;
   display: block;
 }
-/* line 51, ../sass/screen.scss */
 header h2 {
   margin: 15px 0 0;
   font-size: 33px;
-  text-shadow: #4b86d8 -3px 4px 0;
+  text-shadow: #5897d6 -3px 4px 0;
   text-transform: uppercase;
 }
-/* line 56, ../sass/screen.scss */
 header h2 a {
   color: #fff;
   text-decoration: none;
 }
-/* line 59, ../sass/screen.scss */
 header h2 a:hover span:nth-child(2n+1) {
-  color: #9bc4ff;
+  color: #a4d0fd;
 }
-/* line 62, ../sass/screen.scss */
 header h2 a:hover span:nth-child(2n) {
-  color: #c4ddff;
+  color: #cae4fd;
 }
 
-/* line 69, ../sass/screen.scss */
 .mainNav {
   background-color: #222;
   width: 100%;
@@ -136,12 +127,10 @@ header h2 a:hover span:nth-child(2n) {
   text-transform: uppercase;
   z-index: 1000;
 }
-/* line 76, ../sass/screen.scss */
 .mainNav a {
   text-decoration: none;
   color: #fff;
 }
-/* line 80, ../sass/screen.scss */
 .mainNav ul {
   width: 505px;
   margin: 0 auto;
@@ -149,7 +138,6 @@ header h2 a:hover span:nth-child(2n) {
   border-top: 1px solid #444;
   border-bottom: 1px solid #444;
 }
-/* line 86, ../sass/screen.scss */
 .mainNav ul li {
   width: 105px;
   padding: 5px 10px;
@@ -157,11 +145,9 @@ header h2 a:hover span:nth-child(2n) {
   float: left;
   overflow: hidden;
 }
-/* line 92, ../sass/screen.scss */
 .mainNav ul li:last-child {
   border-right: none;
 }
-/* line 95, ../sass/screen.scss */
 .mainNav ul li a {
   width: 105px;
   display: block;
@@ -173,12 +159,15 @@ header h2 a:hover span:nth-child(2n) {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 102, ../sass/screen.scss */
 .mainNav ul li a:hover {
   background-color: #121212;
 }
 
-/* line 110, ../sass/screen.scss */
+/*
+ ******************************************************************************
+ * SECTION GENERAL
+ ******************************************************************************
+*/
 .sectionContainer {
   width: 960px;
   margin: 0 auto;
@@ -187,7 +176,6 @@ header h2 a:hover span:nth-child(2n) {
   overflow: hidden;
 }
 
-/* line 117, ../sass/screen.scss */
 .sectionTitle {
   width: 50%;
   margin: 0 auto 25px;
@@ -198,35 +186,35 @@ header h2 a:hover span:nth-child(2n) {
   padding: 20px 0;
   text-align: center;
   text-transform: uppercase;
-  background-color: #ccd84b;
-  text-shadow: #8e9734 -3px 4px 0;
+  background-color: #d6d658;
+  text-shadow: #95953d -3px 4px 0;
 }
 
-/* line 133, ../sass/screen.scss */
+/*
+ ******************************************************************************
+ * ABOUT SECTION
+ ******************************************************************************
+*/
 .about {
-  background-color: #f1ff59;
+  background-color: #fcfc68;
   color: #333333;
 }
-/* line 136, ../sass/screen.scss */
 .about article {
   width: 600px;
   float: left;
 }
-/* line 140, ../sass/screen.scss */
 .about aside {
   width: 320px;
   float: right;
 }
-/* line 143, ../sass/screen.scss */
 .about aside h3 {
   margin: 0 0 15px;
   font: normal 42px/100% "Oswald", sans-serif;
-  text-shadow: #ccd84b -3px 4px 0;
+  text-shadow: #d6d658 -3px 4px 0;
   text-transform: uppercase;
   color: 333;
 }
 
-/* line 153, ../sass/screen.scss */
 img {
-  border: 15px solid #ccd84b;
+  border: 15px solid #d6d658;
 }
