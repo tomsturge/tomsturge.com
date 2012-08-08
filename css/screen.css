@@ -63,7 +63,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 8, ../sass/screen.scss */
+/* line 17, ../sass/screen.scss */
 html {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
@@ -71,34 +71,34 @@ html {
   color: #fff;
 }
 
-/* line 15, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
 body {
   background-color: #222;
   margin: 0 auto;
 }
 
-/* line 20, ../sass/screen.scss */
+/* line 29, ../sass/screen.scss */
 header {
-  background-color: #7ca9bf;
+  background-color: #599eff;
   padding: 0 0 30px;
   font-family: 'Oswald', sans-serif;
   color: #fff;
   text-align: center;
 }
-/* line 26, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 header h1 {
   width: 720px;
   margin: 0 auto;
   padding: 100px 0 25px;
   position: relative;
   border-bottom: 6px solid #fff;
-  text-shadow: #698fa2 -5px 8px 0;
-  -webkit-box-shadow: #698fa2 0px 6px 0 -2px;
-  -moz-box-shadow: #698fa2 0px 6px 0 -2px;
-  box-shadow: #698fa2 0px 6px 0 -2px;
+  text-shadow: #4b86d8 -5px 8px 0;
+  -webkit-box-shadow: #4b86d8 0px 6px 0 -2px;
+  -moz-box-shadow: #4b86d8 0px 6px 0 -2px;
+  box-shadow: #4b86d8 0px 6px 0 -2px;
   font-size: 120px;
 }
-/* line 35, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 header h1 em {
   position: absolute;
   top: 15px;
@@ -106,28 +106,28 @@ header h1 em {
   font: normal 90px/100% "Lobster", cursive;
   display: block;
 }
-/* line 42, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 header h2 {
   margin: 15px 0 0;
   font-size: 33px;
-  text-shadow: #698fa2 -3px 4px 0;
+  text-shadow: #4b86d8 -3px 4px 0;
   text-transform: uppercase;
 }
-/* line 47, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 header h2 a {
   color: #fff;
   text-decoration: none;
 }
-/* line 50, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 header h2 a:hover span:nth-child(2n+1) {
-  color: #b0cbd8;
+  color: #9bc4ff;
 }
-/* line 53, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 header h2 a:hover span:nth-child(2n) {
-  color: #d1e0e8;
+  color: #c4ddff;
 }
 
-/* line 60, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 .mainNav {
   background-color: #222;
   width: 100%;
@@ -136,20 +136,20 @@ header h2 a:hover span:nth-child(2n) {
   text-transform: uppercase;
   z-index: 1000;
 }
-/* line 67, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 .mainNav a {
   text-decoration: none;
   color: #fff;
 }
-/* line 71, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 .mainNav ul {
-  width: 630px;
+  width: 505px;
   margin: 0 auto;
   overflow: hidden;
   border-top: 1px solid #444;
   border-bottom: 1px solid #444;
 }
-/* line 77, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 .mainNav ul li {
   width: 105px;
   padding: 5px 10px;
@@ -157,28 +157,28 @@ header h2 a:hover span:nth-child(2n) {
   float: left;
   overflow: hidden;
 }
-/* line 83, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 .mainNav ul li:last-child {
   border-right: none;
 }
-/* line 86, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .mainNav ul li a {
   width: 105px;
   display: block;
   padding: 8px 0 8px;
   text-align: center;
-  text-shadow: #121212 -2px 3px 0;
+  text-shadow: #0f0f0f -2px 3px 0;
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 93, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .mainNav ul li a:hover {
   background-color: #121212;
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .sectionContainer {
   width: 960px;
   margin: 0 auto;
@@ -187,31 +187,46 @@ header h2 a:hover span:nth-child(2n) {
   overflow: hidden;
 }
 
-/* line 108, ../sass/screen.scss */
-.about {
-  background-color: #faff75;
-  color: #333;
+/* line 117, ../sass/screen.scss */
+.sectionTitle {
+  width: 50%;
+  margin: 0 auto 25px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 33px;
+  font-weight: 600;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #ccd84b;
+  text-shadow: #8e9734 -3px 4px 0;
 }
-/* line 111, ../sass/screen.scss */
+
+/* line 133, ../sass/screen.scss */
+.about {
+  background-color: #f1ff59;
+  color: #333333;
+}
+/* line 136, ../sass/screen.scss */
 .about article {
   width: 600px;
   float: left;
 }
-/* line 115, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 .about aside {
   width: 320px;
   float: right;
 }
-/* line 118, ../sass/screen.scss */
-.about aside h2 {
+/* line 143, ../sass/screen.scss */
+.about aside h3 {
   margin: 0 0 15px;
   font: normal 42px/100% "Oswald", sans-serif;
-  text-shadow: #d4d863 -3px 4px 0;
+  text-shadow: #ccd84b -3px 4px 0;
   text-transform: uppercase;
   color: 333;
 }
 
-/* line 128, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 img {
-  border: 20px solid #d4d863;
+  border: 15px solid #ccd84b;
 }
