@@ -18,10 +18,10 @@
 <body>
   <nav class="mainNav">
     <ul class="menu">
-      <li><a href="#front" class="curtain-links frontPanel">Home</a></li>
-      <li><a href="#about" class="curtain-links aboutPanel">About</a></li>
-      <li><a href="#work" class="curtain-links workPanel">Work</a></li>
-      <li><a href="#contact" class="curtain-links contactPanel">Contact</a></li>
+      <li><a href="#front" class="curtain-links">Home</a></li>
+      <li><a href="#about" class="curtain-links">About</a></li>
+      <li><a href="#work" class="curtain-links">Work</a></li>
+      <li><a href="#contact" class="curtain-links">Contact</a></li>
     </ul>
   </nav>
 
@@ -46,11 +46,11 @@
             <ul class="devSkills left">
               <li class="skillsTitle">Development</li>
               <li>HTML5/CSS3/jQuery</li>
+              <li>SASS</li>
               <li>PHP</li>
               <li>WordPress Dev</li>
               <li>Responsive Content</li>
               <li>E-commerce</li>
-              <li>Ruby on Rails</li>
             </ul>
             <ul class="designSkills right">
               <li class="skillsTitle">Design</li>
@@ -116,20 +116,10 @@
   </li><!-- /.contactPanel -->
 
   <!-- jQuery plugin that aren't function critical -->  
-  <script type="text/javascript" src="_/scripts/lettering.js"></script>
+  <script type="text/javascript" src="_/scripts/lettering-min.js"></script>
 
   <!-- Site scripts -->
   <script type="text/javascript" src="_/scripts/init.js"></script>
-
-  <script>
-    $(function(){
-       $('.curtains').curtain({
-           scrollSpeed: 450,
-           controls: '.menu',
-           curtainLinks: '.curtain-links'
-       });
-    });
-  </script>
 
 </body>
 </html>

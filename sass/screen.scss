@@ -22,7 +22,7 @@ $green: #72B27B;
 @mixin navHover($color) {
   background-color: rgba(shade($color, 25%), 1);
   @include multiBoxShadow($color, 50%, 3px);
-  @include text-shadow(none)
+  @include flatTextShadow(shade($color, 25%), -2px, 3px);
 }
 @mixin sectionTitleBg($color) {
   background-color: rgba(shade($color, 15%), 1);
@@ -115,7 +115,7 @@ article p { margin-bottom: 20px; }
 .mainNav {
   background-color: $grey;
   width: 100%;
-  padding: 15px 0;
+  padding: 10px 0;
   font: bold 18px/100% 'Oswald', sans-serif;
   text-transform: uppercase;
   position: fixed;
@@ -139,12 +139,16 @@ article p { margin-bottom: 20px; }
         display:block;
         padding: 8px 0 8px;
         text-align: center;
-        @include flatTextShadow($black, -2px, 3px);
-        &.frontPanel:hover { @include navHover($blue); }
-        &.aboutPanel:hover { @include navHover($red); }
-        &.workPanel:hover { @include navHover($green); }
-        &.contactPanel:hover { @include navHover($purple); }
+        @include flatTextShadow(tint($black, 10%), -2px, 3px);
       }
+      &:nth-child(1) a:hover, 
+      &:nth-child(1) a.active { @include navHover($blue); }
+      &:nth-child(2) a:hover, 
+      &:nth-child(2) a.active { @include navHover($red); }
+      &:nth-child(3) a:hover, 
+      &:nth-child(3) a.active { @include navHover($green); }
+      &:nth-child(4) a:hover, 
+      &:nth-child(4) a.active { @include navHover($purple); }
     }
   }
 }
