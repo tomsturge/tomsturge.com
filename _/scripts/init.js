@@ -8,4 +8,15 @@ $(document).ready(function() {
     curtainLinks: '.curtain-links'
   });
 
+  var nav = 'nav ul';
+  
+/* 
+  $(nav + ' a').click(function() {
+    $(nav).children().removeClass('active');
+    $(this).parent().addClass('active');
+  });
+*/
+
+
 });
+

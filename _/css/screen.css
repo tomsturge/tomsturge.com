@@ -159,28 +159,28 @@ article p {
   text-align: center;
   text-shadow: #3c3c3c -2px 3px 0;
 }
-.mainNav ul li:nth-child(1) a:hover, .mainNav ul li:nth-child(1) a.active {
+.mainNav ul li:nth-child(1) a:hover {
   background-color: #4e85bd;
   -webkit-box-shadow: #34597e 0 3px 0 0 inset, #34597e 0 -3px 0 0 inset, #34597e 3px 0 0 0 inset, #34597e -3px 0 0 0 inset;
   -moz-box-shadow: #34597e 0 3px 0 0 inset, #34597e 0 -3px 0 0 inset, #34597e 3px 0 0 0 inset, #34597e -3px 0 0 0 inset;
   box-shadow: #34597e 0 3px 0 0 inset, #34597e 0 -3px 0 0 inset, #34597e 3px 0 0 0 inset, #34597e -3px 0 0 0 inset;
   text-shadow: #4271a0 -2px 3px 0;
 }
-.mainNav ul li:nth-child(2) a:hover, .mainNav ul li:nth-child(2) a.active {
+.mainNav ul li:nth-child(2) a:hover {
   background-color: #bf4d42;
   -webkit-box-shadow: #7f332c 0 3px 0 0 inset, #7f332c 0 -3px 0 0 inset, #7f332c 3px 0 0 0 inset, #7f332c -3px 0 0 0 inset;
   -moz-box-shadow: #7f332c 0 3px 0 0 inset, #7f332c 0 -3px 0 0 inset, #7f332c 3px 0 0 0 inset, #7f332c -3px 0 0 0 inset;
   box-shadow: #7f332c 0 3px 0 0 inset, #7f332c 0 -3px 0 0 inset, #7f332c 3px 0 0 0 inset, #7f332c -3px 0 0 0 inset;
   text-shadow: #a24138 -2px 3px 0;
 }
-.mainNav ul li:nth-child(3) a:hover, .mainNav ul li:nth-child(3) a.active {
+.mainNav ul li:nth-child(3) a:hover {
   background-color: #55855c;
   -webkit-box-shadow: #39593d 0 3px 0 0 inset, #39593d 0 -3px 0 0 inset, #39593d 3px 0 0 0 inset, #39593d -3px 0 0 0 inset;
   -moz-box-shadow: #39593d 0 3px 0 0 inset, #39593d 0 -3px 0 0 inset, #39593d 3px 0 0 0 inset, #39593d -3px 0 0 0 inset;
   box-shadow: #39593d 0 3px 0 0 inset, #39593d 0 -3px 0 0 inset, #39593d 3px 0 0 0 inset, #39593d -3px 0 0 0 inset;
   text-shadow: #48714e -2px 3px 0;
 }
-.mainNav ul li:nth-child(4) a:hover, .mainNav ul li:nth-child(4) a.active {
+.mainNav ul li:nth-child(4) a:hover {
   background-color: #5c5585;
   -webkit-box-shadow: #3d3959 0 3px 0 0 inset, #3d3959 0 -3px 0 0 inset, #3d3959 3px 0 0 0 inset, #3d3959 -3px 0 0 0 inset;
   -moz-box-shadow: #3d3959 0 3px 0 0 inset, #3d3959 0 -3px 0 0 inset, #3d3959 3px 0 0 0 inset, #3d3959 -3px 0 0 0 inset;
@@ -199,7 +199,7 @@ article p {
 
 header {
   width: 960px;
-  margin: -165px 0 0 -480px;
+  margin: -205px 0 0 -480px;
   padding: 0 0 30px;
   font-family: 'Oswald', sans-serif;
   color: #fff;

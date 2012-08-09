@@ -141,14 +141,10 @@ article p { margin-bottom: 20px; }
         text-align: center;
         @include flatTextShadow(tint($black, 10%), -2px, 3px);
       }
-      &:nth-child(1) a:hover, 
-      &:nth-child(1) a.active { @include navHover($blue); }
-      &:nth-child(2) a:hover, 
-      &:nth-child(2) a.active { @include navHover($red); }
-      &:nth-child(3) a:hover, 
-      &:nth-child(3) a.active { @include navHover($green); }
-      &:nth-child(4) a:hover, 
-      &:nth-child(4) a.active { @include navHover($purple); }
+      &:nth-child(1) a:hover { @include navHover($blue); }
+      &:nth-child(2) a:hover { @include navHover($red); }
+      &:nth-child(3) a:hover { @include navHover($green); }
+      &:nth-child(4) a:hover { @include navHover($purple); }
     }
   }
 }
@@ -163,7 +159,7 @@ article p { margin-bottom: 20px; }
 #front { background-color: $blue; }
 header {
   width: 960px;
-  margin: -165px 0 0 -480px;
+  margin: -205px 0 0 -480px;
   padding: 0 0 30px;
   font-family: 'Oswald', sans-serif;
   color: #fff;
