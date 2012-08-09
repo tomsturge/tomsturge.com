@@ -6,7 +6,6 @@
   Site: Portfolio of Thomas Sturge
 ===============================================================================
 */
-/* line 17, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,45 +27,37 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -76,7 +67,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   GLOBAL SITE STYLING
 ===============================================================================
 */
-/* line 65, ../../sass/screen.scss */
 html {
   height: 101%;
   font-family: 'Source Sans Pro', sans-serif;
@@ -86,30 +76,25 @@ html {
   overflow-x: hidden;
 }
 
-/* line 74, ../../sass/screen.scss */
 body {
   background-color: #222222;
   margin: 0 auto;
 }
 
-/* line 79, ../../sass/screen.scss */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 81, ../../sass/screen.scss */
 article p {
   margin-bottom: 20px;
 }
 
-/* line 83, ../../sass/screen.scss */
 .curtains {
   width: 100%;
   z-index: 1;
   position: relative;
 }
-/* line 87, ../../sass/screen.scss */
 .curtains > li {
   position: fixed;
   display: block;
@@ -120,21 +105,17 @@ article p {
   overflow: hidden;
   z-index: 1;
 }
-/* line 97, ../../sass/screen.scss */
 .curtains > li.hidden {
   display: none;
 }
-/* line 100, ../../sass/screen.scss */
 .curtains > li:first-child {
   z-index: 2;
 }
 
-/* line 105, ../../sass/screen.scss */
 .left {
   float: left;
 }
 
-/* line 106, ../../sass/screen.scss */
 .right {
   float: right;
 }
@@ -144,7 +125,6 @@ article p {
   SITE NAVIGATION  
 ===============================================================================
 */
-/* line 115, ../../sass/screen.scss */
 .mainNav {
   background-color: #222222;
   width: 100%;
@@ -155,7 +135,6 @@ article p {
   top: 0;
   z-index: 1000;
 }
-/* line 124, ../../sass/screen.scss */
 .mainNav ul {
   width: 505px;
   margin: 0 auto;
@@ -163,7 +142,6 @@ article p {
   border-top: 1px solid #444;
   border-bottom: 1px solid #444;
 }
-/* line 130, ../../sass/screen.scss */
 .mainNav ul li {
   width: 105px;
   padding: 5px 10px;
@@ -171,11 +149,9 @@ article p {
   float: left;
   overflow: hidden;
 }
-/* line 136, ../../sass/screen.scss */
 .mainNav ul li:last-child {
   border-right: none;
 }
-/* line 139, ../../sass/screen.scss */
 .mainNav ul li a {
   width: 105px;
   display: block;
@@ -183,12 +159,32 @@ article p {
   text-align: center;
   text-shadow: #2b2b2b -2px 3px 0;
 }
-/* line 145, ../../sass/screen.scss */
-.mainNav ul li a:hover {
+.mainNav ul li a.frontPanel:hover {
+  background-color: #4e85bd;
+  -webkit-box-shadow: #34597e 0 3px 0 0 inset, #34597e 0 -3px 0 0 inset, #34597e 3px 0 0 0 inset, #34597e -3px 0 0 0 inset;
+  -moz-box-shadow: #34597e 0 3px 0 0 inset, #34597e 0 -3px 0 0 inset, #34597e 3px 0 0 0 inset, #34597e -3px 0 0 0 inset;
+  box-shadow: #34597e 0 3px 0 0 inset, #34597e 0 -3px 0 0 inset, #34597e 3px 0 0 0 inset, #34597e -3px 0 0 0 inset;
+  text-shadow: none;
+}
+.mainNav ul li a.aboutPanel:hover {
   background-color: #bf4d42;
   -webkit-box-shadow: #7f332c 0 3px 0 0 inset, #7f332c 0 -3px 0 0 inset, #7f332c 3px 0 0 0 inset, #7f332c -3px 0 0 0 inset;
   -moz-box-shadow: #7f332c 0 3px 0 0 inset, #7f332c 0 -3px 0 0 inset, #7f332c 3px 0 0 0 inset, #7f332c -3px 0 0 0 inset;
   box-shadow: #7f332c 0 3px 0 0 inset, #7f332c 0 -3px 0 0 inset, #7f332c 3px 0 0 0 inset, #7f332c -3px 0 0 0 inset;
+  text-shadow: none;
+}
+.mainNav ul li a.workPanel:hover {
+  background-color: #55855c;
+  -webkit-box-shadow: #39593d 0 3px 0 0 inset, #39593d 0 -3px 0 0 inset, #39593d 3px 0 0 0 inset, #39593d -3px 0 0 0 inset;
+  -moz-box-shadow: #39593d 0 3px 0 0 inset, #39593d 0 -3px 0 0 inset, #39593d 3px 0 0 0 inset, #39593d -3px 0 0 0 inset;
+  box-shadow: #39593d 0 3px 0 0 inset, #39593d 0 -3px 0 0 inset, #39593d 3px 0 0 0 inset, #39593d -3px 0 0 0 inset;
+  text-shadow: none;
+}
+.mainNav ul li a.contactPanel:hover {
+  background-color: #5c5585;
+  -webkit-box-shadow: #3d3959 0 3px 0 0 inset, #3d3959 0 -3px 0 0 inset, #3d3959 3px 0 0 0 inset, #3d3959 -3px 0 0 0 inset;
+  -moz-box-shadow: #3d3959 0 3px 0 0 inset, #3d3959 0 -3px 0 0 inset, #3d3959 3px 0 0 0 inset, #3d3959 -3px 0 0 0 inset;
+  box-shadow: #3d3959 0 3px 0 0 inset, #3d3959 0 -3px 0 0 inset, #3d3959 3px 0 0 0 inset, #3d3959 -3px 0 0 0 inset;
   text-shadow: none;
 }
 
@@ -197,12 +193,10 @@ article p {
   HEADER
 ===============================================================================
 */
-/* line 162, ../../sass/screen.scss */
 #front {
   background-color: #68b2fc;
 }
 
-/* line 165, ../../sass/screen.scss */
 header {
   width: 960px;
   margin: -165px 0 0 -480px;
@@ -214,7 +208,6 @@ header {
   top: 50%;
   left: 50%;
 }
-/* line 174, ../../sass/screen.scss */
 header h1 {
   width: 720px;
   margin: 0 auto;
@@ -227,7 +220,6 @@ header h1 {
   box-shadow: #5897d6 0 6px 0 -2px;
   font-size: 120px;
 }
-/* line 183, ../../sass/screen.scss */
 header h1 em {
   position: absolute;
   top: 15px;
@@ -235,18 +227,15 @@ header h1 em {
   font: normal 90px/100% "Lobster", cursive;
   display: block;
 }
-/* line 190, ../../sass/screen.scss */
 header h2 {
   margin: 15px 0 0;
   font-size: 33px;
   text-shadow: #5897d6 -3px 4px 0;
   text-transform: uppercase;
 }
-/* line 196, ../../sass/screen.scss */
 header h2 a:hover span:nth-child(2n+1) {
   color: #a4d0fd;
 }
-/* line 199, ../../sass/screen.scss */
 header h2 a:hover span:nth-child(2n) {
   color: #cae4fd;
 }
@@ -256,7 +245,6 @@ header h2 a:hover span:nth-child(2n) {
   SECTION GENERAL
 ===============================================================================
 */
-/* line 212, ../../sass/screen.scss */
 .sectionContainer {
   width: 960px;
   margin: 0 auto;
@@ -270,7 +258,6 @@ header h2 a:hover span:nth-child(2n) {
   ABOUT SECTION
 ===============================================================================
 */
-/* line 227, ../../sass/screen.scss */
 #about {
   background-color: #ff6759;
   color: #fff;
@@ -281,17 +268,12 @@ header h2 a:hover span:nth-child(2n) {
   -moz-box-shadow: #ff6759 0 10px 0 0;
   box-shadow: #ff6759 0 10px 0 0;
 }
-/* line 234, ../../sass/screen.scss */
 #about article {
   width: 600px;
-  float: left;
 }
-/* line 238, ../../sass/screen.scss */
 #about aside {
   width: 320px;
-  float: right;
 }
-/* line 242, ../../sass/screen.scss */
 #about .bigTitle {
   margin: 0 0 15px;
   font: normal 42px/100% "Oswald", sans-serif;
@@ -299,7 +281,6 @@ header h2 a:hover span:nth-child(2n) {
   text-transform: uppercase;
   color: white;
 }
-/* line 245, ../../sass/screen.scss */
 #about .sectionTitle {
   width: 50%;
   margin: 0 auto 25px;
@@ -313,7 +294,6 @@ header h2 a:hover span:nth-child(2n) {
   background-color: #d8574b;
   text-shadow: #b7493f -3px 4px 0;
 }
-/* line 248, ../../sass/screen.scss */
 #about img {
   border: 15px solid #d8574b;
 }
@@ -321,16 +301,13 @@ header h2 a:hover span:nth-child(2n) {
 /*****************
   SKILL LISTS  
  *****************/
-/* line 259, ../../sass/screen.scss */
 .skillLists {
   overflow: hidden;
 }
-/* line 261, ../../sass/screen.scss */
 .skillLists ul {
   background-color: rgba(51, 51, 51, 0.1);
 }
 
-/* line 266, ../../sass/screen.scss */
 .devSkills, .designSkills {
   width: 260px;
   padding: 15px;
@@ -338,20 +315,16 @@ header h2 a:hover span:nth-child(2n) {
   -moz-box-shadow: #cc5247 0 5px 0 0 inset, #cc5247 0 -5px 0 0 inset, #cc5247 5px 0 0 0 inset, #cc5247 -5px 0 0 0 inset;
   box-shadow: #cc5247 0 5px 0 0 inset, #cc5247 0 -5px 0 0 inset, #cc5247 5px 0 0 0 inset, #cc5247 -5px 0 0 0 inset;
 }
-/* line 270, ../../sass/screen.scss */
 .devSkills li, .designSkills li {
   padding: 0 5px;
 }
-/* line 273, ../../sass/screen.scss */
 .devSkills li:nth-child(2n+1), .designSkills li:nth-child(2n+1) {
   background-color: #d8574b;
 }
-/* line 276, ../../sass/screen.scss */
 .devSkills li:first-child, .designSkills li:first-child {
   background-color: transparent;
 }
 
-/* line 280, ../../sass/screen.scss */
 .skillsTitle {
   margin: 0 0 15px;
   font: normal 42px/100% "Oswald", sans-serif;
@@ -366,7 +339,6 @@ header h2 a:hover span:nth-child(2n) {
   WORK SECTION
 ===============================================================================
 */
-/* line 291, ../../sass/screen.scss */
 #work {
   background-color: #72b27b;
   color: #fff;
@@ -375,16 +347,13 @@ header h2 a:hover span:nth-child(2n) {
   -moz-box-shadow: #4f7c56 0 10px 0 0;
   box-shadow: #4f7c56 0 10px 0 0;
 }
-/* line 296, ../../sass/screen.scss */
 #work article {
   margin: 0 20px 20px 0;
   float: left;
 }
-/* line 299, ../../sass/screen.scss */
 #work article:nth-child(4n+1) {
   margin: 0 0 20px 0;
 }
-/* line 303, ../../sass/screen.scss */
 #work .bigTitle {
   margin: 0 0 15px;
   font: normal 42px/100% "Oswald", sans-serif;
@@ -392,7 +361,6 @@ header h2 a:hover span:nth-child(2n) {
   text-transform: uppercase;
   color: #333333;
 }
-/* line 306, ../../sass/screen.scss */
 #work .sectionTitle {
   width: 50%;
   margin: 0 auto 25px;
@@ -406,7 +374,6 @@ header h2 a:hover span:nth-child(2n) {
   background-color: #609768;
   text-shadow: #518058 -3px 4px 0;
 }
-/* line 309, ../../sass/screen.scss */
 #work img {
   border: 10px solid #609768;
 }
@@ -416,19 +383,16 @@ header h2 a:hover span:nth-child(2n) {
   FOOTER
 ===============================================================================
 */
-/* line 320, ../../sass/screen.scss */
 #contact {
   background-color: #7b72b2;
 }
 
-/* line 324, ../../sass/screen.scss */
 footer {
   -webkit-box-shadow: #564f7c 0 10px 0 inset;
   -moz-box-shadow: #564f7c 0 10px 0 inset;
   box-shadow: #564f7c 0 10px 0 inset;
   text-shadow: #686097 -1px 1px 0;
 }
-/* line 327, ../../sass/screen.scss */
 footer .bigTitle {
   margin: 0 0 15px;
   font: normal 42px/100% "Oswald", sans-serif;
@@ -436,7 +400,6 @@ footer .bigTitle {
   text-transform: uppercase;
   color: white;
 }
-/* line 330, ../../sass/screen.scss */
 footer .sectionTitle {
   width: 50%;
   margin: 0 auto 25px;
@@ -450,20 +413,16 @@ footer .sectionTitle {
   background-color: #686097;
   text-shadow: #585180 -3px 4px 0;
 }
-/* line 333, ../../sass/screen.scss */
 footer article {
   width: 500px;
 }
-/* line 336, ../../sass/screen.scss */
 footer a {
   font-size: 18px;
   color: #fff;
 }
-/* line 339, ../../sass/screen.scss */
 footer a:hover span:nth-child(2n+1) {
   color: #afaad0;
 }
-/* line 342, ../../sass/screen.scss */
 footer a:hover span:nth-child(2n) {
   color: #d0cde4;
 }

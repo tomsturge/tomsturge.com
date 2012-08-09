@@ -16,10 +16,14 @@ $grey: #222;
 $blue: #68b2fc;
 $purple: #7b72b2;
 $red: #ff6759;
-$orange: #FFCF58;
 $green: #72B27B;
  
 //Custom mixins
+@mixin navHover($color) {
+  background-color: rgba(shade($color, 25%), 1);
+  @include multiBoxShadow($color, 50%, 3px);
+  @include text-shadow(none)
+}
 @mixin sectionTitleBg($color) {
   background-color: rgba(shade($color, 15%), 1);
 }
@@ -94,12 +98,8 @@ article p { margin-bottom: 20px; }
     overflow: hidden;
     z-index:1;
   }
-  &>li.hidden {
-    display: none;
-  }
-  &>li:first-child {
-    z-index: 2;
-  }
+  &>li.hidden { display: none; }
+  &>li:first-child { z-index: 2; }
 }
 
 .left { float: left; }
@@ -133,20 +133,17 @@ article p { margin-bottom: 20px; }
       border-right: 1px solid #444;
       float: left;
       overflow: hidden;
-      &:last-child {
-        border-right: none;
-      }
+      &:last-child { border-right: none; }
       a {
         width: 105px;
         display:block;
         padding: 8px 0 8px;
         text-align: center;
         @include flatTextShadow($black, -2px, 3px);
-        &:hover {
-          background-color: rgba(shade($red, 25%), 1);
-          @include multiBoxShadow($red, 50%, 3px);
-          @include text-shadow(none)
-        }
+        &.frontPanel:hover { @include navHover($blue); }
+        &.aboutPanel:hover { @include navHover($red); }
+        &.workPanel:hover { @include navHover($green); }
+        &.contactPanel:hover { @include navHover($purple); }
       }
     }
   }
@@ -159,9 +156,7 @@ article p { margin-bottom: 20px; }
 ===============================================================================
 */
 
-#front {
-  background-color: $blue;
-}
+#front { background-color: $blue; }
 header {
   width: 960px;
   margin: -165px 0 0 -480px;
@@ -193,12 +188,8 @@ header {
     @include flatTextShadow($blue, -3px, 4px);
     text-transform: uppercase;
     a {
-      &:hover span:nth-child(2n+1) {
-        color: tint($blue, 40%);
-      }
-      &:hover span:nth-child(2n) {
-        color: tint($blue,65%);
-      }
+      &:hover span:nth-child(2n+1) { color: tint($blue, 40%); }
+      &:hover span:nth-child(2n) { color: tint($blue,65%); }
     }
   }
 }
@@ -231,23 +222,11 @@ header {
   border-bottom: 5px dashed shade($red, 25%);
   @include flatTextShadow($red, -1px, 1px);
   @include box-shadow($red 0 10px 0 0);
-  article {
-    width: 600px;
-    float: left;
-  }
-  aside {
-    width: 320px;
-    float: right;
-  }
-  .bigTitle {
-    @include bigTitle($red, -3px, 4px, #fff)
-  }
-  .sectionTitle {
-    @include sectionTitle($red);
-  }
-  img { 
-    @include imgBorder($red, 15px);
-  }
+  article { width: 600px; }
+  aside { width: 320px; }
+  .bigTitle { @include bigTitle($red, -3px, 4px, #fff); }
+  .sectionTitle { @include sectionTitle($red); }
+  img { @include imgBorder($red, 15px); }
 } 
 
 
@@ -256,26 +235,17 @@ header {
   SKILL LISTS  
  *****************/
 
-.skillLists {
-  overflow: hidden;
-  ul {
-    background-color: rgba($black, 0.1);
-  }
+.skillLists { overflow: hidden;
+  ul { background-color: rgba($black, 0.1); }
 }
 
 .devSkills, .designSkills {
   width: 260px;
   padding: 15px;
   @include multiBoxShadow($red, 20%, 5px);
-  li {
-    padding: 0 5px;
-  }
-  li:nth-child(2n+1) {
-    background-color: shade($red, 15%);
-  }
-  li:first-child {
-    background-color: transparent;
-  }
+  li { padding: 0 5px; }
+  li:nth-child(2n+1) { background-color: shade($red, 15%); }
+  li:first-child { background-color: transparent; }
 }
 .skillsTitle {
   @include bigTitle(shade($red, 10%), -2px, 3px);
@@ -300,15 +270,9 @@ header {
       margin: 0 0 20px 0;
     }
   }
-  .bigTitle {
-    @include bigTitle($green, -3px, 4px)
-  }
-  .sectionTitle {
-    @include sectionTitle($green);
-  }
-  img { 
-    @include imgBorder($green, 10px);
-  }
+  .bigTitle { @include bigTitle($green, -3px, 4px); }
+  .sectionTitle { @include sectionTitle($green); }
+  img { @include imgBorder($green, 10px); }
 }
 
 /*
@@ -317,30 +281,20 @@ header {
 ===============================================================================
 */
 
-#contact {
-  background-color: $purple;
-}
+#contact { background-color: $purple; }
 
 footer {
   @include box-shadow(shade($purple, 30%) 0 10px 0 inset);
   @include flatTextShadow($purple, -1px, 1px);
-  .bigTitle {
-    @include bigTitle($purple, -3px, 4px, #fff)
-  }
+  .bigTitle { @include bigTitle($purple, -3px, 4px, #fff);; }
   .sectionTitle {
     @include sectionTitle($purple);
   }
-  article {
-    width: 500px;
-  }
+  article { width: 500px; }
   a {
     font-size: 18px;
     color: #fff;
-    &:hover span:nth-child(2n+1) {
-      color: tint($purple, 40%);
-    }
-    &:hover span:nth-child(2n) {
-      color: tint($purple,65%);
-    }
+    &:hover span:nth-child(2n+1) { color: tint($purple, 40%); }
+    &:hover span:nth-child(2n) { color: tint($purple,65%); }
   }
 }
