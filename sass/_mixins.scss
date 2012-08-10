@@ -1,0 +1,67 @@
+//
+//=============================================================================
+//  NAVIGATION
+//=============================================================================
+//
+
+@mixin navHover($color) {
+  background-color: rgba(shade($color, 25%), 1);
+  @include multiBoxShadow($color, 50%, 3px);
+  @include flatTextShadow(shade($color, 25%), -2px, 3px);
+}
+
+//
+//=============================================================================
+//  TITLES
+//=============================================================================
+//
+
+@mixin sectionTitleBg($color) {
+  background-color: rgba(shade($color, 15%), 1);
+}
+@mixin bigTitle($color, $dx, $dy, $text: $black) {
+  margin: 0 0 15px;
+  font: normal 42px/100% 'Oswald', sans-serif;
+  @include flatTextShadow($color, $dx, $dy);
+  text-transform: uppercase;
+  color: $text;
+}
+@mixin sectionTitle($color) {
+  width: 50%;
+  margin: 0 auto 25px;
+  font: {
+    family: 'Oswald', sans-serif;
+    size: 33px;
+    weight: 600;
+  }
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+  @include sectionTitleBg($color);
+  @include flatTextShadow(shade($color, 15%), -3px, 4px)
+}
+
+//
+//=============================================================================
+//  SHADOWS
+//=============================================================================
+//
+
+@mixin flatTextShadow($color, $dx, $dy) {
+  @include text-shadow(rgba(shade($color, 15%), 1) $dx $dy 0);
+}
+@mixin multiBoxShadow($color, $p, $d) {
+  @include box-shadow(rgba(shade($color, $p), 1) 0 $d 0 0 inset, 
+                      rgba(shade($color, $p), 1) 0 -#{$d} 0 0 inset,
+                      rgba(shade($color, $p), 1) $d 0 0 0 inset,
+                      rgba(shade($color, $p), 1) -#{$d} 0 0 0 inset);
+} 
+
+//
+//=============================================================================
+//  IMAGES
+//=============================================================================
+//
+
+@mixin imgBorder($color, $b) { border: $b solid rgba(shade($color, 15%), 1); }

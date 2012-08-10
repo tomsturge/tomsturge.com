@@ -62,11 +62,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/*
-===============================================================================
-  GLOBAL SITE STYLING
-===============================================================================
-*/
 html {
   height: 101%;
   font-family: 'Source Sans Pro', sans-serif;
@@ -120,11 +115,6 @@ article p {
   float: right;
 }
 
-/*
-===============================================================================
-  SITE NAVIGATION  
-===============================================================================
-*/
 .mainNav {
   background-color: #222222;
   width: 100%;
@@ -188,18 +178,21 @@ article p {
   text-shadow: #4e4871 -2px 3px 0;
 }
 
-/*
-===============================================================================
-  HEADER
-===============================================================================
-*/
+.sectionContainer {
+  width: 960px;
+  margin: 0 auto;
+  padding: 100px 0;
+  line-height: 120%;
+  overflow: hidden;
+}
+
 #front {
   background-color: #68b2fc;
 }
 
 header {
   width: 960px;
-  margin: -205px 0 0 -480px;
+  margin: -175px 0 0 -480px;
   padding: 0 0 30px;
   font-family: 'Oswald', sans-serif;
   color: #fff;
@@ -227,37 +220,50 @@ header h1 em {
   font: normal 90px/100% "Lobster", cursive;
   display: block;
 }
-header h2 {
-  margin: 15px 0 0;
-  font-size: 33px;
-  text-shadow: #5897d6 -3px 4px 0;
-  text-transform: uppercase;
-}
-header h2 a:hover span:nth-child(2n+1) {
-  color: #a4d0fd;
-}
-header h2 a:hover span:nth-child(2n) {
-  color: #cae4fd;
-}
 
-/*
-===============================================================================
-  SECTION GENERAL
-===============================================================================
-*/
-.sectionContainer {
-  width: 960px;
-  margin: 0 auto;
-  padding: 100px 0;
-  line-height: 120%;
+.introBox {
+  background-color: #5897d6;
+  width: 665px;
+  height: 60px;
+  margin: 15px auto 0;
+  position: relative;
   overflow: hidden;
+  -webkit-box-shadow: #538ec9 0 5px 0 0 inset, #538ec9 0 -5px 0 0 inset, #538ec9 5px 0 0 0 inset, #538ec9 -5px 0 0 0 inset;
+  -moz-box-shadow: #538ec9 0 5px 0 0 inset, #538ec9 0 -5px 0 0 inset, #538ec9 5px 0 0 0 inset, #538ec9 -5px 0 0 0 inset;
+  box-shadow: #538ec9 0 5px 0 0 inset, #538ec9 0 -5px 0 0 inset, #538ec9 5px 0 0 0 inset, #538ec9 -5px 0 0 0 inset;
+}
+.introBox li {
+  display: block;
+  width: 665px;
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 15px 0;
+  position: absolute;
+  top: 0;
+}
+.introBox li span {
+  margin-right: 1px;
+  text-shadow: #4f88c0 -3px 4px 0;
+}
+.introBox li span:nth-child(2n+1) {
+  color: #ffa39b;
+}
+.introBox li span:nth-child(2n) {
+  color: #ffbab4;
+}
+.introBox li em {
+  margin-left: 5px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 22px;
+  position: relative;
+  top: -4px;
+  text-shadow: #4f88c0 -1px 1px 0;
+}
+.introBox li em span {
+  color: #fff;
 }
 
-/*
-===============================================================================
-  ABOUT SECTION
-===============================================================================
-*/
 #about {
   background-color: #ff6759;
   color: #fff;
@@ -297,10 +303,13 @@ header h2 a:hover span:nth-child(2n) {
 #about img {
   border: 15px solid #d8574b;
 }
+#about em span:nth-child(2n+1) {
+  color: #86c1fc;
+}
+#about em span:nth-child(2n) {
+  color: #b3d8fd;
+}
 
-/*****************
-  SKILL LISTS  
- *****************/
 .skillLists {
   overflow: hidden;
 }
@@ -317,6 +326,7 @@ header h2 a:hover span:nth-child(2n) {
 }
 .devSkills li, .designSkills li {
   padding: 0 5px;
+  text-shadow: #c24e44 -1px 1px 0;
 }
 .devSkills li:nth-child(2n+1), .designSkills li:nth-child(2n+1) {
   background-color: #d8574b;
@@ -334,11 +344,6 @@ header h2 a:hover span:nth-child(2n) {
   font-size: 24px;
 }
 
-/*
-===============================================================================
-  WORK SECTION
-===============================================================================
-*/
 #work {
   background-color: #72b27b;
   color: #fff;
@@ -378,11 +383,6 @@ header h2 a:hover span:nth-child(2n) {
   border: 10px solid #609768;
 }
 
-/*
-===============================================================================
-  FOOTER
-===============================================================================
-*/
 #contact {
   background-color: #7b72b2;
 }
@@ -414,15 +414,25 @@ footer .sectionTitle {
   text-shadow: #585180 -3px 4px 0;
 }
 footer article {
-  width: 500px;
+  width: 450px;
 }
 footer a {
   font-size: 18px;
   color: #fff;
 }
 footer a:hover span:nth-child(2n+1) {
-  color: #afaad0;
+  color: #8ec195;
 }
 footer a:hover span:nth-child(2n) {
-  color: #d0cde4;
+  color: #aad0af;
 }
+
+/*@include keyframes(fadeInOut) {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+*/

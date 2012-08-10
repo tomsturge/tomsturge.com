@@ -17,6 +17,19 @@ $(document).ready(function() {
   });
 */
 
+  $('.introBox').cycle({
+    fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+  });
+
+  $('header h2').cycle ({
+    timeout: 6000,
+    before: function(){
+      $(this).parent().find('a.current').removeClass('current');
+    },
+    after: function(){
+      $(this).addClass('current');
+    }
+  });
 
 });
 

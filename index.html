@@ -7,6 +7,7 @@
   <!-- Loading jQuery and plugins -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
   <script type="text/javascript" src="_/scripts/curtains.js"></script>
+  <script type="text/javascript" src="_/scripts/modernizr.js"></script>
 
   <!-- Loading Fonts from Google WebFonts  -->
   <link href='http://fonts.googleapis.com/css?family=Lobster|Oswald:700|Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
@@ -30,7 +31,14 @@
     <li id="front" class="cover">
       <header>
         <h1><em>Portfolio of</em> Thomas Sturge</h1>
-        <h2><a href="" class="lettering" title="I jump PSDs in a single bound!" alt="Front-end Hero">Front-end Hero</a> &bull; <a href="" class="lettering" title="I know Code-Fu!" alt="Back-end Ninja">Back-end Ninja</a> &bull; <a href="" class="lettering" title="This one is a lie..." alt="Secret Agent">Secret Agent</a></h2>
+        <ul class="introBox">
+          <li><strong class="lettering">Front-end Hero:</strong> 
+              <em>I jump PSDs in a single bound!</em></li>
+          <li><strong class="lettering">Back-end Ninja:</strong> 
+              <em>I know Code-fu</em></li>
+          <li><strong class="lettering">Secret Agent:</strong> 
+              <em>#077. A licence to Teal</em></li>
+        </ul>
       </header>
     </li>
   
@@ -39,8 +47,11 @@
         <h2 class="sectionTitle">About</h2>
         <article class="left">
           <h3 class="bigTitle">Who Am I?</h3>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. </p>
-          <p>Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus. Sed odio est, auctor ac, sollicitudin in, consequat vitae, orci. Fusce id felis. Vivamus sollicitudin metus eget eros.</p>
+          <p><em class="lettering">I'm a</em> twenty something <em class="lettering">designer</em> and <em class="lettering">developer</em> from the coastal town of Margate, Kent. I spent most of my childhood covered in sand or splashing about in the sea, I was often found making elborate sandcastles that took all day to build or drawing chalk masterpieces on the promanade. That was the early signs that I was going to grow up to do something in the creative field.</p>
+          <p>I took a bit of a left turn during my teenage years and rebelled against the educational system so hard I fell out, spending most of my late teens and early twenties drinking and being a bit of a party animal. Once I grew out of that phase I got back to what I always loved, <em class="lettering">making beautiful things</em> and seeing my imagination come to life (be it digital or in a physical medium).</p>
+          <p>I've now been working professional <em class="lettering">for over 6 years</em> and continually trying to learn and do more, freelancing for the majority of the time but enjoying the few times I've been within a team environment.</p>
+
+
           <div class="skillLists">
             <h3 class="bigTitle">My skills are!</h3>
               <ul class="devSkills left">
@@ -103,14 +114,27 @@
     <li id="contact">
       <footer>
         <div class="sectionContainer">
-          <h2 class="sectionTitle">Contact</h2>
-          <article>
-            <h3 class="bigTitle">Drop me a message</h3>
-            <p>
-              Want to have a chat? We can talk about your newest project you need my awesome skills for, how your day has been, that time you got caught trying to refill your pint while the bartender wasn't looking or anything else you'd like to discuss.</p>
-              <p>Send your email to: <a href="mailto://mail@tomsturge.co.uk" class="lettering">mail@tomsturge.co.uk</a></p>
-            </p>
-          </article>
+            <h2 class="sectionTitle">Contact</h2>
+            <article class="left">
+              <h3 class="bigTitle">Drop me a message</h3>
+              <p>
+                Want to have a chat? We can talk about your newest project you need my awesome skills for, how your day has been, that time you got caught trying to refill your pint while the bartender wasn't looking or anything else you'd like to discuss.</p>
+                <p>Send your email to: <a href="mailto://mail@tomsturge.co.uk" class="lettering">mail@tomsturge.co.uk</a></p>
+              </p>
+            </article><!-- /.emailContact -->
+            <article class="right">
+              <h3 class="bigTitle">Network with me</h3>
+              <p>
+                If you'd also like to become my virtual friend or follow my various rabblings on the internet, you can find me on these sites:</p>
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </p>
+            </article>
+          </section><!-- /.emailContact -->
         </div>
       </footer>
     </li><!-- /.contactPanel -->
@@ -118,6 +142,7 @@
 
   <!-- jQuery plugin that aren't function critical -->  
   <script type="text/javascript" src="_/scripts/lettering.js"></script>
+  <script type="text/javascript" src="_/scripts/cycle.js"></script>
 
   <!-- Site scripts -->
   <script type="text/javascript" src="_/scripts/init.js"></script>

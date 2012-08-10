@@ -7,64 +7,51 @@
 ===============================================================================
 */
 
+//=============================================================================
+//
+//  CONTENTS:  
+//    1. IMPORTS AND VARIABLES
+//      1.1 COLOR VARIABLES
+//    2. GLOBAL SITE STYLING
+//    3. SITE NAVIGATION
+//    4. SECTION GENERAL
+//    5. FRONT SECTION
+//    6. ABOUT SECTION
+//      6.1 SKILL LISTS 
+//    7. WORK SECTION
+//    8. CONTACT SECTION
+//    9. ANIMATION KEYFRAMES
+//
+//=============================================================================
+
+
+//
+//=============================================================================
+//  1. IMPORTS AND VARIABLES
+//=============================================================================
+//
+
 @import "compass/reset";
 @import "compass/css3";
+@import "animation";
+@import "mixins";
 
-// Colour variables
-$black: #333;
-$grey: #222;
+//****************
+//  1.1 COLOR VARIABLES 
+//*****************
+
+$black: #333; // Used for text
+$grey: #222; // Used with backgrounds
 $blue: #68b2fc;
 $purple: #7b72b2;
 $red: #ff6759;
 $green: #72B27B;
  
-//Custom mixins
-@mixin navHover($color) {
-  background-color: rgba(shade($color, 25%), 1);
-  @include multiBoxShadow($color, 50%, 3px);
-  @include flatTextShadow(shade($color, 25%), -2px, 3px);
-}
-@mixin sectionTitleBg($color) {
-  background-color: rgba(shade($color, 15%), 1);
-}
-@mixin flatTextShadow($color, $dx, $dy) {
-  @include text-shadow(rgba(shade($color, 15%), 1) $dx $dy 0);
-}
-@mixin multiBoxShadow($color, $p, $d) {
-  @include box-shadow(rgba(shade($color, $p), 1) 0 $d 0 0 inset, 
-                      rgba(shade($color, $p), 1) 0 -#{$d} 0 0 inset,
-                      rgba(shade($color, $p), 1) $d 0 0 0 inset,
-                      rgba(shade($color, $p), 1) -#{$d} 0 0 0 inset);
-} 
-
-@mixin bigTitle($color, $dx, $dy, $text: $black) {
-  margin: 0 0 15px;
-  font: normal 42px/100% 'Oswald', sans-serif;
-  @include flatTextShadow($color, $dx, $dy);
-  text-transform: uppercase;
-  color: $text;
-}
-@mixin imgBorder($color, $b) { border: $b solid rgba(shade($color, 15%), 1); }
-@mixin sectionTitle($color) {
-  width: 50%;
-  margin: 0 auto 25px;
-  font: {
-    family: 'Oswald', sans-serif;
-    size: 33px;
-    weight: 600;
-  }
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  text-transform: uppercase;
-  @include sectionTitleBg($color);
-  @include flatTextShadow(shade($color, 15%), -3px, 4px)
-}
-/*
-===============================================================================
-  GLOBAL SITE STYLING
-===============================================================================
-*/
+//
+//=============================================================================
+//  2. GLOBAL SITE STYLING
+//=============================================================================
+//
 
 html {
   height: 101%;
@@ -106,11 +93,11 @@ article p { margin-bottom: 20px; }
 .right { float: right; }
 
 
-/*
-===============================================================================
-  SITE NAVIGATION  
-===============================================================================
-*/
+//
+//=============================================================================
+//  3. SITE NAVIGATION  
+//=============================================================================
+//
 
 .mainNav {
   background-color: $grey;
@@ -149,17 +136,32 @@ article p { margin-bottom: 20px; }
   }
 }
 
+//
+//=============================================================================
+//  4. SECTION GENERAL
+//=============================================================================
+//
 
-/*
-===============================================================================
-  HEADER
-===============================================================================
-*/
+.sectionContainer {
+  width: 960px;
+  margin: 0 auto;
+  padding: 100px 0;
+  line-height: 120%;
+  overflow: hidden;
+}
 
-#front { background-color: $blue; }
+//
+//=============================================================================
+//  5. FRONT SECTION
+//=============================================================================
+//
+
+#front { 
+  background-color: $blue; 
+}
 header {
   width: 960px;
-  margin: -205px 0 0 -480px;
+  margin: -175px 0 0 -480px;
   padding: 0 0 30px;
   font-family: 'Oswald', sans-serif;
   color: #fff;
@@ -181,39 +183,52 @@ header {
       font: normal 90px/100% 'Lobster', cursive;
       display: block;
     }
-  } 
-  h2 {
-    margin: 15px 0 0;
-    font-size: 33px;
-    @include flatTextShadow($blue, -3px, 4px);
+  }
+}
+
+.introBox {
+  background-color: shade($blue, 15%);
+  width: 665px;
+  height: 60px;
+  margin: 15px auto 0;
+  position: relative;
+  overflow: hidden;
+  @include multiBoxShadow($blue, 20%, 5px);
+  li {
+    display: block;
+    width: 665px;
+    font-size: 28px;
+    text-align: center;
     text-transform: uppercase;
-    a {
-      &:hover span:nth-child(2n+1) { color: tint($blue, 40%); }
-      &:hover span:nth-child(2n) { color: tint($blue,65%); }
+    margin: 15px 0;
+    position: absolute;
+    top: 0;
+    span{ 
+      margin-right: 1px; 
+      @include flatTextShadow(shade($blue, 10%), -3px, 4px);
+
+    }
+    span:nth-child(2n+1) { color: tint($red, 40%); }
+    span:nth-child(2n) { color: tint($red, 55%); }
+    em {
+      margin-left: 5px;
+      font: {
+        family: 'Source Sans Pro', sans-serif;
+        size: 22px;
+      }
+      position: relative;
+      top: -4px;
+      @include flatTextShadow(shade($blue, 10%), -1px, 1px);
+      span { color: #fff; }
     }
   }
 }
 
-/*
-===============================================================================
-  SECTION GENERAL
-===============================================================================
-*/
-
-.sectionContainer {
-  width: 960px;
-  margin: 0 auto;
-  padding: 100px 0;
-  line-height: 120%;
-  overflow: hidden;
-}
-
-
-/*
-===============================================================================
-  ABOUT SECTION
-===============================================================================
-*/
+//
+//=============================================================================
+//  6. ABOUT SECTION
+//=============================================================================
+//
 
 #about {
   background-color: $red;
@@ -227,13 +242,13 @@ header {
   .bigTitle { @include bigTitle($red, -3px, 4px, #fff); }
   .sectionTitle { @include sectionTitle($red); }
   img { @include imgBorder($red, 15px); }
+  em span:nth-child(2n+1) { color: tint($blue, 20%); }
+  em span:nth-child(2n) { color: tint($blue,50%); } 
 } 
 
-
-
-/*****************
-  SKILL LISTS  
- *****************/
+//*****************
+//  6.1 SKILL LISTS  
+//*****************
 
 .skillLists { overflow: hidden;
   ul { background-color: rgba($black, 0.1); }
@@ -243,7 +258,10 @@ header {
   width: 260px;
   padding: 15px;
   @include multiBoxShadow($red, 20%, 5px);
-  li { padding: 0 5px; }
+  li { 
+    padding: 0 5px; 
+    @include flatTextShadow(shade($red, 10%), -1px, 1px);
+  }
   li:nth-child(2n+1) { background-color: shade($red, 15%); }
   li:first-child { background-color: transparent; }
 }
@@ -252,11 +270,11 @@ header {
   font-size: 24px;
 }
 
-/*
-===============================================================================
-  WORK SECTION
-===============================================================================
-*/
+//
+//=============================================================================
+//  7. WORK SECTION
+//=============================================================================
+//
 
 #work {
   background-color: $green;
@@ -275,11 +293,11 @@ header {
   img { @include imgBorder($green, 10px); }
 }
 
-/*
-===============================================================================
-  FOOTER
-===============================================================================
-*/
+//
+//=============================================================================
+//  8. CONTACT SECTION
+//=============================================================================
+//
 
 #contact { background-color: $purple; }
 
@@ -290,11 +308,33 @@ footer {
   .sectionTitle {
     @include sectionTitle($purple);
   }
-  article { width: 500px; }
+  article { width: 450px; }
   a {
     font-size: 18px;
     color: #fff;
-    &:hover span:nth-child(2n+1) { color: tint($purple, 40%); }
-    &:hover span:nth-child(2n) { color: tint($purple,65%); }
+    &:hover span:nth-child(2n+1) { color: tint($green, 20%); }
+    &:hover span:nth-child(2n) { color: tint($green,40%); }
   }
 }
+
+//
+//=============================================================================
+//  9. ANIMATION KEYFRAMES
+//=============================================================================
+//
+
+
+//*****************
+//  FRONT SECTION - INTRO  
+//*****************
+
+/*@include keyframes(fadeInOut) {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+*/
+
