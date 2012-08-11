@@ -62,11 +62,42 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+@font-face {
+  font-family: "Source Sans";
+  src: url('../font/SourceSans.eot');
+  src: url('../font/SourceSans.eot?#iefix') format('eot'), url('../font/SourceSans.woff') format('woff'), url('../font/SourceSans.ttf') format('truetype'), url('../font/SourceSans.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url('../font/oswald.eot');
+  src: url('../font/oswald.eot?#iefix') format('eot'), url('../font/oswald.woff') format('woff'), url('../font/oswald.ttf') format('truetype'), url('../font/oswald.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: url('../font/Lobster.eot');
+  src: url('../font/Lobster.eot?#iefix') format('eot'), url('../font/Lobster.woff') format('woff'), url('../font/Lobster.ttf') format('truetype'), url('../font/Lobster.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  src: url('../font/icons.eot');
+  src: url('../font/icons.eot?#iefix') format('eot'), url('../font/icons.woff') format('woff'), url('../font/icons.ttf') format('truetype'), url('../font/icons.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   height: 101%;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans', sans-serif;
   font-size: 18px;
-  font-weight: 600;
   color: #fff;
   overflow-x: hidden;
 }
@@ -115,19 +146,11 @@ article p {
   float: right;
 }
 
-@font-face {
-  font-family: "icons";
-  src: url('../font/icons.eot');
-  src: url('../font/icons.eot?#iefix') format('eot'), url('../font/icons.woff') format('woff'), url('../font/icons.ttf') format('truetype'), url('../font/icons.svg#icons') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 .mainNav {
   background-color: #222222;
   width: 100%;
   padding: 10px 0;
-  font: bold 18px/100% "Oswald", sans-serif;
+  font: normal 18px/100% "Oswald", sans-serif;
   text-transform: uppercase;
   position: fixed;
   top: 0;
@@ -223,7 +246,7 @@ header h1 {
 }
 header h1 em {
   position: absolute;
-  top: 15px;
+  top: 6px;
   left: -20px;
   font: normal 90px/100% "Lobster", cursive;
   display: block;
@@ -260,7 +283,7 @@ header h1 em {
 }
 .introBox li em {
   margin-left: 5px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans', sans-serif;
   font-size: 22px;
   color: #fff;
   position: relative;
