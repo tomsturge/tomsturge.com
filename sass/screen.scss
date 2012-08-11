@@ -11,8 +11,9 @@
 //
 //  CONTENTS:
 //    1. IMPORTS AND VARIABLES
-//      1.1 COLOR VARIABLES
+//      1.2 COLOR VARIABLES
 //    2. GLOBAL SITE STYLING
+//      2.1 FONT-FACES
 //    3. SITE NAVIGATION
 //    4. SECTION GENERAL
 //    5. FRONT SECTION
@@ -31,9 +32,9 @@
 //=============================================================================
 //
 
-@import "compass/reset";
-@import "compass/css3";
-@import "mixins";
+@import 'compass/reset';
+@import 'compass/css3';
+@import 'mixins';
 
 //****************
 //  1.1 COLOR VARIABLES
@@ -51,6 +52,7 @@ $green: #72B27B;
 //  2. GLOBAL SITE STYLING
 //=============================================================================
 //
+
 
 html {
   height: 101%;
@@ -94,6 +96,16 @@ article p { margin-bottom: 20px; }
 .left { float: left; }
 .right { float: right; }
 
+//****************
+//  2.1 FONT-FACES
+//*****************
+
+@include font-face('icons',
+  font-files('icons.woff',
+             'icons.ttf',
+             'icons.svg#icons'),
+  'icons.eot',
+  normal, normal);
 
 //
 //=============================================================================
@@ -213,7 +225,7 @@ header {
           color: #fff;
           position: relative;
           top: -4px;
-          @include flatTextShadow(shade($blue, 10%), -1px, 1px);
+          @include flatTextShadow(shade($blue, 10%), -2px, 3px);
         }
     }
 }
@@ -304,3 +316,40 @@ footer {
         &:hover { color: tint($black, 8%); }
     }
 }
+
+//*****************
+//  8.1 SOCIAL ICONS
+//*****************
+
+[class^="icon-"]:before,
+[class*="icon-"]:before {
+  background-color: shade($purple, 10%);
+  font: {
+    family: 'icons';
+    style: normal;
+    weight: normal;
+  }
+  speak: none;
+  display: block;
+  text-decoration: inherit;
+  width: 50px; height: 38px;
+  margin: 0 25px 25px 0;
+  text-align: center;
+  padding-top: 12px;
+  @include multiBoxShadow($purple, 20%, 5px);
+}
+
+
+.socialIcons {
+  list-style: none outside none;
+  margin-left: 0;
+    li {
+      font-size: 16px;
+      line-height: 24px;
+      height: 24px;
+    }
+}
+.icon-facebook:before { content: '\f300'; }
+.icon-twitter:before { content: '\f302'; }
+.icon-google:before { content: '\f309'; }
+.icon-skype:before { content: '\f30b'; }
