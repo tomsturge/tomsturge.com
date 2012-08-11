@@ -1,4 +1,4 @@
-/* 
+/*
 ===============================================================================
   The sexy portfolio site for Me, Thomas Sturge
 
@@ -235,15 +235,13 @@ header h1 em {
 .introBox li {
   display: block;
   width: 665px;
+  margin: 15px 0;
   font-size: 28px;
   text-align: center;
   text-transform: uppercase;
-  margin: 15px 0;
+  color: #434343;
   position: absolute;
   top: 0;
-}
-.introBox li span {
-  margin-right: 1px;
   text-shadow: #4f88c0 -3px 4px 0;
 }
 .introBox li span:nth-child(2n+1) {
@@ -256,12 +254,10 @@ header h1 em {
   margin-left: 5px;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 22px;
+  color: #fff;
   position: relative;
   top: -4px;
   text-shadow: #4f88c0 -1px 1px 0;
-}
-.introBox li em span {
-  color: #fff;
 }
 
 #about {
@@ -303,18 +299,15 @@ header h1 em {
 #about img {
   border: 15px solid #d8574b;
 }
-#about em span:nth-child(2n+1) {
-  color: #86c1fc;
-}
-#about em span:nth-child(2n) {
-  color: #b3d8fd;
+#about em {
+  color: #434343;
 }
 
 .skillLists {
   overflow: hidden;
 }
 .skillLists ul {
-  background-color: rgba(51, 51, 51, 0.1);
+  background-color: #e55c50;
 }
 
 .devSkills, .designSkills {
@@ -326,7 +319,7 @@ header h1 em {
 }
 .devSkills li, .designSkills li {
   padding: 0 5px;
-  text-shadow: #c24e44 -1px 1px 0;
+  text-shadow: #b7493f -1px 1px 0;
 }
 .devSkills li:nth-child(2n+1), .designSkills li:nth-child(2n+1) {
   background-color: #d8574b;
@@ -420,19 +413,6 @@ footer a {
   font-size: 18px;
   color: #fff;
 }
-footer a:hover span:nth-child(2n+1) {
-  color: #8ec195;
+footer a:hover {
+  color: #434343;
 }
-footer a:hover span:nth-child(2n) {
-  color: #aad0af;
-}
-
-/*@include keyframes(fadeInOut) {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-*/
