@@ -52,11 +52,11 @@
   @include text-shadow(rgba(shade($color, 15%), 1) $dx $dy 0);
 }
 @mixin multiBoxShadow($color, $p, $d) {
-  @include box-shadow(rgba(shade($color, $p), 1) 0 $d 0 0 inset, 
-                      rgba(shade($color, $p), 1) 0 -#{$d} 0 0 inset, 
+  @include box-shadow(rgba(shade($color, $p), 1) 0 $d 0 0 inset,
+                      rgba(shade($color, $p), 1) 0 -#{$d} 0 0 inset,
                       rgba(shade($color, $p), 1) $d 0 0 0 inset,
                       rgba(shade($color, $p), 1) -#{$d} 0 0 0 inset);
-} 
+}
 
 //
 //=============================================================================
@@ -65,3 +65,15 @@
 //
 
 @mixin imgBorder($color, $b) { border: $b solid rgba(shade($color, 15%), 1); }
+
+//
+//=============================================================================
+//  SOCIAL ICON HOVER
+//=============================================================================
+//
+
+@mixin socialHover($color) {
+  background-color: $color;
+  @include multiBoxShadow($color, 20%, 5px);
+  @include flatTextShadow(shade($color, 15%), -1px, 2px);
+}

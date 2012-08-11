@@ -47,6 +47,12 @@ $purple: #7b72b2;
 $red: #ff6759;
 $green: #72B27B;
 
+// Social Icon Colours
+$facebook: #3b5998;
+$twitter: #60d7ff;
+$gplus: #d14428;
+$skype: #3abfef;
+
 //
 //=============================================================================
 //  2. GLOBAL SITE STYLING
@@ -241,7 +247,7 @@ header {
   color: #fff;
   margin-bottom: 4px;
   border-bottom: 5px dashed shade($red, 25%);
-  @include flatTextShadow($red, -1px, 1px);
+  @include flatTextShadow($red, -1px, 2px);
   @include box-shadow($red 0 10px 0 0);
     article { width: 600px; }
     aside { width: 320px; }
@@ -284,7 +290,7 @@ header {
 #work {
   background-color: $green;
   color: #fff;
-  @include flatTextShadow($green, -1px, 1px);
+  @include flatTextShadow($green, -1px, 2px);
   @include box-shadow(shade($green, 30%) 0 10px 0 0);
     article {
       margin: 0 20px 20px 0;
@@ -306,7 +312,7 @@ header {
 
 footer {
   @include box-shadow(shade($purple, 30%) 0 10px 0 inset);
-  @include flatTextShadow($purple, -1px, 1px);
+  @include flatTextShadow($purple, -1px, 2px);
     .bigTitle { @include bigTitle($purple, -3px, 4px, #fff);; }
     .sectionTitle { @include sectionTitle($purple); }
     article { width: 450px; }
@@ -321,35 +327,38 @@ footer {
 //  8.1 SOCIAL ICONS
 //*****************
 
-[class^="icon-"]:before,
-[class*="icon-"]:before {
-  background-color: shade($purple, 10%);
-  font: {
-    family: 'icons';
-    style: normal;
-    weight: normal;
-  }
-  speak: none;
-  display: block;
-  text-decoration: inherit;
-  width: 50px; height: 38px;
-  margin: 0 25px 25px 0;
-  text-align: center;
-  padding-top: 12px;
-  @include multiBoxShadow($purple, 20%, 5px);
-}
-
-
 .socialIcons {
+  text-align: center;
   list-style: none outside none;
-  margin-left: 0;
     li {
-      font-size: 16px;
-      line-height: 24px;
-      height: 24px;
+      a {
+        background-color: shade($purple, 10%);
+        width: 65px; height: 40px;
+        margin-right:25px;
+        padding-top: 20px;
+        font: {
+          family: 'icons';
+          size: 22px;
+          style: normal;
+          weight: normal;
+        }
+        float: left;
+        @include flatTextShadow(shade($purple, 15%), -1px, 2px);
+        @include multiBoxShadow($purple, 20%, 5px);
+          &:hover { color: #fff;}
+      }
+      &.facebook a:hover {
+        @include socialHover($facebook);
+      }
+      &.twitter a:hover {
+        @include socialHover($twitter);
+      }
+      &.gplus a:hover {
+        @include socialHover($gplus);
+      }
+      &.skype a:hover {
+        @include socialHover($skype);
+      }
+
     }
 }
-.icon-facebook:before { content: '\f300'; }
-.icon-twitter:before { content: '\f302'; }
-.icon-google:before { content: '\f309'; }
-.icon-skype:before { content: '\f30b'; }

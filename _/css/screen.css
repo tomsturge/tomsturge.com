@@ -273,7 +273,7 @@ header h1 em {
   color: #fff;
   margin-bottom: 4px;
   border-bottom: 5px dashed #bf4d42;
-  text-shadow: #d8574b -1px 1px 0;
+  text-shadow: #d8574b -1px 2px 0;
   -webkit-box-shadow: #ff6759 0 10px 0 0;
   -moz-box-shadow: #ff6759 0 10px 0 0;
   box-shadow: #ff6759 0 10px 0 0;
@@ -348,7 +348,7 @@ header h1 em {
 #work {
   background-color: #72b27b;
   color: #fff;
-  text-shadow: #609768 -1px 1px 0;
+  text-shadow: #609768 -1px 2px 0;
   -webkit-box-shadow: #4f7c56 0 10px 0 0;
   -moz-box-shadow: #4f7c56 0 10px 0 0;
   box-shadow: #4f7c56 0 10px 0 0;
@@ -392,7 +392,7 @@ footer {
   -webkit-box-shadow: #564f7c 0 10px 0 inset;
   -moz-box-shadow: #564f7c 0 10px 0 inset;
   box-shadow: #564f7c 0 10px 0 inset;
-  text-shadow: #686097 -1px 1px 0;
+  text-shadow: #686097 -1px 2px 0;
 }
 footer .bigTitle {
   margin: 0 0 15px;
@@ -425,47 +425,54 @@ footer a:hover {
   color: #434343;
 }
 
-[class^="icon-"]:before,
-[class*="icon-"]:before {
+.socialIcons {
+  text-align: center;
+  list-style: none outside none;
+}
+.socialIcons li a {
   background-color: #6e66a0;
+  width: 65px;
+  height: 40px;
+  margin-right: 25px;
+  padding-top: 20px;
   font-family: 'icons';
+  font-size: 22px;
   font-style: normal;
   font-weight: normal;
-  speak: none;
-  display: block;
-  text-decoration: inherit;
-  width: 50px;
-  height: 38px;
-  margin: 0 25px 25px 0;
-  text-align: center;
-  padding-top: 12px;
+  float: left;
+  text-shadow: #585180 -1px 2px 0;
   -webkit-box-shadow: #625b8e 0 5px 0 0 inset, #625b8e 0 -5px 0 0 inset, #625b8e 5px 0 0 0 inset, #625b8e -5px 0 0 0 inset;
   -moz-box-shadow: #625b8e 0 5px 0 0 inset, #625b8e 0 -5px 0 0 inset, #625b8e 5px 0 0 0 inset, #625b8e -5px 0 0 0 inset;
   box-shadow: #625b8e 0 5px 0 0 inset, #625b8e 0 -5px 0 0 inset, #625b8e 5px 0 0 0 inset, #625b8e -5px 0 0 0 inset;
 }
-
-.socialIcons {
-  list-style: none outside none;
-  margin-left: 0;
+.socialIcons li a:hover {
+  color: #fff;
 }
-.socialIcons li {
-  font-size: 16px;
-  line-height: 24px;
-  height: 24px;
+.socialIcons li.facebook a:hover {
+  background-color: #3b5998;
+  -webkit-box-shadow: #2f4779 0 5px 0 0 inset, #2f4779 0 -5px 0 0 inset, #2f4779 5px 0 0 0 inset, #2f4779 -5px 0 0 0 inset;
+  -moz-box-shadow: #2f4779 0 5px 0 0 inset, #2f4779 0 -5px 0 0 inset, #2f4779 5px 0 0 0 inset, #2f4779 -5px 0 0 0 inset;
+  box-shadow: #2f4779 0 5px 0 0 inset, #2f4779 0 -5px 0 0 inset, #2f4779 5px 0 0 0 inset, #2f4779 -5px 0 0 0 inset;
+  text-shadow: #2a3f6d -1px 2px 0;
 }
-
-.icon-facebook:before {
-  content: '\f300';
+.socialIcons li.twitter a:hover {
+  background-color: #60d7ff;
+  -webkit-box-shadow: #4caccc 0 5px 0 0 inset, #4caccc 0 -5px 0 0 inset, #4caccc 5px 0 0 0 inset, #4caccc -5px 0 0 0 inset;
+  -moz-box-shadow: #4caccc 0 5px 0 0 inset, #4caccc 0 -5px 0 0 inset, #4caccc 5px 0 0 0 inset, #4caccc -5px 0 0 0 inset;
+  box-shadow: #4caccc 0 5px 0 0 inset, #4caccc 0 -5px 0 0 inset, #4caccc 5px 0 0 0 inset, #4caccc -5px 0 0 0 inset;
+  text-shadow: #449ab7 -1px 2px 0;
 }
-
-.icon-twitter:before {
-  content: '\f302';
+.socialIcons li.gplus a:hover {
+  background-color: #d14428;
+  -webkit-box-shadow: #a73620 0 5px 0 0 inset, #a73620 0 -5px 0 0 inset, #a73620 5px 0 0 0 inset, #a73620 -5px 0 0 0 inset;
+  -moz-box-shadow: #a73620 0 5px 0 0 inset, #a73620 0 -5px 0 0 inset, #a73620 5px 0 0 0 inset, #a73620 -5px 0 0 0 inset;
+  box-shadow: #a73620 0 5px 0 0 inset, #a73620 0 -5px 0 0 inset, #a73620 5px 0 0 0 inset, #a73620 -5px 0 0 0 inset;
+  text-shadow: #96301c -1px 2px 0;
 }
-
-.icon-google:before {
-  content: '\f309';
-}
-
-.icon-skype:before {
-  content: '\f30b';
+.socialIcons li.skype a:hover {
+  background-color: #3abfef;
+  -webkit-box-shadow: #2e98bf 0 5px 0 0 inset, #2e98bf 0 -5px 0 0 inset, #2e98bf 5px 0 0 0 inset, #2e98bf -5px 0 0 0 inset;
+  -moz-box-shadow: #2e98bf 0 5px 0 0 inset, #2e98bf 0 -5px 0 0 inset, #2e98bf 5px 0 0 0 inset, #2e98bf -5px 0 0 0 inset;
+  box-shadow: #2e98bf 0 5px 0 0 inset, #2e98bf 0 -5px 0 0 inset, #2e98bf 5px 0 0 0 inset, #2e98bf -5px 0 0 0 inset;
+  text-shadow: #2989ac -1px 2px 0;
 }
