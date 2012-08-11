@@ -12,16 +12,16 @@
 //  CONTENTS:
 //    1. IMPORTS AND VARIABLES
 //      1.2 COLOR VARIABLES
-//    2. GLOBAL SITE STYLING
-//      2.1 FONT-FACES
-//    3. SITE NAVIGATION
-//    4. SECTION GENERAL
-//    5. FRONT SECTION
-//    6. ABOUT SECTION
-//      6.1 SKILL LISTS
-//    7. WORK SECTION
-//    8. CONTACT SECTION
-//    9. ANIMATION KEYFRAMES
+//    2. @FONT-FACES
+//    3. GLOBAL SITE STYLING
+//    4. SITE NAVIGATION
+//    5. SECTION GENERAL
+//    6. FRONT SECTION
+//    7. ABOUT SECTION
+//      7.1 SKILL LISTS
+//    8. WORK SECTION
+//    9. CONTACT SECTION
+//      9.1 SOCIAL ICONS
 //
 //=============================================================================
 
@@ -55,7 +55,41 @@ $skype: #3abfef;
 
 //
 //=============================================================================
-//  2. GLOBAL SITE STYLING
+//  2. @FONT-FACES
+//=============================================================================
+//
+
+@include font-face('Source Sans',
+  font-files('SourceSans.woff',
+             'SourceSans.ttf',
+             'SourceSans.svg#icons'),
+  'SourceSans.eot',
+  normal, normal);
+
+@include font-face('Oswald',
+  font-files('oswald.woff',
+             'oswald.ttf',
+             'oswald.svg#icons'),
+  'oswald.eot',
+  normal, normal);
+
+@include font-face('Lobster',
+  font-files('Lobster.woff',
+             'Lobster.ttf',
+             'Lobster.svg#icons'),
+  'Lobster.eot',
+  normal, normal);
+
+@include font-face('icons',
+  font-files('icons.woff',
+             'icons.ttf',
+             'icons.svg#icons'),
+  'icons.eot',
+  normal, normal);
+
+//
+//=============================================================================
+//  3. GLOBAL SITE STYLING
 //=============================================================================
 //
 
@@ -63,9 +97,8 @@ $skype: #3abfef;
 html {
   height: 101%;
   font: {
-    family: 'Source Sans Pro', sans-serif;
+    family: 'Source Sans', sans-serif;
     size: 18px;
-    weight: 600;
   }
   color: #fff;
   overflow-x: hidden;
@@ -102,20 +135,10 @@ article p { margin-bottom: 20px; }
 .left { float: left; }
 .right { float: right; }
 
-//****************
-//  2.1 FONT-FACES
-//*****************
-
-@include font-face('icons',
-  font-files('icons.woff',
-             'icons.ttf',
-             'icons.svg#icons'),
-  'icons.eot',
-  normal, normal);
 
 //
 //=============================================================================
-//  3. SITE NAVIGATION
+//  4. SITE NAVIGATION
 //=============================================================================
 //
 
@@ -123,7 +146,7 @@ article p { margin-bottom: 20px; }
   background-color: $grey;
   width: 100%;
   padding: 10px 0;
-  font: bold 18px/100% 'Oswald', sans-serif;
+  font: normal 18px/100% 'Oswald', sans-serif;
   text-transform: uppercase;
   position: fixed;
   top: 0;
@@ -157,7 +180,7 @@ article p { margin-bottom: 20px; }
 
 //
 //=============================================================================
-//  4. SECTION GENERAL
+//  5. SECTION GENERAL
 //=============================================================================
 //
 
@@ -170,7 +193,7 @@ article p { margin-bottom: 20px; }
 
 //
 //=============================================================================
-//  5. FRONT SECTION
+//  6. FRONT SECTION
 //=============================================================================
 //
 
@@ -193,7 +216,7 @@ header {
       font-size: 120px;
         em {
           position: absolute;
-          top: 15px;left: -20px;
+          top: 6px;left: -20px;
           font: normal 90px/100% 'Lobster', cursive;
           display: block;
         }
@@ -225,7 +248,7 @@ header {
         em {
           margin-left: 5px;
           font: {
-            family: 'Source Sans Pro', sans-serif;
+            family: 'Source Sans', sans-serif;
             size: 22px;
           }
           color: #fff;
@@ -238,7 +261,7 @@ header {
 
 //
 //=============================================================================
-//  6. ABOUT SECTION
+//  7. ABOUT SECTION
 //=============================================================================
 //
 
@@ -258,7 +281,7 @@ header {
 }
 
 //*****************
-//  6.1 SKILL LISTS
+//  7.1 SKILL LISTS
 //*****************
 
 .skillLists { overflow: hidden;
@@ -283,7 +306,7 @@ header {
 
 //
 //=============================================================================
-//  7. WORK SECTION
+//  8. WORK SECTION
 //=============================================================================
 //
 
@@ -304,7 +327,7 @@ header {
 
 //
 //=============================================================================
-//  8. CONTACT SECTION
+//  9. CONTACT SECTION
 //=============================================================================
 //
 
@@ -324,7 +347,7 @@ footer {
 }
 
 //*****************
-//  8.1 SOCIAL ICONS
+//  9.1 SOCIAL ICONS
 //*****************
 
 .socialIcons {
