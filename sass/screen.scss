@@ -266,6 +266,8 @@ header {
 //
 
 #about {
+    h2 { @include sectionTitle($red); }
+    h3 { @include bigTitle($red, -3px, 4px); }
   background-color: $red;
   color: #fff;
   margin-bottom: 4px;
@@ -274,8 +276,6 @@ header {
   @include box-shadow($red 0 10px 0 0);
     article { width: 600px; }
     aside { width: 320px; }
-    .bigTitle { @include bigTitle($red, -3px, 4px); }
-    .sectionTitle { @include sectionTitle($red); }
     img { @include imgBorder($red, 15px); }
     em { color: tint($black, 8%); }
 }
@@ -289,6 +289,10 @@ header {
 }
 
 .devSkills, .designSkills {
+    h4  {
+      @include bigTitle(shade($red, 10%), -2px, 3px, $black);
+      font-size: 24px;
+    }
   width: 260px;
   padding: 15px;
   @include multiBoxShadow($red, 20%, 5px);
@@ -299,10 +303,7 @@ header {
     li:nth-child(2n+1) { background-color: shade($red, 15%); }
     li:first-child { background-color: transparent; }
 }
-.skillsTitle {
-  @include bigTitle(shade($red, 10%), -2px, 3px, $black);
-  font-size: 24px;
-}
+
 
 //
 //=============================================================================
@@ -311,6 +312,8 @@ header {
 //
 
 #work {
+    h2 { @include sectionTitle($green); }
+    h3 { @include bigTitle($green, -3px, 4px); }
   background-color: $green;
   color: #fff;
   @include flatTextShadow($green, -1px, 2px);
@@ -324,8 +327,6 @@ header {
           &:nth-child(2n) { margin-right: 0; }
         }
     }
-    .bigTitle { @include bigTitle($green, -3px, 4px); }
-    .sectionTitle { @include sectionTitle($green); }
     img { @include imgBorder($green, 10px); }
 }
 
@@ -344,13 +345,15 @@ header {
 //=============================================================================
 //
 
-#contact { background-color: $purple; }
+#contact { 
+    h2 { @include sectionTitle($purple); }
+    h3 { @include bigTitle($purple, -3px, 4px, #fff); }
+  background-color: $purple; 
+}
 
 footer {
   @include box-shadow(shade($purple, 30%) 0 10px 0 inset);
   @include flatTextShadow($purple, -1px, 2px);
-    .bigTitle { @include bigTitle($purple, -3px, 4px, #fff);; }
-    .sectionTitle { @include sectionTitle($purple); }
     article { width: 450px; }
     a {
       font-size: 18px;
