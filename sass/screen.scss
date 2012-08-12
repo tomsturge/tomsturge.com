@@ -67,10 +67,10 @@ $skype: #3abfef;
   normal, normal);
 
 @include font-face('Oswald',
-  font-files('oswald.woff',
-             'oswald.ttf',
-             'oswald.svg#icons'),
-  'oswald.eot',
+  font-files('Oswald.woff',
+             'Oswald.ttf',
+             'Oswald.svg#icons'),
+  'Oswald.eot',
   normal, normal);
 
 @include font-face('Lobster',
@@ -274,7 +274,7 @@ header {
   @include box-shadow($red 0 10px 0 0);
     article { width: 600px; }
     aside { width: 320px; }
-    .bigTitle { @include bigTitle($red, -3px, 4px, #fff); }
+    .bigTitle { @include bigTitle($red, -3px, 4px); }
     .sectionTitle { @include sectionTitle($red); }
     img { @include imgBorder($red, 15px); }
     em { color: tint($black, 8%); }
@@ -294,13 +294,13 @@ header {
   @include multiBoxShadow($red, 20%, 5px);
     li {
       padding: 0 5px;
-      @include flatTextShadow(shade($red, 15%), -1px, 1px);
+      @include flatTextShadow(shade($red, 15%), -1px, 2px);
     }
     li:nth-child(2n+1) { background-color: shade($red, 15%); }
     li:first-child { background-color: transparent; }
 }
 .skillsTitle {
-  @include bigTitle(shade($red, 10%), -2px, 3px);
+  @include bigTitle(shade($red, 10%), -2px, 3px, $black);
   font-size: 24px;
 }
 
@@ -315,14 +315,27 @@ header {
   color: #fff;
   @include flatTextShadow($green, -1px, 2px);
   @include box-shadow(shade($green, 30%) 0 10px 0 0);
-    article {
-      margin: 0 20px 20px 0;
-      float: left;
-        &:nth-child(4n+1) { margin: 0 0 20px 0; }
+    section {
+      margin-bottom: 20px;
+      overflow: hidden;
+        li {
+          margin: 0 20px 20px 0;
+          float: left;
+          &:nth-child(2n) { margin-right: 0; }
+        }
     }
     .bigTitle { @include bigTitle($green, -3px, 4px); }
     .sectionTitle { @include sectionTitle($green); }
     img { @include imgBorder($green, 10px); }
+}
+
+.workIntro {
+  display: block;
+  width: 300px;
+}
+.workShowcase {
+  display: block;
+  width: 640px;
 }
 
 //

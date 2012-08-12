@@ -19,9 +19,9 @@
 @mixin sectionTitleBg($color) {
   background-color: rgba(shade($color, 15%), 1);
 }
-@mixin bigTitle($color, $dx, $dy, $text: $black) {
+@mixin bigTitle($color, $dx, $dy, $text: #fff) {
   margin: 0 0 15px;
-  font: normal 42px/100% 'Oswald', sans-serif;
+  font: normal 42px/110% 'Oswald', sans-serif;
   @include flatTextShadow($color, $dx, $dy);
   text-transform: uppercase;
   color: $text;
