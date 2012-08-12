@@ -18,9 +18,14 @@ Features
 
 [jQuery](http://jquery.com "jquery")  
 &nbsp;&nbsp;&nbsp;&nbsp;[Modernizr](http://modernizr "Modernizr")  
-&nbsp;&nbsp;&nbsp;&nbsp;[Curtains](http://curtain.victorcoulon.fr/ "Curtains")
+&nbsp;&nbsp;&nbsp;&nbsp;[Curtains](http://curtain.victorcoulon.fr/ "Curtains")  
 &nbsp;&nbsp;&nbsp;&nbsp;[Cycle](jquery.malsup.com/cycle/ "Cycle")
 
 [Gravatar](http://gravatar/ "Gravatar")
 
+Description
+-----------
 
+Designed organically in browser, it was fun just letting the design make itself as I went along.
+
+_**NOTE** I originally used [Google Webfonts](www.google.com/webfonts "Google Webfonts") to provide the fonts for the site but encountered problems with IE and iPhone 3 Safari. So to fix it I now use local font files and @font-face instead._ 
