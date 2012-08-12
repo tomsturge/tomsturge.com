@@ -9,10 +9,10 @@ Features
 
 Fonts:
 
-[Lobster](http://www.impallari.com/lobster/ "Lobster")  
-[Oswald](http://www.fontsquirrel.com/fonts/oswald "Oswald")  
-[Source Sans Pro](http://blogs.adobe.com/typblography/2012/08/source-sans-pro.html "Source Sans Pro")  
-[Custom Fontello](http://fontello.com/ "Fontello")  
+[Lobster](http://www.impallari.com/lobster/ "Lobster") by [Impallari Type](www.impallari.com/ "Impallari Type")  
+[Oswald](http://www.fontsquirrel.com/fonts/oswald "Oswald") by [Vernon Adams](https://plus.google.com/107807505287232434305/posts "Vernon Adam")  
+[Source Sans Pro](http://blogs.adobe.com/typblography/2012/08/source-sans-pro.html "Source Sans Pro") by [Adobe](http://Adobe.com "Adobe")    
+[Custom Fontello Build](http://fontello.com/ "Fontello") by [Fontello](http://github.com/fontello "Fontello")  
 
 Tools:
 
