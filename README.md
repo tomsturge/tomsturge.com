@@ -1,7 +1,7 @@
 Portfolio of Thomas Sturge
 ==========================
 
-This is the code that makes up the new portfolio for [Thomas Sturge](http://portfolio.tomsturge.co.uk/ "Portfolio of Thomas Sturge").
+This is the code that makes up my new [Portfolio](http://tomsturge.co.uk/ "Portfolio of Thomas Sturge").
 
 
 Features
