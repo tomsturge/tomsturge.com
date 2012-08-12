@@ -348,7 +348,7 @@ header h1 em {
   -moz-box-shadow: #cc5247 0 5px 0 0 inset, #cc5247 0 -5px 0 0 inset, #cc5247 5px 0 0 0 inset, #cc5247 -5px 0 0 0 inset;
   box-shadow: #cc5247 0 5px 0 0 inset, #cc5247 0 -5px 0 0 inset, #cc5247 5px 0 0 0 inset, #cc5247 -5px 0 0 0 inset;
 }
-.devSkills h4, .designSkills h4 {
+.devSkills h3, .designSkills h3 {
   margin: 0 0 15px;
   font: normal 42px/110% "Oswald", sans-serif;
   text-shadow: #c24e44 -2px 3px 0;
