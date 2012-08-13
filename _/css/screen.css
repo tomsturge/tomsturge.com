@@ -411,16 +411,24 @@ header h1 em {
   margin-bottom: 20px;
   overflow: hidden;
 }
-#work section li {
-  margin: 0 20px 20px 0;
+#work section > ul > li {
+  width: 310px;
+  margin: 0 15px 15px 0;
   float: left;
   position: relative;
 }
-#work section li:nth-child(2n) {
+#work section > ul > li:nth-child(3n) {
   margin-right: 0;
 }
-#work section li div {
-  background-color: rgba(114, 178, 123, 0.6);
+#work section > ul > li p {
+  margin-bottom: 10px;
+}
+#work img {
+  border: 10px solid #609768;
+}
+
+.hoverBox {
+  background-color: rgba(135, 189, 142, 0.8);
   display: none;
   width: 270px;
   height: 165px;
@@ -429,37 +437,27 @@ header h1 em {
   top: 10px;
   left: 10px;
 }
-#work section li div h4 {
+.hoverBox h4 {
   margin: 0;
   margin: 0 0 15px;
   font: normal 42px/110% "Oswald", sans-serif;
   text-shadow: #609768 -2px 3px 0;
   text-transform: uppercase;
   color: white;
-  font-size: 26px;
+  font-size: 24px;
 }
-#work section li div ul {
+.hoverBox ul {
   position: absolute;
   bottom: 10px;
   left: 5px;
 }
-#work section li div li {
-  background-color: #72b27b;
+.hoverBox ul li {
+  width: auto;
+  float: left;
+  background-color: #609768;
   margin: 0 0 5px 5px;
   padding: 2px 5px;
-}
-#work img {
-  border: 10px solid #609768;
-}
-
-.workIntro {
-  display: block;
-  width: 300px;
-}
-
-.workShowcase {
-  display: block;
-  width: 640px;
+  text-shadow: #518058 -1px 2px 0;
 }
 
 #contact {
