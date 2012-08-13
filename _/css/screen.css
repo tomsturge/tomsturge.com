@@ -107,9 +107,17 @@ body {
   margin: 0 auto;
 }
 
+::selection, ::-moz-selection {
+  background: #333333;
+  color: #fff;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+a:hover {
+  color: #434343;
 }
 
 article p {
@@ -180,6 +188,9 @@ article p {
   text-align: center;
   text-shadow: #3c3c3c -2px 3px 0;
 }
+.mainNav ul li a:hover {
+  color: #fff;
+}
 .mainNav ul li:nth-child(1) a:hover {
   background-color: #4e85bd;
   -webkit-box-shadow: #34597e 0 3px 0 0 inset, #34597e 0 -3px 0 0 inset, #34597e 3px 0 0 0 inset, #34597e -3px 0 0 0 inset;
@@ -223,7 +234,7 @@ article p {
 
 header {
   width: 960px;
-  margin: -175px 0 0 -480px;
+  margin: -142px 0 0 -480px;
   padding: 0 0 30px;
   font-family: 'Oswald', sans-serif;
   color: #fff;
@@ -348,7 +359,7 @@ header h1 em {
   -moz-box-shadow: #cc5247 0 5px 0 0 inset, #cc5247 0 -5px 0 0 inset, #cc5247 5px 0 0 0 inset, #cc5247 -5px 0 0 0 inset;
   box-shadow: #cc5247 0 5px 0 0 inset, #cc5247 0 -5px 0 0 inset, #cc5247 5px 0 0 0 inset, #cc5247 -5px 0 0 0 inset;
 }
-.devSkills h3, .designSkills h3 {
+.devSkills h4, .designSkills h4 {
   margin: 0 0 15px;
   font: normal 42px/110% "Oswald", sans-serif;
   text-shadow: #c24e44 -2px 3px 0;
@@ -402,9 +413,39 @@ header h1 em {
 #work section li {
   margin: 0 20px 20px 0;
   float: left;
+  position: relative;
 }
 #work section li:nth-child(2n) {
   margin-right: 0;
+}
+#work section li div {
+  background-color: rgba(114, 178, 123, 0.6);
+  display: none;
+  width: 270px;
+  height: 165px;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#work section li div h4 {
+  margin: 0;
+  margin: 0 0 15px;
+  font: normal 42px/110% "Oswald", sans-serif;
+  text-shadow: #609768 -2px 3px 0;
+  text-transform: uppercase;
+  color: white;
+  font-size: 26px;
+}
+#work section li div ul {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+}
+#work section li div li {
+  background-color: #72b27b;
+  margin: 0 0 5px 5px;
+  padding: 2px 5px;
 }
 #work img {
   border: 10px solid #609768;
@@ -456,9 +497,6 @@ footer article {
 footer a {
   font-size: 18px;
   color: #fff;
-}
-footer a:hover {
-  color: #434343;
 }
 
 .socialIcons {

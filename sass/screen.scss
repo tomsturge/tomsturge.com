@@ -109,9 +109,15 @@ body {
   margin: 0 auto;
 }
 
+::selection, ::-moz-selection {
+  background: $black;
+  color: #fff;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+  &:hover { color: tint($black, 8%); }
 }
 
 article p { margin-bottom: 20px; }
@@ -169,6 +175,7 @@ article p { margin-bottom: 20px; }
               padding: 8px 0 8px;
               text-align: center;
               @include flatTextShadow(tint($black, 10%), -2px, 3px);
+              &:hover { color: #fff; }
             }
             &:nth-child(1) a:hover { @include navHover($blue); }
             &:nth-child(2) a:hover { @include navHover($red); }
@@ -200,7 +207,7 @@ article p { margin-bottom: 20px; }
 #front { background-color: $blue; }
 header {
   width: 960px;
-  margin: -175px 0 0 -480px; padding: 0 0 30px;
+  margin: -142px 0 0 -480px; padding: 0 0 30px;
   font-family: 'Oswald', sans-serif;
   color: #fff;
   text-align: center;
@@ -289,7 +296,7 @@ header {
 }
 
 .devSkills, .designSkills {
-    h3  {
+    h4  {
       @include bigTitle(shade($red, 10%), -2px, 3px, $black);
       font-size: 24px;
     }
@@ -324,7 +331,29 @@ header {
         li {
           margin: 0 20px 20px 0;
           float: left;
+          position: relative;
           &:nth-child(2n) { margin-right: 0; }
+            div {
+              background-color: rgba($green, 0.6);
+              display: none;
+              width: 270px; height: 165px;
+              padding: 10px;
+              position: absolute;
+              top: 10px; left: 10px;
+                h4 {
+                  margin: 0;
+                  @include bigTitle($green, -2px, 3px);
+                  font-size: 26px;
+                }
+                ul {
+                  position: absolute;
+                  bottom: 10px; left: 5px;
+                }
+                li {
+                  background-color: $green;
+                  margin: 0 0 5px 5px; padding: 2px 5px;                   
+                }
+            }
         }
     }
     img { @include imgBorder($green, 10px); }
@@ -358,7 +387,6 @@ footer {
     a {
       font-size: 18px;
       color: #fff;
-        &:hover { color: tint($black, 8%); }
     }
 }
 
