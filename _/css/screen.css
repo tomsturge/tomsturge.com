@@ -110,6 +110,7 @@ body {
 ::selection, ::-moz-selection {
   background: #333333;
   color: #fff;
+  text-shadow: none;
 }
 
 a {
@@ -234,7 +235,7 @@ article p {
 
 header {
   width: 960px;
-  margin: -142px 0 0 -480px;
+  margin: -159px 0 0 -480px;
   padding: 0 0 30px;
   font-family: 'Oswald', sans-serif;
   color: #fff;

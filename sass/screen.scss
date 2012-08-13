@@ -112,6 +112,7 @@ body {
 ::selection, ::-moz-selection {
   background: $black;
   color: #fff;
+  @include text-shadow(none);
 }
 
 a {
@@ -207,7 +208,7 @@ article p { margin-bottom: 20px; }
 #front { background-color: $blue; }
 header {
   width: 960px;
-  margin: -142px 0 0 -480px; padding: 0 0 30px;
+  margin: -159px 0 0 -480px; padding: 0 0 30px;
   font-family: 'Oswald', sans-serif;
   color: #fff;
   text-align: center;
