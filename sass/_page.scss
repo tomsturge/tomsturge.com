@@ -15,32 +15,33 @@
 //
 
 .mainNav {
+  $baseSize: 18px;
   background-color: $grey;
   width: 100%;
-  padding: 10px 0;
-  font: normal 18px/100% $headingFont;
+  padding: calcEm(10px, $baseSize) 0;
+  font: normal #{calcEm($baseSize)}/100% $headingFont; //18px
   text-transform: uppercase;
-  position: fixed;
+  position: fixed;  
   top: 0;
   z-index: 1000;
     ul {
-      width: 505px;
+      width: 28.056em;
       margin: 0 auto;
       overflow: hidden;
       border-top: 1px solid #444; border-bottom: 1px solid #444;
         li {
-          width: 105px;
-          padding: 5px 10px;
+          width: 5.833em;
+          padding: calcEm(5px, $baseSize) calcEm(10px, $baseSize);
           border-right: 1px solid #444;
           float: left;
           overflow: hidden;
             &:last-child { border-right: none; }
             a {
-              width: 105px;
+              width: 100%;
               display:block;
-              padding: 8px 0 8px;
+              padding: calcEm(8px, $baseSize) 0 calcEm(8px, $baseSize);
               text-align: center;
-              @include flatTextShadow(tint($black, 10%), -2px, 3px);
+              @include flatTextShadow(tint($black, 10%), calcEm(-2px, $baseSize), calcEm(3px, $baseSize));
               &:hover { color: #fff; }
             }
             &:nth-child(1) a:hover { @include navHover($blue); }

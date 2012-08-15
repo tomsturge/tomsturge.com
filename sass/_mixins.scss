@@ -40,27 +40,27 @@
 @mixin sectionTitleBg($color) {
   background-color: rgba(shade($color, 15%), 1);
 }
-@mixin bigTitle($color, $dx, $dy, $text: #fff) {
-  margin: 0 0 15px;
-  font: normal 42px/110% $headingFont;
-  @include flatTextShadow($color, $dx, $dy);
+@mixin bigTitle( $color, $dx, $dy, $baseSize: 42px, $text: #fff) {
+  margin: 0 0 calcEm(15px, $baseSize);
+  font-family: $headingFont;
+  @include fontSize($baseSize/1px);
+  line-height: 110%;
+  @include flatTextShadow($color, calcEm($dx, $baseSize), calcEm($dy, $baseSize));
   text-transform: uppercase;
   color: $text;
 }
 @mixin sectionTitle($color) {
+  $baseSize: 33px;
   width: 50%;
-  margin: 0 auto 25px;
-  font: {
-    family: $headingFont;
-    size: 33px;
-    weight: 600;
-  }
+  margin: 0 auto calcEm(25px, $baseSize);
+  font-family: $headingFont;
+  @include fontSize($baseSize/1px);
   color: #fff;
-  padding: 20px 0;
+  padding: calcEm(20px, $baseSize) 0;
   text-align: center;
   text-transform: uppercase;
   @include sectionTitleBg($color);
-  @include flatTextShadow(shade($color, 15%), -3px, 4px)
+  @include flatTextShadow(shade($color, 15%), calcEm(-3px, $baseSize), calcEm(4px, $baseSize));
 }
 
 //
@@ -106,7 +106,7 @@
 //=============================================================================
 //
 
-@mixin fontSize($fontSize: 16){
+@mixin fontSize($fontSize: 18){
 font-size : #{$fontSize}px;
 font-size : #{$fontSize / 10}rem; }
 
@@ -134,3 +134,4 @@ visibility : hidden; }
 -moz-user-select : $select;
 -o-user-select : $select;
 user-select : $select; }
+
