@@ -7,3 +7,14 @@
 //  URL: http://tomsturge.co.uk/
 //=============================================================================
 //
+
+.sectionContainer {
+  width: 53.333em; // 960px
+  padding: 100px 0;
+}
+
+header {
+  width: 53.333em; // 960px
+  margin-left: calcEm(-480px);
+}
+

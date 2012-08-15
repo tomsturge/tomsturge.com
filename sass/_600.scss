@@ -8,7 +8,12 @@
 //=============================================================================
 //
 
-.mainNav { 
+.sectionContainer {
+  width: 32.222em; // 580px
+  padding: 100px 0;
+}
+
+.mainNav {
   $baseSize: 18px;
     ul {
       width: 28.056em;
@@ -21,6 +26,21 @@
               padding: calcEm(8px, $baseSize) 0;
               @include flatTextShadow(tint($black, 10%), calcEm(-2px, $baseSize), calcEm(3px, $baseSize));
             }
-        }    
+        }
+    }
+}
+
+
+header {
+  width: 100%; // 580px
+  margin: calcEm(-159px) 0 0 0; padding: 0 0 calcEm(30px);
+    h1 {
+      $baseSize: 90px;
+      width: calcEm(580px, $baseSize);
+        em {
+          $baseSize: 65px;
+          position: absolute;
+          top: calcEm(5px, $baseSize); left: calcEm(10px, $baseSize);
+        }
     }
 }

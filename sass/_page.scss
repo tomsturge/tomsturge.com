@@ -15,15 +15,15 @@
 //
 
 .mainNav {
-  $baseSize: 12px;
+  $baseSize: 15px;
   background-color: $grey;
   width: 100%;
   text-transform: uppercase;
-  position: fixed;  
+  position: fixed;
   top: 0;
   z-index: 1000;
     ul {
-      width: 28.056em;
+      width: 26.66em;
       padding: calcEm(5px, $baseSize) 0;
       font: normal #{calcEm($baseSize)}/100% $headingFont;
       margin: 0 auto;

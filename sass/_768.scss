@@ -8,3 +8,41 @@
 //=============================================================================
 //
 
+header {
+  width: 41.111em; // 740px
+  margin: calcEm(-159px) 0 0 calcEm(-370px); padding: 0 0 calcEm(30px);
+  position: absolute;
+  top: 50%; left: 50%;
+    h1 {
+      $baseSize: 120px;
+      width: calcEm(720px, $baseSize);
+      line-height: 120%;
+      border-bottom: 6px solid #fff;
+      @include box-shadow(rgba(shade($blue, 15%), 1) 0 calcEm(6px, $baseSize) 0 calcEm(-2px, $baseSize));
+        em {
+          $baseSize: 90px;
+          position: absolute;
+          top: calcEm(15px, $baseSize); left: calcEm(-20px, $baseSize);
+        }
+    }
+}
+
+
+.introBox {
+  width: 36.944em; height: 3.333em;
+  display: block;
+    li {
+        $baseSize: 28px;
+        display: block;
+        width: calcEm(665px, $baseSize);
+        margin: calcEm(15px, $baseSize) 0;
+          em {
+            margin-left: calcEm(5px, $baseSize);
+            color: #fff;
+            display: inline;
+            position: relative;
+            top: calcEm(-4px, $baseSize);
+          }
+    }
+}
+

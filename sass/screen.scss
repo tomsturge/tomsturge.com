@@ -26,12 +26,12 @@
 // Variables and Mixins
 @import 'functions';
 @import 'variables';
-@import 'mixins';  
+@import 'mixins';
 
 // Site wide styles (html, body etc)
 @import 'site';
 
-//     
+//
 //=============================================================================
 //  TYPOGRAPHY
 //=============================================================================
@@ -72,11 +72,6 @@
 //=============================================================================
 //
 
-// 480px
-@media only screen and (min-width: 480px) {
-@import '480';
-}
-
 // 600px
 @media only screen and (min-width: 600px) {
 @import '600';
@@ -90,9 +85,4 @@
 // 992px
 @media only screen and (min-width: 992px) {
 @import '992';
-}
-
-// 1382px
-@media only screen and (min-width: 1382px) {
-@import '1382';
 }
