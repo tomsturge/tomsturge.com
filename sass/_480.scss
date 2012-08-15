@@ -7,3 +7,20 @@
 //  URL: http://tomsturge.co.uk/
 //=============================================================================
 //
+
+.mainNav { 
+  $baseSize: 14px;
+    ul {
+      width: 29.2571em;
+      padding: calcEm(10px, $baseSize) 0;
+      font: normal #{calcEm($baseSize)}/100% $headingFont;
+        li {
+          width: 5.833em;
+          padding: calcEm(5px, $baseSize) calcEm(10px, $baseSize);
+            a {
+              padding: calcEm(8px, $baseSize) 0;
+              @include flatTextShadow(tint($black, 10%), calcEm(-2px, $baseSize), calcEm(3px, $baseSize));
+            }
+        }
+    }
+}

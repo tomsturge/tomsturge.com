@@ -15,32 +15,32 @@
 //
 
 .mainNav {
-  $baseSize: 18px;
+  $baseSize: 12px;
   background-color: $grey;
   width: 100%;
-  padding: calcEm(10px, $baseSize) 0;
-  font: normal #{calcEm($baseSize)}/100% $headingFont; //18px
   text-transform: uppercase;
   position: fixed;  
   top: 0;
   z-index: 1000;
     ul {
       width: 28.056em;
+      padding: calcEm(5px, $baseSize) 0;
+      font: normal #{calcEm($baseSize)}/100% $headingFont;
       margin: 0 auto;
       overflow: hidden;
-      border-top: 1px solid #444; border-bottom: 1px solid #444;
         li {
-          width: 5.833em;
-          padding: calcEm(5px, $baseSize) calcEm(10px, $baseSize);
-          border-right: 1px solid #444;
+          border: 1px solid #444;
+          border-left: none;
           float: left;
+          width: 5.95em;
+          padding: calcEm(5px, $baseSize);
           overflow: hidden;
             &:last-child { border-right: none; }
             a {
               width: 100%;
               display:block;
-              padding: calcEm(8px, $baseSize) 0 calcEm(8px, $baseSize);
               text-align: center;
+              padding: calcEm(16px, $baseSize) 0;
               @include flatTextShadow(tint($black, 10%), calcEm(-2px, $baseSize), calcEm(3px, $baseSize));
               &:hover { color: #fff; }
             }
