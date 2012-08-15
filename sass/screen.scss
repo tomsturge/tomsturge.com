@@ -1,11 +1,12 @@
-/*
-===============================================================================
-  The sexy portfolio site for Me, Thomas Sturge
-
-  Author: Thomas Sturge / Arrowhead Desgin
-  Site: Portfolio of Thomas Sturge
-===============================================================================
-*/
+//
+//=============================================================================
+//  The sexy portfolio site for Me, Thomas Sturge
+//
+//  Author: Thomas Sturge / Arrowhead Desgin
+//  Version: 2.1
+//  URL: http://tomsturge.co.uk/
+//=============================================================================
+//
 
 //
 //=============================================================================
@@ -19,12 +20,12 @@
 // Reset
 @import 'reset';
 
-// Variables and Mixins
-@import 'variables';
-@import 'mixins';
-
 // Font-face
 @import 'fonts';
+
+// Variables and Mixins
+@import 'variables';
+@import 'mixins';  
 
 // Site wide styles (html, body etc)
 @import 'site';

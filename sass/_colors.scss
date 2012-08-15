@@ -1,0 +1,21 @@
+//
+//=============================================================================
+//  The sexy portfolio site for Me, Thomas Sturge
+//
+//  Author: Thomas Sturge / Arrowhead Desgin
+//  Version: 2.1
+//  URL: http://tomsturge.co.uk/
+//=============================================================================
+//
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover { color: tint($black, 8%); }
+}
+
+::selection, ::-moz-selection {
+  background: $black;
+  color: #fff;
+  @include text-shadow(none);
+}
