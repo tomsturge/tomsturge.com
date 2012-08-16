@@ -15,7 +15,7 @@
 //
 
 .sectionContainer {
-  width: 20em;
+  width: 17.778em; // 320px
   margin: 0 auto; padding: 4.4444em 0;
   line-height: 120%;
   overflow: hidden;
@@ -30,22 +30,20 @@
 #front { background-color: $blue; }
 header {
   width: 100%;
-  margin: calcEm(-235px) 0 0; padding: 0;
+  margin: 0; padding: 0;
   font-family: $headingFont;
   color: #fff;
   text-align: center;
-  position: absolute;
-  top: 50%;
     h1 {
-      $baseSize: 90px;
-      width: calcEm(350px, $baseSize);
-      margin: 0 auto; padding: calcEm(80px, $baseSize) 0 calcEm(25px, $baseSize);
+      $baseSize: 75px;
+      width: calcEm(320px, $baseSize);
+      margin: 0 auto; padding: calcEm(100px, $baseSize) 0 calcEm(25px, $baseSize);
       position: relative;
       @include flatTextShadow($blue, calcEm(-5px,$baseSize), calcEm(8px, $baseSize));
       font-size: calcEm($baseSize);
       line-height: 105%;
         em {
-          $baseSize: 65px;
+          $baseSize: 55px;
           font: normal #{$baseSize}/110% $cursiveFont;
           display: block;
         }
@@ -107,7 +105,7 @@ header {
   @include flatTextShadow($red, 0.063em, 0.125em);
   @include box-shadow($red 0 10px 0 0);
     section { 
-      width: 20em;// 360px
+      width: 100%;// 360px
       float: none; }
     aside { display: none; }
     img { @include imgBorder($red, 15px); }
@@ -127,7 +125,7 @@ header {
       @include bigTitle(shade($red, 10%), -2px, 3px, 24px, $black);
     }
   width: 14.444em;
-  margin: 0 auto;
+  margin: 0;
   padding: 0.938em;
   @include multiBoxShadow($red, 20%, 0.313em);
     li {
@@ -213,7 +211,7 @@ header {
 footer {
   @include box-shadow(shade($purple, 30%) 0 10px 0 inset);
   @include flatTextShadow($purple, 0.056em, 0.111em);
-    article { width: 20em; }
+    article { width: 17.778em; }
     a {
       color: #fff;
     }
@@ -231,7 +229,7 @@ footer {
         $baseSize: 22px;
         background-color: shade($purple, 10%);
         width: calcEm(65px, $baseSize); height: calcEm(40px, $baseSize);
-        margin-right: calcEm(25px, $baseSize);
+        margin-right: calcEm(15px, $baseSize);
         padding-top: calcEm(20px, $baseSize);
         font: {
           family: 'icons';

@@ -15,7 +15,7 @@
 //
 
 .mainNav {
-  $baseSize: 15px;
+  $baseSize: 14px;
   background-color: $grey;
   width: 100%;
   text-transform: uppercase;
@@ -23,8 +23,8 @@
   top: 0;
   z-index: 1000;
     ul {
-      width: 26.66em;
-      padding: calcEm(5px, $baseSize) 0;
+      width: 26.7em;
+      padding: 0;
       font: normal #{calcEm($baseSize)}/100% $headingFont;
       margin: 0 auto;
       overflow: hidden;
@@ -32,15 +32,15 @@
           border: 1px solid #444;
           border-left: none;
           float: left;
-          width: 5.95em;
-          padding: calcEm(5px, $baseSize);
+          width: 6.593em;
+          padding: 0;
           overflow: hidden;
-            &:last-child { border-right: none; }
+          &:nth-child(4n) { border-right: none; }
             a {
               width: 100%;
               display:block;
               text-align: center;
-              padding: calcEm(16px, $baseSize) 0;
+              padding: calcEm(15px, $baseSize) 0;
               @include flatTextShadow(tint($black, 10%), calcEm(-2px, $baseSize), calcEm(3px, $baseSize));
               &:hover { color: #fff; }
             }

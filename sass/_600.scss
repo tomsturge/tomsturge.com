@@ -34,9 +34,12 @@
 header {
   width: 100%; // 580px
   margin: calcEm(-159px) 0 0 0; padding: 0 0 calcEm(30px);
+  position: absolute;
+  top: 50%;
     h1 {
       $baseSize: 90px;
       width: calcEm(580px, $baseSize);
+      padding: calcEm(80px, $baseSize) 0 calcEm(25px, $baseSize);
         em {
           $baseSize: 65px;
           position: absolute;
@@ -60,7 +63,7 @@ header {
 //*****************
 
 
-.skillsList {
+.skillLists {
   width: 11.667em;
   float: right;
 }
@@ -71,4 +74,13 @@ header {
 
 footer {
   article { width: 32.222em;}
+}
+
+.socialIcons {
+    li {
+      a {
+        $baseSize: 22px;
+        margin-right: calcEm(25px, $baseSize);
+      }
+    }  
 }
