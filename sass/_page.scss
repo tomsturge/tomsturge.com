@@ -23,7 +23,7 @@
   top: 0;
   z-index: 1000;
     ul {
-      width: 26.7em;
+      width: 22.858em;
       padding: 0;
       font: normal #{calcEm($baseSize)}/100% $headingFont;
       margin: 0 auto;
@@ -32,7 +32,7 @@
           border: 1px solid #444;
           border-left: none;
           float: left;
-          width: 6.593em;
+          width: 5.661em;
           padding: 0;
           overflow: hidden;
           &:nth-child(4n) { border-right: none; }
@@ -40,7 +40,7 @@
               width: 100%;
               display:block;
               text-align: center;
-              padding: calcEm(15px, $baseSize) 0;
+              padding: calcEm(17px, $baseSize) 0;
               @include flatTextShadow(tint($black, 10%), calcEm(-2px, $baseSize), calcEm(3px, $baseSize));
               &:hover { color: #fff; }
             }

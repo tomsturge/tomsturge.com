@@ -21,6 +21,11 @@ header {
       @include box-shadow(rgba(shade($blue, 15%), 1) 0 calcEm(6px, $baseSize) 0 calcEm(-2px, $baseSize));
         em {
           $baseSize: 90px;
+          font: {
+            size: calcEm($baseSize, 120px);
+            family: $cursiveFont;
+          } 
+          line-height: 110%;;
           position: absolute;
           top: calcEm(15px, $baseSize); left: calcEm(-20px, $baseSize);
         }

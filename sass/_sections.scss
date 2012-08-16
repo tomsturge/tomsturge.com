@@ -37,14 +37,18 @@ header {
     h1 {
       $baseSize: 75px;
       width: calcEm(320px, $baseSize);
-      margin: 0 auto; padding: calcEm(100px, $baseSize) 0 calcEm(25px, $baseSize);
+      margin: 0 auto; padding: calcEm(80px, $baseSize) 0 calcEm(25px, $baseSize);
       position: relative;
       @include flatTextShadow($blue, calcEm(-5px,$baseSize), calcEm(8px, $baseSize));
       font-size: calcEm($baseSize);
       line-height: 105%;
         em {
           $baseSize: 55px;
-          font: normal #{$baseSize}/110% $cursiveFont;
+          font: {
+            size: calcEm($baseSize, 75px);
+            family: $cursiveFont;
+          } 
+          line-height: 110%;
           display: block;
         }
     }

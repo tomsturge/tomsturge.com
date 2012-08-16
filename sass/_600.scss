@@ -42,6 +42,11 @@ header {
       padding: calcEm(80px, $baseSize) 0 calcEm(25px, $baseSize);
         em {
           $baseSize: 65px;
+          font: {
+            size: calcEm($baseSize, 90px);
+            family: $cursiveFont;
+          } 
+          line-height: 110%;
           position: absolute;
           top: calcEm(5px, $baseSize); left: calcEm(10px, $baseSize);
         }
