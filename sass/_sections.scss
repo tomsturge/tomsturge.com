@@ -99,15 +99,17 @@ header {
 
 #about {
     h2 { @include sectionTitle($red); }
-    h3 { @include bigTitle($red, -3px, 4px); }
+    h3 { @include bigTitle($red, -3px, 4px, 32px); }
   background-color: $red;
   color: #fff;
   margin-bottom: calcEm(4px);
   border-bottom: 5px dashed shade($red, 25%);
   @include flatTextShadow($red, 0.063em, 0.125em);
   @include box-shadow($red 0 10px 0 0);
-    article { width: 33.333em; }
-    aside { width: 17.778em; }
+    section { 
+      width: 20em;// 360px
+      float: none; }
+    aside { display: none; }
     img { @include imgBorder($red, 15px); }
     em { color: tint($black, 8%); }
 }
@@ -125,6 +127,7 @@ header {
       @include bigTitle(shade($red, 10%), -2px, 3px, 24px, $black);
     }
   width: 14.444em;
+  margin: 0 auto;
   padding: 0.938em;
   @include multiBoxShadow($red, 20%, 0.313em);
     li {
@@ -135,6 +138,9 @@ header {
     li:first-child { background-color: transparent; }
 }
 
+.devSkills {
+  margin-bottom: 15px;
+}
 
 //
 //=============================================================================

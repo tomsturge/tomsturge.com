@@ -18,3 +18,35 @@ header {
   margin-left: calcEm(-480px);
 }
 
+#about {
+  h3 { @include bigTitle($red, -3px, 4px); }
+  section { 
+    width: 33.333em;
+    float: left; 
+      article {
+        width: 33.333em;
+        float: none;
+      }
+  }
+  aside { 
+    width: 17.778em; 
+    display: block; 
+    float: right;
+  }
+}
+
+//*****************
+//  7.1 SKILL LISTS
+//*****************
+
+.devSkills, .designSkills {
+  width: 14.167em;
+  margin: 0;
+}
+
+.devSkills {
+  float: left;
+}
+.designSkills {
+  float: right;
+}

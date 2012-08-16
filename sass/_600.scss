@@ -44,3 +44,27 @@ header {
         }
     }
 }
+
+#about {
+    section {
+      width: 100%;
+        article {
+          width: 20em;
+          float: left;
+        }
+    }
+}
+
+//*****************
+//  7.1 SKILL LISTS
+//*****************
+
+
+.skillsList {
+  width: 11.667em;
+  float: right;
+}
+
+.devSkills, .designSkills {
+  width: 9.222em;
+}
