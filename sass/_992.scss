@@ -50,3 +50,15 @@ header {
 .designSkills {
   float: right;
 }
+
+
+#contact {
+    h3 { @include bigTitle($purple, -3px, 4px); }
+}
+
+footer {
+  article { width: 25em; }
+}
+
+.contactEmail { float: left; }
+.contactNet { float: right; }

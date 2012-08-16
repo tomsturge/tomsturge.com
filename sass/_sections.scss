@@ -206,14 +206,14 @@ header {
 
 #contact {
     h2 { @include sectionTitle($purple); }
-    h3 { @include bigTitle($purple, -3px, 4px); }
+    h3 { @include bigTitle($purple, -3px, 4px, 32px); }
   background-color: $purple;
 }
 
 footer {
   @include box-shadow(shade($purple, 30%) 0 10px 0 inset);
   @include flatTextShadow($purple, 0.056em, 0.111em);
-    article { width: 25em; }
+    article { width: 20em; }
     a {
       color: #fff;
     }
