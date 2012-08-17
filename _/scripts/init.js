@@ -8,17 +8,31 @@ $(document).ready(function() {
   });
 
   $('.introBox').cycle({
-    fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+    fx: 'fade'
   });
   
-  var workBox = '.workShowcase li'
+  var workBox = '.slide'
   
   $(workBox).hover(function (){
-    $(this).children("div").stop().fadeIn('fast');
+    $(this).find(".hoverBox").stop().fadeIn('fast');
   },
   function (){
-    $(this).children("div").stop().fadeOut('fast');
+    $(this).find(".hoverBox").stop().fadeOut('fast');
   });
-    
+  
+  $('.workSlider').iosSlider({
+    snapToChildren: true,
+    scrollbar: true,
+    scrollbarHide: false,
+    desktopClickDrag: true,
+    scrollbarDrag: true,
+    scrollbarLocation: 'bottom',
+    scrollbarHeight: '15px', 
+    scrollbarBackground: '#609768',
+    scrollbarBorderRadius: '0',
+    scrollbarOpacity: '1'
+  }); // #518058'
+  
+  
 });
 

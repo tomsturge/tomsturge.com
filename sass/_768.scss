@@ -25,7 +25,7 @@ header {
             size: calcEm($baseSize, 120px);
             family: $cursiveFont;
           } 
-          line-height: 110%;;
+          line-height: 110%;
           position: absolute;
           top: calcEm(15px, $baseSize); left: calcEm(-20px, $baseSize);
         }

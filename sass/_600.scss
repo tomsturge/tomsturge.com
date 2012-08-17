@@ -39,7 +39,6 @@ header {
     h1 {
       $baseSize: 90px;
       width: calcEm(580px, $baseSize);
-      padding: calcEm(80px, $baseSize) 0 calcEm(25px, $baseSize);
         em {
           $baseSize: 65px;
           font: {

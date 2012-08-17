@@ -15,8 +15,8 @@
 //
 
 .sectionContainer {
-  width: 17.778em; // 320px
-  margin: 0 auto; padding: 4.4444em 0;
+  width: 16.667em; // 320px
+  margin: 0 auto; padding: 4.4444em 0.556em;
   line-height: 120%;
   overflow: hidden;
 }
@@ -34,6 +34,9 @@ header {
   font-family: $headingFont;
   color: #fff;
   text-align: center;
+  margin: calcEm(-160px) 0 0; padding: 0 0 calcEm(30px);
+  position: absolute;
+  top: 50%;
     h1 {
       $baseSize: 75px;
       width: calcEm(320px, $baseSize);
@@ -50,6 +53,7 @@ header {
           } 
           line-height: 110%;
           display: block;
+          @include flatTextShadow($blue, calcEm(-4px,$baseSize), calcEm(6px, $baseSize));
         }
     }
 }
@@ -152,7 +156,7 @@ header {
 
 #work {
     h2 { @include sectionTitle($green); }
-    h3 { @include bigTitle($green, -3px, 4px); }
+    h3 { @include bigTitle($green, -3px, 4px, 32px); }
   background-color: $green;
   color: #fff;
   @include flatTextShadow($green, 0.063em, 0.125em);
@@ -162,10 +166,6 @@ header {
       overflow: hidden;
         > ul {
             > li {
-              width: 17.150em;
-              margin: 0 0.938em 0.938em 0;
-              float: left;
-              position: relative;
               &:nth-child(3n) { margin-right: 0; }
               p {
                 margin-bottom: 0.625em;
@@ -173,13 +173,42 @@ header {
             }
         }
     }
-    img { @include imgBorder($green, 10px); }
+    img { 
+      width: 15.556em;
+      @include imgBorder($green, 10px); }
 }
+
+//*****************
+//  WorkSlider
+//*****************
+
+.workSlider {
+  width: 100%;
+  height: 12.889em;
+  position: relative;
+  top: 0; left: 0;
+  overflow: hidden;
+    .slider {
+      width: 100%;
+      height: 100%;
+        .slide {
+          width: 17.150em;
+          height: 16.667em;
+          margin: 0 0.938em 0.938em 0;
+          position: relative;
+        }
+    }
+}
+
+//*****************
+//  Hover Box
+//*****************
+
 
 .hoverBox {
   background-color: rgba(tint($green, 15%), 0.8);
   display: none;
-  width: 15em; height: 9.167em;
+  width: 14.444em; height: 8.889em;
   padding: 0.556em;
   position: absolute;
   top: 10px; left: 10px;
@@ -215,7 +244,7 @@ header {
 footer {
   @include box-shadow(shade($purple, 30%) 0 10px 0 inset);
   @include flatTextShadow($purple, 0.056em, 0.111em);
-    article { width: 17.778em; }
+    article { width: 100%; }
     a {
       color: #fff;
     }
@@ -233,7 +262,7 @@ footer {
         $baseSize: 22px;
         background-color: shade($purple, 10%);
         width: calcEm(65px, $baseSize); height: calcEm(40px, $baseSize);
-        margin-right: calcEm(15px, $baseSize);
+        margin-right: calcEm(10px, $baseSize);
         padding-top: calcEm(20px, $baseSize);
         font: {
           family: 'icons';

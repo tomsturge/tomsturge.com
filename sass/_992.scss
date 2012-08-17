@@ -39,6 +39,10 @@ header {
 //  7.1 SKILL LISTS
 //*****************
 
+.skillLists {
+  width: 100%;
+}
+
 .devSkills, .designSkills {
   width: 14.167em;
   margin: 0;
@@ -49,6 +53,14 @@ header {
 }
 .designSkills {
   float: right;
+}
+
+#work {
+    img { width: 16.111em; }
+}
+
+.hoverBox {
+  width: 15em;
 }
 
 
