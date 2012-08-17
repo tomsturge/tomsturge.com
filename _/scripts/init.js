@@ -13,11 +13,9 @@ $(document).ready(function() {
   
   var workBox = '.slide'
   
-  $(workBox).hover(function (){
-    $(this).find(".hoverBox").stop().fadeIn('fast');
-  },
-  function (){
-    $(this).find(".hoverBox").stop().fadeOut('fast');
+  $(workBox).click(function (){
+    $(this).find(".hoverBox").fadeIn('fast')
+                             .delay(5000).fadeOut('fast');
   });
   
   $('.workSlider').iosSlider({
@@ -27,11 +25,11 @@ $(document).ready(function() {
     desktopClickDrag: true,
     scrollbarDrag: true,
     scrollbarLocation: 'bottom',
-    scrollbarHeight: '15px', 
-    scrollbarBackground: '#609768',
+    scrollbarHeight: '10px', 
+    scrollbarBackground: '#518058',
     scrollbarBorderRadius: '0',
-    scrollbarOpacity: '1'
-  }); // #518058'
+    scrollbarOpacity: '0.6'
+  });
   
   
 });
