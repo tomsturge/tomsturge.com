@@ -20,17 +20,17 @@ header {
 
 #about {
   h3 { @include bigTitle($red, -3px, 4px); }
-  section { 
+  section {
     width: 33.333em;
-    float: left; 
+    float: left;
       article {
         width: 33.333em;
         float: none;
       }
   }
-  aside { 
-    width: 17.778em; 
-    display: block; 
+  aside {
+    width: 17.778em;
+    display: block;
     float: right;
   }
 }
@@ -68,6 +68,7 @@ header {
 
 .hoverBox {
   width: 15em;
+  height: 9.167em;
 }
 
 
