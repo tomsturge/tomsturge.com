@@ -1,23 +1,16 @@
 $(document).ready(function() {
 
-  $('.curtains').curtain({
-    scrollSpeed: 450,
-    controls: '.menu',
-    curtainLinks: '.curtain-links',
-    enableKeys: false
-  });
-
   $('.introBox').cycle({
     fx: 'fade'
   });
-  
-  var workBox = '.slide'
-  
-  $(workBox).click(function (){
-    $(this).find(".hoverBox").fadeIn('fast')
-                             .delay(5000).fadeOut('fast');
-  });
-  
+
+
+  Modernizr.load([{
+    test: 1025 > window.screen.width
+  , yep: "_/scripts/mobilePlugins.js"
+  , nope: "_/scripts/desktopPlugins.js"
+  }]);
+
   $('.workSlider').iosSlider({
     snapToChildren: true,
     scrollbar: true,
@@ -25,12 +18,32 @@ $(document).ready(function() {
     desktopClickDrag: true,
     scrollbarDrag: true,
     scrollbarLocation: 'bottom',
-    scrollbarHeight: '10px', 
+    scrollbarHeight: '10px',
     scrollbarBackground: '#518058',
     scrollbarBorderRadius: '0',
     scrollbarOpacity: '0.6'
   });
-  
-  
+
+  $('a.scroll').live('click',function(e){
+    e.preventDefault();
+    var target = $(this).attr('href');
+    $.scrollTo(target,{'onAfter':function(){
+      window.location.hash=target},'duration':500,
+    });
+  });
+
+
+  var newWindowHeight = $(window).height();
+  $(".cover").css("min-height", newWindowHeight );
+
+
+  $(window).bind("resize", resizeWindow);
+  function resizeWindow( e ) {
+    var newWindowHeight = $(window).height();
+    $(".cover").css("min-height", newWindowHeight );
+  }
+
+
+
 });
 

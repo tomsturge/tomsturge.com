@@ -45,10 +45,10 @@ header {
           font: {
             size: calcEm($baseSize, 90px);
             family: $cursiveFont;
-          } 
+          }
           line-height: 110%;
           position: absolute;
-          top: calcEm(5px, $baseSize); left: calcEm(10px, $baseSize);
+          top: 0; left: calcEm(10px, $baseSize);
         }
     }
 }
@@ -87,5 +87,5 @@ footer {
         $baseSize: 22px;
         margin-right: calcEm(25px, $baseSize);
       }
-    }  
+    }
 }

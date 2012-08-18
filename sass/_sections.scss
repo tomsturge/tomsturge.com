@@ -16,7 +16,7 @@
 
 .sectionContainer {
   width: 16.667em; // 320px
-  margin: 0 auto; padding: 4.4444em 0.556em;
+  margin: 0 auto; padding: 3.4444em 0.556em;
   line-height: 120%;
   overflow: hidden;
 }
@@ -50,7 +50,7 @@ header {
           font: {
             size: calcEm($baseSize, 75px);
             family: $cursiveFont;
-          } 
+          }
           line-height: 110%;
           display: block;
           @include flatTextShadow($blue, calcEm(-4px,$baseSize), calcEm(6px, $baseSize));
@@ -112,7 +112,7 @@ header {
   border-bottom: 5px dashed shade($red, 25%);
   @include flatTextShadow($red, 0.063em, 0.125em);
   @include box-shadow($red 0 10px 0 0);
-    section { 
+    section {
       width: 100%;// 360px
       float: none; }
     aside { display: none; }
@@ -165,7 +165,7 @@ header {
       margin-bottom: 1.250em;
       overflow: hidden;
     }
-    img { 
+    img {
       width: 15.556em;
       @include imgBorder($green, 10px); }
 }
@@ -187,7 +187,7 @@ header {
         .slide {
           width: 16.667em;
           height: 11em;
-          margin-right: 1.111em;
+          margin: 0 1.111em 1.111em 0;
           position: relative;
         }
     }
