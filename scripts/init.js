@@ -7,8 +7,8 @@ $(document).ready(function() {
 
   Modernizr.load([{
     test: 1025 > window.screen.width
-  , yep: "_/scripts/mobilePlugins.js"
-  , nope: "_/scripts/desktopPlugins.js"
+  , yep: "scripts/mobilePlugins.js"
+  , nope: "scripts/desktopPlugins.js"
   }]);
 
   $('.workSlider').iosSlider({
