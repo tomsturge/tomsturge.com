@@ -27,7 +27,7 @@
 //=============================================================================
 //
 
-#front { background-color: $blue; }
+#front { background-color: $blue; min-height: 100%; }
 header {
   width: 100%;
   margin: 0; padding: 0;
