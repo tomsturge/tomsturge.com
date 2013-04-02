@@ -72,17 +72,18 @@
 //=============================================================================
 //
 
+// 320px
+@media only screen and (max-width: 320px) {
+@import 'responsive/320';
+}
+
 // 600px
-@media only screen and (min-width: 600px) {
-@import '600';
+@media only screen and (max-width: 600px) {
+@import 'responsive/600';
 }
 
 // 768px
-@media only screen and (min-width: 768px) {
-@import '768';
+@media only screen and (max-width: 768px) {
+@import 'responsive/768';
 }
 
-// 992px
-@media only screen and (min-width: 992px) {
-@import '992';
-}
