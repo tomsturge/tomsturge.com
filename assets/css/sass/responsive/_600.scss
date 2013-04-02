@@ -9,7 +9,7 @@
 //
 
 .sectionContainer {
-  width: 32.222em; // 580px
+  width: 32.222em !important; // 580px
   padding: 100px 0;
 }
 
@@ -54,9 +54,9 @@ header {
 }
 
 #about {
-    section {
+    article {
       width: 100%;
-        article {
+        section {
           width: 20em;
           float: left;
         }
@@ -69,8 +69,8 @@ header {
 
 
 .skillLists {
-  width: 11.667em;
-  float: right;
+  width: 11.667em !important;
+  float: right !important;
 }
 
 .devSkills, .designSkills {
@@ -78,7 +78,7 @@ header {
 }
 
 footer {
-  article { width: 32.222em;}
+  section { width: 32.222em;}
 }
 
 .socialIcons {

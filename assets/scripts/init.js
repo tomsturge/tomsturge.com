@@ -1,14 +1,14 @@
 $(document).ready(function() {
 
   $('.introBox').cycle({
-    fx: 'fade'
+    fx: 'scrollUp'
   });
 
 
   Modernizr.load([{
     test: 1025 > window.screen.width
-  , yep: "scripts/mobilePlugins.js"
-  , nope: "scripts/desktopPlugins.js"
+  , yep: "assets/scripts/mobilePlugins.js"
+  , nope: "assets/scripts/desktopPlugins.js"
   }]);
 
   $('.workSlider').iosSlider({

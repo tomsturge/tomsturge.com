@@ -15,8 +15,8 @@
 //
 
 .sectionContainer {
-  width: 16.667em; // 320px
-  margin: 0 auto; padding: 3.4444em 0.556em;
+  width: 53.333em; // 960px
+  margin: 0 auto; padding: 100px 0;
   line-height: 120%;
   overflow: hidden;
 }
@@ -29,12 +29,12 @@
 
 #front { background-color: $blue; min-height: 100%; }
 header {
-  width: 100%;
+  width: 53.333em; // 960px
   margin: 0; padding: 0;
+  margin-left: calcEm(-480px);
   font-family: $headingFont;
   color: #fff;
   text-align: center;
-  margin: calcEm(-160px) 0 0; padding: 0 0 calcEm(30px);
   position: absolute;
   top: 50%;
     h1 {
