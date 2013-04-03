@@ -1,13 +1,12 @@
 //
-//=============================================================================
-//  The sexy portfolio site for Me, Thomas Sturge
+//===============================================
+//  The sexy portfolio site for Thomas Sturge
 //
 //  Author: Thomas Sturge / Arrowhead Desgin
-//  Version: 2.1
+//  Version: 2.5
 //  URL: http://tomsturge.co.uk/
-//=============================================================================
+//===============================================
 //
-
 
 html {
   height: 101%;
@@ -23,10 +22,371 @@ body {
   margin: 0 auto;
 }
 
-.cover {
-  min-height: 100%;
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover { color: tint($black, 8%); }
 }
+
+::selection, ::-moz-selection {
+  background: $black;
+  color: #fff;
+  @include text-shadow(none);
+}
+
+article p { margin-bottom: 20px; }
 
 .left { float: left; }
 .right { float: right; }
 
+//
+//===============================================
+//  SECTION GENERAL
+//===============================================
+//
+
+.sectionContainer {
+  width: 53.333em; // 960px
+  margin: 0 auto; padding: 100px 0;
+  line-height: 120%;
+  overflow: hidden;
+}
+
+//
+//===============================================
+//  SITE NAVIGATION
+//===============================================
+//
+
+.mainNav {
+  $baseSize: 18px;
+  background-color: $grey;
+  width: 100%;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+    ul {
+      width: 28.056em;
+      padding: calcEm(10px, $baseSize) 0;
+      font: normal #{calcEm($baseSize)}/100% $headingFont;
+      margin: 0 auto;
+      overflow: hidden;
+        li {
+          border: 1px solid #444;
+          border-left: none;
+          float: left;
+          width: 5.833em;
+          padding: calcEm(5px, $baseSize) calcEm(10px, $baseSize);
+          overflow: hidden;
+            a {
+              width: 100%;
+              display:block;
+              text-align: center;
+              padding: calcEm(8px, $baseSize) 0;
+              @include flatTextShadow(tint($black, 10%), calcEm(-2px, $baseSize), calcEm(3px, $baseSize));
+                &:hover { color: #fff; }
+            }
+            &:nth-child(4n) { border-right: none; }
+            &:nth-child(1) a:hover { @include navHover($blue); }
+            &:nth-child(2) a:hover { @include navHover($red); }
+            &:nth-child(3) a:hover { @include navHover($green); }
+            &:nth-child(4) a:hover { @include navHover($purple); }
+        }
+    }
+}
+
+//
+//===============================================
+//  FRONT SECTION
+//===============================================
+//
+
+#front { 
+  background-color: $blue;
+    .sectionContainer {
+      padding: 166px 0 100px;
+    }
+}
+header {
+  width: calcEm(600px);
+	font-family: $headingFont;
+  color: #fff;
+  text-align: center;
+    h1 {
+      $baseSize: 75px;
+      @include flatTextShadow($blue, calcEm(-5px,$baseSize), calcEm(8px, $baseSize));
+      font-size: calcEm($baseSize);
+      line-height: 105%;
+        em {
+          $baseSize: 55px;
+          display: block;
+          font: {
+            size: calcEm($baseSize, 75px);
+            family: $cursiveFont;
+          }
+          color: tint($black, 8%);
+          line-height: 110%;
+          @include flatTextShadow($blue, calcEm(-3px,$baseSize), calcEm(3px, $baseSize));
+          position: relative;
+          top: 10px;
+        }
+    }
+    h2 {
+      $baseSize: 28px;
+      margin-top: calcEm(15px, $baseSize);
+      font: {
+        family: $bodyFont;
+        size: $baseSize;
+      }
+      line-height: calcEm(30px, $baseSize);
+      clear: both;
+      @include flatTextShadow($blue, calcEm(-1px,$baseSize), calcEm(3px, $baseSize));
+    }
+}
+
+.introBox {
+  background-color: shade($blue, 15%);
+	width: 100%; height: calcEm(50px);
+  margin: calcEm(20px) 0;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  @include multiBoxShadow($blue, 20%, 0.278em);
+    li {
+      $baseSize: 28px;
+      display: block;
+      width: 100%;
+      margin: calcEm(15px, $baseSize) auto 0; 
+      font-size: $baseSize;
+      text: {
+        align: center;
+        transform: uppercase;
+      }
+      color: tint($black, 8%);
+      position: relative;
+      @include flatTextShadow(shade($blue, 10%), calcEm(-2px, $baseSize), calcEm(3px, $baseSize));
+        span:nth-child(2n+1) { color: tint($red, 40%); }
+        span:nth-child(2n) { color: tint($red, 55%); }
+        em {
+          $baseSize: 22px;
+          margin-left: calcEm(5px, $baseSize);
+          font: {
+            family: $bodyFont;
+            size: $baseSize;
+          }
+          color: #fff;
+          position: relative;
+          top: -5px;
+          @include flatTextShadow(shade($blue, 10%), calcEm(-2px, $baseSize), calcEm(3px, $baseSize));
+        }
+    }
+}
+
+//
+//===============================================
+//  ABOUT SECTION
+//===============================================
+//
+
+#about {
+    h2 { @include sectionTitle($red); }
+    h3 { @include bigTitle($red, -3px, 4px, 32px); }
+  background-color: $red;
+  color: #fff;
+  margin-bottom: calcEm(4px);
+  border-bottom: 5px dashed shade($red, 25%);
+  overflow: hidden;
+  @include flatTextShadow($red, 0.063em, 0.125em);
+  @include box-shadow($red 0 10px 0 0);
+    section {
+      width: 33.333em;
+      float: left;
+        div {
+          width: 33.333em;
+          float: none; 
+        }
+    }
+    aside { 
+      width: 17.778em;
+      display: block;
+      float: right;
+        section {
+          width: auto;
+        }
+    }
+    img { @include imgBorder($red, 15px); }
+    em { color: tint($black, 8%); }
+}
+
+//*****************
+//  SKILL LISTS
+//*****************
+
+.skillLists { 
+  width: 100%;
+  overflow: hidden;
+  ul { background-color: shade($red, 10%); }
+}
+
+.devSkills, .designSkills {
+  width: 14.167em;
+  margin: 0;
+  padding: 0.938em;
+  @include multiBoxShadow($red, 20%, 0.313em);
+    li {
+      padding: 0 0.313em;
+      @include flatTextShadow(shade($red, 15%), 0.063em, 0.125em);
+    }
+    li:nth-child(2n+1) { background-color: shade($red, 15%); }
+    li:first-child { background-color: transparent; }
+    h4  {
+      @include bigTitle(shade($red, 10%), -2px, 3px, 24px, $black);
+    }
+}
+
+.devSkills {
+  float: left;
+}
+.designSkills {
+  float: right;
+}
+
+//
+//===============================================
+//  WORK SECTION
+//===============================================
+//
+
+#work {
+    h2 { @include sectionTitle($green); }
+    h3 { @include bigTitle($green, -3px, 4px, 32px); }
+  background-color: $green;
+  color: #fff;
+  @include flatTextShadow($green, 0.063em, 0.125em);
+  @include box-shadow(shade($green, 30%) 0 0.625em 0 0);
+    section {
+      margin-bottom: 1.250em;
+      overflow: hidden;
+    }
+    img {
+      width: 15.556em;
+      @include imgBorder($green, 10px); }
+}
+
+//*****************
+//  WorkSlider
+//*****************
+
+.workSlider {
+  width: 100%;
+  height: 12.222em;
+  margin-top: 0.556em;
+  position: relative;
+  top: 0; left: 0;
+  overflow: hidden;
+    .slider {
+      width: 100%;
+      height: 100%;
+        .slide {
+          width: 16.667em;
+          height: 11em;
+          margin: 0 1.111em 1.111em 0;
+          position: relative;
+        }
+    }
+}
+
+.scrollbarBlock1, .scrollbarBlock2 {
+  background-color: rgba(shade($green, 15%), 1);
+}
+
+//*****************
+//  Hover Box
+//*****************
+
+.hoverBox {
+  background-color: rgba(tint($green, 15%), 0.8);
+  display: none;
+  width: 14.444em; height: 8.889em;
+  padding: 0.556em;
+  position: absolute;
+  top: 10px; left: 10px;
+    h4 {
+      margin: 0;
+      @include bigTitle($green, -2px, 3px, 24px);
+    }
+    ul {
+      position: absolute;
+      bottom: 10px; left: 5px;
+        li {
+          width: auto;
+          float: left;
+          background-color: shade($green, 15%);
+          margin: 0 0 0.278em 0.278em; padding: 0.111em 0.278em;
+          @include flatTextShadow(shade($green, 15%), 0.056em, 0.111em);
+        }
+    }
+}
+
+//
+//===============================================
+//  CONTACT SECTION
+//===============================================
+//
+
+#contact {
+    h2 { @include sectionTitle($purple); }
+    h3 { @include bigTitle($purple, -3px, 4px, 32px); }
+  background-color: $purple;
+}
+
+footer {
+  @include box-shadow(shade($purple, 30%) 0 10px 0 inset);
+  @include flatTextShadow($purple, 0.056em, 0.111em);
+    article { width: 100%; }
+    a {
+      color: #fff;
+    }
+}
+
+//*****************
+//  SOCIAL ICONS
+//*****************
+
+.socialIcons {
+  text-align: center;
+  list-style: none outside none;
+    li {
+      a {
+        $baseSize: 22px;
+        background-color: shade($purple, 10%);
+        width: calcEm(65px, $baseSize); height: calcEm(40px, $baseSize);
+        margin-right: calcEm(10px, $baseSize);
+        padding-top: calcEm(20px, $baseSize);
+        font: {
+          family: 'icons';
+          size: calcEm(22px);
+          style: normal;
+          weight: normal;
+        }
+        float: left;
+        @include flatTextShadow(shade($purple, 15%), calcEm(-1px, $baseSize), calcEm(2px, $baseSize));
+        @include multiBoxShadow($purple, 20%, calcEm(5px, $baseSize));
+          &:hover { color: #fff;}
+      }
+      &.facebook a:hover {
+        @include socialHover($facebook);
+      }
+      &.twitter a:hover {
+        @include socialHover($twitter);
+      }
+      &.gplus a:hover {
+        @include socialHover($gplus);
+      }
+      &.skype a:hover {
+        @include socialHover($skype);
+      }
+
+    }
+}
