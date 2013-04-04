@@ -97,6 +97,7 @@ $bodyFont: 'Source Sans', sans-serif;
   margin: 0 auto calcEm(25px, $baseSize);
   font-family: $headingFont;
   @include fontSize($baseSize/1px);
+  line-height: 125%;
   color: #fff;
   padding: calcEm(20px, $baseSize) 0;
   text-align: center;

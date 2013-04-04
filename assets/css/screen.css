@@ -61,6 +61,7 @@ body {
   font-size: 18px;
   font-size: 1.8rem;
   margin: 0 auto;
+  padding: 66px 0 0;
 }
 
 a {
@@ -162,18 +163,55 @@ article p {
   text-shadow: #4e4871 -2px 3px 0;
 }
 
+#post {
+  background-color: #ff6759;
+}
+#post h1 {
+  width: 50%;
+  margin: 0 auto 0.75758em;
+  font-family: "Oswald", sans-serif;
+  font-size: 33px;
+  font-size: 3.3rem;
+  line-height: 125%;
+  color: #fff;
+  padding: 0.60606em 0;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #d8574b;
+  text-shadow: #b7493f -0.09091em 0.12121em 0;
+}
+
+#demo {
+  background-color: #72b27b;
+}
+#demo h1 {
+  width: 50%;
+  margin: 0 auto 0.75758em;
+  font-family: "Oswald", sans-serif;
+  font-size: 33px;
+  font-size: 3.3rem;
+  line-height: 125%;
+  color: #fff;
+  padding: 0.60606em 0;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #609768;
+  text-shadow: #518058 -0.09091em 0.12121em 0;
+}
+
 #front {
   background-color: #68b2fc;
 }
 #front .sectionContainer {
-  padding: 166px 0 100px;
+  padding: 100px 0;
 }
 
 header {
-  width: 33.33333em;
+  width: 30em;
   font-family: "Oswald", sans-serif;
   color: #fff;
   text-align: center;
+  float: left;
 }
 header h1 {
   text-shadow: #5897d6 -0.06667em 0.10667em 0;
@@ -200,16 +238,16 @@ header h2 {
 }
 
 .introBox {
-  background-color: #5897d6;
+  background-color: #5da0e2;
   width: 100%;
   height: 2.77778em;
   margin: 1.11111em 0;
   float: left;
   position: relative;
   overflow: hidden;
-  -webkit-box-shadow: #538ec9 0 0.278em 0 0 inset, #538ec9 0 -0.278em 0 0 inset, #538ec9 0.278em 0 0 0 inset, #538ec9 -0.278em 0 0 0 inset;
-  -moz-box-shadow: #538ec9 0 0.278em 0 0 inset, #538ec9 0 -0.278em 0 0 inset, #538ec9 0.278em 0 0 0 inset, #538ec9 -0.278em 0 0 0 inset;
-  box-shadow: #538ec9 0 0.278em 0 0 inset, #538ec9 0 -0.278em 0 0 inset, #538ec9 0.278em 0 0 0 inset, #538ec9 -0.278em 0 0 0 inset;
+  -webkit-box-shadow: #538ec9 0 5px 0 0 inset, #538ec9 0 -5px 0 0 inset, #538ec9 5px 0 0 0 inset, #538ec9 -5px 0 0 0 inset;
+  -moz-box-shadow: #538ec9 0 5px 0 0 inset, #538ec9 0 -5px 0 0 inset, #538ec9 5px 0 0 0 inset, #538ec9 -5px 0 0 0 inset;
+  box-shadow: #538ec9 0 5px 0 0 inset, #538ec9 0 -5px 0 0 inset, #538ec9 5px 0 0 0 inset, #538ec9 -5px 0 0 0 inset;
 }
 .introBox li {
   display: block;
@@ -229,13 +267,56 @@ header h2 {
   color: #ffbab4;
 }
 .introBox li em {
-  margin-left: 0.22727em;
+  margin-left: 0.09091em;
   font-family: "Source Sans", sans-serif;
   font-size: 22px;
   color: #fff;
   position: relative;
   top: -5px;
   text-shadow: #4f88c0 -0.09091em 0.13636em 0;
+}
+
+#focusBox {
+  width: 21.11111em;
+  float: right;
+}
+
+#recent-posts {
+  margin-bottom: 1.11111em;
+}
+
+#recent-posts, #recent-demos {
+  background-color: #5da0e2;
+}
+#recent-posts ul, #recent-demos ul {
+  margin: 0;
+  padding: 0.88889em;
+  -webkit-box-shadow: #538ec9 0 5px 0 0 inset, #538ec9 0 -5px 0 0 inset, #538ec9 5px 0 0 0 inset, #538ec9 -5px 0 0 0 inset;
+  -moz-box-shadow: #538ec9 0 5px 0 0 inset, #538ec9 0 -5px 0 0 inset, #538ec9 5px 0 0 0 inset, #538ec9 -5px 0 0 0 inset;
+  box-shadow: #538ec9 0 5px 0 0 inset, #538ec9 0 -5px 0 0 inset, #538ec9 5px 0 0 0 inset, #538ec9 -5px 0 0 0 inset;
+}
+#recent-posts ul li, #recent-demos ul li {
+  text-shadow: #4a80b5 0.063em 0.125em 0;
+}
+#recent-posts ul li:nth-child(2n+1), #recent-demos ul li:nth-child(2n+1) {
+  background-color: #5897d6;
+}
+#recent-posts ul li:first-child, #recent-demos ul li:first-child {
+  background-color: transparent;
+  padding: 0 0.27778em;
+}
+#recent-posts ul li:not(:first-child), #recent-demos ul li:not(:first-child) {
+  padding: 0.27778em 0.27778em;
+}
+#recent-posts ul h3, #recent-demos ul h3 {
+  margin: 0 0 0.625em;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 110%;
+  text-shadow: #4f88c0 -0.08333em 0.125em 0;
+  text-transform: uppercase;
+  color: #434343;
 }
 
 #about {
@@ -255,6 +336,7 @@ header h2 {
   font-family: "Oswald", sans-serif;
   font-size: 33px;
   font-size: 3.3rem;
+  line-height: 125%;
   color: #fff;
   padding: 0.60606em 0;
   text-align: center;
@@ -272,11 +354,11 @@ header h2 {
   text-transform: uppercase;
   color: white;
 }
-#about section {
+#about div {
   width: 33.333em;
   float: left;
 }
-#about section div {
+#about div section {
   width: 33.333em;
   float: none;
 }
@@ -305,14 +387,14 @@ header h2 {
 
 .devSkills, .designSkills {
   width: 14.167em;
+  /* 255px */
   margin: 0;
-  padding: 0.938em;
-  -webkit-box-shadow: #cc5247 0 0.313em 0 0 inset, #cc5247 0 -0.313em 0 0 inset, #cc5247 0.313em 0 0 0 inset, #cc5247 -0.313em 0 0 0 inset;
-  -moz-box-shadow: #cc5247 0 0.313em 0 0 inset, #cc5247 0 -0.313em 0 0 inset, #cc5247 0.313em 0 0 0 inset, #cc5247 -0.313em 0 0 0 inset;
-  box-shadow: #cc5247 0 0.313em 0 0 inset, #cc5247 0 -0.313em 0 0 inset, #cc5247 0.313em 0 0 0 inset, #cc5247 -0.313em 0 0 0 inset;
+  padding: 0.88889em;
+  -webkit-box-shadow: #cc5247 0 5px 0 0 inset, #cc5247 0 -5px 0 0 inset, #cc5247 5px 0 0 0 inset, #cc5247 -5px 0 0 0 inset;
+  -moz-box-shadow: #cc5247 0 5px 0 0 inset, #cc5247 0 -5px 0 0 inset, #cc5247 5px 0 0 0 inset, #cc5247 -5px 0 0 0 inset;
+  box-shadow: #cc5247 0 5px 0 0 inset, #cc5247 0 -5px 0 0 inset, #cc5247 5px 0 0 0 inset, #cc5247 -5px 0 0 0 inset;
 }
 .devSkills li, .designSkills li {
-  padding: 0 0.313em;
   text-shadow: #b7493f 0.063em 0.125em 0;
 }
 .devSkills li:nth-child(2n+1), .designSkills li:nth-child(2n+1) {
@@ -320,6 +402,10 @@ header h2 {
 }
 .devSkills li:first-child, .designSkills li:first-child {
   background-color: transparent;
+  padding: 0 0.27778em;
+}
+.devSkills li:not(:first-child), .designSkills li:not(:first-child) {
+  padding: 0.27778em 0.27778em;
 }
 .devSkills h4, .designSkills h4 {
   margin: 0 0 0.625em;
@@ -354,6 +440,7 @@ header h2 {
   font-family: "Oswald", sans-serif;
   font-size: 33px;
   font-size: 3.3rem;
+  line-height: 125%;
   color: #fff;
   padding: 0.60606em 0;
   text-align: center;
@@ -448,6 +535,7 @@ header h2 {
   font-family: "Oswald", sans-serif;
   font-size: 33px;
   font-size: 3.3rem;
+  line-height: 125%;
   color: #fff;
   padding: 0.60606em 0;
   text-align: center;

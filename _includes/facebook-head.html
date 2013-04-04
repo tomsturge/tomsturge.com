@@ -1,0 +1,12 @@
+<!--
+  Facebook SocialGraph meta settings for those nice looking site previews
+-->
+<meta property="og:title" 
+      content="{% if page.type == 'post' %}{{ page.title }} // {% endif %}Thomas Sturge" />
+<meta property="og:url" content="http://tomsturge.co.uk/" />
+<meta property="og:site_name" content="Thomas Sturge" />
+<meta property="og:image"
+      content="/assets/images/og_image.jpg"/>
+<meta property="og:description"
+      content="{% if page.type == 'post' %}{{ page.meta }}{% elsif page.type == 'home'  %}Web designer, front-end and back-end developer.{% endif %}"/>
+<meta property="og:type" content="website"/>
