@@ -14,23 +14,27 @@
 //===============================================
 //
 
-$black: #333; // Used for text
+$black: #202020; // Used for text
 $grey: #222; // Used with backgrounds
-$blue: #68b2fc;
-$purple: #7b72b2;
-$red: #ff6759;
-$green: #72B27B;
+$blue: #528CC5;
+$purple: #51518F;
+$red: #B05140;
+$green: #539052;
 
 // Social Icon Colours
-$facebook: #3b5998;
-$twitter: #60d7ff;
-$gplus: #d14428;
-$skype: #3abfef;
+$facebook:  #3b5998;
+$twitter:   #00ACED;
+$instagram: #A58E7C;
+$gplus:     #d14428;
+$skype:     #3abfef;
+$github:    #495861;
+$dribbble:  #ea4c88;
+$gmail:     #D14130;
 
 // Font-face
 $cursiveFont: 'Lobster', cursive;
 $headingFont: 'Oswald', sans-serif;
-$bodyFont: 'Source Sans', sans-serif;
+$bodyFont: 'Source Sans Pro', sans-serif;
 
 
 //
@@ -99,7 +103,7 @@ $bodyFont: 'Source Sans', sans-serif;
   @include fontSize($baseSize/1px);
   line-height: 125%;
   color: #fff;
-  padding: calcEm(20px, $baseSize) 0;
+  padding: calcEm(15px, $baseSize) 0;
   text-align: center;
   text-transform: uppercase;
   @include sectionTitleBg($color);

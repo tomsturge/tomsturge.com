@@ -12,22 +12,25 @@ This is the code that makes up my [Portfolio Site](http://tomsturge.co.uk/ "Port
 ### 1.0 / 02-05-10 ([v1.tomsturge.co.uk](http://v1.tomsturge.co.uk/ "Site v1"))
 - Simple slide box for contact information
 
-### 1.1.  
+### 1.0.1. 
 - Added Feed box slide out to feed in images from Flickr, Dribbble and Zootools.
 
-### 1.2.  
+### 1.0.2.  
 - Replaced all the sites images with CSS3 equivalents i.e gradients, border shapes and psudeo elements.
+
+### 1.1.0.
+- Added an intro animation to greet visitors and provide quick social links
 
 ### 2.0 / 17-08-12 ([tomsturge.co.uk](http://tomsturge.co.uk/ "Site v2"))
 - Full portfolio.
 - Work showcase.
 - Longer biography.
  
-### 2.1.  
+### 2.0.1.  
 - Made the site responsive and mobile friendly.
 - Removed the curtain effect for a simplier scroll animation.
 
-### 2.5. / 05-04-2013 
+### 2.1. / 05-04-2013 
 - **The Jekyll update** 
 - Ground up rewrite, using Jekyll and Liquid templating. 
 - Ability to publish posts and host demos on the site with ease.  
@@ -38,7 +41,7 @@ Even though this update is a fundemental rewrite of the original code base of th
 
 This update applies the site to the Jekyll static site generator and utilises the Liquid templatng engine to streamline and help with future upgrades.
 
-The big additions to the front-end of the site is the posts and demos features, allow me to being publishing articles and demonstrate my experiments and ideas.
+The big additions to the front-end of the site are the posts and demos features, allow me to being publishing articles and demonstrate my experiments and ideas.
     
 # Features
 

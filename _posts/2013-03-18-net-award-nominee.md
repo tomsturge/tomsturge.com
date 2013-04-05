@@ -4,7 +4,7 @@ layout: post
 slug: net-award-nominee
 title: .net award nominee
 categories:
-- posts
+- post
 meta: I’ve been nominated for a .net award!
 ---
 
@@ -17,7 +17,7 @@ but sure enough, enough people (you guys!) put my name forward for the category
 that I’m into the official 12! I’m up against some _real_ talent as well, which I
 think says a lot about the quality of the industry’s young devs.
 
-The next stage is the public (you guys again!) vote. You can cast votes for who
+The next stage is the public (you guys again!) vote. **You can cast votes** for who
 _you_ believe deserves to make the final three; the final three then go onto a
 judged decision ‘behind closed doors’.
 

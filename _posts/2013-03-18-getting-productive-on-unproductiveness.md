@@ -4,7 +4,7 @@ layout: demo
 slug: getting-production-on-unproductiveness
 title: Getting productive on unproductiveness
 categories:
-- demos
+- demo
 meta: Learn to get heading of the procastination curve and stay productive
 ---
 

@@ -14,24 +14,3 @@
              'SourceSans.svg#icons'),
   'SourceSans.eot',
   normal, normal);
-
-@include font-face('Oswald',
-  font-files('Oswald.woff',
-             'Oswald.ttf',
-             'Oswald.svg#icons'),
-  'Oswald.eot',
-  normal, normal);
-
-@include font-face('Lobster',
-  font-files('Lobster.woff',
-             'Lobster.ttf',
-             'Lobster.svg#icons'),
-  'Lobster.eot',
-  normal, normal);
-
-@include font-face('icons',
-  font-files('icons.woff',
-             'icons.ttf',
-             'icons.svg#icons'),
-  'icons.eot',
-  normal, normal);

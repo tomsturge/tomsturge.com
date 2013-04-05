@@ -4,33 +4,33 @@ type: home
 ---
 
 <div class="sectionContainer">
-  <header>
+  <header class="left">
     <h1>
       Thomas Sturge
-      <em>Designer + Developer</em> 
+      <span>Designer + Developer</span> 
     </h1>
     <ul class="introBox">
       <li>Front-end Hero:
-          <em>Jump PSDs in a single bound!</em></li>
+          <span>Jump PSDs in a single bound!</span></li>
       <li>UI Zombie:
-          <em>Reanimating dead pixels</em></li>
+          <span>Reanimating dead pixels</span></li>
       <li>Back-end Ninja:
-          <em>I know Code-fu</em></li>
+          <span>I know Code-fu</span></li>
       <li>Secret Agent:
-          <em>#077. Licence to Teal</em></li>
+          <span>#077. Licence to Teal</span></li>
     </ul>
     <h2>Designer of pretty interfaces &amp; developer of semantic responsive experiences.</h2>
   </header>
   
-  <div id="focusBox">
+  <div id="focusBox" class="right">
     <div id="recent-posts">
       <ul>
         <li><h3>Recent Posts</h3></li>
         {% for post in site.posts %}
-          {% if post.categories contains 'posts' %}
+          {% if post.categories contains 'post' %}
             <li>
               <a href="{{ post.url }}">{{ post.title }}</a>
-            </li>      
+            </li>   
           {% endif %}
         {% endfor %}
       </ul>
@@ -40,7 +40,7 @@ type: home
       <ul>
         <li><h3>Recent Demos</h3></li>
         {% for post in site.posts %}
-          {% if post.categories contains 'demos' %}
+          {% if post.categories contains 'demo' %}
             <li>
               <a href="{{ post.url }}">{{ post.title }}</a>
             </li>      

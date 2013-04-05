@@ -19,9 +19,9 @@ $(document).ready(function() {
     scrollbarDrag: true,
     scrollbarLocation: 'bottom',
     scrollbarHeight: '10px',
-    scrollbarBackground: '#518058',
+    scrollbarBackground: '#fff',
     scrollbarBorderRadius: '0',
-    scrollbarOpacity: '0.6'
+    scrollbarOpacity: '1'
   });
 
   $('a.scroll').live('click',function(e){

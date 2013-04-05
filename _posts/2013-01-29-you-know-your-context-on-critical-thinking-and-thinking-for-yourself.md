@@ -4,7 +4,7 @@ layout: post
 slug: you-know-your-context-on-critical-thinking-and-thinking-for-yourself
 title: You know your context – on critical thinking and thinking for yourself
 categories:
-- posts
+- post
 tag:
 meta: About learning to look at things objectively and apply your own context
 ---

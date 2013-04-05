@@ -4,7 +4,7 @@ layout: post
 slug: responsive-grid-systems-a-solution
 title: Responsive grid systems; a solution?
 categories:
-- posts
+- post
 meta: A look at building a practical, robust,  flexible, usable responsive grid system.
 ---
 

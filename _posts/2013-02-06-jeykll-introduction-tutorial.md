@@ -4,7 +4,7 @@ layout: demo
 slug: jeykll-introduction-tutorial
 title: Jeykll introduction tutorial
 categories:
-- demos
+- demo
 meta: Jekyll - What is it and how do you use it?
 ---
 
