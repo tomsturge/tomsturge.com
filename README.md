@@ -1,9 +1,11 @@
 Portfolio of Thomas Sturge
 ==========================
 
-This is the code that makes up my new [Portfolio](http://tomsturge.co.uk/ "Portfolio of Thomas Sturge").
+This is the code that makes up my [Portfolio Site](http://tomsturge.co.uk/ "Portfolio Site").
 
 100% responsive and mobile friendly
+
+**NOTE**: Despite this code base being open source all its code and content remains copyright of the owner and creator Thomas Sturge.
 
 # Change Log
 
@@ -28,13 +30,15 @@ This is the code that makes up my new [Portfolio](http://tomsturge.co.uk/ "Portf
 ### 2.5. / 05-04-2013 
 - **The Jekyll update** 
 - Ground up rewrite, using Jekyll and Liquid templating. 
-- Aility to publish posts and host demos on the site with ease.  
+- Ability to publish posts and host demos on the site with ease.  
     
 # Description
 
-Designed organically in browser, it was fun just letting the design make itself as I went along.
+Even though this update is a fundemental rewrite of the original code base of the site it still uses the v2.0-2.0 design so instead of a version this is a reworking and feature rich iteration of the same version.
 
-_**NOTE** I originally used [Google Webfonts](www.google.com/webfonts "Google Webfonts") to provide the fonts for the site but encountered problems with IE and iPhone 3 Safari. So to fix it I now use local font files and @font-face instead._
+This update applies the site to the Jekyll static site generator and utilises the Liquid templatng engine to streamline and help with future upgrades.
+
+The big additions to the front-end of the site is the posts and demos features, allow me to being publishing articles and demonstrate my experiments and ideas.
     
 # Features
 
