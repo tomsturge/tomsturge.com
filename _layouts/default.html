@@ -33,7 +33,7 @@
   {% endif %}
 
   <!-- Google Web Fonts -->  
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic|Lobster|Oswald:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic|Lobster|Oswald:700|Inconsolata' rel='stylesheet' type='text/css'>
   
   <!-- Icons font -->
   <link rel="stylesheet" type="text/css" href="/assets/fonts/ss-social-regular.css" media="all">
@@ -46,22 +46,10 @@
   {% include nav.html %}
   
   {% case page.type %}
-  
-  {% when 'post' %}
-    
-    <div id="post" class="cover">
-      {{ content }}
-    </div>
-    
-  {% when 'demo' %}
-  
-    <div id="demo" class="cover">
-      {{ content }}
-    </div>
 
   {% when 'home' %}
 
-    <div id="front" class="cover">
+    <div id="intro">
       {{ content }}
     </div>
 
@@ -74,10 +62,38 @@
     <script type="text/javascript" src="/assets/scripts/cycle.js"></script>
     <script type="text/javascript" src="/assets/scripts/iosslider.js"></script>
     
-  {% else %}
-  
-    {{ page.type }}
     
+  {% when 'posts' %}
+    
+    <div id="posts">
+      {{ content }}
+    </div>
+    
+    {% include contact.html %}
+    
+  {% when 'demos' %}
+  
+    <div id="demos">
+      {{ content }}
+    </div>
+    
+    {% include contact.html %}
+  
+  {% when 'post' %}
+    
+    <div id="post">
+      {{ content }}
+    </div>
+    
+      {% include social.html %}
+    
+  {% when 'demo' %}
+  
+    <div id="demo">
+      {{ content }}
+    </div>
+    
+    {% include contact.html %}
   {% endcase %}
 
     <!-- Site scripts -->

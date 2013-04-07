@@ -3,16 +3,24 @@ layout: default
 type: demo
 ---
 
-<article class="sectionContainer">
+<article>
 
-  <h1>{{ page.title }}</h1>
+  <section id="demoTitle" class="sectionContainer">
   
-  <p>{{ page.meta }}</p>
+  	<h1>{{ page.title }}</h1>
+  	
+  	<div>
+ 			<p>{{ page.meta }}</p>
+		</div>
+	
+	</section>
   
-  <section id="demoArea" class="sectionContainer">
+  <div id="demoArea" class="sectionContainer">
+  	<div id="demoWrapper">
   	
   	{{ content }}
-  
+  	
+  	</div>
   </section>
 	
 </article>

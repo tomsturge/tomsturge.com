@@ -34,10 +34,11 @@ This is the code that makes up my [Portfolio Site](http://tomsturge.co.uk/ "Port
 - **The Jekyll update** 
 - Ground up rewrite, using Jekyll and Liquid templating. 
 - Ability to publish posts and host demos on the site with ease.  
+- Much improved readability due to increased contrast of background colours
     
 # Description
 
-Even though this update is a fundemental rewrite of the original code base of the site it still uses the v2.0-2.0 design so instead of a version this is a reworking and feature rich iteration of the same version.
+Even though this update is a fundemental rewrite of the original code base of the site it still uses the v2.0 design so instead of a new version this is a reworking and feature rich iteration of the same version.
 
 This update applies the site to the Jekyll static site generator and utilises the Liquid templatng engine to streamline and help with future upgrades.
 
@@ -46,14 +47,18 @@ The big additions to the front-end of the site are the posts and demos features,
 # Features
 
 ## Fonts:
-[Lobster](http://www.impallari.com/lobster/ "Lobster") by [Impallari Type](www.impallari.com/ "Impallari Type")  
-[Oswald](http://www.fontsquirrel.com/fonts/oswald "Oswald") by [Vernon Adams](https://plus.google.com/107807505287232434305/posts "Vernon Adam")  
-[Source Sans Pro](http://blogs.adobe.com/typblography/2012/08/source-sans-pro.html "Source Sans Pro") by [Adobe](http://Adobe.com "Adobe")  
-[Custom Fontello Build](http://fontello.com/ "Fontello") by [Fontello](http://github.com/fontello "Fontello")  
+
+### Supplied by [Google](http://google.co.uk "Google")
+[Lobster](http://www.google.com/fonts/specimen/Lobster "Lobster")  
+[Oswald](http://www.google.com/fonts/specimen/Oswald "Oswald")  
+[Source Sans Pro](http://www.google.com/fonts/specimen/Source+Sans+Pro "Source Sans Pro") 
+
+### Supplied by [SymbolSet](http://symbolset.com "SymbolSet")
+[Social Regular](https://symbolset.com/sets/social-regular "Social Regular")
 
 ## Tools:
 
-[Jekyll](http://jekyllrb.com/ "Jekyll")
+[Jekyll](http://jekyllrb.com/ "Jekyll") & [Liquid](https://github.com/Shopify/liquid "Liquid")  
 [SASS](http://sass-lang.com/ "SASS") & [Compass](http://compass-style.org/ "Compass")
 
 [jQuery](http://jquery.com "jquery")  

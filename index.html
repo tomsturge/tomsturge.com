@@ -11,7 +11,7 @@ type: home
     </h1>
     <ul class="introBox">
       <li>Front-end Hero:
-          <span>Jump PSDs in a single bound!</span></li>
+          <span>Jump PSDs in a single bound</span></li>
       <li>UI Zombie:
           <span>Reanimating dead pixels</span></li>
       <li>Back-end Ninja:
@@ -26,12 +26,10 @@ type: home
     <div id="recent-posts">
       <ul>
         <li><h3>Recent Posts</h3></li>
-        {% for post in site.posts %}
-          {% if post.categories contains 'post' %}
-            <li>
-              <a href="{{ post.url }}">{{ post.title }}</a>
-            </li>   
-          {% endif %}
+        {% for post in site.categories.post limit:3 %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>     
         {% endfor %}
       </ul>
     </div>
@@ -39,12 +37,10 @@ type: home
     <div id="recent-demos">
       <ul>
         <li><h3>Recent Demos</h3></li>
-        {% for post in site.posts %}
-          {% if post.categories contains 'demo' %}
-            <li>
-              <a href="{{ post.url }}">{{ post.title }}</a>
-            </li>      
-          {% endif %}
+        {% for post in site.categories.demo limit:3 %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>     
         {% endfor %}
       </ul>
     </div>

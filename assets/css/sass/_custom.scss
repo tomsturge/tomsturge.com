@@ -1,15 +1,5 @@
 //
 //===============================================
-//  The sexy portfolio site for Thomas Sturge
-//
-//  Author: Thomas Sturge / Arrowhead Desgin
-//  Version: 2.5
-//  URL: http://tomsturge.co.uk/
-//===============================================
-//
-
-//
-//===============================================
 //  VARIABLES
 //===============================================
 //
@@ -99,13 +89,14 @@ $bodyFont: 'Source Sans Pro', sans-serif;
   $baseSize: 33px;
   width: 50%;
   margin: 0 auto calcEm(25px, $baseSize);
+  padding: calcEm(16px, $baseSize);
   font-family: $headingFont;
   @include fontSize($baseSize/1px);
   line-height: 125%;
   color: #fff;
-  padding: calcEm(15px, $baseSize) 0;
   text-align: center;
   text-transform: uppercase;
+  border-bottom: none;
   @include sectionTitleBg($color);
   @include flatTextShadow(shade($color, 15%), calcEm(-3px, $baseSize), calcEm(4px, $baseSize));
 }

@@ -24,13 +24,5 @@ $(document).ready(function() {
     scrollbarOpacity: '1'
   });
 
-  $('a.scroll').live('click',function(e){
-    e.preventDefault();
-    var target = $(this).attr('href');
-    $.scrollTo(target,{'onAfter':function(){
-      window.location.hash=target},'duration':500,
-    });
-  });
-
 });
 

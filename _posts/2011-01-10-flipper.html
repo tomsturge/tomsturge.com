@@ -1,5 +1,5 @@
 ---
-date: 2013-01-29
+date: 2011-01-10
 layout: demo
 slug: flipper
 title: CSS3 Flip Clock
@@ -8,16 +8,17 @@ categories:
 tag:
 meta: A Flip Clock done in CSS3
 ---
-<link type='text/css' rel='stylesheet' 
-      href='http://fonts.googleapis.com/css?family=Arimo' >
-<link rel='stylesheet' type='text/css'
-      href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold'>
 
 <style type="text/css">
+  #demoWrapper {
+    background: url(/assets/demos/dark_bg.png) 0 0 repeat #1a1a1a;
+  }
+  
   #container {
     display: block;
     width: 380px; height: 325px;
     margin: 0 auto;
+    padding: 0 0 75px;
     position: relative;
   }
 
@@ -36,7 +37,7 @@ meta: A Flip Clock done in CSS3
     width: 94%; height: 50%;
     border-bottom: 1px solid #000;
     position: absolute;
-    top: 0; left: 10px;
+    top: -37px; left: 10px;
     z-index: 1;
   }
 
@@ -141,20 +142,19 @@ meta: A Flip Clock done in CSS3
     #bottom-flipstack li:first-child { top: 6px; }
     #bottom-flipstack li:last-child { top: 9px; }
 
-  p.inspired {
+  .inspired {
     margin: 0; padding: 25px 0;
     font: normal 0.75em/100% 'Source Sans', sans-serif;
     text-align: center;
     letter-spacing: 0em;
-    position: relative;
-    top: 0; left: 0;
+    color: #d2d2d2;
     clear: both;
   }
-    p.inspired a {
+    .inspired a {
       border-bottom: 1px dotted #d2d2d2;
       text-decoration: none;
     }
-    p.inspired a:hover {
+    .inspired a:hover {
       border-bottom: 1px solid #d2d2d2;
     }
 </style>
