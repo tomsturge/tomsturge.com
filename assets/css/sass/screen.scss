@@ -1,0 +1,58 @@
+//
+//===============================================
+//  The sexy portfolio site for Thomas Sturge
+//
+//  Author: Thomas Sturge / Arrowhead Desgin
+//  Version: 2.5
+//  URL: http://tomsturge.co.uk/
+//===============================================
+//
+
+//
+//===============================================
+//  ROOT
+//===============================================
+//
+
+// Compass
+@import 'compass';
+
+// Variables, Functions and Mixins
+@import 'custom';
+
+// Reset
+@import 'reset';
+//
+//===============================================
+//  LAYOUT
+//===============================================
+//
+
+// Site wide styles (html, body etc)
+@import 'site';
+
+//
+//===============================================
+//  MEDIA QUERIES
+//===============================================
+//
+
+// 980px and below
+@media only screen and (max-width: 980px) {
+	@import 'responsive/980';
+}
+
+// 800px to 980px
+@media only screen and (min-width: 800px) and (max-width: 980px) {
+	@import 'responsive/800';
+}
+
+// 480px to 800px
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+	@import 'responsive/480';
+}
+
+// 320px to 480px
+@media only screen and (max-width: 480px) {
+	@import 'responsive/320';
+}

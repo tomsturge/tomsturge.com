@@ -1,0 +1,93 @@
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video { margin : 0; padding : 0; border : 0; outline : 0; font: inherit;
+vertical-align : baseline; background : transparent; }
+
+ol, ul { list-style-type: none;}
+
+article, aside, figure, footer, header, hgroup, nav, section { display : block; }
+
+h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, .page-head, .media, .island, .islet {
+  margin-bottom: 24px;  
+}
+
+h1, h2, h3, h4 {
+  font-weight: 400;
+  color: $red;
+  line-height: 1.6; 
+}
+
+h2 {
+  $baseSize: 30px;
+  font-size: calcEm($baseSize);
+  border-bottom: 1px solid $red;
+}
+h3 { 
+  $baseSize: 22px;
+  font-size: calcEm($baseSize);
+}
+h4 { 
+  $baseSize: 18px;
+  font-size: calcEm($baseSize);
+}
+
+p { 
+  line-height: 1.6; 
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover { text-decoration: underline;}
+}
+
+i,em { font-style: italic; }
+b,strong { font-weight: bold; } 
+
+ol { 
+  list-style-type: decimal;   
+  margin-left: calcEm(40px);  
+}
+ul {
+  list-style-type: disc;
+  margin-left: calcEm(40px);  
+}
+
+hr {
+  border-style: solid;
+  border-width: 1px 0;
+  border-top-color: tint($black, 85%);
+  border-bottom-color: white;
+  margin-bottom: 22px;
+}
+
+blockquote {
+  quotes:"\201C""\201D""\2018""\2019";
+  padding: calcEm(10px) calcEm(15px) ;
+  border-left: 5px solid $red;
+}
+blockquote p:before {
+  content: open-quote;
+  font-size:2em;
+  line-height:.1em;
+  color: $red;
+}
+blockquote p:last-of-type {
+  margin-bottom: 0;
+}
+
+pre, code, kbd, samp {
+  font: {
+    family: Inconsolata,"Courier New",Courier,monospace;
+    size: 1em;
+  }
+  color: $blue;
+}
+pre {
+  background-color: #333;
+  padding: 12px;
+  color: white;
+  white-space: pre;
+  word-wrap: normal;
+  border-radius: 4px;
+  overflow: auto;
+}
+pre code, pre kbd, pre samp { color: #fff; }
