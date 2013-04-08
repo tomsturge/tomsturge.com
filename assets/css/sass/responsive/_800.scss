@@ -1,0 +1,45 @@
+#postContent > div, 
+#demoTitle > div, 
+.sectionContainer {
+  width: 42em;
+}
+
+#about aside { float: right; }
+
+.skillLists { 
+  width: 50%; 
+  float: left;
+    ul { width: 90%; }
+}
+.devSkills { margin-bottom: calcEm(24px); }
+
+footer {
+    section { 
+      width: 100%;
+      margin-bottom: calcEm(24px);
+        p {
+          width: 60%;
+          float: left;
+        }
+    }
+}
+
+.socialIcons {
+  width: 32%;
+  float: right;
+    a { margin-bottom: calcEm(14px); }
+}
+
+.archiveList h2 {
+  width: 24em;
+}
+
+.comments {
+  width: 27em;
+  float: left;
+}
+.share {
+  width: 13em;
+  float: right;
+    ul { width: 100%; }
+}

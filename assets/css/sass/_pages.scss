@@ -30,23 +30,23 @@
               color: $black;
             }
           }
-        h2 { 
-          width: 760px;
-          margin-bottom: 0;
-          font: {
-            size: $baseSize;
-            weight: normal;
-          }
-          line-height: 130%;
-          color: #fff;
-          border-bottom: none;
-          float: left; 
-        }
-        time {
-          padding-top: 0.35em;
-          font-size: calcEm(16px, $baseSize);
-          float: right;
-        }
+    }
+    h2 { 
+      width: 31.675em;
+      margin-bottom: 0;
+      font: {
+        size: $baseSize;
+        weight: normal;
+      }
+      line-height: 130%;
+      color: #fff;
+      border-bottom: none;
+      float: left; 
+    }
+    time {
+      padding-top: 0.35em;
+      font-size: calcEm(16px, $baseSize);
+      float: right;
     }
 }
 
@@ -102,6 +102,11 @@
       color: $red;
     }
     b,strong { font-weight: normal } 
+    img { 
+      margin: 0 0 14px 24px;
+      border: 10px solid $red;
+      float: right; 
+    }
 } 
     
 //
@@ -179,7 +184,11 @@
   color: #444;
   text-shadow: none;
     &.sectionContainer { padding: 0; }
-    #demoWrapper { padding: 100px 0; }
+    #demoWrapper { 
+      padding: 100px 0; 
+        .left { float: left; }
+        .right { float: right; }
+    }
 } 
 
 //
@@ -232,7 +241,7 @@ header {
       color: #fff;
       font: {
         family: $bodyFont;
-        size: $baseSize;
+        size: calcEm($baseSize);
         weight: normal;
       }
       line-height: calcEm(30px, $baseSize);
@@ -300,10 +309,10 @@ header {
           width: auto; height: 100%; 
           padding: calcEm(15px) calcEm(10px);  
           -webkit-transition: all 0.5s;
-          -moz-transition:  all 0.5s;
-          -ms-transition:  all 0.5s;
-          -o-transition:  all 0.5s;
-          transition:  all 0.5s;
+             -moz-transition: all 0.5s;
+              -ms-transition: all 0.5s;
+               -o-transition: all 0.5s;
+                  transition: all 0.5s;
             &:hover {
               background-color: #fff;
               color: $blue;
@@ -334,12 +343,7 @@ header {
   @include box-shadow($red 0 10px 0 0); 
     h2 { @include sectionTitle($red); }
     h3 { @include bigTitle($red, -3px, 4px, 32px); }
-    div {
-      width: 33.333em;
-        section {
-          width: 33.333em;
-        }
-    }
+    div { width: 33.333em; }
     aside { 
       width: 17.778em;
       display: block;
@@ -483,7 +487,10 @@ header {
 footer {
   @include box-shadow(shade($purple, 30%) 0 10px 0 inset);
   @include flatTextShadow($purple, 0.056em, 0.111em);
-    section { width: 26em; }
+    section { 
+      width: 26em;
+      overflow: hidden; 
+    }
 }
 
 
@@ -509,10 +516,10 @@ footer {
       @include flatTextShadow(shade($purple, 15%), calcEm(-1px, $baseSize), calcEm(2px, $baseSize));
       @include multiBoxShadow($purple, 20%, calcEm(5px, $baseSize));
       -webkit-transition: all 0.5s;
-      -moz-transition:  all 0.5s;
-      -ms-transition:  all 0.5s;
-      -o-transition:  all 0.5s;
-      transition:  all 0.5s;
+         -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+           -o-transition: all 0.5s;
+              transition: all 0.5s;
       float: left;
         &:hover {
           text-decoration: none; 

@@ -37,17 +37,22 @@
 //===============================================
 //
 
-// // 320px
-// @media only screen and (max-width: 320px) {
-// @import 'responsive/320';
-// }
+// 980px and below
+@media only screen and (max-width: 980px) {
+	@import 'responsive/980';
+}
 
-// // 600px
-// @media only screen and (max-width: 600px) {
-// @import 'responsive/600';
-// }
+// 800px to 980px
+@media only screen and (min-width: 800px) and (max-width: 980px) {
+	@import 'responsive/800';
+}
 
-// // 768px
-// @media only screen and (max-width: 768px) {
-// @import 'responsive/768';
-// }
+// 480px to 800px
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+	@import 'responsive/480';
+}
+
+// 320px to 480px
+@media only screen and (max-width: 480px) {
+	@import 'responsive/320';
+}

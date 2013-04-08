@@ -1,0 +1,66 @@
+h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, .page-head, .media, .island, .islet {
+margin-bottom: 12px;
+}
+
+#intro .sectionContainer { padding: 44px 0; }
+#social .sectionContainer { padding: 34px 0 44px; }
+
+.mainNav {
+  $baseSize: 16px;
+    ul {
+      width: 29em;
+      padding: calcEm(10px, $baseSize) 0;
+      font: normal #{calcEm($baseSize)}/100% $headingFont;
+    }
+    li {
+      width: 5.833em;
+      padding: calcEm(5px, $baseSize) calcEm(10px, $baseSize);
+        a {
+          padding: calcEm(8px, $baseSize) 0;
+          @include flatTextShadow(tint($black, 10%), calcEm(-2px, $baseSize), calcEm(3px, $baseSize));
+        }
+    } 
+}
+
+.sectionContainer {
+  width: 25.57em;
+  padding: 44px 0;
+}
+#postContent > div, 
+#demoTitle > div {
+  width: 25.57em;
+  padding: 12px 0;
+}
+
+header { 
+  width: 100%; 
+    h1 { 
+      font-size: 4em; 
+        span { top: 0; }
+    }
+    h2 { font-size: 1.2em; }
+}
+.introBox { display: none; }
+
+#about {
+      aside { display: none; }
+}
+
+.skillLists ul { width: 92%; }
+.devSkills { margin-bottom: calcEm(12px); }
+
+footer section { margin: 0 0 24px; }
+
+.archiveList h2 { width: 13em; }
+
+
+#postContent { 
+    img { 
+      width: 40%;
+      margin: 0 0 14px 24px;
+      border: 5px solid $red;
+      float: right; 
+    }
+} 
+
+.comments { width: 26em; }

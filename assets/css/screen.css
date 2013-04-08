@@ -256,8 +256,8 @@ body {
 .archiveList a:hover time {
   color: #202020;
 }
-.archiveList a h2 {
-  width: 760px;
+.archiveList h2 {
+  width: 31.675em;
   margin-bottom: 0;
   font-size: 24px;
   font-weight: normal;
@@ -266,7 +266,7 @@ body {
   border-bottom: none;
   float: left;
 }
-.archiveList a time {
+.archiveList time {
   padding-top: 0.35em;
   font-size: 0.66667em;
   float: right;
@@ -354,6 +354,11 @@ body {
 }
 #postContent b, #postContent strong {
   font-weight: normal;
+}
+#postContent img {
+  margin: 0 0 14px 24px;
+  border: 10px solid #b05140;
+  float: right;
 }
 
 #social {
@@ -469,6 +474,12 @@ body {
 #demoArea #demoWrapper {
   padding: 100px 0;
 }
+#demoArea #demoWrapper .left {
+  float: left;
+}
+#demoArea #demoWrapper .right {
+  float: right;
+}
 
 #intro {
   background-color: #528cc5;
@@ -504,7 +515,7 @@ header h2 {
   margin: 0.53571em 0 0;
   color: #fff;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 28px;
+  font-size: 1.55556em;
   font-weight: normal;
   line-height: 1.07143em;
   border-bottom: none;
@@ -638,9 +649,6 @@ header h2 {
   color: white;
 }
 #about div {
-  width: 33.333em;
-}
-#about div section {
   width: 33.333em;
 }
 #about aside {
@@ -850,6 +858,7 @@ footer {
 }
 footer section {
   width: 26em;
+  overflow: hidden;
 }
 
 .socialIcons {
@@ -940,4 +949,291 @@ footer section {
 
 .full {
   width: 100%;
+}
+
+@media only screen and (max-width: 980px) {
+  .left {
+    float: none;
+  }
+
+  .right {
+    float: none;
+  }
+
+  header {
+    margin: 0 auto;
+  }
+
+  #focusBox {
+    margin: 24px auto 0;
+  }
+
+  #about div {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 980px) {
+  #postContent > div,
+  #demoTitle > div,
+  .sectionContainer {
+    width: 42em;
+  }
+
+  #about aside {
+    float: right;
+  }
+
+  .skillLists {
+    width: 50%;
+    float: left;
+  }
+  .skillLists ul {
+    width: 90%;
+  }
+
+  .devSkills {
+    margin-bottom: 1.33333em;
+  }
+
+  footer section {
+    width: 100%;
+    margin-bottom: 1.33333em;
+  }
+  footer section p {
+    width: 60%;
+    float: left;
+  }
+
+  .socialIcons {
+    width: 32%;
+    float: right;
+  }
+  .socialIcons a {
+    margin-bottom: 0.77778em;
+  }
+
+  .archiveList h2 {
+    width: 24em;
+  }
+
+  .comments {
+    width: 27em;
+    float: left;
+  }
+
+  .share {
+    width: 13em;
+    float: right;
+  }
+  .share ul {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 800px) {
+  h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, .page-head, .media, .island, .islet {
+    margin-bottom: 12px;
+  }
+
+  #intro .sectionContainer {
+    padding: 44px 0;
+  }
+
+  #social .sectionContainer {
+    padding: 34px 0 44px;
+  }
+
+  .mainNav ul {
+    width: 29em;
+    padding: 0.625em 0;
+    font: normal 0.88889em/100% "Oswald", sans-serif;
+  }
+  .mainNav li {
+    width: 5.833em;
+    padding: 0.3125em 0.625em;
+  }
+  .mainNav li a {
+    padding: 0.5em 0;
+    text-shadow: #2d2d2d -0.125em 0.1875em 0;
+  }
+
+  .sectionContainer {
+    width: 25.57em;
+    padding: 44px 0;
+  }
+
+  #postContent > div,
+  #demoTitle > div {
+    width: 25.57em;
+    padding: 12px 0;
+  }
+
+  header {
+    width: 100%;
+  }
+  header h1 {
+    font-size: 4em;
+  }
+  header h1 span {
+    top: 0;
+  }
+  header h2 {
+    font-size: 1.2em;
+  }
+
+  .introBox {
+    display: none;
+  }
+
+  #about aside {
+    display: none;
+  }
+
+  .skillLists ul {
+    width: 92%;
+  }
+
+  .devSkills {
+    margin-bottom: 0.66667em;
+  }
+
+  footer section {
+    margin: 0 0 24px;
+  }
+
+  .archiveList h2 {
+    width: 13em;
+  }
+
+  #postContent img {
+    width: 40%;
+    margin: 0 0 14px 24px;
+    border: 5px solid #b05140;
+    float: right;
+  }
+
+  .comments {
+    width: 26em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, .page-head, .media, .island, .islet {
+    margin-bottom: 12px;
+  }
+
+  body {
+    padding: 50px 0 0;
+  }
+
+  .mainNav ul {
+    width: 22.858em;
+    margin: 0 auto;
+    padding: 0;
+    font: normal 0.77778em/100% "Oswald", sans-serif;
+  }
+  .mainNav li {
+    width: 5.661em;
+    padding: 0;
+  }
+  .mainNav li a {
+    padding: 1.21429em 0;
+  }
+
+  #intro .sectionContainer {
+    padding: 22px 0;
+  }
+
+  #social .sectionContainer {
+    padding: 12px 0 22px;
+  }
+
+  .sectionContainer {
+    width: 17.223em;
+    padding: 22px 0;
+  }
+
+  #postContent > div,
+  #demoTitle > div {
+    width: 17.223em;
+    padding: 6px 0;
+  }
+
+  header {
+    width: 100%;
+  }
+  header h1 {
+    font-size: 2.8em;
+  }
+  header h1 span {
+    top: 0;
+  }
+  header h2 {
+    font-size: 1.05em;
+  }
+
+  .introBox {
+    display: none;
+  }
+
+  #focusBox {
+    width: 100%;
+    margin: 12px 0 0;
+  }
+
+  #recent-posts h3, #recent-demos h3 {
+    margin: 0 0 0.68182em;
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 110%;
+    text-shadow: #3e6b96 -0.09091em 0.13636em 0;
+    text-transform: uppercase;
+    color: #202020;
+  }
+
+  #about aside {
+    display: none;
+  }
+
+  .skillLists ul {
+    width: 89%;
+  }
+
+  .devSkills {
+    margin-bottom: 0.66667em;
+  }
+
+  footer section {
+    width: 100%;
+    margin: 0 0 12px;
+  }
+
+  .socialIcons a {
+    margin-bottom: 0.77778em;
+  }
+
+  .archiveList h2 {
+    width: 100%;
+  }
+  .archiveList time {
+    float: left;
+  }
+
+  #demo #demoTitle,
+  #post #postTitle {
+    padding: 12px 0;
+  }
+
+  #postContent img {
+    margin-bottom: 12px;
+    border: 5px solid #b05140;
+    float: none;
+  }
+
+  .comments {
+    width: 100%;
+  }
+
+  .share {
+    width: 100%;
+  }
 }
