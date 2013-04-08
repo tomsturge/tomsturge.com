@@ -1,0 +1,165 @@
+//
+//===============================================
+//  VARIABLES
+//===============================================
+//
+
+$black: #202020; // Used for text
+$grey: #222; // Used with backgrounds
+$blue: #528CC5;
+$purple: #51518F;
+$red: #B05140;
+$green: #539052;
+
+// Social Icon Colours
+$facebook:  #3b5998;
+$twitter:   #00ACED;
+$instagram: #A58E7C;
+$gplus:     #d14428;
+$skype:     #3abfef;
+$github:    #495861;
+$dribbble:  #ea4c88;
+$gmail:     #D14130;
+
+// Font-face
+$cursiveFont: 'Lobster', cursive;
+$headingFont: 'Oswald', sans-serif;
+$bodyFont: 'Source Sans Pro', sans-serif;
+
+
+//
+//===============================================
+//  FUNCTIONS
+//===============================================
+//
+
+//*****************
+//  PX TO EM CONVERSION
+//*****************
+
+@function calcEm($target, $context: 18px) {
+  @if $target == 0 { @return 0 };
+  @return $target / $context * 1em;
+}
+
+//
+//===============================================
+//  MIXINS
+//===============================================
+//
+
+//*****************
+//  DISPLAY HELPERS
+//*****************
+
+@mixin displayInlineBlock() {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+//*****************
+//  NAVIGATION
+//*****************
+
+
+@mixin navHover($color) {
+  background-color: rgba(shade($color, 25%), 1);
+  @include multiBoxShadow($color, 50%, 3px);
+  @include flatTextShadow(shade($color, 25%), -2px, 3px);
+}
+
+//*****************
+//  TITLE
+//*****************
+
+@mixin sectionTitleBg($color) {
+  background-color: rgba(shade($color, 15%), 1);
+}
+@mixin bigTitle( $color, $dx, $dy, $baseSize: 42px, $text: #fff) {
+  margin: 0 0 calcEm(15px, $baseSize);
+  font-family: $headingFont;
+  @include fontSize($baseSize/1px);
+  line-height: 110%;
+  @include flatTextShadow($color, calcEm($dx, $baseSize), calcEm($dy, $baseSize));
+  text-transform: uppercase;
+  color: $text;
+}
+@mixin sectionTitle($color) {
+  $baseSize: 33px;
+  width: 50%;
+  margin: 0 auto calcEm(25px, $baseSize);
+  padding: calcEm(16px, $baseSize);
+  font-family: $headingFont;
+  @include fontSize($baseSize/1px);
+  line-height: 125%;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: none;
+  @include sectionTitleBg($color);
+  @include flatTextShadow(shade($color, 15%), calcEm(-3px, $baseSize), calcEm(4px, $baseSize));
+}
+
+//*****************
+//  SHADOW
+//*****************
+
+@mixin flatTextShadow($color, $dx, $dy) {
+  @include text-shadow(rgba(shade($color, 15%), 1) $dx $dy 0);
+}
+@mixin multiBoxShadow($color, $p, $d) {
+  @include box-shadow(rgba(shade($color, $p), 1) 0 $d 0 0 inset,
+                      rgba(shade($color, $p), 1) 0 -#{$d} 0 0 inset,
+                      rgba(shade($color, $p), 1) $d 0 0 0 inset,
+                      rgba(shade($color, $p), 1) -#{$d} 0 0 0 inset);
+}
+
+//*****************
+//  IMAGES
+//*****************
+
+@mixin imgBorder($color, $b) { border: $b solid rgba(shade($color, 15%), 1); }
+
+//*****************
+//  SCOIAL ICON HOVER
+//*****************
+
+@mixin socialHover($color) {
+  background-color: $color;
+  @include multiBoxShadow($color, 20%, 5px);
+  @include flatTextShadow(shade($color, 15%), -1px, 2px);
+}
+
+
+//*****************
+//  TYPOGRAPHY
+//*****************
+
+@mixin fontSize($fontSize: 18){
+font-size : #{$fontSize}px;
+font-size : #{$fontSize / 10}rem; }
+
+@mixin text-overflow() {
+overflow : hidden;
+text-overflow : ellipsis;
+white-space : nowrap; }
+
+//*****************
+//  ELEMENTS
+//*****************
+
+// Hide from visual and speaking browsers
+
+@mixin hidden() {
+display : none !important;
+visibility : hidden; }
+
+// @include userselect(VALUE) (all, element, none, text)
+
+@mixin user-select($select) {
+-webkit-user-select : $select;
+-moz-user-select : $select;
+-o-user-select : $select;
+user-select : $select; }
+

@@ -1,23 +1,50 @@
 ---
-layout: homepage
-title: Portfolio
-page-class: page-home
+layout: default
+type: home
 ---
 
-<header>
-  <h1><em>Portfolio of</em> Thomas Sturge</h1>
-  <ul class="introBox">
-    <li>
-      Front-end Hero:
-      <em>I jump PSDs in a single bound!</em>
-    </li>
-    <li>
-      Back-end Ninja:
-      <em>I know Code-fu</em>
-    </li>
-    <li>
-      Secret Agent:
-      <em>#077. Licence to Teal</em>
-    </li>
-  </ul>
-</header>
+<div class="sectionContainer">
+  <header class="left">
+    <h1>
+      Thomas Sturge
+      <span>Designer + Developer</span> 
+    </h1>
+    <ul class="introBox">
+      <li>Front-end Hero:
+          <span>Jump PSDs in a single bound</span></li>
+      <li>UI Zombie:
+          <span>Reanimating dead pixels</span></li>
+      <li>Back-end Ninja:
+          <span>I know Code-fu</span></li>
+      <li>Secret Agent:
+          <span>#077. Licence to Teal</span></li>
+    </ul>
+    <h2>Designer of pretty interfaces &amp; developer of semantic responsive experiences.</h2>
+  </header>
+  
+  <div id="focusBox" class="right">
+    <div id="recent-posts">
+      <ul>
+        <li><h3>Recent Posts</h3></li>
+        {% for post in site.categories.post limit:3 %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>     
+        {% endfor %}
+      </ul>
+    </div>
+    
+    <div id="recent-demos">
+      <ul>
+        <li><h3>Recent Demos</h3></li>
+        {% for post in site.categories.demo limit:3 %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>     
+        {% endfor %}
+      </ul>
+    </div>
+  </div><!-- /#focusBox -->
+  
+  
+</div>

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<!--
+=================================================
+  The sexy portfolio site for Thomas Sturge
+
+  Author: Thomas Sturge / Arrowhead Desgin
+  Version: 2.5
+  URL: http://tomsturge.co.uk/
+=================================================
+-->
+
+<html class="page"
+      xmlns:og="http://ogp.me/ns#" lang="en-US"
+      xmlns:fb="https://www.facebook.com/2008/fbml" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" 
+        content="width=device-width, height=device-height, user-scalable=no" />
+  <meta name="keywords"
+        content="Web, Design, Website, Designer, Developer" />
+  <meta name="description"
+        content="Thomas Sturge. Web designer, front-end and back-end developer." />
+  <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+  {% include facebook-head.html %}
+
+  <title>{% if page.type == 'post' %}{{ page.title }} - {% endif %}Thomas Sturge // Designer + Developer</title>
+
+  <!-- Loading jQuery and plugins -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+  {% if page.type == 'home' %}
+  <script type="text/javascript" src="/assets/scripts/modernizr.js"></script>
+  {% endif %}
+
+  <!-- Google Web Fonts -->  
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic|Lobster|Oswald:700|Inconsolata' rel='stylesheet' type='text/css'>
+  
+  <!-- Icons font -->
+  <link rel="stylesheet" type="text/css" href="/assets/fonts/ss-social-regular.css" media="all">
+  
+  <!-- Global stylesheet -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" media="all">
+
+</head>
+<body>
+  {% include nav.html %}
+  
+  {% case page.type %}
+
+  {% when 'home' %}
+
+    <div id="intro">
+      {{ content }}
+    </div>
+
+    {% include about.html %}
+
+    {% include work.html %}
+
+    {% include contact.html %}
+
+    <script type="text/javascript" src="/assets/scripts/cycle.js"></script>
+    <script type="text/javascript" src="/assets/scripts/iosslider.js"></script>
+    
+    
+  {% when 'posts' %}
+    
+    <div id="posts">
+      {{ content }}
+    </div>
+    
+    {% include contact.html %}
+    
+  {% when 'demos' %}
+  
+    <div id="demos">
+      {{ content }}
+    </div>
+    
+    {% include contact.html %}
+  
+  {% when 'post' %}
+    
+    <div id="post">
+      {{ content }}
+    </div>
+    
+      {% include social.html %}
+    
+  {% when 'demo' %}
+  
+    <div id="demo">
+      {{ content }}
+    </div>
+    
+    {% include contact.html %}
+  {% endcase %}
+
+    <!-- Site scripts -->
+    <script type="text/javascript" src="/assets/scripts/init.js"></script>
+    
+	
+  
+</body>
+</html>

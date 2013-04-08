@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   $('.introBox').cycle({
-    fx: 'scrollUp'
+    fx: 'fade'
   });
 
 
@@ -19,31 +19,10 @@ $(document).ready(function() {
     scrollbarDrag: true,
     scrollbarLocation: 'bottom',
     scrollbarHeight: '10px',
-    scrollbarBackground: '#518058',
+    scrollbarBackground: '#fff',
     scrollbarBorderRadius: '0',
-    scrollbarOpacity: '0.6'
+    scrollbarOpacity: '1'
   });
-
-  $('a.scroll').live('click',function(e){
-    e.preventDefault();
-    var target = $(this).attr('href');
-    $.scrollTo(target,{'onAfter':function(){
-      window.location.hash=target},'duration':500,
-    });
-  });
-
-
-  var newWindowHeight = $(window).height();
-  $(".cover").css("min-height", newWindowHeight );
-
-
-  $(window).bind("resize", resizeWindow);
-  function resizeWindow( e ) {
-    var newWindowHeight = $(window).height();
-    $(".cover").css("min-height", newWindowHeight );
-  }
-
-
 
 });
 

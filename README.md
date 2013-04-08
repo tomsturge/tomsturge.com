@@ -1,54 +1,69 @@
 Portfolio of Thomas Sturge
 ==========================
 
-This is the code that makes up my new [Portfolio](http://tomsturge.co.uk/ "Portfolio of Thomas Sturge").
+This is the code that makes up my [Portfolio Site](http://tomsturge.co.uk/ "Portfolio Site").
 
 100% responsive and mobile friendly
 
-Change Log
-----------
+**NOTE**: Despite this code base being open source all its code and content remains copyright of the owner and creator Thomas Sturge.
 
-**1**.  
-URL: [v1.tomsturge.co.uk](http://v1.tomsturge.co.uk/ "Site v1")  
-Simple slide box for contact information
+# Change Log
 
-&nbsp;&nbsp;&nbsp;&nbsp;_**1.1**_.  
-&nbsp;&nbsp;&nbsp;&nbsp;Added Feed box slide out to feed in images from Flickr, Dribbble and Zootools
+### 1.0 / 02-05-10 ([v1.tomsturge.co.uk](http://v1.tomsturge.co.uk/ "Site v1"))
+- Simple slide box for contact information
 
-&nbsp;&nbsp;&nbsp;&nbsp;_**1.2**_.  
-&nbsp;&nbsp;&nbsp;&nbsp;Removed all the sites images with CSS3 equivalents i.e gradients, border shapes and psudeo elements
+### 1.0.1. 
+- Added Feed box slide out to feed in images from Flickr, Dribbble and Zootools.
 
-**2**.  
-URL: [Current](http://tomsturge.co.uk/ "Site v2")  
-Full portfolio with work showcase and longer biography
+### 1.0.2.  
+- Replaced all the sites images with CSS3 equivalents i.e gradients, border shapes and psudeo elements.
+
+### 1.1.0.
+- Added an intro animation to greet visitors and provide quick social links
+
+### 2.0 / 17-08-12 ([tomsturge.co.uk](http://tomsturge.co.uk/ "Site v2"))
+- Full portfolio.
+- Work showcase.
+- Longer biography.
  
-&nbsp;&nbsp;&nbsp;&nbsp;_**2.1**_.  
-&nbsp;&nbsp;&nbsp;&nbsp;Made the site responsive and mobile friendly, removing the curtain effect for a simplier scroll animation
+### 2.0.1.  
+- Made the site responsive and mobile friendly.
+- Removed the curtain effect for a simplier scroll animation.
+
+### 2.1. / 05-04-2013 
+- **The Jekyll update** 
+- Ground up rewrite, using Jekyll and Liquid templating. 
+- Ability to publish posts and host demos on the site with ease.  
+- Much improved readability due to increased contrast of background colours
     
-Description
------------
+# Description
 
-Designed organically in browser, it was fun just letting the design make itself as I went along.
+Even though this update is a fundemental rewrite of the original code base of the site it still uses the v2.0 design so instead of a new version this is a reworking and feature rich iteration of the same version.
 
-_**NOTE** I originally used [Google Webfonts](www.google.com/webfonts "Google Webfonts") to provide the fonts for the site but encountered problems with IE and iPhone 3 Safari. So to fix it I now use local font files and @font-face instead._
+This update applies the site to the Jekyll static site generator and utilises the Liquid templatng engine to streamline and help with future upgrades.
+
+The big additions to the front-end of the site are the posts and demos features, allow me to being publishing articles and demonstrate my experiments and ideas.
     
-Features
---------
+# Features
 
-### Fonts:
-[Lobster](http://www.impallari.com/lobster/ "Lobster") by [Impallari Type](www.impallari.com/ "Impallari Type")  
-[Oswald](http://www.fontsquirrel.com/fonts/oswald "Oswald") by [Vernon Adams](https://plus.google.com/107807505287232434305/posts "Vernon Adam")  
-[Source Sans Pro](http://blogs.adobe.com/typblography/2012/08/source-sans-pro.html "Source Sans Pro") by [Adobe](http://Adobe.com "Adobe")  
-[Custom Fontello Build](http://fontello.com/ "Fontello") by [Fontello](http://github.com/fontello "Fontello")  
+## Fonts:
 
-### Tools:
-[SASS](sass-lang.com/ "SASS") & [Compass](http://compass-style.org/ "Compass")
+### Supplied by [Google](http://google.co.uk "Google")
+[Lobster](http://www.google.com/fonts/specimen/Lobster "Lobster")  
+[Oswald](http://www.google.com/fonts/specimen/Oswald "Oswald")  
+[Source Sans Pro](http://www.google.com/fonts/specimen/Source+Sans+Pro "Source Sans Pro") 
+
+### Supplied by [SymbolSet](http://symbolset.com "SymbolSet")
+[Social Regular](https://symbolset.com/sets/social-regular "Social Regular")
+
+## Tools:
+
+[Jekyll](http://jekyllrb.com/ "Jekyll") & [Liquid](https://github.com/Shopify/liquid "Liquid")  
+[SASS](http://sass-lang.com/ "SASS") & [Compass](http://compass-style.org/ "Compass")
 
 [jQuery](http://jquery.com "jquery")  
-&nbsp;&nbsp;&nbsp;&nbsp;[Modernizr](http://modernizr "Modernizr")  
-&nbsp;&nbsp;&nbsp;&nbsp;[iOSSlider](http://www.iosscripts.com/iosslider/ "iOSSlider")  
-&nbsp;&nbsp;&nbsp;&nbsp;[Cycle](jquery.malsup.com/cycle/ "Cycle")  
-&nbsp;&nbsp;&nbsp;&nbsp;[scrollTo](http://flesler.blogspot.co.uk/2007/10/jqueryscrollto.html "scrollTo")   
-&nbsp;&nbsp;&nbsp;&nbsp;~~[Curtains](http://curtain.victorcoulon.fr/ "Curtains")~~ _Replaced due to mobile incompatibilities_  
+[Modernizr](http://modernizr "Modernizr")  
+[iOSSlider](http://www.iosscripts.com/iosslider/ "iOSSlider")  
+[Cycle](jquery.malsup.com/cycle/ "Cycle") 
 
 [Gravatar](http://gravatar/ "Gravatar")

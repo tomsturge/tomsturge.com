@@ -3,3 +3,5 @@ config
 compass_app_log.txt
 fire_app_log.txt
 config.rb
+/_site/
+/start/

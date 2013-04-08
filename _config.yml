@@ -2,5 +2,7 @@ auto: true
 server: true
 markdown: rdiscount
 pygments: true
-permalink: /:year/:month/:title
-paginate: 5
+permalink: /:categories/:title
+paginate: 10
+exclude: sass, config.rb, CNAME
+url: http://tomsturge.co.uk
