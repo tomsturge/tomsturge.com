@@ -40,7 +40,7 @@ This time I used a service called [Contact Checker](http://contrastchecker.com/ 
 
 During this reaserch and discovery I came to realise how little I regarded the subject of accessibilty and it made me sit up and start to paying attention to what I could learn. The site is a long way off from being a safe heaven for the impaired user but I'm going to apply changes as I learn more. I'll be writing up my findings as I go in an attempt to help others discover what can be done to improve to Web for all.
 
-## What is store?
+## What's in store?
 
 My main drive to update this site in the way I have is to give me a place to careful digest and articulate my thoughts and feelings about the things I've learned, and surely will learn, as I continue to grow as a developer. Some of the topics I have in mind are tutorials on the process I went through to create the refresh of this site, tips and tricks I've picked up on my journey as a professional and things I find interesting when I create projects and experiements with new technology and old alike.
 
