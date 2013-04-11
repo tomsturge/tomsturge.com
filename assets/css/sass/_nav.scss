@@ -1,5 +1,5 @@
-.mainNav {
-  $baseSize: 18px;
+.main-nav {
+  $base-size: 18px;
   background-color: $grey;
   width: 100%;
   text-transform: uppercase;
@@ -9,8 +9,8 @@
     ul {
       width: 28.056em;
       margin: 0 auto;
-      padding: calcEm(10px, $baseSize) 0;
-      font: normal #{calcEm($baseSize)}/100% $headingFont;
+      padding: calc-em(10px, $base-size) 0;
+      font: normal #{calc-em($base-size)}/100% $headingFont;
       list-style-type: none;
       overflow: hidden;
     }
@@ -19,7 +19,7 @@
       border-left: none;
       float: left;
       width: 5.833em;
-      padding: calcEm(5px, $baseSize) calcEm(10px, $baseSize);
+      padding: calc-em(5px, $base-size) calc-em(10px, $base-size);
       overflow: hidden;
         a {
           display:block;
@@ -27,16 +27,16 @@
           padding: 0.6em 0 0.4em;
           text-align: center;
           border-bottom: none;
-          @include flatTextShadow(tint($black, 10%), calcEm(-2px, $baseSize), calcEm(3px, $baseSize));
+          @include flat-text-shadow(tint($black, 10%), calc-em(-2px, $base-size), calc-em(3px, $base-size));
             &:hover {
               text-decoration: none; 
               color: #fff; 
             }
         }
         &:nth-child(4n) { border-right: none; }
-        &:nth-child(1) a:hover { @include navHover($blue); }
-        &:nth-child(2) a:hover { @include navHover($red); }
-        &:nth-child(3) a:hover { @include navHover($green); }
-        &:nth-child(4) a:hover { @include navHover($purple); }
+        &:nth-child(1) a:hover { @include nav-hover($blue); }
+        &:nth-child(2) a:hover { @include nav-hover($red); }
+        &:nth-child(3) a:hover { @include nav-hover($green); }
+        &:nth-child(4) a:hover { @include nav-hover($purple); }
     }
 }

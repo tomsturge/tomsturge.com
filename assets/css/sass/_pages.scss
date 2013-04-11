@@ -4,18 +4,18 @@
 //===============================================
 //
 
-.archiveList {
-  $baseSize: 24px;
+.archive-list {
+  $base-size: 24px;
   margin: 0;
-  padding: calcEm(16px, $baseSize);
-  font-size: calcEm($baseSize);
+  padding: calc-em(16px, $base-size);
+  font-size: calc-em($base-size);
   list-style-type: none;
     a {
       display: block;
       width: auto; height: 100%; 
-      padding: calcEm(15px, $baseSize) 
-               calcEm(10px, $baseSize)
-               calcEm(10px, $baseSize);  
+      padding: calc-em(15px, $base-size) 
+               calc-em(10px, $base-size)
+               calc-em(10px, $base-size);  
       -webkit-transition: all 0.5s;
       -moz-transition:  all 0.5s;
       -ms-transition:  all 0.5s;
@@ -35,7 +35,7 @@
       width: 31.675em;
       margin-bottom: 0;
       font: {
-        size: $baseSize;
+        size: $base-size;
         weight: normal;
       }
       line-height: 130%;
@@ -45,7 +45,7 @@
     }
     time {
       padding-top: 0.35em;
-      font-size: calcEm(16px, $baseSize);
+      font-size: calc-em(16px, $base-size);
       float: right;
     }
 }
@@ -59,16 +59,16 @@
 
 #posts {
   background-color: $red;
-  @include flatTextShadow($red, 0.063em, 0.125em);
-    .sectionContainer { padding-top: calcEm(44px, 24px); }
-    h1 { @include sectionTitle($red); }
-    p { padding: 0 calcEm(26px); }
+  @include flat-text-shadow($red, 0.063em, 0.125em);
+    .section-container { padding-top: calc-em(44px, 24px); }
+    h1 { @include section-title($red); }
+    p { padding: 0 calc-em(26px); }
     ul {
       background-color: shade($red, 10%); 
-      @include multiBoxShadow($red, 20%, 5px);
+      @include multi-box-shadow($red, 20%, 5px);
     }
     li {
-      @include flatTextShadow(shade($red, 15%), 0.063em, 0.125em);
+      @include flat-text-shadow(shade($red, 15%), 0.063em, 0.125em);
         &:nth-child(2n) a { 
           background-color: shade($red, 20%); }
         a:hover {
@@ -82,18 +82,18 @@
 }
 
 #post {
-    .sectionContainer { 
+    .section-container { 
       width: 100%;
       padding: 20px 0; 
     }
-    #postTitle { 
+    #post-title { 
       background-color: $red;
       padding: 44px 0 20px; 
     }
-    h1 { @include sectionTitle($red); }
+    h1 { @include section-title($red); }
 }
 
-#postContent { 
+#post-content { 
   background-color: #fff; 
   font-weight: 300;
   color: #444;
@@ -117,12 +117,12 @@
 
 #social {
   background-color: $blue;
-  padding-top: calcEm(4px);
+  padding-top: calc-em(4px);
   border-top: 5px dashed shade($blue, 25%);
   @include box-shadow($blue 0 -5px 0 0); 
-    .sectionContainer { padding: 90px 0 100px; }
-    h2 { @include sectionTitle($blue); }
-    h3 { @include bigTitle($blue, -3px, 4px, 32px); }
+    .section-container { padding: 90px 0 100px; }
+    h2 { @include section-title($blue); }
+    h3 { @include big-title($blue, -3px, 4px, 32px); }
 }
 
 .comments {
@@ -130,12 +130,15 @@
 }
 .share {
   width: 20em;
-    .socialIcons {
+    .social-icons {
         a {
-          $baseSize: 23px;
+          $base-size: 23px;
           background-color: shade($blue, 10%);
-          @include flatTextShadow(shade($blue, 15%), calcEm(-1px, $baseSize), calcEm(2px, $baseSize));
-          @include multiBoxShadow($blue, 20%, calcEm(5px, $baseSize));
+          @include flat-text-shadow(shade($blue, 15%), 
+                   calc-em(-1px, $base-size), 
+                   calc-em(2px, $base-size));
+          @include multi-box-shadow($blue, 20%, 
+                   calc-em(5px, $base-size));
         }
     }
 }
@@ -148,18 +151,18 @@
 
 #demos, #demo {
   background-color: $green;
-  @include flatTextShadow($green, 0.063em, 0.125em);
-    h1 { @include sectionTitle($green); }
+  @include flat-text-shadow($green, 0.063em, 0.125em);
+    h1 { @include section-title($green); }
 }
 
 #demos {
-    p { padding: 0 calcEm(26px); }
+    p { padding: 0 calc-em(26px); }
     ul {
       background-color: shade($green, 10%); 
-      @include multiBoxShadow($green, 20%, 5px);
+      @include multi-box-shadow($green, 20%, 5px);
     }
     li {
-      @include flatTextShadow(shade($green, 15%), 0.063em, 0.125em);
+      @include flat-text-shadow(shade($green, 15%), 0.063em, 0.125em);
         &:nth-child(2n) a { 
           background-color: shade($green, 20%); }
         a:hover {
@@ -173,18 +176,18 @@
 }
 
 #demo {
-    #demoTitle { 
+    #demo-title { 
       padding: 44px 0 20px; 
     }
 }
 
-#demoArea { 
+#demo-area { 
   background-color: #fff; 
   width: 100%;
   color: #444;
   text-shadow: none;
-    &.sectionContainer { padding: 0; }
-    #demoWrapper { 
+    &.section-container { padding: 0; }
+    #demowrapper { 
       padding: 100px 0; 
         .left { float: left; }
         .right { float: right; }
@@ -205,109 +208,114 @@
 
 #intro { 
   background-color: $blue;
-    .sectionContainer {
+    .section-container {
       padding: 100px 0;
     }
 }
 header {
-  width: calcEm(540px);
-  font-family: $headingFont;
+  width: calc-em(540px);
+  font-family: $heading-font;
   color: #fff;
   text-align: center;
     h1 {
-      $baseSize: 75px;
-      font-size: calcEm($baseSize);
+      $base-size: 75px;
+      font-size: calc-em($base-size);
       line-height: 105%;
       color: #fff;
-      @include flatTextShadow($blue, calcEm(-5px,$baseSize), calcEm(8px, $baseSize));
+      @include flat-text-shadow($blue, calc-em(-5px,$base-size), 
+               calc-em(8px, $base-size));
         span {
-          $baseSize: 55px;
+          $base-size: 55px;
           display: block;
           font: {
-            family: $cursiveFont;
-            size: calcEm($baseSize, 75px);
+            family: $cursive-font;
+            size: calc-em($base-size, 75px);
             style: normal;
           }
           color: $black;
           line-height: 110%;
-          @include flatTextShadow($blue, calcEm(-3px,$baseSize), calcEm(3px, $baseSize));
+          @include flat-text-shadow($blue, calc-em(-3px,$base-size),
+                   calc-em(3px, $base-size));
           position: relative;
           top: 10px;
         }
     }
     h2 {
-      $baseSize: 28px;
-      margin: calcEm(15px, $baseSize) 0 0;
+      $base-size: 28px;
+      margin: calc-em(15px, $base-size) 0 0;
       color: #fff;
       font: {
-        family: $bodyFont;
-        size: calcEm($baseSize);
+        family: $body-font;
+        size: calc-em($base-size);
         weight: normal;
       }
-      line-height: calcEm(30px, $baseSize);
+      line-height: calc-em(30px, $base-size);
       border-bottom: none;
       clear: both;
-      @include flatTextShadow($blue, calcEm(-1px,$baseSize), calcEm(3px, $baseSize));
+      @include flat-text-shadow($blue, calc-em(-1px,$base-size), calc-em(3px, $base-size));
     }
 }
 
-.introBox {
+.intro-box {
   background-color: shade($blue, 10%);
-  width: 100%; height: calcEm(50px);
-  margin: calcEm(20px) 0;
+  width: 100%; height: calc-em(50px);
+  margin: calc-em(20px) 0;
   position: relative;
   overflow: hidden;
-  @include multiBoxShadow($blue, 20%, 5px);
+  @include multi-box-shadow($blue, 20%, 5px);
     li {
-      $baseSize: 28px;
+      $base-size: 28px;
       display: block;
       width: 100%;
-      margin: calcEm(15px, $baseSize) auto 0; 
-      font-size: $baseSize;
+      margin: calc-em(15px, $base-size) auto 0; 
+      font-size: $base-size;
       text: {
         align: center;
         transform: uppercase;
       }
       color: $black;
       position: relative;
-      @include flatTextShadow(shade($blue, 10%), calcEm(-2px, $baseSize), calcEm(3px, $baseSize));
+      @include flat-text-shadow(shade($blue, 10%), 
+               calc-em(-2px, $base-size), calc-em(3px, $base-size));
         span {
-          $baseSize: 22px;
-          margin-left: calcEm(2px, $baseSize);
+          $base-size: 22px;
+          margin-left: calc-em(2px, $base-size);
           font: {
-            family: $bodyFont;
-            size: $baseSize;
+            family: $body-font;
+            size: $base-size;
           }
           color: #fff;
           position: relative;
           top: -5px;
-          @include flatTextShadow(shade($blue, 10%), calcEm(-2px, $baseSize), calcEm(3px, $baseSize));
+          @include flat-text-shadow(shade($blue, 10%), 
+                   calc-em(-2px, $base-size), 
+                   calc-em(3px, $base-size));
         }
     }
 }
 
-#focusBox { width: calcEm(380px); }
+#focus-box { width: calc-em(380px); }
 
-#recent-posts { margin-bottom: calcEm(20px); }
+#recent-posts { margin-bottom: calc-em(20px); }
 #recent-posts, #recent-demos {
   background-color: shade($blue, 10%); 
     ul {
       margin: 0;
-      padding: calcEm(16px);
+      padding: calc-em(16px);
       list-style-type: none;
-      @include multiBoxShadow($blue, 20%, 5px);
+      @include multi-box-shadow($blue, 20%, 5px);
     }    
     li {
-      @include flatTextShadow(shade($blue, 15%), 0.063em, 0.125em);
+      @include flat-text-shadow(shade($blue, 15%), 0.063em, 0.125em);
         &:first-child { 
           background-color: transparent; 
-          padding: 0 calcEm(5px);
+          padding: 0 calc-em(5px);
         }
         &:nth-child(2n) a { background-color: shade($blue, 20%); }
         a {
           display: block;
           width: auto; height: 100%; 
-          padding: calcEm(15px) calcEm(10px);  
+          padding: calc-em(15px) calc-em(10px);  
           -webkit-transition: all 0.5s;
              -moz-transition: all 0.5s;
               -ms-transition: all 0.5s;
@@ -322,7 +330,7 @@ header {
         }
     }
     h3 {
-      @include bigTitle(shade($blue, 10%), -2px, 3px, 24px, $black);
+      @include big-title(shade($blue, 10%), -2px, 3px, 24px, $black);
     }
     
 }
@@ -336,13 +344,13 @@ header {
 #about {
   background-color: $red;
   color: #fff;
-  margin-bottom: calcEm(4px);
+  margin-bottom: calc-em(4px);
   border-bottom: 5px dashed shade($red, 25%);
   overflow: hidden;
-  @include flatTextShadow($red, 0.063em, 0.125em);
+  @include flat-text-shadow($red, 0.063em, 0.125em);
   @include box-shadow($red 0 10px 0 0); 
-    h2 { @include sectionTitle($red); }
-    h3 { @include bigTitle($red, -3px, 4px, 32px); }
+    h2 { @include section-title($red); }
+    h3 { @include big-title($red, -3px, 4px, 32px); }
     div { width: 33.333em; }
     aside { 
       width: 17.778em;
@@ -351,7 +359,7 @@ header {
           width: auto;
         }
     }
-    img { @include imgBorder($red, 15px); }
+    img { @include img-border($red, 15px); }
     em { color: black; }
 }
 
@@ -359,29 +367,29 @@ header {
 //  SKILL LISTS
 //*****************
 
-.skillLists { 
+.skill-lists { 
   width: 100%;
   overflow: hidden;
   ul { background-color: shade($red, 10%); }
 }
 
-.devSkills, .designSkills {
+.dev-skills, .design-skills {
   width: 14.167em; /* 255px */
   margin: 0;
-  padding: calcEm(16px);
+  padding: calc-em(16px);
   list-style-type: none;
-  @include multiBoxShadow($red, 20%, 5px);
+  @include multi-box-shadow($red, 20%, 5px);
     li {
-      @include flatTextShadow(shade($red, 15%), 0.063em, 0.125em);
+      @include flat-text-shadow(shade($red, 15%), 0.063em, 0.125em);
         &:nth-child(2n+1) { background-color: shade($red, 20%); }
         &:first-child { 
           background-color: transparent; 
-          padding: 0 calcEm(5px); 
+          padding: 0 calc-em(5px); 
         }
-        &:not(:first-child) { padding: calcEm(10px) calcEm(5px);  }
+        &:not(:first-child) { padding: calc-em(10px) calc-em(5px);  }
     }
     h4 {
-      @include bigTitle(shade($red, 10%), -2px, 3px, 24px, $black);
+      @include big-title(shade($red, 10%), -2px, 3px, 24px, $black);
     }
 }
 
@@ -392,11 +400,11 @@ header {
 //
 
 #work {
-    h2 { @include sectionTitle($green); }
-    h3 { @include bigTitle($green, -3px, 4px, 32px); }
+    h2 { @include section-title($green); }
+    h3 { @include big-title($green, -3px, 4px, 32px); }
   background-color: $green;
   color: #fff;
-  @include flatTextShadow($green, 0.063em, 0.125em);
+  @include flat-text-shadow($green, 0.063em, 0.125em);
   @include box-shadow(shade($green, 30%) 0 0.625em 0 0);
     section {
       margin-bottom: 1.250em;
@@ -404,18 +412,18 @@ header {
     }
     img {
       width: 15.556em;
-      @include imgBorder($green, 10px); }
+      @include img-border($green, 10px); }
 }
 
 //*****************
 //  WorkSlider
 //*****************
 
-.workShowcase { 
+.work-showcase { 
   margin: 0;
   list-style-type: none; 
 }
-.workSlider {
+.work-slider {
   width: 100%; height: 12.222em;
   margin-top: 0.556em;
   position: relative;
@@ -433,15 +441,11 @@ header {
     }
 }
 
-.scrollbarBlock1, .scrollbarBlock2 {
-  background-color: rgba(shade($green, 15%), 1);
-}
-
 //*****************
 //  Hover Box
 //*****************
 
-.hoverBox {
+.hover-box {
   background-color: rgba(tint($green, 15%), 0.8);
   display: none;
   width: 14.444em; height: 8.889em;
@@ -450,7 +454,7 @@ header {
   top: 10px; left: 10px;
     h4 {
       margin: 0;
-      @include bigTitle($green, -2px, 3px, 24px);
+      @include big-title($green, -2px, 3px, 24px);
     }
     p { 
       margin-bottom: 0.3em; 
@@ -467,7 +471,7 @@ header {
       float: left;
       background-color: shade($green, 15%);
       margin: 0 0 0.278em 0.278em; padding: 0.111em 0.278em;
-      @include flatTextShadow(shade($green, 15%), 0.056em, 0.111em);
+      @include flat-text-shadow(shade($green, 15%), 0.056em, 0.111em);
         
     }
 }
@@ -480,41 +484,42 @@ header {
 
 #contact {
   background-color: $purple;
-    h2 { @include sectionTitle($purple); }
-    h3 { @include bigTitle($purple, -3px, 4px, 32px); }
+    h2 { @include section-title($purple); }
+    h3 { @include big-title($purple, -3px, 4px, 32px); }
 }
 
 footer {
   @include box-shadow(shade($purple, 30%) 0 10px 0 inset);
-  @include flatTextShadow($purple, 0.056em, 0.111em);
+  @include flat-text-shadow($purple, 0.056em, 0.111em);
     section { 
       width: 26em;
       overflow: hidden; 
     }
 }
 
-
 //*****************
 //  SOCIAL ICONS
 //*****************
 
-.socialIcons {
+.social-icons {
   margin: 0;
   text-align: center;
   list-style: none outside none;
     a {
-      $baseSize: 23px;
+      $base-size: 23px;
       background-color: shade($purple, 10%);
-      width: calcEm(65px, $baseSize); height: calcEm(40px, $baseSize);
-      margin-right: calcEm(15px, $baseSize);
-      padding-top: calcEm(25px, $baseSize);
+      width: calc-em(65px, $base-size); 
+      height: calc-em(40px, $base-size);
+      margin-right: calc-em(15px, $base-size);
+      padding-top: calc-em(25px, $base-size);
       font: {
-        size: calcEm(22px);
+        size: calc-em(22px);
         style: normal;
         weight: normal;
       }
-      @include flatTextShadow(shade($purple, 15%), calcEm(-1px, $baseSize), calcEm(2px, $baseSize));
-      @include multiBoxShadow($purple, 20%, calcEm(5px, $baseSize));
+      @include flat-text-shadow(shade($purple, 15%), 
+               calc-em(-1px, $base-size), calc-em(2px, $base-size));
+      @include multi-box-shadow($purple, 20%, calc-em(5px, $base-size));
       -webkit-transition: all 0.5s;
          -moz-transition: all 0.5s;
           -ms-transition: all 0.5s;
@@ -526,12 +531,12 @@ footer {
           color: #fff;
         }
     }
-    li.facebook a:hover { @include socialHover($facebook); }
-    li.twitter a:hover { @include socialHover($twitter); }
-    li.instagram a:hover { @include socialHover($instagram); }
-    li.github a:hover { @include socialHover($github); }
-    li.dribbble a:hover { @include socialHover($dribbble); }
-    li.gplus a:hover { @include socialHover($gplus); }
-    li.skype a:hover { @include socialHover($skype); }
-    li.gmail a:hover { @include socialHover($gmail); }
+    li.facebook a:hover { @include social-hover($facebook); }
+    li.twitter a:hover { @include social-hover($twitter); }
+    li.instagram a:hover { @include social-hover($instagram); }
+    li.github a:hover { @include social-hover($github); }
+    li.dribbble a:hover { @include social-hover($dribbble); }
+    li.gplus a:hover { @include social-hover($gplus); }
+    li.skype a:hover { @include social-hover($skype); }
+    li.gmail a:hover { @include social-hover($gmail); }
 }

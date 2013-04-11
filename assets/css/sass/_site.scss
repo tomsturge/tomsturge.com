@@ -1,5 +1,5 @@
 html {
-  font-family: $bodyFont;
+  font-family: $body-font;
   font-size: 62.5%;
   color: #fff;
   overflow-x: hidden;
@@ -7,7 +7,7 @@ html {
 
 body {
   background-color: $grey;
-  @include fontSize(18);
+  @include font-size(18);
   margin: 0 auto;
   padding: 66px 0 0;
 }
@@ -32,14 +32,14 @@ body {
 //===============================================
 //
 
-#postContent > div, 
-#demoTitle > div,
-.sectionContainer { 
+#post-content > div, 
+#demo-title > div,
+.section-container { 
   width: 53.333em; // 960px 
   margin: 0 auto; 
 }
 
-.sectionContainer {
+.section-container {
   padding: 100px 0;
   line-height: 120%;
   overflow: hidden;

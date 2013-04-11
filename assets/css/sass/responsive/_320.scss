@@ -4,31 +4,31 @@ margin-bottom: 12px;
 
 body { padding: 50px 0 0; }
 
-.mainNav {
-  $baseSize: 14px;
+.main-nav {
+  $base-size: 14px;
     ul {
       width: 22.858em;
       margin: 0 auto; padding: 0;
-      font: normal #{calcEm($baseSize)}/100% $headingFont;
+      font: normal #{calc-em($base-size)}/100% $heading-font;
     }
     li {
       width: 5.661em;
       padding: 0;
         a {
-          padding: calcEm(17px, $baseSize) 0;
+          padding: calc-em(17px, $base-size) 0;
         }
     }
 }
 
-#intro .sectionContainer { padding: 22px 0; }
-#social .sectionContainer { padding: 12px 0 22px; }
+#intro .section-container { padding: 22px 0; }
+#social .section-container { padding: 12px 0 22px; }
 
-.sectionContainer {
+.section-container {
   width: 17.223em;
   padding: 22px 0;
 }
-#postContent > div, 
-#demoTitle > div {
+#post-content > div, 
+#demo-title > div {
   width: 17.223em;
   padding: 6px 0;
 }
@@ -41,42 +41,42 @@ header {
     }
     h2 { font-size: 1.05em; }
 }
-.introBox { display: none; }
+.intro-box { display: none; }
 
-#focusBox { 
+#focus-box { 
   width: 100%;
   margin: 12px 0 0; 
 }
 #recent-posts, #recent-demos { 
     h3 { 
-      @include bigTitle(shade($blue, 10%), -2px, 3px, 22px, $black); }
+      @include big-title(shade($blue, 10%), -2px, 3px, 22px, $black); }
 }
 
 #about {
       aside { display: none; }
 }
 
-.skillLists ul { width: 89%; }
-.devSkills { margin-bottom: calcEm(12px); }
+.skill-lists ul { width: 89%; }
+.dev-skills { margin-bottom: calc-em(12px); }
 
 footer section { 
   width: 100%; 
   margin: 0 0 12px; 
 }
 
-.socialIcons {
-    a { margin-bottom: calcEm(14px); }
+.social-icons {
+    a { margin-bottom: calc-em(14px); }
 }
 
-.archiveList {
+.archive-list {
     h2 { width: 100%; }
     time { float: left; }
 }
 
-#demo #demoTitle,
-#post #postTitle { padding: 12px 0; }
+#demo #demo-title,
+#post #post-title { padding: 12px 0; }
 
-#postContent { 
+#post-content { 
     img { 
       margin-bottom: 12px;
       border: 5px solid $red;
