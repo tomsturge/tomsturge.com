@@ -10,7 +10,7 @@
       width: 28.056em;
       margin: 0 auto;
       padding: calc-em(10px, $base-size) 0;
-      font: normal #{calc-em($base-size)}/100% $headingFont;
+      font: normal #{calc-em($base-size)}/100% $heading-font;
       list-style-type: none;
       overflow: hidden;
     }

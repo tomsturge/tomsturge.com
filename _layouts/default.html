@@ -58,7 +58,7 @@
 {% case page.type %}
 
 {% when 'home' %}
-
+  
   <div id="intro">
     {{ content }}
   </div>
@@ -71,6 +71,9 @@
 
   <script type="text/javascript" src="/assets/scripts/cycle2.js">
   </script>
+  <script type="text/javascript" src="/assets/scripts/cycle2.carousel.js">
+  </script>
+  <script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
 {% when 'posts' %}
   
   <div id="posts">
