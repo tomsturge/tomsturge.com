@@ -8,10 +8,11 @@ client: Arrowhead Design
 client_url: http://arrowheaddesign.com
 categories:
 - work
-- branding
+- design
 meta: A logo created for a company that specialised in print and web design. The concept is a mouse point made out of folded paper.
 tags: 
 - Design Agency
+- Logo
 ---
 
 ![Arrowhead Design Logo](/assets/images/logo/arrowheadDesign.png)

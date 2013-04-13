@@ -3,21 +3,48 @@ layout: default
 type: work-items
 ---
 
-<div class="section-container">
+<article class="section-container">
 
   <h1>Work</h1>
-  
-  <ul class="archive-list">
-    {% for post in site.categories.work %}
-      <li>
-      	<a href="{{ post.url }}">
-        	<h2>{{ post.title }}</h2>
-      	  <time datetime="{{ post.date | date: %Y-%m-%d }}" pubdate>
-      	  	{{ post.date | date: "%d %B, %Y" }}
-      	  </time>
-      	</a>
-    	</li>
-    {% endfor %}
-  </ul>
-	
-</div>
+  {% case site.catogories %}
+    
+    {% when web %}
+    <section>
+      <h2>Web</h2>
+      <p>A few of the sites I've made whilst working with various agencies or as part of solo projects.</p>
+      <ul>
+        {% for post in site.categories.web %}
+        <li>
+          <a href="{{ post.url }}">
+            <img src="{{ post.image }}" />
+          </a>
+          <a href="{{ post.url }}">
+            <h3>{{ post.title }}</h3>
+          </a>
+          <p>{{ post.meta }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    
+    {% when design %}
+    <section>
+      <h2>Design</h2>
+      <p>A collection of designs I've created for different projects.</p>
+     <ul>
+        {% for post in site.categories.design %}
+        <li>
+          <a href="{{ post.url }}">
+            <img src="{{ post.image }}" />
+          </a>
+          <a href="{{ post.url }}">
+            <h3>{{ post.title }}</h3>
+          </a>
+          <p>{{ post.meta }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endcase %}
+    
+</article>

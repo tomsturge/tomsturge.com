@@ -8,58 +8,39 @@
     
     {% when web %}
     <section>
-      <ul class="work-showcase">
+      <h3>Web</h3>
+      <p>A few of the sites I've made whilst working with various agencies or as part of solo projects.</p>
+      <ul class="work-highlight">
+        {% for post in site.categories.web limit:3 %}
         <li>
-          <h3>Web</h3>
-          <p>A few of the sites I've made whilst working with various agencies or as part of solo projects.</p></li>
-        <li>
-          <div class="work-slider">
-            <ul class="slider">
-              {% for post in site.categories.web %}
-              <li class="slide">
-                <img src="{{ post.image }}" />
-                  <a href="{{ post.url }}">
-                    <h4>{{ post.title }}</h4>
-                  </a>
-              </li>
-              {% endfor %}
-            </ul>
-          </div><!-- /.work-slider -->
+          <a href="{{ post.url }}">
+            <img src="{{ post.image }}" />
+          </a>
+          <a href="{{ post.url }}">
+            <h4>{{ post.title }}</h4>
+          </a>
+          <p>{{ post.meta }}</p>
         </li>
+        {% endfor %}
       </ul>
     </section>
     
-    {% when branding %}
+    {% when design %}
     <section>
-      <ul class="work-showcase">
+      <h3>Design</h3>
+      <p>A collection of designs I've created for different projects.</p>
+      <ul class="work-highlight">
+        {% for post in site.categories.design limit:3 %}
         <li>
-          <h3>Branding</h3>
-          <p>Who doesn't like a good logo? Here are some of marks I've created.</p>
+          <a href="{{ post.url }}">
+            <img src="{{ post.image }}" />
+          </a>
+          <a href="{{ post.url }}">
+            <h4>{{ post.title }}</h4>
+          </a>
+          <p>{{ post.meta }}</p>
         </li>
-        <li>
-          <div class="work-slider">
-            <ul class="slider">
-              {% for post in site.categories.branding %}
-              <li class="slide">
-                <img src="{{ post.image }}" />
-                <div class="hover-box">
-                  <a href="{{ post.url }}">
-                    <h4>{{ post.title }}</h4>
-                  </a>
-                    {% for client in post.client %}
-                      <p>For: <a href="{{ post.client_url }}">{{ post.client }}</a></p>
-                    {% endfor %}
-                  <ul>
-                    {% for tag in post.tags %}
-                      <li>{{ tag }}</li>
-                    {% endfor %}
-                  </ul>
-                </div>
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </li>
+        {% endfor %}
       </ul>
     </section>
     {% endcase %}

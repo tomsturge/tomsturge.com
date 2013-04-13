@@ -113,6 +113,14 @@
   </div>
   
   {% include contact.html %}
+  
+{% when 'work-single' %}
+
+  <div id="work">
+    {{ content }}
+  </div>
+  
+  {% include contact.html %}
 {% endcase %}
   
 <!-- SymbolSet Support -->
