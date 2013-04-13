@@ -32,10 +32,6 @@
 
 <!-- Loading jQuery and plugins -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-{% if page.type == 'home' %}
-<script type="text/javascript" src="/assets/scripts/modernizr.js">
-</script>
-{% endif %}
 
 <!-- Google Web Fonts -->  
 <link rel='stylesheet' type='text/css'
@@ -64,16 +60,12 @@
   </div>
 
   {% include about.html %}
-
+  
   {% include work.html %}
 
   {% include contact.html %}
 
-  <script type="text/javascript" src="/assets/scripts/cycle2.js">
-  </script>
-  <script type="text/javascript" src="/assets/scripts/cycle2.carousel.js">
-  </script>
-  <script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
+  <script type="text/javascript" src="/assets/scripts/cycle2.js"></script>
 {% when 'posts' %}
   
   <div id="posts">
@@ -101,6 +93,22 @@
 {% when 'demo' %}
 
   <div id="demo">
+    {{ content }}
+  </div>
+  
+  {% include contact.html %}
+  
+{% when 'work' %}
+
+  <div id="work">
+    {{ content }}
+  </div>
+  
+  {% include contact.html %}
+
+{% when 'work-items' %}
+
+  <div id="work">
     {{ content }}
   </div>
   

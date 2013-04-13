@@ -82,12 +82,8 @@
 }
 
 #post {
-    .section-container { 
-      width: 100%;
-      padding: 20px 0; 
-    }
+  background-color: $red;
     #post-title { 
-      background-color: $red;
       padding: 44px 0 20px; 
     }
     h1 { @include section-title($red); }
@@ -95,17 +91,22 @@
 
 #post-content { 
   background-color: #fff; 
+  width: 100%;
   font-weight: 300;
   color: #444;
+    .section-container { 
+      width: 100%;
+      padding: 20px 0; 
+    }
     a {
       font-weight: 400;
       color: $red;
     }
     b,strong { font-weight: normal } 
     img { 
-      margin: 0 0 14px 24px;
       border: 10px solid $red;
-      float: right; 
+        &.right { margin: 0 0 14px 24px; }
+        &.left { margin: 0 24px 14px 0; }
     }
 } 
     
@@ -150,27 +151,27 @@
 //
 
 #demos, #demo {
-  background-color: $green;
-  @include flat-text-shadow($green, 0.063em, 0.125em);
-    h1 { @include section-title($green); }
+  background-color: $purple;
+  @include flat-text-shadow($purple, 0.063em, 0.125em);
+    h1 { @include section-title($purple); }
 }
 
 #demos {
     p { padding: 0 calc-em(26px); }
     ul {
-      background-color: shade($green, 10%); 
-      @include multi-box-shadow($green, 20%, 5px);
+      background-color: shade($purple, 10%); 
+      @include multi-box-shadow($purple, 20%, 5px);
     }
     li {
-      @include flat-text-shadow(shade($green, 15%), 0.063em, 0.125em);
+      @include flat-text-shadow(shade($purple, 15%), 0.063em, 0.125em);
         &:nth-child(2n) a { 
-          background-color: shade($green, 20%); }
+          background-color: shade($purple, 20%); }
         a:hover {
           background-color: #fff;
-          color: $green;
+          color: $purple;
           text-shadow: none; 
           text-decoration: none;
-            h2 { color: $green; }
+            h2 { color: $purple; }
         }
     }    
 }
@@ -206,12 +207,7 @@
 //----------------------
 //
 
-#intro { 
-  background-color: $blue;
-    .section-container {
-      padding: 100px 0;
-    }
-}
+#intro { background-color: $blue; }
 header {
   width: calc-em(540px);
   font-family: $heading-font;
@@ -222,8 +218,8 @@ header {
       font-size: calc-em($base-size);
       line-height: 105%;
       color: #fff;
-      @include flat-text-shadow($blue, calc-em(-5px,$base-size), 
-               calc-em(8px, $base-size));
+      @include flat-text-shadow($blue, calc-em(-3px,$base-size), 
+               calc-em(5px, $base-size));
         span {
           $base-size: 55px;
           display: block;
@@ -437,6 +433,11 @@ header {
           width: 16.667em; height: 11em;
           margin: 0 1.67em 1.111em 0;
           position: relative !important;
+            > a {
+              display: block;
+              width: 100%; height: 100%;
+              z-index: 100;
+            }
         }
     }
 }
