@@ -6,8 +6,8 @@ html {
 }
 
 body {
-  background-color: $grey;
   @include font-size(18);
+  background-color: $grey;
   margin: 0 auto;
   padding: 66px 0 0;
 }
@@ -16,14 +16,14 @@ body {
 .right { float: right; }
 
 ::selection {
+  @include text-shadow(none);
   background: $black;
   color: #fff;
-  @include text-shadow(none);
 }
 ::-moz-selection {
+  @include text-shadow(none);
   background: $black;
   color: #fff;
-  @include text-shadow(none);
 }
   
 //
@@ -55,11 +55,23 @@ body {
 
 //
 //===============================================
-//  PAGES
+//  Pages
 //===============================================
 //
 
-@import 'pages';
+// Home page
+@import 'pages/home';
 
+// Archive page
+@import 'pages/archive';
+
+// Posts page
+@import 'pages/posts';
+
+// Work pages
+@import 'pages/work';
+
+// Demos page
+@import 'pages/demos';
 
 .full { width: 100%; }

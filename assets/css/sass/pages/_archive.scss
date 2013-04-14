@@ -1,0 +1,45 @@
+.archive-list {
+  $base-size: 24px;
+  margin: 0;
+  padding: calc-em(16px, $base-size);
+  font-size: calc-em($base-size);
+  list-style-type: none;
+    a {
+      display: block;
+      width: auto; height: 100%; 
+      padding: calc-em(15px, $base-size) 
+               calc-em(10px, $base-size)
+               calc-em(10px, $base-size);  
+      -webkit-transition: all 0.5s;
+      -moz-transition:  all 0.5s;
+      -ms-transition:  all 0.5s;
+      -o-transition:  all 0.5s;
+      transition:  all 0.5s;
+      overflow: hidden;
+        &:hover {
+          background-color: #fff;
+          text-shadow: none; 
+          text-decoration: none;
+            time {
+              color: $black;
+            }
+          }
+    }
+    h2 { 
+      width: 31.675em;
+      margin-bottom: 0;
+      font: {
+        size: $base-size;
+        weight: normal;
+      }
+      line-height: 130%;
+      color: #fff;
+      border-bottom: none;
+      float: left; 
+    }
+    time {
+      padding-top: 0.35em;
+      font-size: calc-em(16px, $base-size);
+      float: right;
+    }
+}

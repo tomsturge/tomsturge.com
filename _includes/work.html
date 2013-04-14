@@ -10,16 +10,14 @@
     <section>
       <h3>Web</h3>
       <p>A few of the sites I've made whilst working with various agencies or as part of solo projects.</p>
-      <ul class="work-highlight">
+      <ul>
         {% for post in site.categories.web limit:3 %}
         <li>
-          <a href="{{ post.url }}">
+          <a href="{{ post.url }}" alt="{{ post.title }}">
             <img src="{{ post.image }}" />
-          </a>
-          <a href="{{ post.url }}">
             <h4>{{ post.title }}</h4>
+            <p>{{ post.meta }}</p>
           </a>
-          <p>{{ post.meta }}</p>
         </li>
         {% endfor %}
       </ul>
@@ -28,17 +26,15 @@
     {% when design %}
     <section>
       <h3>Design</h3>
-      <p>A collection of designs I've created for different projects.</p>
-      <ul class="work-highlight">
+      <p>A collection of designs I've created for clients and personal projects.</p>
+      <ul>
         {% for post in site.categories.design limit:3 %}
         <li>
-          <a href="{{ post.url }}">
+          <a href="{{ post.url }}" alt="{{ post.title }}">
             <img src="{{ post.image }}" />
-          </a>
-          <a href="{{ post.url }}">
             <h4>{{ post.title }}</h4>
+            <p>{{ post.meta }}</p>
           </a>
-          <p>{{ post.meta }}</p>
         </li>
         {% endfor %}
       </ul>

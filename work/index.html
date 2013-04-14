@@ -1,6 +1,6 @@
 ---
 layout: default
-type: work-items
+type: work-page
 ---
 
 <article class="section-container">
@@ -17,11 +17,9 @@ type: work-items
         <li>
           <a href="{{ post.url }}">
             <img src="{{ post.image }}" />
-          </a>
-          <a href="{{ post.url }}">
             <h3>{{ post.title }}</h3>
+            <p>{{ post.meta }}</p>
           </a>
-          <p>{{ post.meta }}</p>
         </li>
         {% endfor %}
       </ul>
@@ -36,11 +34,9 @@ type: work-items
         <li>
           <a href="{{ post.url }}">
             <img src="{{ post.image }}" />
-          </a>
-          <a href="{{ post.url }}">
             <h3>{{ post.title }}</h3>
+            <p>{{ post.meta }}</p>
           </a>
-          <p>{{ post.meta }}</p>
         </li>
         {% endfor %}
       </ul>

@@ -1,0 +1,316 @@
+
+//
+//----------------------
+//  INTRO SECTION
+//----------------------
+//
+
+#intro { background-color: $blue; }
+header {
+  width: calc-em(540px);
+  font-family: $heading-font;
+  color: #fff;
+  text-align: center;
+    h1 {
+      $base-size: 75px;
+      @include flat-text-shadow($blue, calc-em(-3px,$base-size), 
+               calc-em(5px, $base-size));
+      font-size: calc-em($base-size);
+      line-height: 105%;
+      color: #fff;
+        span {
+          $base-size: 55px;
+          @include flat-text-shadow($blue, calc-em(-3px,$base-size),
+                   calc-em(3px, $base-size));
+          display: block;
+          font: {
+            family: $cursive-font;
+            size: calc-em($base-size, 75px);
+            style: normal;
+          }
+          color: $black;
+          line-height: 110%;
+          position: relative;
+          top: 10px;
+        }
+    }
+    h2 {
+      $base-size: 28px;
+      @include flat-text-shadow($blue, calc-em(-1px,$base-size), calc-em(3px, $base-size));
+      margin: calc-em(15px, $base-size) 0 0;
+      color: #fff;
+      font: {
+        family: $body-font;
+        size: calc-em($base-size);
+        weight: normal;
+      }
+      line-height: calc-em(30px, $base-size);
+      border-bottom: none;
+      clear: both;
+    }
+}
+
+.intro-box {
+  @include multi-box-shadow($blue, 20%, 5px);
+  background-color: shade($blue, 10%);
+  width: 100%; height: calc-em(50px);
+  margin: calc-em(20px) 0;
+  position: relative;
+  overflow: hidden;
+    li {
+      $base-size: 28px;
+      @include flat-text-shadow(shade($blue, 10%), 
+               calc-em(-2px, $base-size), calc-em(3px, $base-size));
+      display: block;
+      width: 100%;
+      margin: calc-em(15px, $base-size) auto 0; 
+      font-size: $base-size;
+      text: {
+        align: center;
+        transform: uppercase;
+      }
+      color: $black;
+      position: relative;
+        span {
+          $base-size: 22px;
+          margin-left: calc-em(2px, $base-size);
+          font: {
+            family: $body-font;
+            size: $base-size;
+          }
+          color: #fff;
+          position: relative;
+          top: -5px;
+          @include flat-text-shadow(shade($blue, 10%), 
+                   calc-em(-2px, $base-size), 
+                   calc-em(3px, $base-size));
+        }
+    }
+}
+
+#focus-box { width: calc-em(380px); }
+
+#recent-posts { margin-bottom: calc-em(20px); }
+#recent-posts, #recent-demos {
+  background-color: shade($blue, 10%); 
+    ul {
+      margin: 0;
+      padding: calc-em(16px);
+      list-style-type: none;
+      @include multi-box-shadow($blue, 20%, 5px);
+    }    
+    li {
+      @include flat-text-shadow(shade($blue, 15%), 0.063em, 0.125em);
+        &:first-child { 
+          background-color: transparent; 
+          padding: 0 calc-em(5px);
+        }
+        &:nth-child(2n) a { background-color: shade($blue, 20%); }
+        a {
+          display: block;
+          width: auto; height: 100%; 
+          padding: calc-em(15px) calc-em(10px);  
+          -webkit-transition: all 0.5s;
+             -moz-transition: all 0.5s;
+              -ms-transition: all 0.5s;
+               -o-transition: all 0.5s;
+                  transition: all 0.5s;
+            &:hover {
+              background-color: #fff;
+              color: $blue;
+              text-shadow: none; 
+              text-decoration: none;
+            }
+        }
+    }
+    h3 {
+      @include big-title(shade($blue, 10%), -2px, 3px, 24px, $black);
+    }
+    
+}
+
+//
+//----------------------
+//  ABOUT SECTION
+//----------------------
+//
+
+#about {
+  @include flat-text-shadow($red, 0.063em, 0.125em);
+  @include box-shadow($red 0 10px 0 0); 
+  background-color: $red;
+  color: #fff;
+  margin-bottom: calc-em(4px);
+  border-bottom: 5px dashed shade($red, 25%);
+  overflow: hidden;
+    h2 { @include section-title($red); }
+    h3 { @include big-title($red, -3px, 4px, 32px); }
+    div { width: 33.333em; }
+    aside { 
+      width: 17.778em;
+      display: block;
+        section {
+          width: auto;
+        }
+    }
+    img { @include img-border($red, 15px); }
+    em { color: black; }
+}
+
+//*****************
+//  SKILL LISTS
+//*****************
+
+.skill-lists { 
+  width: 100%;
+  overflow: hidden;
+  ul { background-color: shade($red, 10%); }
+}
+
+.dev-skills, .design-skills {
+  width: 14.167em; /* 255px */
+  margin: 0;
+  padding: calc-em(16px);
+  list-style-type: none;
+  @include multi-box-shadow($red, 20%, 5px);
+    li {
+      @include flat-text-shadow(shade($red, 15%), 0.063em, 0.125em);
+        &:nth-child(2n+1) { background-color: shade($red, 20%); }
+        &:first-child { 
+          background-color: transparent; 
+          padding: 0 calc-em(5px); 
+        }
+        &:not(:first-child) { padding: calc-em(10px) calc-em(5px);  }
+    }
+    h4 {
+      @include big-title(shade($red, 10%), -2px, 3px, 24px, $black);
+    }
+}
+
+//
+//----------------------
+//  WORK SECTION
+//----------------------
+//
+
+#work {
+  @include flat-text-shadow($green, 0.063em, 0.125em);
+  @include box-shadow(shade($green, 30%) 0 0.625em 0 0);
+  background-color: $green;
+  color: #fff;
+    h2 { @include section-title($green); }
+    h3 { @include big-title($green, -3px, 4px, 32px); }
+    h4 {
+      @include big-title(shade($green, 15%), -3px, 4px, 32px);
+      padding: 0 15px;
+      font-size: 1.35em;
+    }
+    section {
+      margin-bottom: 1.250em;
+      overflow: hidden;
+    }
+    img {
+      width: 15.556em;
+      padding: 10px; }
+    ul { margin: 0; }
+    
+    li {
+      background-color: shade($green, 15%);
+      display: inline-block;
+      width: 300px; height: 315px;
+      margin: 0 30px 20px 0;
+      vertical-align: top;
+      float: left;
+        &:nth-child(3n) { margin-right: 0; }
+        &:hover {
+          background-color: #fff;
+            h4, p { 
+              text-shadow: none;
+            }
+            h4 { color: $black; }
+            p { color: shade($green, 15%); }
+        }
+        a {
+          display: block;
+          height: 315px;
+          text-decoration: none;
+        }
+        p { 
+          @include flat-text-shadow(shade($green, 15%), 
+                                    0.063em, 0.125em);
+          padding: 0 15px; 
+        }
+    }
+    li, li * {
+      -webkit-transition: all 0.5s;
+         -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+           -o-transition: all 0.5s;
+              transition: all 0.5s;
+    }
+}
+
+//
+//----------------------
+//  CONTACT SECTION
+//----------------------
+//
+
+#contact {
+  background-color: $purple;
+    h2 { @include section-title($purple); }
+    h3 { @include big-title($purple, -3px, 4px, 32px); }
+}
+
+footer {
+  @include box-shadow(shade($purple, 30%) 0 10px 0 inset);
+  @include flat-text-shadow($purple, 0.056em, 0.111em);
+    section { 
+      width: 26em;
+      overflow: hidden; 
+    }
+}
+
+//*****************
+//  SOCIAL ICONS
+//*****************
+
+.social-icons {
+  margin: 0;
+  text-align: center;
+  list-style: none outside none;
+    a {
+      $base-size: 23px;
+      background-color: shade($purple, 10%);
+      width: calc-em(65px, $base-size); 
+      height: calc-em(40px, $base-size);
+      margin-right: calc-em(15px, $base-size);
+      padding-top: calc-em(25px, $base-size);
+      font: {
+        size: calc-em(22px);
+        style: normal;
+        weight: normal;
+      }
+      @include flat-text-shadow(shade($purple, 15%), 
+               calc-em(-1px, $base-size), calc-em(2px, $base-size));
+      @include multi-box-shadow($purple, 20%, calc-em(5px, $base-size));
+      -webkit-transition: all 0.5s;
+         -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+           -o-transition: all 0.5s;
+              transition: all 0.5s;
+      float: left;
+        &:hover {
+          text-decoration: none; 
+          color: #fff;
+        }
+    }
+    li.facebook a:hover { @include social-hover($facebook); }
+    li.twitter a:hover { @include social-hover($twitter); }
+    li.instagram a:hover { @include social-hover($instagram); }
+    li.github a:hover { @include social-hover($github); }
+    li.dribbble a:hover { @include social-hover($dribbble); }
+    li.gplus a:hover { @include social-hover($gplus); }
+    li.skype a:hover { @include social-hover($skype); }
+    li.gmail a:hover { @include social-hover($gmail); }
+}

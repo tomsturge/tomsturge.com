@@ -68,7 +68,7 @@
   <script type="text/javascript" src="/assets/scripts/cycle2.js"></script>
 {% when 'posts' %}
   
-  <div id="posts">
+  <div id="posts-page">
     {{ content }}
   </div>
   
@@ -76,7 +76,7 @@
   
 {% when 'demos' %}
 
-  <div id="demos">
+  <div id="demos-page">
     {{ content }}
   </div>
   
@@ -84,7 +84,7 @@
 
 {% when 'post' %}
   
-  <div id="post">
+  <div id="post-single">
     {{ content }}
   </div>
   
@@ -92,23 +92,7 @@
   
 {% when 'demo' %}
 
-  <div id="demo">
-    {{ content }}
-  </div>
-  
-  {% include contact.html %}
-  
-{% when 'work' %}
-
-  <div id="work">
-    {{ content }}
-  </div>
-  
-  {% include contact.html %}
-
-{% when 'work-items' %}
-
-  <div id="work">
+  <div id="demo-single">
     {{ content }}
   </div>
   
@@ -116,7 +100,23 @@
   
 {% when 'work-single' %}
 
-  <div id="work">
+  <div id="work-single">
+    {{ content }}
+  </div>
+  
+  {% include contact.html %}
+
+{% when 'work-page' %}
+
+  <div id="work-page">
+    {{ content }}
+  </div>
+  
+  {% include contact.html %}
+  
+{% when 'work-category' %}
+
+  <div id="work-category">
     {{ content }}
   </div>
   

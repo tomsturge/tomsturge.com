@@ -6,6 +6,7 @@ title: Green Clean Queen
 site_name: thegreencleanqueen.com
 site_url: http://www.thegreencleanqueen.com/
 image: /assets/images/web/greenClean.png
+fb_image: 
 client: Copter Lab
 client_url: http://copterlab.com
 categories:
