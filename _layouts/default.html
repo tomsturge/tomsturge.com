@@ -15,6 +15,7 @@
 <head>
   
 <meta charset="UTF-8">
+<meta http-equiv="Cache-control" content="public">
 <meta name="viewport" 
       content="width=device-width, height=device-height, user-scalable=no" />
 <meta name="keywords"
@@ -29,9 +30,6 @@
 
 
 <title>{% if page.type == 'post' %}{{ page.title }} - {% endif %}Thomas Sturge // Designer + Developer</title>
-
-<!-- Loading jQuery and plugins -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 
 <!-- Google Web Fonts -->  
 <link rel='stylesheet' type='text/css'
@@ -65,22 +63,16 @@
 
   {% include contact.html %}
 
+<!-- Loading jQuery and plugins -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js
+" type="text/javascript"></script>
+
   <script type="text/javascript" src="/assets/scripts/cycle2.js"></script>
 {% when 'posts' %}
   
   <div id="posts-page">
     {{ content }}
-  </div>
-  
-  {% include contact.html %}
-  
-{% when 'demos' %}
-
-  <div id="demos-page">
-    {{ content }}
-  </div>
-  
-  {% include contact.html %}
+  </div>  
 
 {% when 'post' %}
   
@@ -88,15 +80,19 @@
     {{ content }}
   </div>
   
-    {% include social.html %}
+  {% include social.html %}
+  
+{% when 'demos' %}
+
+  <div id="demos-page">
+    {{ content }}
+  </div>
   
 {% when 'demo' %}
 
   <div id="demo-single">
     {{ content }}
   </div>
-  
-  {% include contact.html %}
   
 {% when 'work-single' %}
 
@@ -112,15 +108,12 @@
     {{ content }}
   </div>
   
-  {% include contact.html %}
-  
 {% when 'work-category' %}
 
   <div id="work-category">
     {{ content }}
   </div>
   
-  {% include contact.html %}
 {% endcase %}
   
 <!-- SymbolSet Support -->
@@ -128,21 +121,8 @@
 </script>
 
 <!-- Site scripts -->
-<script type="text/javascript" src="/assets/scripts/init.js">
-</script>
+<!-- <script type="text/javascript" src="/assets/scripts/init.js">
+</script> -->
 
-<!-- Google Analytics -->
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-7385039-2']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-    
 </body>
 </html>
