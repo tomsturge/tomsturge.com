@@ -1,0 +1,9 @@
+<!--
+  Twitter Card meta settings for rich link generation
+-->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tomsturge">
+<meta name="twitter:url" content="http://tomsturge.co.uk{{ page.url }}">
+<meta name="twitter:title" content="{{% if page.type == 'post' %}{{ page.title }} // {% endif %}Thomas Sturge">
+<meta name="twitter:description" content="{% if page.type == 'post' %}{{ page.meta }}{% elsif page.type == 'home' %}Web designer, front-end and back-end developer.{% endif %}">
+<meta name="twitter:image" content="{% if page.fb_image %}http://tomsturge.co.uk{{ page.tw_image }}{% else %}http://tomsturge.co.uk/og_image.png{% endif %}">
