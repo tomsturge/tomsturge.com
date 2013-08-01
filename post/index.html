@@ -20,7 +20,7 @@ type: posts
       <li>
         <a href="{{ post.url }}">
           <h2>{{ post.title }}</h2>
-          <time datetime="{{ post.date | date: %Y-%m-%d }}" pubdate>
+          <time datetime="{{ post.date | date: "%Y-%m-%d" }}" pubdate>
             {{ post.date | date: "%d %B, %Y" }}
           </time>
         </a>
