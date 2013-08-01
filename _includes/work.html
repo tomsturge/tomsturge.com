@@ -13,8 +13,8 @@
       <ul>
         {% for post in site.categories.web limit:3 %}
         <li>
-          <a href="{{ post.url }}" alt="{{ post.title }}">
-            <img src="{{ post.image }}" />
+          <a href="{{ post.url }}" title="{{ post.title }}">
+            <img src="{{ post.image }}" alt="{{ post.title }}" />
             <h4>{{ post.title }}</h4>
             <p>{{ post.meta }}</p>
           </a>
@@ -37,8 +37,8 @@
       <ul>
         {% for post in site.categories.design limit:3 %}
         <li>
-          <a href="{{ post.url }}" alt="{{ post.title }}">
-            <img src="{{ post.image }}" />
+          <a href="{{ post.url }}" title="{{ post.title }}">
+            <img src="{{ post.image }}" alt="{{ post.title }}" />
             <h4>{{ post.title }}</h4>
             <p>{{ post.meta }}</p>
           </a>
