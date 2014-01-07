@@ -1,0 +1,22 @@
+---
+layout: default
+type: work-category
+---
+
+<article class="section-container">
+  
+  <h1>Design Work</h1>
+
+  <ul>
+  {% for post in site.categories.design %}
+    <li>
+      <a href="{{ post.url }}">
+        <img src="{{ post.image }}" />
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.meta }}</p>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+  
+</article>

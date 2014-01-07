@@ -1,0 +1,23 @@
+---
+layout: default
+type: demos
+---
+
+<div class="section-container">
+
+  <h1>Demos</h1>
+  
+  <ul class="archive-list">
+    {% for post in site.categories.demo %}
+      <li>
+      	<a href="{{ post.url }}">
+        	<h2>{{ post.title }}</h2>
+          <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+      	  	{{ post.date | date: "%d %B, %Y" }}
+      	  </time>
+      	</a>
+    	</li>
+    {% endfor %}
+  </ul>
+	
+</div>

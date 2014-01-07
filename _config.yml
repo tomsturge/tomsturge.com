@@ -1,0 +1,8 @@
+auto: true
+server: true
+markdown: rdiscount
+pygments: true
+permalink: /:categories/:title
+paginate: 10
+exclude: sass, config.rb, CNAME
+url: http://tomsturge.co.uk

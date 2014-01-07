@@ -1,0 +1,59 @@
+<div id="work">
+  <article class="section-container">
+    <h2>Work</h2>
+    
+    {% case site.catogories %}
+    
+    <!-- TODO: Work out a new layout for work items -->
+    
+    {% when web %}
+    <section>
+      <h3>Web</h3>
+      <p>A few of the sites I've made whilst working with various agencies or as part of solo projects.</p>
+      <ul>
+        {% for post in site.categories.web limit:3 %}
+        <li>
+          <a href="{{ post.url }}" title="{{ post.title }}">
+            <img src="{{ post.image }}" alt="{{ post.title }}" />
+            <h4>{{ post.title }}</h4>
+            <p>{{ post.meta }}</p>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      
+      {% for post in site.categories.web %}
+        {% capture web_count %} 
+          {{ web_count | plus: 1 }} 
+        {% endcapture %}
+      {% endfor %}
+      <p class="right"><a href="work/web">See all {{ web_count }} items</a></p>
+    </section>
+    
+    {% when design %}
+    <section>
+      <h3>Design</h3>
+      <p>A collection of designs I've created for clients and personal projects.</p>
+      <ul>
+        {% for post in site.categories.design limit:3 %}
+        <li>
+          <a href="{{ post.url }}" title="{{ post.title }}">
+            <img src="{{ post.image }}" alt="{{ post.title }}" />
+            <h4>{{ post.title }}</h4>
+            <p>{{ post.meta }}</p>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      
+      {% for post in site.categories.design %}
+        {% capture design_count %} 
+          {{ design_count | plus: 1 }} 
+        {% endcapture %}
+      {% endfor %}
+      <p class="right"><a href="work/design">See all {{ design_count }} items</a></p>
+    </section>
+    {% endcase %}
+    
+  </article>
+</div><!-- /.work-panel -->

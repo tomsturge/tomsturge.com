@@ -1,0 +1,46 @@
+---
+layout: default
+type: work-page
+---
+
+<article class="section-container">
+
+  <h1>Work</h1>
+  {% case site.catogories %}
+    
+    {% when web %}
+    <section>
+      <h2>Web</h2>
+      <p>A few of the sites I've made whilst working with various agencies or as part of solo projects.</p>
+      <ul>
+        {% for post in site.categories.web %}
+        <li>
+          <a href="{{ post.url }}" title="{{ post.title }}">
+            <img src="{{ post.image }}" alt="{{ post.title }}" />
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.meta }}</p>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    
+    {% when design %}
+    <section>
+      <h2>Design</h2>
+      <p>A collection of designs I've created for different projects.</p>
+     <ul>
+        {% for post in site.categories.design %}
+        <li>
+          <a href="{{ post.url }}" title="{{ post.title }}">
+            <img src="{{ post.image }}" alt="{{ post.title }}" />
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.meta }}</p>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endcase %}
+    
+</article>
