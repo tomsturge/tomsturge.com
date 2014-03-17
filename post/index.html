@@ -3,18 +3,18 @@ layout: default
 type: posts
 ---
 
-<div class="section-container">
+<div class="wrapper">
 
   <h1>Posts</h1>
-  
+
   <p>
     Here is an archive of my attempts to communicate my thoughts and understandings of a wide range of different topics, from Web technologies to my developing skills in arts and crafts.
   </p>
-  
+
   <p>
     I also try to share some of my knowledge and experiences via tutorials, quick tips and helpful code snippets.
   </p>
-  
+
   <ul class="archive-list">
     {% for post in site.categories.post %}
       <li>
@@ -27,5 +27,5 @@ type: posts
       </li>
     {% endfor %}
   </ul>
-  
+
 </div>

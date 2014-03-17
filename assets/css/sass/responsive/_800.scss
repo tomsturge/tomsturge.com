@@ -1,45 +1,52 @@
-#post-content > div, 
-#demo-title > div, 
+#post-content > div,
+#demo-title > div,
 .section-container {
-  width: 42em;
-}
+  width: 42em; }
 
-#about aside { float: right; }
+#about aside {
+    float: right; }
 
-.skill-lists { 
-  width: 50%; 
-  float: left;
-    ul { width: 90%; }
+.skill-lists {
+    width: 50%;
+    float: left;
+
+    ul {
+        width: 90%; }
 }
-.dev-skills { margin-bottom: calc-em(24px); }
+.dev-skills {
+    margin-bottom: calc-em(24px); }
 
 footer {
-    section { 
-      width: 100%;
-      margin-bottom: calc-em(24px);
+
+    section {
+        width: 100%;
+        margin-bottom: calc-em(24px);
+
         p {
-          width: 60%;
-          float: left;
-        }
+            width: 60%;
+            float: left; }
     }
 }
 
 .social-icons {
-  width: 32%;
-  float: right;
-    a { margin-bottom: calc-em(14px); }
+    width: 32%;
+    float: right;
+
+    a {
+        margin-bottom: calc-em(14px); }
 }
 
 .archive-list h2 {
-  width: 24em;
-}
+    width: 24em; }
 
 .comments {
-  width: 27em;
-  float: left;
-}
+    width: 27em;
+    float: left; }
+
 .share {
-  width: 13em;
-  float: right;
-    ul { width: 100%; }
+    width: 13em;
+    float: right;
+
+    ul {
+        width: 100%; }
 }

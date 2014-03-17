@@ -3,11 +3,11 @@ layout: default
 type: work-page
 ---
 
-<article class="section-container">
+<article class="wrapper">
 
   <h1>Work</h1>
   {% case site.catogories %}
-    
+
     {% when web %}
     <section>
       <h2>Web</h2>
@@ -24,7 +24,7 @@ type: work-page
         {% endfor %}
       </ul>
     </section>
-    
+
     {% when design %}
     <section>
       <h2>Design</h2>
@@ -42,5 +42,5 @@ type: work-page
       </ul>
     </section>
     {% endcase %}
-    
+
 </article>

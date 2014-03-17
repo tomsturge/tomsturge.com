@@ -13,34 +13,29 @@
       xmlns:og="http://ogp.me/ns#" lang="en-US"
       xmlns:fb="https://www.facebook.com/2008/fbml" >
 <head>
-  
+
 <meta charset="UTF-8">
-<meta name="viewport" 
+<meta name="viewport"
       content="width=device-width, height=device-height" />
 <meta name="keywords"
       content="Web, Design, Website, Designer, Developer" />
 <meta name="description"
       content="Thomas Sturge. Web designer, front-end and back-end developer." />
-      
+
 {% include facebook-head.html %}
 {% include twitter-head.html %}
 
 <link rel="shortcut icon" href="/icon.png">
 <link rel="apple-touch-icon-precomposed" href="/icon.png">
 
-
 <title>{% if page.type == 'post' %}{{ page.title }} - {% endif %}Thomas Sturge // Designer + Developer</title>
 
-<!-- Scripts -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="/assets/scripts/core.js"></script>
-
-<!-- Google Web Fonts -->  
-<link rel='stylesheet' type='text/css'
-      href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic|Lobster|Oswald:700|Inconsolata'>
+<!-- Typekit Fonts -->
+<script type="text/javascript" src="//use.typekit.net/sok1fkn.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <!-- Icons font -->
-<link href="/assets/fonts/ss-social-regular.css" rel="stylesheet" 
+<link href="/assets/fonts/ss-social-regular.css" rel="stylesheet"
       type="text/css" media="all">
 
 <!-- Global stylesheet -->
@@ -50,28 +45,16 @@
 
 <body>
 
-<div id="loading">
-<h1>
-  Please Wait
-  <span>site loading</span> 
-</h1>
-</div>
-<!-- /#loading -->
-
-<div id="loaded">
+<div>
 {% include nav.html %}
 
 {% case page.type %}
 
 {% when 'home' %}
-  
-  <div id="intro">
+
+  <div class="intro-panel">
     {{ content }}
   </div>
-
-  {% include about.html %}
-  
-  {% include work.html %}
 
   {% include contact.html %}
 
@@ -81,37 +64,37 @@
 
   <script type="text/javascript" src="/assets/scripts/cycle2.js"></script>
 {% when 'posts' %}
-  
+
   <div id="posts-page">
     {{ content }}
-  </div>  
+  </div>
 
 {% when 'post' %}
-  
+
   <div id="post-single">
     {{ content }}
   </div>
-  
+
   {% include social.html %}
-  
+
 {% when 'demos' %}
 
   <div id="demos-page">
     {{ content }}
   </div>
-  
+
 {% when 'demo' %}
 
   <div id="demo-single">
     {{ content }}
   </div>
-  
+
 {% when 'work-single' %}
 
   <div id="work-single">
     {{ content }}
   </div>
-  
+
   {% include contact.html %}
 
 {% when 'work-page' %}
@@ -119,24 +102,25 @@
   <div id="work-page">
     {{ content }}
   </div>
-  
+
 {% when 'work-category' %}
 
   <div id="work-category">
     {{ content }}
   </div>
-  
+
 {% endcase %}
 </div>
-<!-- /#loaded -->
-  
-<!-- SymbolSet Support -->
-<script type="text/javascript" src="/assets/scripts/ss-social.js">
-</script>
 
-<!-- Site scripts -->
-<!-- <script type="text/javascript" src="/assets/scripts/init.js">
-</script> -->
+<div class="credits-panel">
+    <div class="wrapper">
+        <p class="no-margin">
+            &copy; {{ site.time | date: '%Y' }} <a href="http://twitter.com/tomsturge" title="Twitter - Tomsturge">Thomas Sturge</a>. Built with <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a> and <a href="https://github.com/tomsturge/tomsturge.github.com" title="Github">hosted on GitHub</a>.
+        </p>
+    </div>
+    <!-- /.wrapper -->
+</div>
+<!-- /.credits-panel -->
 
 </body>
 </html>

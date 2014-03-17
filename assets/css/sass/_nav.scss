@@ -1,43 +1,36 @@
 .main-nav {
-  $base-size: 18px;
-  background-color: $grey;
-  width: 100%;
-  text-transform: uppercase;
-  position: fixed;
-  top: -66px;
-  opacity: 0;
-  z-index: 1000;
+    $base-size: 18px;
+    background-color: $grey;
+    width: 100%;
+    text-transform: uppercase;
+
     ul {
-      width: 28.056em;
-      margin: 0 auto;
-      padding: calc-em(10px, $base-size) 0;
-      font: normal #{calc-em($base-size)}/100% $heading-font;
-      list-style-type: none;
-      overflow: hidden;
-    }
+        width: 28.056em;
+        margin: 0 auto;
+        padding: calc-em(10px, $base-size) 0;
+        font: normal #{calc-em($base-size)}/100% $heading-font;
+        list-style-type: none;
+        overflow: hidden; }
+
     li {
-      border: 1px solid #444;
-      border-left: none;
-      float: left;
-      width: 5.833em;
-      padding: calc-em(5px, $base-size) calc-em(10px, $base-size);
-      overflow: hidden;
+        @extend %fl;
+        border: 1px solid #444;
+        border-left: none;
+        width: 5.833em;
+        padding: calc-em(5px, $base-size) calc-em(10px, $base-size);
+        overflow: hidden;
+
         a {
-          display:block;
-          width: 100%;
-          padding: 0.6em 0 0.4em;
-          text-align: center;
-          border-bottom: none;
-          @include flat-text-shadow(tint($black, 10%), calc-em(-2px, $base-size), calc-em(3px, $base-size));
+            display:block;
+            width: 100%;
+            padding: 0.6em 0 0.4em;
+            text-align: center;
+            border-bottom: none;
+            color: #fff;
+
             &:hover {
-              text-decoration: none; 
-              color: #fff; 
-            }
+                text-decoration: none;
+                color: $red; }
         }
-        &:nth-child(4n) { border-right: none; }
-        &:nth-child(1) a:hover { @include nav-hover($blue); }
-        &:nth-child(2) a:hover { @include nav-hover($red); }
-        &:nth-child(3) a:hover { @include nav-hover($green); }
-        &:nth-child(4) a:hover { @include nav-hover($purple); }
     }
 }

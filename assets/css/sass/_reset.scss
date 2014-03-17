@@ -6,31 +6,30 @@ ol, ul { list-style-type: none;}
 article, aside, figure, footer, header, hgroup, nav, section { display : block; }
 
 h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, .page-head, .media, .island, .islet {
-  margin-bottom: 24px;  
+  margin-bottom: 18px;
 }
 
 h1, h2, h3, h4 {
-  font-weight: 400;
-  color: $red;
-  line-height: 1.6; 
+  font-weight: 700;
+  color: $black;
+  line-height: 1.6;
 }
 
 h2 {
   $base-size: 30px;
   font-size: calc-em($base-size);
-  border-bottom: 1px solid $red;
 }
-h3 { 
+h3 {
   $base-size: 22px;
   font-size: calc-em($base-size);
 }
-h4 { 
+h4 {
   $base-size: 18px;
   font-size: calc-em($base-size);
 }
 
-p { 
-  line-height: 1.6; 
+p {
+  line-height: 1.6;
 }
 
 a {
@@ -40,16 +39,18 @@ a {
 }
 
 i,em { font-style: italic; }
-b,strong { font-weight: bold; } 
+b,strong { font-weight: bold; }
 
-ol { 
-  list-style-type: decimal;   
-  margin-left: calc-em(40px);  
+ol {
+  list-style-type: decimal;
+  margin-left: calc-em(40px);
 }
 ul {
   list-style-type: disc;
-  margin-left: calc-em(40px);  
+  margin-left: calc-em(40px);
 }
+li {
+    margin-bottom: 8px; }
 
 hr {
   border-style: solid;
@@ -76,7 +77,7 @@ blockquote p:last-of-type {
 
 pre, code, kbd, samp {
   font: {
-    family: Inconsolata,"Courier New",Courier,monospace;
+    family: $code-font;
     size: 1em;
   }
   color: $blue;
