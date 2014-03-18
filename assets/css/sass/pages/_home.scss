@@ -3,20 +3,35 @@
 //----------------------
 
 .intro-panel {
-    background-color: $blue; }
+    background-color: $blue;
+    position: relative;
+
+    &:after {
+        content: " ";
+        display: block;
+        width: 101%;
+        height: 52px;
+        background: #FFF;
+        -webkit-transform: rotate(-2deg);
+        bottom: -26px;
+        position: absolute;
+    }
+}
 
 .page-lead {
     @extend %cf;
+
     margin: 0 0 60px;
     color: #fff;
     font-family: $heading-font; }
 
 .page-lead__text {
     $base-size: 68px;
-    @include flat-text-shadow($blue, calc-em(-3px, $base-size), calc-em(5px, $base-size));
     @extend %fl;
     @extend %no-margin;
+
     width: calc-em(468px, $base-size);
+    margin-left: 15px;
     font-size: calc-em($base-size);
     line-height: 120%;
     color: #fff;
@@ -37,19 +52,43 @@
     $base-size: 29px;
     @extend %fr;
     @extend %no-margin;
-    @include flat-text-shadow(shade($blue, 22%), calc-em(-2px, $base-size), calc-em(3px, $base-size));
+
     text-align: center;
     font-size: calc-em($base-size);
     line-height: calc-em($base-size * 2.4);
     color: #fff;
+    -webkit-perspective: 1590px;
+    margin-right: 15px;
 
     a {
         display: block;
         background-color: shade($blue, 20%);
-        padding: calc-em(28px, $base-size) calc-em(55px, $base-size);
+        padding: calc-em(28px, $base-size) calc-em(35px, $base-size);
         line-height: 140%;
+        -webkit-transform-style: preserve-3d;
+        -webkit-transform-origin: 0% 0%;
+        -webkit-transition: -webkit-transform .3s;
 
-        &:hover { text-decoration: none; }
+        &:after {
+            content: attr(data-hover);
+            position: absolute;
+            box-sizing: border-box;
+            top: 100%;
+            left: 0;
+            font-size: 20px;
+            width: 100%;
+            background: #355C82;
+            display: block;
+            padding: calc-em(2px, $base-size) calc-em(35px, $base-size);
+            text-transform: uppercase;
+            -webkit-transform-origin: 0% 0%;
+            -webkit-transform: rotateX(-90deg);
+        }
+
+        &:hover {
+            text-decoration: none;
+            -webkit-transform: rotateX(45deg);
+        }
     }
 
     span {
@@ -64,33 +103,43 @@
     }
 }
 
-.focus-box__posts {
+.post-list {
 
     ul {
         margin: 0;
         list-style-type: none;
-        border-bottom: 1px solid shade($blue, 20%);
     }
 
     li {
         $base-size: 22px;
         margin-bottom: 0;
-        border-top: 1px solid shade($blue, 20%);
+        border-top: 1px solid #ebebeb;
         font-size: calc-em($base-size);
+        transition: border 0.5s, border-color 0.5s;
 
-         a {
+        &:hover, &:hover + li {
+            border-top: 1px solid $black;
+        }
+
+        &:last-of-type {
+            border-bottom: 1px solid #ebebeb;
+
+            &:hover {
+                border-color: $black;
+            }
+        }
+
+        a {
             display: block;
             width: auto; height: 100%;
             padding: calc-em(15px, $base-size);
-            transition:  background-color 0.5s;
             overflow: hidden;
 
             &:hover {
-                background-color: shade($blue, 20%);
                 text-decoration: none; }
         }
 
-        .focus-box__title {
+        .post-list__title {
             @extend %fl;
             width: 90%;
             margin-bottom: 0;
@@ -100,7 +149,6 @@
                 weight: 600;
             }
             line-height: 130%;
-            color: #fff;
             border-bottom: none; }
 
         time {
@@ -111,168 +159,11 @@
     }
 }
 
-//
-//----------------------
-//  ABOUT SECTION
-//----------------------
-//
-
-#about {
-    @include flat-text-shadow($red, 0.063em, 0.125em);
-    @include box-shadow($red 0 10px 0 0);
-    background-color: $red;
-    color: #fff;
-    margin-bottom: calc-em(4px);
-    border-bottom: 5px dashed shade($red, 25%);
-    overflow: hidden;
-
-    h2 {
-        @include section-title($red); }
-
-    h3 {
-        @include big-title($red, -3px, 4px, 32px); }
-
-    div {
-        width: 33.333em; }
-
-    aside {
-        width: 17.778em;
-        display: block;
-
-        section {
-            width: auto; }
-    }
-
-    img {
-        @include img-border($red, 15px); }
-
-    em {
-        color: black; }
-}
-
-//*****************
-//  SKILL LISTS
-//*****************
-
-.skill-lists {
-    width: 100%;
-    overflow: hidden;
-
-    ul {
-        background-color: shade($red, 10%); }
-}
-
-.dev-skills, .design-skills {
-    @include multi-box-shadow($red, 20%, 5px);
-    width: 14.167em; /* 255px */
-    margin: 0;
-    padding: calc-em(16px);
-    list-style-type: none;
-
-    li {
-        @include flat-text-shadow(shade($red, 15%), 0.063em, 0.125em);
-
-        &:nth-child(2n+1) {
-            background-color: shade($red, 20%); }
-
-        &:first-child {
-            background-color: transparent;
-            padding: 0 calc-em(5px);
-        }
-
-        &:not(:first-child) {
-            padding: calc-em(10px) calc-em(5px); }
-    }
-
-    h4 {
-        @include big-title(shade($red, 10%), -2px, 3px, 24px, $black); }
-}
-
-//
-//----------------------
-//  WORK SECTION
-//----------------------
-//
-
-#work {
-    @include flat-text-shadow($green, 0.063em, 0.125em);
-    @include box-shadow(shade($green, 30%) 0 0.625em 0 0);
-    background-color: $green;
-    color: #fff;
-
-    h2 {
-        @include section-title($green); }
-
-    h3 {
-        @include big-title($green, -3px, 4px, 32px); }
-    h4 {
-        @include big-title(shade($green, 15%), -3px, 4px, 32px);
-        padding: 0 15px;
-        font-size: 1.35em; }
-
-    section {
-        margin-bottom: 1.250em;
-        overflow: hidden; }
-
-    img {
-        width: 15.556em;
-        padding: 10px; }
-
-    ul {
-        margin: 0; }
-
-    li {
-        background-color: shade($green, 15%);
-        display: inline-block;
-        width: 300px; height: 315px;
-        margin: 0 29px 20px 0;
-        vertical-align: top;
-        float: left;
-
-        &:nth-child(3n) {
-            margin-right: 0; }
-
-        &:hover {
-            background-color: #fff;
-
-            h4, p {
-              text-shadow: none; }
-            h4 { color: $black; }
-            p { color: shade($green, 15%); }
-        }
-        a {
-            display: block;
-            height: 315px;
-            text-decoration: none; }
-        p {
-            @include flat-text-shadow(shade($green, 15%), 0.063em, 0.125em);
-            padding: 0 15px; }
-    }
-    li, li * {
-      transition: all 0.5s; }
-}
-
 
 //----------------------
 //  CONTACT SECTION
 //----------------------
 
-.purple-panel,
-%purple-panel {
-    @include box-shadow(shade($purple, 30%) 0 10px 0 inset);
-    @include flat-text-shadow($purple, 0.056em, 0.111em);
-    background-color: $purple;
-
-    h2 {
-        @include section-title($purple); }
-
-    h3 {
-        @include big-title($purple, -3px, 4px, 32px); }
-}
-
-.contact-panel {
-    @extend %purple-panel;
-}
 
 .contact-panel__email, .contact-panel__social {
     width: 26em;
@@ -282,6 +173,7 @@
 //*****************
 //  SOCIAL ICONS
 //*****************
+
 
 .social-icons {
     margin: 0;

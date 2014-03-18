@@ -52,62 +52,75 @@
 
 {% when 'home' %}
 
-  <div class="intro-panel">
-    {{ content }}
-  </div>
+    <div class="intro-panel">
+        {{ content }}
+    </div>
 
-  {% include contact.html %}
+    <div class="post-panel">
+        <div class="wrapper">
+            <div class="post-list post-list--home">
+                <ul>
+                    {% for post in site.categories.post limit:3 %}
+                        <li class="post-list__post">
+                            <a href="{{ post.url }}" title="{{ post.title }}">
+                              <h2 class="post-list__title">{{ post.title }}</h2>
+                              <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
+                                {{ post.date | date: "%d %b, %Y" }}
+                              </time>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- /.post-box -->
+        </div>
+    </div>
 
-<!-- Loading jQuery and plugins -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js
-" type="text/javascript"></script>
-
-  <script type="text/javascript" src="/assets/scripts/cycle2.js"></script>
 {% when 'posts' %}
 
-  <div id="posts-page">
-    {{ content }}
-  </div>
+    <div id="posts-page">
+        {{ content }}
+    </div>
 
 {% when 'post' %}
 
-  <div id="post-single">
-    {{ content }}
-  </div>
+    <div id="post-single">
+        {{ content }}
+    </div>
 
-  {% include social.html %}
+    {% include social.html %}
 
 {% when 'demos' %}
 
-  <div id="demos-page">
-    {{ content }}
-  </div>
+    <div id="demos-page">
+        {{ content }}
+    </div>
 
 {% when 'demo' %}
 
-  <div id="demo-single">
-    {{ content }}
-  </div>
+    <div id="demo-single">
+        {{ content }}
+    </div>
 
 {% when 'work-single' %}
 
-  <div id="work-single">
-    {{ content }}
-  </div>
+    <div id="work-single">
+        {{ content }}
+    </div>
 
-  {% include contact.html %}
+    {% include contact.html %}
 
 {% when 'work-page' %}
 
-  <div id="work-page">
-    {{ content }}
-  </div>
+    <div id="work-page">
+        {{ content }}
+    </div>
 
 {% when 'work-category' %}
 
-  <div id="work-category">
-    {{ content }}
-  </div>
+    <div id="work-category">
+        {{ content }}
+    </div>
 
 {% endcase %}
 </div>

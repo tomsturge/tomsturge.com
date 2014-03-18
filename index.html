@@ -13,32 +13,11 @@ type: home
         </h1>
 
         <h2 class="page-lead__hire">
-            <a href="http://tomsturge.co.uk/work">
-                Currently available for hire.
-                <span>Updated: January 2014</span>
+            <a href="http://tomsturge.co.uk/work" data-hover="Find out more">
+                Available for new projects.
+                <span>Booking for April 2014</span>
             </a>
         </h2>
     </div>
     <!-- /.page-lead -->
-
-    <div class="focus-box">
-        <div class="focus-box__posts">
-            <ul>
-                {% for post in site.categories.post limit:3 %}
-                    <li>
-                        <a href="{{ post.url }}" title="{{ post.title }}">
-                          <h2 class="focus-box__title">{{ post.title }}</h2>
-                          <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
-                            {{ post.date | date: "%d %b, %Y" }}
-                          </time>
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-        <!-- /.focus-box__posts -->
-    </div>
-    <!-- /.focus-box -->
-
-
 </div>
