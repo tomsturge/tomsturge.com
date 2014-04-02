@@ -3,21 +3,27 @@ layout: default
 type: post
 ---
 
-<article>
-	
-	<section id="post-title" class="section-container">
-  
-  	<h1>{{ page.title }}</h1>
-	
-	</section>
-	
-	<section id="post-content" class="section-container">
-		<div>
-	  
-	  	{{ content }}
-	  
-	  </div>
-	
-	</section>
 
-</article>
+<div id="post-single">
+
+    <div class="page__intro" style="background-image: url(/assets/images/headers/posts/{{ page.header }});">
+        <div>
+            <div class="wrapper">
+                <time datetime="{{ page.date | date: "%Y-%m" }}">
+                    {{ page.date | date: "%b, %Y" }}
+                </time>
+
+                <h1>{{ page.title }}</h1>
+        	</div>
+        </div>
+    </div>
+
+
+    <article>
+    	<section id="post-content">
+    		<div class="wrapper">
+    	  	    {{ content }}
+    	    </div>
+    	</section>
+    </article>
+</div>

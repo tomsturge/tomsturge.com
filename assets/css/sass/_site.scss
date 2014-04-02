@@ -1,48 +1,275 @@
 html {
+  background-color: white;
   font-family: $body-font;
   font-size: 62.5%;
-  color: #fff;
-  overflow-x: hidden;
-}
+  color: #444;
+  overflow-x: hidden; }
 
 body {
-  @include font-size(18);
-  background-color: $grey;
-  margin: 0 auto;
-  padding: 66px 0 0;
+    @include font-size(18);
+
+    margin: 0 auto;
+    padding: 0;
+    position: relative; }
+
+.fl, %fl {
+    float: left; }
+.fr, %fr {
+    float: right; }
+
+.no-margin, %no-margin { margin: 0; }
+
+.cf, %cf {
+    &:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
 }
 
-.left { float: left; }
-.right { float: right; }
+a {
+    text-decoration: none;
+    box-shadow: inset 0 -1px;
+
+    &:hover {
+        box-shadow: inset 0 -1px, 0 1px;
+        text-decoration: none; }
+}
 
 ::selection {
-  @include text-shadow(none);
-  background: $black;
-  color: #fff;
-}
+    background: $black;
+    color: #fff; }
 ::-moz-selection {
-  @include text-shadow(none);
-  background: $black;
-  color: #fff;
-}
-  
+    background: $black;
+    color: #fff; }
+
 //
 //===============================================
 //  SECTION GENERAL
 //===============================================
 //
 
-#post-content > div, 
-#demo-title > div,
-.section-container { 
-  width: 53.333em; // 960px 
-  margin: 0 auto; 
+
+.page__intro {
+    $base-size: 65px;
+
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: calc-em($base-size);
+    font-family: $heading-font;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+
+    h1 {
+        color: #fff;
+        line-height: 1.2;
+        clear: both; }
+
+    time {
+        padding: 5px 10px;
+        line-height: 1;
+        font-size: 16px;
+        border: 2px solid white;
+        float: right; }
+
+    > div {
+
+        &:before, &:after {
+            content: " ";
+            display: block;
+            width: 52%;
+            height: 60px;
+            background: #FFF;
+            bottom: -40px;
+            position: absolute; }
+
+        &:after {
+            transform: rotate(-3deg);
+            right: -5px; }
+
+        &:before {
+            transform: rotate(3deg);
+            left: -5px; }
+    }
 }
 
-.section-container {
-  padding: 60px 0;
-  line-height: 120%;
-  overflow: hidden;
+
+.container {
+    background: white;
+    opacity: 1;
+    transition: transform .3s, opacity .3s;
+    perspective: 1200px;
+
+    &.menu-open {
+        transform: translate3d(-410px, 0, 0);
+        opacity: .5;
+    }
+}
+
+.wrapper,
+%wrapper {
+    width: 960px; // 960px
+    margin: 0 auto;
+    padding: 60px 0;
+    line-height: 120%;
+    overflow: hidden;
+    position: relative; }
+
+.page__intro .wrapper {
+    padding: 100px 0;
+}
+
+.credits-panel {
+    font-family: $heading-font;
+    color: white;
+
+    p {
+        padding: 0 15px; }
+}
+
+
+.post-list {
+
+    ul {
+        margin: 0;
+        list-style-type: none; }
+
+    li {
+        $base-size: 22px;
+
+        margin-bottom: 0;
+        border-top: 2px solid #ddd;
+        font-size: calc-em($base-size);
+        transition: border 0.5s, border-color 0.5s;
+        position: relative;
+
+        &:hover, &:hover + li {
+            border-top: 2px solid $black; }
+
+        &:last-of-type {
+            border-bottom: 2px solid #ddd;
+
+            &:hover {
+                border-color: $black; }
+        }
+
+        a {
+            display: block;
+            width: auto; height: 100%;
+            padding: calc-em(15px, $base-size);
+            overflow: hidden;
+            border: none;
+            box-shadow: none;
+
+            &:hover {
+                text-decoration: none;
+                box-shadow: none; }
+        }
+
+        .post-list__title {
+            @extend %fl;
+            margin-bottom: 0;
+            font: {
+                family: $heading-font;
+                size: $base-size;
+                weight: 600; }
+            line-height: 130%;
+            border-bottom: none; }
+
+        p {
+            clear: both;
+            color: #bbb;
+            font-size: 18px;
+            margin: 0; }
+
+        time {
+            @extend %fr;
+
+            font-size: calc-em(16px, $base-size);
+            line-height: calc-em($base-size + 10);
+            position: absolute;
+            top: 15px;
+            right: 15px; }
+    }
+}
+
+.heading-wrapper {
+    margin: 60px 0 0;
+    position: relative;
+
+    &:before {
+        content: " ";
+        background: #ddd;
+        display: inline-block;
+        width: 100%;
+        height: 2px;
+        margin-top: -1px;
+        position: absolute;
+        left: 0;
+        top: 50%; }
+}
+
+.heading--lined {
+    width: 500px;
+    margin: 0 auto;
+    font-family: $heading-font;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 140%;
+    perspective: 1520px;
+
+    a, span {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        color: white;
+        box-shadow: none;
+        transform-style: preserve-3d;
+        transform-origin: 0% 50%;
+        transition: transform .3s;
+
+        &:after {
+            content: attr(data-hover);
+            position: absolute;
+            box-sizing: border-box;
+            top: 61px;
+            left: 0;
+            font-size: 20px;
+            width: 100%;
+            display: block;
+            padding: 2px 35px;
+            text-transform: uppercase;
+            transform-origin: 0% 0%;
+            transform: rotateX(-90deg); }
+
+        &:hover {
+            text-decoration: none;
+            box-shadow: none;
+            transform: rotateX(45deg); }
+    }
+}
+
+.heading--post {
+
+    a, span {
+        background: #B05140;
+
+        &:after {
+            background: #834034; }
+    }
+}
+
+.heading--work {
+
+    a, span {
+        background: #539052;
+
+        &:after {
+            background: #3E743D; }
+    }
 }
 
 //
@@ -62,16 +289,12 @@ body {
 // Home page
 @import 'pages/home';
 
-// Archive page
-@import 'pages/archive';
-
 // Posts page
 @import 'pages/posts';
 
 // Work pages
 @import 'pages/work';
 
-// Demos page
-@import 'pages/demos';
 
-.full { width: 100%; }
+.full {
+    width: 100%; }

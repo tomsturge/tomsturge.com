@@ -3,29 +3,33 @@ layout: default
 type: posts
 ---
 
-<div class="section-container">
+<div id="posts-page">
 
-  <h1>Posts</h1>
-  
-  <p>
-    Here is an archive of my attempts to communicate my thoughts and understandings of a wide range of different topics, from Web technologies to my developing skills in arts and crafts.
-  </p>
-  
-  <p>
-    I also try to share some of my knowledge and experiences via tutorials, quick tips and helpful code snippets.
-  </p>
-  
-  <ul class="archive-list">
-    {% for post in site.categories.post %}
-      <li>
-        <a href="{{ post.url }}">
-          <h2>{{ post.title }}</h2>
-          <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
-            {{ post.date | date: "%d %B, %Y" }}
-          </time>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-  
+    <div class="page__intro" style="background-image: url(/assets/images/headers/postsIntro.png);">
+        <div>
+            <div class="wrapper">
+                <h1>Posts</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="post-list">
+            <ul>
+                {% for post in site.categories.post %}
+                    <li class="post-list__post">
+                        <a href="{{ post.url }}">
+                            <h2 class="post-list__title">{{ post.title }}</h2>
+                            <p>{{ post.intro }} </p>
+                            <time datetime="{{ post.date | date: "%Y-%m" }}">
+                                {{ post.date | date: "%b, %Y" }}
+                            </time>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+
 </div>

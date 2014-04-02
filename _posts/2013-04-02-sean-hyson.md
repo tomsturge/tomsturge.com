@@ -3,15 +3,18 @@ date: 2013-04-02
 layout: work
 slug: sean-hyson
 title: Sean Hyson
+intro: A magazine like site based on a custom CMS for the fitness editor at Men's Fitness magazine
 site_name: seanhyson.com
 site_url: http://seanhyson.com/
-image: /assets/images/web/seanHyson.png
+image: /assets/images/work/seanHyson.png
+header: seanHyson.png
+full_image: /assets/images/work/full/sean-hyson.png
 fb_image: 
 client: Copter Lab
 client_url: http://copterlab.com
 categories:
 - work
-- web
+- dev
 meta: Site Description
 tags: 
 - HTML5
@@ -19,6 +22,4 @@ tags:
 - Custom CMS
 ---
 
-![Sean Hyson](/assets/images/web/seanHyson.png)
-
-Site Description
+A magazine like site based on a custom CMS for the fitness editor at Men's Fitness magazine

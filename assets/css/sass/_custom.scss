@@ -4,8 +4,7 @@
 //===============================================
 //
 
-$black: #202020; // Used for text
-$grey: #222; // Used with backgrounds
+$black: #444;
 $blue: #528CC5;
 $purple: #51518F;
 $red: #B05140;
@@ -17,15 +16,16 @@ $twitter:   #00ACED;
 $instagram: #A58E7C;
 $gplus:     #d14428;
 $skype:     #3abfef;
-$github:    #495861;
+$github:    #222;
 $dribbble:  #ea4c88;
 $gmail:     #D14130;
 
 // Font-face
-$cursive-font: 'Lobster', cursive;
-$heading-font: 'Oswald', sans-serif;
-$body-font: 'Source Sans Pro', sans-serif;
+$heading-font: 'freight-sans-pro-1', 'freight-sans-pro-2', sans-serif;
+$body-font: 'ff-tisa-web-pro-1', 'ff-tisa-web-pro-2', sans-serif;
+$code-font: 'source-code-pro-1', 'source-code-pro-2', monospace;
 
+@import 'icons';
 
 //
 //===============================================
@@ -38,9 +38,8 @@ $body-font: 'Source Sans Pro', sans-serif;
 //*****************
 
 @function calc-em($target, $context: 18px) {
-  @if $target == 0 { @return 0 };
-  @return $target / $context * 1em;
-}
+    @if $target == 0 { @return 0 };
+    @return $target / $context * 1em; }
 
 //
 //===============================================
@@ -53,86 +52,11 @@ $body-font: 'Source Sans Pro', sans-serif;
 //*****************
 
 @mixin display-inline-block() {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-}
-
-//*****************
-//  NAVIGATION
-//*****************
+    display: inline-block;
+    *display: inline;
+    zoom: 1; }
 
 
-@mixin nav-hover($color) {
-  background-color: rgba(shade($color, 25%), 1);
-  @include multi-box-shadow($color, 50%, 3px);
-  @include flat-text-shadow(shade($color, 25%), -2px, 3px);
-}
-
-//*****************
-//  TITLE
-//*****************
-
-@mixin section-title-bg($color) {
-  background-color: rgba(shade($color, 15%), 1);
-}
-@mixin big-title( $color, $dx, $dy, $base-size: 42px, $text: #fff) {
-  margin: 0 0 calc-em(15px, $base-size);
-  font-family: $heading-font;
-  @include font-size($base-size/1px);
-  line-height: 110%;
-  @include flat-text-shadow($color, calc-em($dx, $base-size), 
-           calc-em($dy, $base-size));
-  text-transform: uppercase;
-  color: $text;
-}
-@mixin section-title($color) {
-  $base-size: 33px;
-  @include section-title-bg($color);
-  @include flat-text-shadow(shade($color, 15%), 
-           calc-em(-3px, $base-size), calc-em(4px, $base-size));
-  @include font-size($base-size/1px);
-  width: 50%;
-  margin: 0 auto calc-em(25px, $base-size);
-  padding: calc-em(16px, $base-size);
-  font-family: $heading-font;
-  line-height: 125%;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-  border-bottom: none;
-}
-
-//*****************
-//  SHADOW
-//*****************
-
-@mixin flat-text-shadow($color, $dx, $dy) {
-  @include text-shadow(rgba(shade($color, 15%), 1) $dx $dy 0);
-}
-@mixin multi-box-shadow($color, $p, $d) {
-  @include box-shadow(rgba(shade($color, $p), 1) 0 $d 0 0 inset,
-                      rgba(shade($color, $p), 1) 0 -#{$d} 0 0 inset,
-                      rgba(shade($color, $p), 1) $d 0 0 0 inset,
-                      rgba(shade($color, $p), 1) -#{$d} 0 0 0 inset);
-}
-
-//*****************
-//  IMAGES
-//*****************
-
-@mixin img-border($color, $b) { 
-       border: $b solid rgba(shade($color, 15%), 1); }
-
-//*****************
-//  SCOIAL ICON HOVER
-//*****************
-
-@mixin social-hover($color) {
-  @include multi-box-shadow($color, 20%, 5px);
-  @include flat-text-shadow(shade($color, 15%), -1px, 2px);
-  background-color: $color;
-}
 
 
 //*****************
@@ -140,13 +64,13 @@ $body-font: 'Source Sans Pro', sans-serif;
 //*****************
 
 @mixin font-size($font-size: 18){
-font-size : #{$font-size}px;
-font-size : #{$font-size / 10}rem; }
+    font-size : #{$font-size}px;
+    font-size : #{$font-size / 10}rem; }
 
 @mixin text-overflow() {
-overflow : hidden;
-text-overflow : ellipsis;
-white-space : nowrap; }
+    overflow : hidden;
+    text-overflow : ellipsis;
+    white-space : nowrap; }
 
 //*****************
 //  ELEMENTS
@@ -155,13 +79,14 @@ white-space : nowrap; }
 // Hide from visual and speaking browsers
 
 @mixin hidden() {
-display : none !important;
-visibility : hidden; }
+    display : none !important;
+    visibility : hidden; }
 
 // @include userselect(VALUE) (all, element, none, text)
 
 @mixin user-select($select) {
--webkit-user-select : $select;
-   -moz-user-select : $select;
-     -o-user-select : $select;
-        user-select : $select; }
+    -webkit-user-select : $select;
+       -moz-user-select : $select;
+         -o-user-select : $select;
+            user-select : $select; }
+

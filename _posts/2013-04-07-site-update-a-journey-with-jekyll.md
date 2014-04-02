@@ -3,6 +3,8 @@ date: 2013-04-07
 layout: post
 slug: site-update-a-journey-with-jekyll
 title: Site update - A journey with Jekyll 
+intro: An overview of the update to my site and what it means going forward
+header: jekyllJourney.png
 categories:
 - post
 meta: A huge site update, rewritten from the ground up with Jekyll and Liquid templating. This first post is an introduction to the new site and what is in store.
@@ -34,7 +36,7 @@ The [SASS](http://sass-lang.com "SASS") was in a bit of a state too, again this 
 
 During the time I spent on this update I took sometime to work on the harsh colour scheme I had originally choosen the first time through. When I created the site I wanted it to be bright and eye catching, in the effort to produce that effect I may have gone a little far with the "eye catching" part and ended up with a palette that, in some places, hurt to look at for extended periods of time.
 
-<img class="right" src="/assets/images/oldSite.png" alt="Old site colour scheme" />
+<img class="fr" src="/assets/images/oldSite.png" alt="Old site colour scheme" />
 
 
 This time I used a service called [Contact Checker](http://contrastchecker.com/ "Contrast Checker") that helped me work out the best balance on contract for light and dark text, while it may not be perfect it is a good step in the right direction to making the site a more pleasant experience. Especially if I'm to expect people to hang around long enough to actually read the articles I'm planning to publish.

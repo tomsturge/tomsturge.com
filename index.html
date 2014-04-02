@@ -3,53 +3,61 @@ layout: default
 type: home
 ---
 
-<div class="section-container">
-  <header class="left">
-    <h1>
-      Thomas Sturge
-      <span>Designer + Developer</span> 
-    </h1>
-    <ul class="intro-box cycle-slideshow"
-        data-cycle-timeout=4000
-        data-cycle-slides="> li" >
-      <li>Front-end Hero:
-          <span>Jump PSDs in a single bound</span></li>
-      <li>UI Zombie:
-          <span>Reanimating dead pixels</span></li>
-      <li>Back-end Ninja:
-          <span>I know Code-fu</span></li>
-      <li>Secret Agent:
-          <span>#077. Licence to Teal</span></li>
-    </ul>
-    <h2>Designer of pretty interfaces &amp; developer of semantic responsive experiences.</h2>
-  </header>
-  
-  <div id="focus-box" class="right">
-    <div id="recent-posts">
-      <ul>
-        <li><h3>Recent Posts</h3></li>
-        {% for post in site.categories.post limit:3 %}
-          <li>
-            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-          </li>     
-        {% endfor %}
-      </ul>
+<div class="page__intro">
+    <div>
+        <div class="wrapper">
+            <h1>Thomas Sturge</h1>
+            <p>A <a href="/work#dev">front-end arcitect</a>, <a href="/work#design">designer</a> and <a href="/work#teaching">volunteer educator</a></p>
+        </div>
     </div>
-    <!-- /#recent-posts -->
-    
-    <div id="recent-demos">
-      <ul>
-        <li><h3>Recent Demos</h3></li>
-        {% for post in site.categories.demo limit:3 %}
-          <li>
-            <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-          </li>     
-        {% endfor %}
-      </ul>
+</div>
+
+<div class="post-panel">
+    <div class="heading-wrapper">
+        <h2 class="heading--lined heading--post">
+            <a href="/post" data-hover="The desire to write grows with writing">Recent Articles</a>
+        </h2>
     </div>
-    <!-- /#recent-demos -->
-  </div>
-  <!-- /#focus-box -->
-  
-  
+
+    <div class="wrapper">
+        <div class="post-list post-list--home">
+            <ul>
+                {% for post in site.categories.post limit:3 %}
+                    <li class="post-list__post">
+                        <a href="{{ post.url }}" title="{{ post.title }}">
+                            <h2 class="post-list__title">{{ post.title }}</h2>
+                            <p>{{ post.intro }} </p>
+                            <time datetime="{{ post.date | date: "%Y-%m" }}">
+                                {{ post.date | date: "%b, %Y" }}
+                            </time>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <!-- /.post-box -->
+    </div>
+</div>
+
+<div class="work-panel">
+    <div class="heading-wrapper">
+        <h2 class="heading--lined heading--work">
+            <a href="/work" data-hover="By the work one knows the workman">Recent Project</a>
+        </h2>
+    </div>
+
+    <div class="test-panel test1" data-type="background" data-speed="2" >
+        <div class="panel__cover">
+            <div class="wrapper">
+                <div class="panel__title">
+                    <h3>Recruitment Genius</h3>
+                    <blockquote>
+                        The site wouldn't look half as good as it does now without Tom. He has a fantastic eye for details and UX. 
+
+                        <cite>Geoff Newman, Director</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

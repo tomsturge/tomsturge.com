@@ -3,7 +3,10 @@ date: 2013-04-13
 layout: work
 slug: arrowhead-logo
 title: Arrowhead Design
-image: /assets/images/logo/arrowheadDesign.png
+intro: A logo created for a company that specialised in print and web design. The concept is a mouse point made out of folded paper.
+image: /assets/images/work/arrowheadDesign-logo.png
+header: arrowheadLogo.png
+full_image: /assets/images/work/arrowheadDesign-logo.png
 client: Arrowhead Design
 client_url: http://arrowheaddesign.com
 categories:
@@ -14,7 +17,5 @@ tags:
 - Design Agency
 - Logo
 ---
-
-![Arrowhead Design Logo](/assets/images/logo/arrowheadDesign.png)
 
 A logo created for a company that specialised in print and web design. The concept is a mouse point made out of folded paper.

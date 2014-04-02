@@ -13,116 +13,84 @@
       xmlns:og="http://ogp.me/ns#" lang="en-US"
       xmlns:fb="https://www.facebook.com/2008/fbml" >
 <head>
-  
+
 <meta charset="UTF-8">
-<meta name="viewport" 
+<meta name="viewport"
       content="width=device-width, height=device-height" />
 <meta name="keywords"
       content="Web, Design, Website, Designer, Developer" />
 <meta name="description"
       content="Thomas Sturge. Web designer, front-end and back-end developer." />
-      
+
 {% include facebook-head.html %}
 {% include twitter-head.html %}
 
 <link rel="shortcut icon" href="/icon.png">
 <link rel="apple-touch-icon-precomposed" href="/icon.png">
 
-
 <title>{% if page.type == 'post' %}{{ page.title }} - {% endif %}Thomas Sturge // Designer + Developer</title>
 
-<!-- Google Web Fonts -->  
-<link rel='stylesheet' type='text/css'
-      href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic|Lobster|Oswald:700|Inconsolata'>
+<!-- Typekit Fonts -->
+<script type="text/javascript" src="//use.typekit.net/sok1fkn.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <!-- Icons font -->
-<link href="/assets/fonts/ss-social-regular.css" rel="stylesheet" 
+<link href="/assets/fonts/ss-social-regular.css" rel="stylesheet"
       type="text/css" media="all">
 
 <!-- Global stylesheet -->
 <link href="/assets/css/screen.css" rel="stylesheet" type="text/css"
       media="all">
-
 </head>
 
-<body>
-  
+<body class="page--{{page.type}}">
+
 {% include nav.html %}
 
-{% case page.type %}
+<div class="container">
 
-{% when 'home' %}
-  
-  <div id="intro">
     {{ content }}
-  </div>
 
-  {% include about.html %}
-  
-  {% include work.html %}
+    {% include credits.html %}
 
-  {% include contact.html %}
+</div>
 
-<!-- Loading jQuery and plugins -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js
-" type="text/javascript"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-  <script type="text/javascript" src="/assets/scripts/cycle2.js"></script>
-{% when 'posts' %}
-  
-  <div id="posts-page">
-    {{ content }}
-  </div>  
+<script>
+$(document).ready(function(){
+// Cache the Window object
+$window = $(window);
 
-{% when 'post' %}
-  
-  <div id="post-single">
-    {{ content }}
-  </div>
-  
-  {% include social.html %}
-  
-{% when 'demos' %}
+$('[data-type="background"]').each(function(){
+    var $bgobj = $(this); // assigning the object
 
-  <div id="demos-page">
-    {{ content }}
-  </div>
-  
-{% when 'demo' %}
+    $(window).scroll(function() {
 
-  <div id="demo-single">
-    {{ content }}
-  </div>
-  
-{% when 'work-single' %}
+        // Scroll the background at var speed
+        // the yPos is a negative value because we're scrolling it UP!
+        var yPos = -( ($window.scrollTop() - $bgobj.offset().top) / $bgobj.data('speed'));
 
-  <div id="work-single">
-    {{ content }}
-  </div>
-  
-  {% include contact.html %}
+        // Put together our final background position
+        var coords = '50% '+ yPos + 'px';
 
-{% when 'work-page' %}
+        // Move the background
+        $bgobj.css({ backgroundPosition: coords });
 
-  <div id="work-page">
-    {{ content }}
-  </div>
-  
-{% when 'work-category' %}
+    }); // window scroll Ends
+});
 
-  <div id="work-category">
-    {{ content }}
-  </div>
-  
-{% endcase %}
-  
-<!-- SymbolSet Support -->
-<script type="text/javascript" src="/assets/scripts/ss-social.js">
+$('.main-nav > a').click(function(e){
+    e.preventDefault();
+
+    $(".main-nav").toggleClass("menu-open");
+    $(".container").toggleClass("menu-open");
+});
+
+});
+
+document.createElement("article");
+document.createElement("section");
 </script>
-
-<!-- Site scripts -->
-<!-- <script type="text/javascript" src="/assets/scripts/init.js">
-</script> -->
-
 </body>
 </html>

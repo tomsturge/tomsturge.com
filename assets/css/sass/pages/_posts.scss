@@ -1,86 +1,40 @@
-#posts-page {
-  @include flat-text-shadow($red, 0.063em, 0.125em);
-  background-color: $red;
-    .section-container { padding-top: calc-em(44px, 24px); }
-    h1 { @include section-title($red); }
-    p { padding: 0 calc-em(26px); }
-    ul {
-      @include multi-box-shadow($red, 20%, 5px);
-      background-color: shade($red, 10%); 
-    }
-    li {
-      @include flat-text-shadow(shade($red, 15%), 0.063em, 0.125em);
-        &:nth-child(2n) a { 
-          background-color: shade($red, 20%); }
-        a:hover {
-          background-color: #fff;
-          color: $red;
-          text-shadow: none; 
-          text-decoration: none;
-            h2 { color: $red; }
-        }
-    }    
+.page--posts, .page--post {
+
+    .page__intro  > div {
+            background-color: rgba(176, 81, 64, .35); }
+
+    .credits-panel {
+        background-color: $red; }
 }
+
 
 #post-single {
-  background-color: $red;
-    #post-title { 
-      padding: 44px 0 20px; 
-    }
-    h1 { @include section-title($red); }
+    background-color: $red;
+
+    #post-title {
+      padding: 44px 0 20px; }
+
 }
 
-#post-content { 
-  background-color: #fff; 
-  width: 100%;
-  font-weight: 300;
-  color: #444;
-    .section-container { 
-      width: 100%;
-      padding: 20px 0; 
-    }
+#post-content {
+    background-color: #fff;
+    width: 100%;
+    font-weight: 300;
+    color: #444;
+
     a {
-      font-weight: 400;
-      color: $red;
-    }
-    b,strong { font-weight: normal } 
-    img { 
-      border: 10px solid $red;
-        &.right { margin: 0 0 14px 24px; }
-        &.left { margin: 0 24px 14px 0; }
-    }
-} 
-    
-//
-//----------------------
-//  SOCIAL SECTION
-//----------------------
-//
+        font-weight: 400;
+        color: $red; }
 
-#social {
-  background-color: $blue;
-  padding-top: calc-em(4px);
-  border-top: 5px dashed shade($blue, 25%);
-  @include box-shadow($blue 0 -5px 0 0); 
-    .section-container { padding: 90px 0 100px; }
-    h2 { @include section-title($blue); }
-    h3 { @include big-title($blue, -3px, 4px, 32px); }
-}
+    b,strong {
+        font-weight: normal }
 
-.comments {
-  width: 30em;
-}
-.share {
-  width: 20em;
-    .social-icons {
-        a {
-          $base-size: 23px;
-          background-color: shade($blue, 10%);
-          @include flat-text-shadow(shade($blue, 15%), 
-                   calc-em(-1px, $base-size), 
-                   calc-em(2px, $base-size));
-          @include multi-box-shadow($blue, 20%, 
-                   calc-em(5px, $base-size));
-        }
+    img {
+
+        &.fr {
+            margin: 0 0 14px 24px; }
+
+        &.fl {
+            margin: 0 24px 14px 0; }
     }
 }

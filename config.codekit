@@ -20,6 +20,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/_includes\/credits.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_includes\/credits.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/_includes\/facebook-head.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -83,15 +92,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_layouts\/demo.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_layouts\/demo.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/_layouts\/post.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -110,21 +110,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_posts\/2011-01-10-css3-buttons.html": {
-		"fileType": 8192,
+	"\/_posts\/2010-05-02-site-v1.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_posts\/2011-01-10-css3-buttons.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/_posts\/2011-01-10-flipper.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_posts\/2011-01-10-flipper.html",
-		"outputAbbreviatedPath": "No Output Path",
+		"inputAbbreviatedPath": "\/_posts\/2010-05-02-site-v1.md",
+		"outputAbbreviatedPath": "\/_posts\/2010-05-02-site-v1.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -308,44 +302,787 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_posts\/2013-04-14-site-v1.md": {
+	"\/_posts\/2013-04-13-roman-fitness.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
 		"expandTabs": 1,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_posts\/2013-04-14-site-v1.md",
-		"outputAbbreviatedPath": "\/_posts\/2013-04-14-site-v1.html",
+		"inputAbbreviatedPath": "\/_posts\/2013-04-13-roman-fitness.md",
+		"outputAbbreviatedPath": "\/_posts\/2013-04-13-roman-fitness.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/demo\/css3-buttons\/index.html": {
-		"fileType": 8192,
+	"\/_posts\/2013-06-20-site-v2.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/demo\/css3-buttons\/index.html",
+		"inputAbbreviatedPath": "\/_posts\/2013-06-20-site-v2.md",
+		"outputAbbreviatedPath": "\/_posts\/2013-06-20-site-v2.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_posts\/2013-08-20-recruitment-genius.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_posts\/2013-08-20-recruitment-genius.md",
+		"outputAbbreviatedPath": "\/_posts\/2013-08-20-recruitment-genius.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_posts\/2014-01-30-bodsham.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_posts\/2014-01-30-bodsham.md",
+		"outputAbbreviatedPath": "\/_posts\/2014-01-30-bodsham.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_posts\/2014-03-24-johnwesley.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_posts\/2014-03-24-johnwesley.md",
+		"outputAbbreviatedPath": "\/_posts\/2014-03-24-johnwesley.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/assets\/css\/screen.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/assets\/css\/screen.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/demo\/flipper\/index.html": {
-		"fileType": 8192,
+	"\/_site\/assets\/fonts\/ss-social-regular.css": {
+		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/demo\/flipper\/index.html",
+		"inputAbbreviatedPath": "\/_site\/assets\/fonts\/ss-social-regular.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/demo\/index.html": {
-		"fileType": 8192,
+	"\/_site\/assets\/images\/headers\/homeIntro.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/demo\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
+		"initialSize": 273005,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/headers\/homeIntro.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/headers\/homeIntro.png",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/headers\/posts\/jekyllJourney.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 228593,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/headers\/posts\/jekyllJourney.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/headers\/posts\/jekyllJourney.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/headers\/posts\/oldSite.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 26143,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/headers\/posts\/oldSite.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/headers\/posts\/oldSite.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/headers\/postsIntro.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 238899,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/headers\/postsIntro.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/headers\/postsIntro.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/headers\/workIntro.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 309523,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/headers\/workIntro.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/headers\/workIntro.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/advancedTrans.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 59174,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/advancedTrans.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/advancedTrans.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/arrowheadDesign-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 51595,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/arrowheadDesign-logo.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/arrowheadDesign-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/benBruno.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 122701,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/benBruno.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/benBruno.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/bjornRos.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 96760,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/bjornRos.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/bjornRos.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/bodsham.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 164651,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/bodsham.jpg",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/bodsham.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/bodyFat.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 94809,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/bodyFat.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/bodyFat.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/crossfitElijo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 57844,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/crossfitElijo.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/crossfitElijo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/devFrame.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1295,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/devFrame.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/devFrame.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/durhamTraining.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 26201,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/durhamTraining.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/durhamTraining.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/fourthCoast.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 77089,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/fourthCoast.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/fourthCoast.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/4th-coast-fitness.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 348402,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/4th-coast-fitness.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/4th-coast-fitness.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/ats.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 441897,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/ats.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/ats.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/ben-bruno.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 253514,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/ben-bruno.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/ben-bruno.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/bjorn-rosinger.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.16941e+06,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/bjorn-rosinger.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/bjorn-rosinger.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/bodsham.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 97025,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/bodsham.jpg",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/bodsham.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/bodyfat-meltdown.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 872893,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/bodyfat-meltdown.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/bodyfat-meltdown.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/crossfit-sanelijo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.37866e+06,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/crossfit-sanelijo.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/crossfit-sanelijo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/green-clean.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 583028,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/green-clean.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/green-clean.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/jhh.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 347798,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/jhh.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/jhh.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/john-wesley.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 337977,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/john-wesley.jpg",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/john-wesley.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/phase-five.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.706e+06,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/phase-five.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/phase-five.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/recruitment-genius.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 177145,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/recruitment-genius.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/recruitment-genius.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/roman-fitness.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 182192,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/roman-fitness.jpg",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/roman-fitness.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/sean-hyson.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 547096,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/sean-hyson.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/sean-hyson.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/site-v2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.06524e+06,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/site-v2.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/site-v2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/full\/tomsturge-v1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 164319,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/tomsturge-v1.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/full\/tomsturge-v1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/greenClean.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 56206,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/greenClean.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/greenClean.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/4th-coast-fitness.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 178623,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/4th-coast-fitness.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/4th-coast-fitness.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/arrowheadLogo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 326010,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/arrowheadLogo.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/arrowheadLogo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/ats.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 221828,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/ats.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/ats.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/ben-bruno.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 311150,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/ben-bruno.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/ben-bruno.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/bjorn-rosinger.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 270421,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/bjorn-rosinger.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/bjorn-rosinger.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/bodsham.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 440228,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/bodsham.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/bodsham.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/bodyfat-meltdown.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 249074,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/bodyfat-meltdown.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/bodyfat-meltdown.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/crossfit-sanelijo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 162313,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/crossfit-sanelijo.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/crossfit-sanelijo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/green-clean.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 206611,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/green-clean.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/green-clean.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/jhh-site.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 179349,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/jhh-site.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/jhh-site.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/jhh.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 404980,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/jhh.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/jhh.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/john-wesley.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 354960,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/john-wesley.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/john-wesley.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/phase-five.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 217107,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/phase-five.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/phase-five.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/recruitment-genius.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 132452,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/recruitment-genius.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/recruitment-genius.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/roman-fitness.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 258948,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/roman-fitness.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/roman-fitness.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/sb-security.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 255051,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/sb-security.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/sb-security.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/seanHyson.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 163465,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/seanHyson.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/seanHyson.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/site-v2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 117772,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/site-v2.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/site-v2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/skyblu.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 474971,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/skyblu.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/skyblu.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/headers\/tomsturge-v1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 95529,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/tomsturge-v1.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/headers\/tomsturge-v1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/joesHoliday-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 54517,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/joesHoliday-logo.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/joesHoliday-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/joesHoliday.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 56029,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/joesHoliday.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/joesHoliday.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/john-wesley.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 134123,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/john-wesley.jpg",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/john-wesley.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/oldSite.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16902,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/oldSite.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/oldSite.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/phaseFive.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 96954,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/phaseFive.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/phaseFive.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/recruitmentGenius.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 51074,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/recruitmentGenius.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/recruitmentGenius.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/romanFitness.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 99169,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/romanFitness.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/romanFitness.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/sbSecurity-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28572,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/sbSecurity-logo.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/sbSecurity-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/seanHyson.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 39729,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/seanHyson.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/seanHyson.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/site-v1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 51899,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/site-v1.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/site-v1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/site-v2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 39554,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/site-v2.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/site-v2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/assets\/images\/work\/skybluStudios-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 48225,
+		"inputAbbreviatedPath": "\/_site\/assets\/images\/work\/skybluStudios-logo.png",
+		"outputAbbreviatedPath": "\/_site\/assets\/images\/work\/skybluStudios-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/_site\/icon.png": {
 		"fileType": 32768,
@@ -358,6 +1095,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/_site\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/_site\/og_image.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -368,6 +1114,42 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/_site\/page2\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/page2\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/page3\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/page3\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/post\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/post\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/post\/site-update-a-journey-with-jekyll\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/post\/site-update-a-journey-with-jekyll\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/_site\/README.md": {
 		"enableFootnoteSupport": 0,
@@ -381,129 +1163,221 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/work\/web\/4th-coast\/index.html": {
+	"\/_site\/work\/design\/arrowhead\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/work\/web\/4th-coast\/index.html",
+		"inputAbbreviatedPath": "\/_site\/work\/design\/arrowhead\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/work\/web\/ats\/index.html": {
+	"\/_site\/work\/design\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/work\/web\/ats\/index.html",
+		"inputAbbreviatedPath": "\/_site\/work\/design\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/work\/web\/ben-bruno\/index.html": {
+	"\/_site\/work\/design\/joes-holiday-home\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/work\/web\/ben-bruno\/index.html",
+		"inputAbbreviatedPath": "\/_site\/work\/design\/joes-holiday-home\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/work\/web\/bjorn-rosinger\/index.html": {
+	"\/_site\/work\/design\/sb-security\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/work\/web\/bjorn-rosinger\/index.html",
+		"inputAbbreviatedPath": "\/_site\/work\/design\/sb-security\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/work\/web\/bodyfat-meltdown\/index.html": {
+	"\/_site\/work\/design\/skyblu-studio\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/work\/web\/bodyfat-meltdown\/index.html",
+		"inputAbbreviatedPath": "\/_site\/work\/design\/skyblu-studio\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/work\/web\/crossfit-sanelijo\/index.html": {
+	"\/_site\/work\/dev\/4th-coast\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/work\/web\/crossfit-sanelijo\/index.html",
+		"inputAbbreviatedPath": "\/_site\/work\/dev\/4th-coast\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/work\/web\/green-clean-queen\/index.html": {
+	"\/_site\/work\/dev\/ats\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/work\/web\/green-clean-queen\/index.html",
+		"inputAbbreviatedPath": "\/_site\/work\/dev\/ats\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/work\/web\/index.html": {
+	"\/_site\/work\/dev\/ben-bruno\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/work\/web\/index.html",
+		"inputAbbreviatedPath": "\/_site\/work\/dev\/ben-bruno\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/work\/web\/jhh\/index.html": {
+	"\/_site\/work\/dev\/bjorn-rosinger\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/work\/web\/jhh\/index.html",
+		"inputAbbreviatedPath": "\/_site\/work\/dev\/bjorn-rosinger\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/work\/web\/phase-five\/index.html": {
+	"\/_site\/work\/dev\/bodyfat-meltdown\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/work\/web\/phase-five\/index.html",
+		"inputAbbreviatedPath": "\/_site\/work\/dev\/bodyfat-meltdown\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/work\/web\/sean-hyson\/index.html": {
+	"\/_site\/work\/dev\/crossfit-sanelijo\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/work\/web\/sean-hyson\/index.html",
+		"inputAbbreviatedPath": "\/_site\/work\/dev\/crossfit-sanelijo\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_site\/work\/web\/site-v1\/index.html": {
+	"\/_site\/work\/dev\/green-clean-queen\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/work\/web\/site-v1\/index.html",
+		"inputAbbreviatedPath": "\/_site\/work\/dev\/green-clean-queen\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/assets\/css\/sass\/_animations.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
+	"\/_site\/work\/dev\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/css\/sass\/_animations.scss",
-		"outputAbbreviatedPath": "\/assets\/css\/css\/_animations.css",
+		"inputAbbreviatedPath": "\/_site\/work\/dev\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
+		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/work\/dev\/jhh\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/work\/dev\/jhh\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/work\/dev\/phase-five\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/work\/dev\/phase-five\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/work\/dev\/recruitment-genius\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/work\/dev\/recruitment-genius\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/work\/dev\/roman-fitness\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/work\/dev\/roman-fitness\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/work\/dev\/sean-hyson\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/work\/dev\/sean-hyson\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/work\/dev\/site-v1\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/work\/dev\/site-v1\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/work\/dev\/site-v2\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/work\/dev\/site-v2\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/work\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/work\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/work\/teaching\/bodsham\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/work\/teaching\/bodsham\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/work\/teaching\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/work\/teaching\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/_site\/work\/teaching\/johnwesley\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_site\/work\/teaching\/johnwesley\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/assets\/css\/sass\/_custom.scss": {
 		"createSourceMap": 0,
@@ -517,6 +1391,22 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 3,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/assets\/css\/sass\/_icons.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/css\/sass\/_icons.scss",
+		"outputAbbreviatedPath": "\/assets\/css\/css\/_icons.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
@@ -569,38 +1459,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/assets\/css\/sass\/pages\/_archive.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/css\/sass\/pages\/_archive.scss",
-		"outputAbbreviatedPath": "\/assets\/css\/sass\/css\/_archive.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/assets\/css\/sass\/pages\/_demos.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/css\/sass\/pages\/_demos.scss",
-		"outputAbbreviatedPath": "\/assets\/css\/sass\/css\/_demos.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
 	"\/assets\/css\/sass\/pages\/_home.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -649,70 +1507,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/assets\/css\/sass\/responsive\/_320.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/css\/sass\/responsive\/_320.scss",
-		"outputAbbreviatedPath": "\/assets\/css\/sass\/css\/_320.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/assets\/css\/sass\/responsive\/_480.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/css\/sass\/responsive\/_480.scss",
-		"outputAbbreviatedPath": "\/assets\/css\/sass\/css\/_480.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/assets\/css\/sass\/responsive\/_800.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/css\/sass\/responsive\/_800.scss",
-		"outputAbbreviatedPath": "\/assets\/css\/sass\/css\/_800.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/assets\/css\/sass\/responsive\/_980.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/css\/sass\/responsive\/_980.scss",
-		"outputAbbreviatedPath": "\/assets\/css\/sass\/css\/_980.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
 	"\/assets\/css\/sass\/screen.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -738,50 +1532,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/assets\/demos\/arrow.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1026,
-		"inputAbbreviatedPath": "\/assets\/demos\/arrow.png",
-		"outputAbbreviatedPath": "\/assets\/demos\/arrow.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/demos\/dark_bg.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3767,
-		"inputAbbreviatedPath": "\/assets\/demos\/dark_bg.png",
-		"outputAbbreviatedPath": "\/assets\/demos\/dark_bg.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/demos\/dblarrow.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1089,
-		"inputAbbreviatedPath": "\/assets\/demos\/dblarrow.png",
-		"outputAbbreviatedPath": "\/assets\/demos\/dblarrow.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/demos\/light_bg.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1498,
-		"inputAbbreviatedPath": "\/assets\/demos\/light_bg.jpg",
-		"outputAbbreviatedPath": "\/assets\/demos\/light_bg.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/assets\/fonts\/ss-social-regular.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -791,368 +1541,709 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/assets\/images\/logo\/arrowheadDesign.png": {
+	"\/assets\/images\/headers\/homeIntro.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 40241,
-		"inputAbbreviatedPath": "\/assets\/images\/logo\/arrowheadDesign.png",
-		"outputAbbreviatedPath": "\/assets\/images\/logo\/arrowheadDesign.png",
+		"initialSize": 273005,
+		"inputAbbreviatedPath": "\/assets\/images\/headers\/homeIntro.png",
+		"outputAbbreviatedPath": "\/assets\/images\/headers\/homeIntro.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/logo\/joesHoliday.png": {
+	"\/assets\/images\/headers\/posts\/jekyllJourney.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 41104,
-		"inputAbbreviatedPath": "\/assets\/images\/logo\/joesHoliday.png",
-		"outputAbbreviatedPath": "\/assets\/images\/logo\/joesHoliday.png",
+		"initialSize": 228593,
+		"inputAbbreviatedPath": "\/assets\/images\/headers\/posts\/jekyllJourney.png",
+		"outputAbbreviatedPath": "\/assets\/images\/headers\/posts\/jekyllJourney.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/logo\/sbSecurity.png": {
+	"\/assets\/images\/headers\/posts\/oldSite.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 23224,
-		"inputAbbreviatedPath": "\/assets\/images\/logo\/sbSecurity.png",
-		"outputAbbreviatedPath": "\/assets\/images\/logo\/sbSecurity.png",
+		"initialSize": 26143,
+		"inputAbbreviatedPath": "\/assets\/images\/headers\/posts\/oldSite.png",
+		"outputAbbreviatedPath": "\/assets\/images\/headers\/posts\/oldSite.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/logo\/skybluStudios.png": {
+	"\/assets\/images\/headers\/postsIntro.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 39280,
-		"inputAbbreviatedPath": "\/assets\/images\/logo\/skybluStudios.png",
-		"outputAbbreviatedPath": "\/assets\/images\/logo\/skybluStudios.png",
+		"initialSize": 238899,
+		"inputAbbreviatedPath": "\/assets\/images\/headers\/postsIntro.png",
+		"outputAbbreviatedPath": "\/assets\/images\/headers\/postsIntro.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/oldSite.png": {
+	"\/assets\/images\/headers\/workIntro.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 26639,
-		"inputAbbreviatedPath": "\/assets\/images\/oldSite.png",
-		"outputAbbreviatedPath": "\/assets\/images\/oldSite.png",
+		"initialSize": 309523,
+		"inputAbbreviatedPath": "\/assets\/images\/headers\/workIntro.png",
+		"outputAbbreviatedPath": "\/assets\/images\/headers\/workIntro.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/advancedTrans.png": {
+	"\/assets\/images\/work\/advancedTrans.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 42272,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/advancedTrans.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/advancedTrans.png",
+		"initialSize": 59174,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/advancedTrans.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/advancedTrans.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/benBruno.png": {
+	"\/assets\/images\/work\/arrowheadDesign-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 102157,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/benBruno.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/benBruno.png",
+		"initialSize": 51595,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/arrowheadDesign-logo.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/arrowheadDesign-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/bjornRos.png": {
+	"\/assets\/images\/work\/benBruno.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 71126,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/bjornRos.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/bjornRos.png",
+		"initialSize": 122701,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/benBruno.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/benBruno.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/bodyFat.png": {
+	"\/assets\/images\/work\/bjornRos.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 91972,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/bodyFat.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/bodyFat.png",
+		"initialSize": 96760,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/bjornRos.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/bjornRos.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/crossfitElijo.png": {
-		"fileType": 32768,
+	"\/assets\/images\/work\/bodsham.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 43635,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/crossfitElijo.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/crossfitElijo.png",
+		"initialSize": 164651,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/bodsham.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/bodsham.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/durhamTraining.png": {
+	"\/assets\/images\/work\/bodyFat.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 94809,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/bodyFat.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/bodyFat.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/crossfitElijo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 57844,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/crossfitElijo.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/crossfitElijo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/devFrame.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1295,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/devFrame.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/devFrame.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/durhamTraining.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 26201,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/durhamTraining.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/durhamTraining.png",
+		"inputAbbreviatedPath": "\/assets\/images\/work\/durhamTraining.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/durhamTraining.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/fourthCoast.png": {
+	"\/assets\/images\/work\/fourthCoast.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 53503,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/fourthCoast.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/fourthCoast.png",
+		"initialSize": 77089,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/fourthCoast.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/fourthCoast.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/full\/4th-coast-fitness.png": {
+	"\/assets\/images\/work\/full\/4th-coast-fitness.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 348402,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/full\/4th-coast-fitness.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/full\/4th-coast-fitness.png",
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/4th-coast-fitness.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/4th-coast-fitness.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/full\/ats.png": {
+	"\/assets\/images\/work\/full\/ats.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 618485,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/full\/ats.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/full\/ats.png",
+		"initialSize": 441897,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/ats.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/ats.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/full\/ben-bruno.png": {
+	"\/assets\/images\/work\/full\/ben-bruno.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 9.39384e+06,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/full\/ben-bruno.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/full\/ben-bruno.png",
+		"initialSize": 253514,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/ben-bruno.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/ben-bruno.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/full\/bjorn-rosinger.png": {
+	"\/assets\/images\/work\/full\/bjorn-rosinger.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2.69054e+06,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/full\/bjorn-rosinger.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/full\/bjorn-rosinger.png",
+		"initialSize": 2.16941e+06,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/bjorn-rosinger.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/bjorn-rosinger.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/full\/bodyfat-meltdown.png": {
+	"\/assets\/images\/work\/full\/bodsham.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 97025,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/bodsham.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/bodsham.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/full\/bodyfat-meltdown.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1.14031e+06,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/full\/bodyfat-meltdown.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/full\/bodyfat-meltdown.png",
+		"initialSize": 872893,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/bodyfat-meltdown.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/bodyfat-meltdown.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/full\/crossfit-sanelijo.png": {
+	"\/assets\/images\/work\/full\/crossfit-sanelijo.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1.77232e+06,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/full\/crossfit-sanelijo.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/full\/crossfit-sanelijo.png",
+		"initialSize": 1.37866e+06,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/crossfit-sanelijo.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/crossfit-sanelijo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/full\/green-clean.png": {
+	"\/assets\/images\/work\/full\/green-clean.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 784821,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/full\/green-clean.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/full\/green-clean.png",
+		"initialSize": 583028,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/green-clean.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/green-clean.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/full\/jhh.png": {
+	"\/assets\/images\/work\/full\/jhh.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 460779,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/full\/jhh.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/full\/jhh.png",
+		"initialSize": 347798,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/jhh.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/jhh.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/full\/phase-five.png": {
+	"\/assets\/images\/work\/full\/john-wesley.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 337977,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/john-wesley.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/john-wesley.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/full\/phase-five.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 3.6582e+06,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/full\/phase-five.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/full\/phase-five.png",
+		"initialSize": 2.706e+06,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/phase-five.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/phase-five.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/full\/sean-hyson.png": {
+	"\/assets\/images\/work\/full\/recruitment-genius.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 689579,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/full\/sean-hyson.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/full\/sean-hyson.png",
+		"initialSize": 177145,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/recruitment-genius.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/recruitment-genius.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/full\/tomsturge-v1.png": {
+	"\/assets\/images\/work\/full\/roman-fitness.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 182192,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/roman-fitness.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/roman-fitness.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/full\/sean-hyson.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 547096,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/sean-hyson.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/sean-hyson.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/full\/site-v2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.06524e+06,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/site-v2.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/site-v2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/full\/tomsturge-v1.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 164319,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/full\/tomsturge-v1.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/full\/tomsturge-v1.png",
+		"inputAbbreviatedPath": "\/assets\/images\/work\/full\/tomsturge-v1.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/full\/tomsturge-v1.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/greenClean.png": {
+	"\/assets\/images\/work\/greenClean.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 59167,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/greenClean.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/greenClean.png",
+		"initialSize": 56206,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/greenClean.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/greenClean.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/joesHoliday.png": {
+	"\/assets\/images\/work\/headers\/4th-coast-fitness.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 64215,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/joesHoliday.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/joesHoliday.png",
+		"initialSize": 178623,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/4th-coast-fitness.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/4th-coast-fitness.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/oldSite.png": {
+	"\/assets\/images\/work\/headers\/arrowheadLogo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 326010,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/arrowheadLogo.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/arrowheadLogo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/ats.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 221828,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/ats.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/ats.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/ben-bruno.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 311150,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/ben-bruno.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/ben-bruno.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/bjorn-rosinger.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 270421,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/bjorn-rosinger.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/bjorn-rosinger.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/bodsham.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 440228,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/bodsham.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/bodsham.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/bodyfat-meltdown.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 249074,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/bodyfat-meltdown.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/bodyfat-meltdown.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/crossfit-sanelijo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 162313,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/crossfit-sanelijo.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/crossfit-sanelijo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/green-clean.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 206611,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/green-clean.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/green-clean.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/jhh-site.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 179349,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/jhh-site.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/jhh-site.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/jhh.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 404980,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/jhh.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/jhh.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/john-wesley.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 354960,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/john-wesley.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/john-wesley.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/phase-five.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 217107,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/phase-five.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/phase-five.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/recruitment-genius.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 132452,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/recruitment-genius.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/recruitment-genius.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/roman-fitness.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 258948,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/roman-fitness.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/roman-fitness.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/sb-security.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 255051,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/sb-security.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/sb-security.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/seanHyson.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 163465,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/seanHyson.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/seanHyson.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/site-v2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 117772,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/site-v2.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/site-v2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/skyblu.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 474971,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/skyblu.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/skyblu.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/headers\/tomsturge-v1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 95529,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/headers\/tomsturge-v1.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/headers\/tomsturge-v1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/joesHoliday-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 54517,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/joesHoliday-logo.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/joesHoliday-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/joesHoliday.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 56029,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/joesHoliday.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/joesHoliday.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/john-wesley.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 134123,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/john-wesley.jpg",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/john-wesley.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/work\/oldSite.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 16902,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/oldSite.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/oldSite.png",
+		"inputAbbreviatedPath": "\/assets\/images\/work\/oldSite.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/oldSite.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/phaseFive.png": {
+	"\/assets\/images\/work\/phaseFive.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 55924,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/phaseFive.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/phaseFive.png",
+		"initialSize": 96954,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/phaseFive.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/phaseFive.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/quattroFitness.png": {
+	"\/assets\/images\/work\/recruitmentGenius.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 89822,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/quattroFitness.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/quattroFitness.png",
+		"initialSize": 51074,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/recruitmentGenius.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/recruitmentGenius.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/romanFitness.png": {
+	"\/assets\/images\/work\/romanFitness.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 57822,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/romanFitness.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/romanFitness.png",
+		"initialSize": 99169,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/romanFitness.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/romanFitness.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/images\/web\/seanHyson.png": {
+	"\/assets\/images\/work\/sbSecurity-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 49024,
-		"inputAbbreviatedPath": "\/assets\/images\/web\/seanHyson.png",
-		"outputAbbreviatedPath": "\/assets\/images\/web\/seanHyson.png",
+		"initialSize": 28572,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/sbSecurity-logo.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/sbSecurity-logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/scripts\/core.js": {
-		"fileType": 64,
+	"\/assets\/images\/work\/seanHyson.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/scripts\/core.js",
-		"outputAbbreviatedPath": "\/assets\/scripts\/min\/core-ck.js",
+		"initialSize": 39729,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/seanHyson.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/seanHyson.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
+		"processed": 0
 		},
-	"\/assets\/scripts\/cycle2.js": {
-		"fileType": 64,
+	"\/assets\/images\/work\/site-v1.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/scripts\/cycle2.js",
-		"outputAbbreviatedPath": "\/assets\/scripts\/min\/cycle2-ck.js",
+		"initialSize": 51899,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/site-v1.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/site-v1.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
+		"processed": 0
 		},
-	"\/assets\/scripts\/ss-social.js": {
-		"fileType": 64,
+	"\/assets\/images\/work\/site-v2.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/scripts\/ss-social.js",
-		"outputAbbreviatedPath": "\/assets\/scripts\/min\/ss-social-ck.js",
+		"initialSize": 39554,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/site-v2.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/site-v2.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
+		"processed": 0
+		},
+	"\/assets\/images\/work\/skybluStudios-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 48225,
+		"inputAbbreviatedPath": "\/assets\/images\/work\/skybluStudios-logo.png",
+		"outputAbbreviatedPath": "\/assets\/images\/work\/skybluStudios-logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/config.rb": {
 		"fileType": 131072,
@@ -1160,15 +2251,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/config.rb",
 		"outputAbbreviatedPath": "\/config.rb",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/demo\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/demo\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -1233,6 +2315,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/work\/dev\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/work\/dev\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/work\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1242,11 +2333,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/work\/web\/index.html": {
+	"\/work\/teaching\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/work\/web\/index.html",
+		"inputAbbreviatedPath": "\/work\/teaching\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1833,7 +2924,7 @@
 	"sassUseLibsass": 0,
 	"shouldRunAutoprefixer": 0,
 	"shouldRunBless": 0,
-	"skippedItemsString": ".svn, .git, .hg, log, _logs, _cache, cache, logs",
+	"skippedItemsString": "_cache, logs, \/_posts, _logs, cache, .git, log, .svn, .hg",
 	"slimAutoOutputPathRelativePath": "",
 	"slimAutoOutputPathReplace1": "",
 	"slimAutoOutputPathReplace2": "",
