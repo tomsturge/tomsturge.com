@@ -31,10 +31,6 @@
 
 <title>{% if page.type == 'post' %}{{ page.title }} - {% endif %}Thomas Sturge // Designer + Developer</title>
 
-<!-- Scripts -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="/assets/scripts/core.js"></script>
-
 <!-- Google Web Fonts -->  
 <link rel='stylesheet' type='text/css'
       href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic|Lobster|Oswald:700|Inconsolata'>
@@ -46,19 +42,11 @@
 <!-- Global stylesheet -->
 <link href="/assets/css/screen.css" rel="stylesheet" type="text/css"
       media="all">
+
 </head>
 
 <body>
-
-<div id="loading">
-<h1>
-  Please Wait
-  <span>site loading</span> 
-</h1>
-</div>
-<!-- /#loading -->
-
-<div id="loaded">
+  
 {% include nav.html %}
 
 {% case page.type %}
@@ -127,8 +115,6 @@
   </div>
   
 {% endcase %}
-</div>
-<!-- /#loaded -->
   
 <!-- SymbolSet Support -->
 <script type="text/javascript" src="/assets/scripts/ss-social.js">

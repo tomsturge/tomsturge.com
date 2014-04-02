@@ -1,18 +1,11 @@
-//
-//----------------------
-//  LOADING SECTION
-//----------------------
-//
+
 //
 //----------------------
 //  INTRO SECTION
 //----------------------
 //
 
-#intro { 
-  background-color: $blue; 
-  padding-top: 66px;
-}
+#intro { background-color: $blue; }
 header {
   width: calc-em(540px);
   font-family: $heading-font;
