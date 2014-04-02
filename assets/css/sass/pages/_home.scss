@@ -35,28 +35,9 @@
 }
 
 
-.test-panel {
+.feature-panel {
+    background: url(/assets/images/picjumbo.com_IMG_1732.jpg) top center fixed #444 no-repeat;
     background-size: cover;
-
-    &.test1 {
-        background: url(/assets/images/picjumbo.com_IMG_1732.jpg) top center fixed #444 no-repeat;
-        background-size: cover;
-
-        .panel__cover {  }
-    }
-    &.test2 {
-        background: url(/assets/images/americanroundup.jpg) top center fixed #444 no-repeat;
-        background-size: cover;
-
-        .panel__cover {  }
-    }
-    &.test3 {
-        background: url(/assets/images/picjumbo.com_IMG_6772.jpg) top center fixed #444 no-repeat;
-        background-size: cover;
-
-        .panel__cover {  }
-    }
-
 
     .panel__cover {
         padding: 60px 0; }
