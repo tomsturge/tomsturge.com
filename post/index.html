@@ -20,6 +20,7 @@ type: posts
                     <li class="post-list__post">
                         <a href="{{ post.url }}">
                             <h2 class="post-list__title">{{ post.title }}</h2>
+                            <p>{{ post.intro }} </p>
                             <time datetime="{{ post.date | date: "%Y-%m" }}">
                                 {{ post.date | date: "%b, %Y" }}
                             </time>

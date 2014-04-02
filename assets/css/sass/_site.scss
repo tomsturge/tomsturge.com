@@ -59,11 +59,12 @@ a {
     background-size: cover;
     font-size: calc-em($base-size);
     font-family: $heading-font;
-    color: #fff; 
+    color: #fff;
     text-align: center;
+    overflow: hidden;
 
     h1 {
-        color: #fff; 
+        color: #fff;
         line-height: 1.2;
         clear: both; }
 
@@ -265,7 +266,7 @@ a {
 
     a, span {
         background: #539052;
-        
+
         &:after {
             background: #3E743D; }
     }
@@ -287,9 +288,6 @@ a {
 
 // Home page
 @import 'pages/home';
-
-// Archive page
-@import 'pages/archive';
 
 // Posts page
 @import 'pages/posts';

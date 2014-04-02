@@ -7,14 +7,6 @@
         background-color: $red; }
 }
 
-#posts-page {
-
-    .section-container {
-        padding-top: calc-em(44px, 24px); }
-
-    p {
-        padding: 0 calc-em(26px); }
-}
 
 #post-single {
     background-color: $red;
@@ -30,18 +22,14 @@
     font-weight: 300;
     color: #444;
 
-    .section-container {
-        width: 100%;
-        padding: 20px 0; }
-
     a {
         font-weight: 400;
         color: $red; }
 
     b,strong {
         font-weight: normal }
+
     img {
-        border: 10px solid $red;
 
         &.fr {
             margin: 0 0 14px 24px; }
