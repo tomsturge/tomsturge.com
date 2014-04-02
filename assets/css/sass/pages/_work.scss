@@ -1,91 +1,118 @@
-#work-page, #work-category {
-    @include flat-text-shadow($green, 0.063em, 0.125em);
-    background-color: $green;
+.page--work-page, .page--work-single {
 
-    h1 {
-        @include section-title($green); }
+    .page__intro > div {
+        background-color: rgbA(83, 144, 82, .35); }
 
-    section {
-    	margin-bottom: 40px;
-    	overflow: hidden; }
 
-    img {
-	    width: 15.556em;
-	    padding: 10px; }
+    .credits-panel {
+        background-color: $green; }
+}
 
-    ul {
-        margin: 0; }
+.work-items {
+    list-style: none;
+    margin: -20px 0 0;
 
     li {
-        background-color: shade($green, 15%);
-        display: inline-block;
-        width: 300px;
-        height: 315px;
-        margin: 0 29px 20px 0;
+        width: 310px;
+        height: 240px;
         vertical-align: top;
+        margin: 20px 15px 0 0;
+        position: relative; 
+        overflow: hidden;
         float: left;
 
         &:nth-child(3n) {
             margin-right: 0; }
 
         &:hover {
-            background-color: #fff;
 
-            h2, h3, p {
-              text-shadow: none; }
+            img {
+                transform: scale(1.1,1.1);
+                filter: blur(2px); }
+                
+            .item-mask {
+               opacity: 1; }
 
-            h2, h3 {
-                color: $black; }
+            h3 {
+                transform: translateY(0); }
 
             p {
-                color: shade($green, 15%); }
+                opacity: 1;
+                transform: translateY(0); }
+            a {
+                opacity: 1; }
         }
-        a {
-          display: block;
-          height: 315px;
-          text-decoration: none; }
-
-        p {
-          @include flat-text-shadow(shade($green, 15%), 0.063em, 0.125em);
-          padding: 0 15px; }
     }
 
-    li, li * {
-        transition: background-color .5s,
-                    color .5s; }
+    img {
+        display: block;
+        height: 100%;
+        width:  100%;
+        transition: transform .3s, filter .3s; }
 }
 
-#work-page {
-
-    h2 {
-    	@include big-title($green, -3px, 4px, 32px);
-    	border-bottom: none;
-    	clear: both; }
+.item-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(83, 144, 82, 0.7);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity .3s;
 
     h3 {
-        @include big-title(shade($green, 15%), -3px, 4px, 32px);
-        padding: 0 15px;
-        font-size: 1.35em; }
+        background: #444;
+        color: white;
+        padding: 10px 15px;
+        margin: 15px 0;
+        text-transform: uppercase;
+        transform: translateY(-80px); 
+        font-size: 16px;
+        transition: transform .3s; }
+
+    p {
+        margin: 0 0 15px;
+        padding: 0 20px;
+        color: white;
+        line-height: 1.2;
+        font-size: 15px;
+        transform: translateY(140px); 
+        opacity: 0; 
+        transition: transform .3s, opacity .3s; }
+
+    a {
+        display: inline-block;
+        margin: 0 auto;
+        width:  auto;
+        box-shadow: none;
+        color: white;
+        background: #444;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 5px 10px;
+        opacity: 0; 
+        transition: opacity .5s; }
 }
+
 #work-category {
 
     h2 {
-        @include big-title(shade($green, 15%), -3px, 4px, 32px);
     	border-bottom: none;
         padding: 0 15px;
         font-size: 1.35em; }
 }
 
 #work-single {
-    @include flat-text-shadow($green, 0.063em, 0.125em);
-    background-color: $green;
-    h1 {
-        @include section-title($green); }
+
     img {
       width: 480px;
       float: left; }
 
-    div {
+    article div {
       width: 440px;
       float: right; }
 
@@ -100,7 +127,10 @@
       padding: 6px 10px;
       margin-right: 10px;
       background-color: #467A45;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      font-family: $heading-font;
+      text-transform: uppercase;
+      color: white; }
 }
 
 .site-link {
@@ -108,12 +138,17 @@
     display: inline-block;
     padding: 10px 20px;
     text-shadow: none;
-    transition: background-color .5s,
-                color .5s;
+    box-shadow: none;
+    color: white;
+    font-family: $heading-font;
+    border: 2px solid #444;
+    transition: background-color .3s,
+                color .3s;
 
     &:hover {
         background-color: #fff;
         color: $black;
+        box-shadow: none;
         text-decoration: none; }
 
         span {
@@ -121,4 +156,4 @@
             font-size: 15px;
             position: relative;
             top: 2px; }
-  }
+}

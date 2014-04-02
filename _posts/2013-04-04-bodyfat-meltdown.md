@@ -5,13 +5,13 @@ slug: bodyfat-meltdown
 title: Bodyfat Meltdown
 site_name: bodyfatmeltdown.com
 site_url: http://www.bodyfatmeltdown.com/
-image: /assets/images/web/bodyFat.png
+image: /assets/images/work/bodyFat.png
 fb_image:
 client: Copter Lab
 client_url: http://copterlab.com
 categories:
 - work
-- web
+- dev
 meta: Site Description
 tags: 
 - Design
@@ -21,7 +21,5 @@ tags:
 - Single Page
 - Responsive
 ---
-
-![Bodyfat Meltdown](/assets/images/web/bodyFat.png)
 
 Site Description

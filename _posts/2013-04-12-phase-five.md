@@ -5,13 +5,13 @@ slug: phase-five
 title: Phase Five Fitness
 site_name: phase5fitness.com
 site_url: http://www.phase5fitness.com/
-image: /assets/images/web/phaseFive.png
+image: /assets/images/work/phaseFive.png
 fb_image: 
 client: Copter Lab
 client_url: http://copterlab.com
 categories:
 - work
-- web
+- dev
 meta: Fitness site
 tags: 
 - HTML5
@@ -19,7 +19,5 @@ tags:
 - jQuery
 - WordPress
 ---
-
-![Phase Five Fitness](/assets/images/web/phaseFive.png)
 
 Fitness site

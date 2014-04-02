@@ -59,33 +59,50 @@
       media="all">
 </head>
 
-<body>
+<body class="page--post">
 
-<div>
 <nav class="main-nav">
-  <ul class="menu">
-    <li><a href="/" title="Home">Home</a></li>
-    <li><a href="/post" title="Posts">Posts</a></li>
-    <li><a href="/work" title="Work">Work</a></li>
-    <li><a href="/demo" title="Demos">Demos</a></li>
-  </ul>
+    <a href="/" title="Menu" class=""><span></span></a>
+
+    <div class="main-nav__content">
+
+        <ul class="main-nav__menu">
+            <li><a href="/" class="icon-home">Home</a></li>
+            <li><a href="/post" class="icon-posts">Posts</a></li>
+            <li><a href="/work" class="icon-work">Work</a></li>
+        </ul>
+
+        <div class="main-nav__about">
+            <div class="main-nav__heading">
+                <h3 class="icon-lightbulb">About</h3>
+            </div>
+
+            <p>Focused on crafting great experiences, making everything I touch better, smarter and easier to use. I specialize in responsive front-end design, HTML/CSS and web typography. <em>I believe simple is beautiful.</em></p>
+        </div>
+    </div>
 </nav>
 
-
+<div class="container">
 
     <div id="post-single">
-        <article>
 
-	<section id="post-title" class="wrapper">
+    <div class="page__intro" style="background-image: url(/assets/images/headers/jekyllJourney.png);">
+        <div>
+            <div class="wrapper">
+                <time datetime="2013-04">
+                    Apr, 2013
+                </time>
 
-  	<h1>Site update - A journey with Jekyll</h1>
+                <h1>Site update - A journey with Jekyll</h1>
+        	</div>
+        </div>
+    </div>
 
-	</section>
 
-	<section id="post-content">
-		<div class="wrapper">
-
-	  	<p>This update has been coming for a long time, I've been talking about going over my site for a while. The aim was to add this very feature, the ability to start writing articles and try my hand at doing it in some professional capcity.</p>
+    <article>
+    	<section id="post-content">
+    		<div class="wrapper">
+    	  	    <p>This update has been coming for a long time, I've been talking about going over my site for a while. The aim was to add this very feature, the ability to start writing articles and try my hand at doing it in some professional capcity.</p>
 
 <p>The platform I've chosen to provide this update is <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a>, which is a static site generator that uses the <a href="https://github.com/Shopify/liquid" title="Liquid">Liquid</a> templating engine. It was fun learning how to use these technologies and isn't that the point of what we do as developers? To have fun and challenge ourselves, especially in our side projects.</p>
 
@@ -112,7 +129,7 @@
 
 <p>During the time I spent on this update I took sometime to work on the harsh colour scheme I had originally choosen the first time through. When I created the site I wanted it to be bright and eye catching, in the effort to produce that effect I may have gone a little far with the "eye catching" part and ended up with a palette that, in some places, hurt to look at for extended periods of time.</p>
 
-<p><img class="right" src="/assets/images/oldSite.png" alt="Old site colour scheme" /></p>
+<p><img class="fr" src="/assets/images/oldSite.png" alt="Old site colour scheme" /></p>
 
 <p>This time I used a service called <a href="http://contrastchecker.com/" title="Contrast Checker">Contact Checker</a> that helped me work out the best balance on contract for light and dark text, while it may not be perfect it is a good step in the right direction to making the site a more pleasant experience. Especially if I'm to expect people to hang around long enough to actually read the articles I'm planning to publish.</p>
 
@@ -134,79 +151,59 @@
 
 <p><strong>Thank you for stopping by and come back soon for future articles</strong></p>
 
-
-	  </div>
-
-	</section>
-
-</article>
-    </div>
-
-    	<div id="social">
-
-  <article class="wrapper">
-    <h2>Social</h2>
-    
-
-	    <section class="comments">
-
-	    	<h3>Comments</h3>
-
-	    	<div id="disqus_thread"></div>
-		    <script type="text/javascript">
-		        var disqus_shortname = 'tomsturge';
-
-		        (function() {
-		            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		        })();
-		    </script>
-		    <noscript>
-		    	Please enable JavaScript to view the comments.
-		    </noscript>
-
-	    </section>
-
-	    <section class="share">
-
-      	<h3>Share</h3>
-
-<p>
-  I hope you liked this article. If you did then you should share it with your friends:
-</p>
-<ul class="social-icons">
-  <li class="twitter ss-icon">
-    <a href="https://twitter.com/intent/tweet?text=Site update - A journey with Jekyll&url=http://tomsturge.co.uk/post/site-update-a-journey-with-jekyll&via=tomsturge" title="Share on Twiter" target="_blank">Twitter</a>
-  </li>
-  <li class="facebook ss-icon">
-    <a href="http://www.facebook.com/sharer.php?u=http://tomsturge.co.uk/post/site-update-a-journey-with-jekyll" title="Share on Facebook">Facebook</a>
-  </li>
-  <li class="gplus ss-icon">
-    <a href="https://plus.google.com/share?url=http://tomsturge.co.uk/post/site-update-a-journey-with-jekyll" title="Share on Google Plus">Google+</a>
-  </li>
-</ul>
-
-	    </section>
-
-	  
-
-  </article>
-
-</footer><!-- /#contact -->
-
-
+    	    </div>
+    	</section>
+    </article>
 </div>
 
+    
 <div class="credits-panel">
     <div class="wrapper">
         <p class="no-margin">
-            &copy; 2014 <a href="http://twitter.com/tomsturge" title="Twitter - Tomsturge">Thomas Sturge</a>. Built with <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a> and <a href="https://github.com/tomsturge/tomsturge.github.com" title="Github">hosted on GitHub</a>.
+            &copy; 2014 <a href="http://twitter.com/tomsturge" title="Twitter - Tomsturge">Thomas Sturge</a>. Built with <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a> and hosted on <a href="https://github.com/tomsturge/tomsturge.github.com" title="Github">GitHub</a>.
         </p>
     </div>
-    <!-- /.wrapper -->
 </div>
 <!-- /.credits-panel -->
 
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+// Cache the Window object
+$window = $(window);
+
+$('[data-type="background"]').each(function(){
+    var $bgobj = $(this); // assigning the object
+
+    $(window).scroll(function() {
+
+        // Scroll the background at var speed
+        // the yPos is a negative value because we're scrolling it UP!
+        var yPos = -( ($window.scrollTop() - $bgobj.offset().top) / $bgobj.data('speed'));
+
+        // Put together our final background position
+        var coords = '50% '+ yPos + 'px';
+
+        // Move the background
+        $bgobj.css({ backgroundPosition: coords });
+
+    }); // window scroll Ends
+});
+
+$('.main-nav > a').click(function(e){
+    e.preventDefault();
+
+    $(".main-nav").toggleClass("menu-open");
+    $(".container").toggleClass("menu-open");
+});
+
+});
+
+document.createElement("article");
+document.createElement("section");
+</script>
 </body>
 </html>

@@ -59,76 +59,148 @@
       media="all">
 </head>
 
-<body>
+<body class="page--work-category">
 
-<div>
 <nav class="main-nav">
-  <ul class="menu">
-    <li><a href="/" title="Home">Home</a></li>
-    <li><a href="/post" title="Posts">Posts</a></li>
-    <li><a href="/work" title="Work">Work</a></li>
-    <li><a href="/demo" title="Demos">Demos</a></li>
-  </ul>
+    <a href="/" title="Menu" class=""><span></span></a>
+
+    <div class="main-nav__content">
+
+        <ul class="main-nav__menu">
+            <li><a href="/" class="icon-home">Home</a></li>
+            <li><a href="/post" class="icon-posts">Posts</a></li>
+            <li><a href="/work" class="icon-work">Work</a></li>
+        </ul>
+
+        <div class="main-nav__about">
+            <div class="main-nav__heading">
+                <h3 class="icon-lightbulb">About</h3>
+            </div>
+
+            <p>Focused on crafting great experiences, making everything I touch better, smarter and easier to use. I specialize in responsive front-end design, HTML/CSS and web typography. <em>I believe simple is beautiful.</em></p>
+        </div>
+    </div>
 </nav>
 
-
+<div class="container">
 
     <div id="work-category">
-        <article class="wrapper">
 
-  <h1>Design Work</h1>
+    <article class="wrapper">
+        <h1>Design Work</h1>
 
-  <ul>
-  
-    <li>
-      <a href="/work/design/arrowhead">
-        <img src="/assets/images/logo/arrowheadDesign.png" />
-        <h2>Arrowhead Design</h2>
-        <p>A logo for a print and web design company.</p>
-      </a>
-    </li>
-  
-    <li>
-      <a href="/work/design/sb-security">
-        <img src="/assets/images/logo/sbSecurity.png" />
-        <h2>SB Security</h2>
-        <p>A logo for a security company.</p>
-      </a>
-    </li>
-  
-    <li>
-      <a href="/work/design/skyblu-studio">
-        <img src="/assets/images/logo/skybluStudios.png" />
-        <h2>Skyblu Studios</h2>
-        <p>A logo for a project management company.</p>
-      </a>
-    </li>
-  
-    <li>
-      <a href="/work/design/joes-holiday-home">
-        <img src="/assets/images/logo/joesHoliday.png" />
-        <h2>Joes Holiday Home</h2>
-        <p>A logo for a home letting site.</p>
-      </a>
-    </li>
-  
-  </ul>
+        <ul>
+            
+                <li>
+                    <a href="/work/dev/design/site-v2">
+                        <img src="/assets/images/work/site-v2.png" />
+                        <h2>Personal Site v2</h2>
+                        <p></p>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/work/design/arrowhead">
+                        <img src="/assets/images/work/arrowheadDesign-logo.png" />
+                        <h2>Arrowhead Design</h2>
+                        <p>A logo for a print and web design company.</p>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/work/design/sb-security">
+                        <img src="/assets/images/work/sbSecurity-logo.png" />
+                        <h2>SB Security</h2>
+                        <p>A logo for a security company.</p>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/work/design/skyblu-studio">
+                        <img src="/assets/images/work/skybluStudios-logo.png" />
+                        <h2>Skyblu Studios</h2>
+                        <p>A logo for a project management company.</p>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/work/design/joes-holiday-home">
+                        <img src="/assets/images/work/joesHoliday-logo.png" />
+                        <h2>Joes Holiday Home</h2>
+                        <p>A logo for a home letting site.</p>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/work/dev/design/jhh">
+                        <img src="/assets/images/work/joesHoliday.png" />
+                        <h2>Joe's Holiday Home</h2>
+                        <p>Site Description</p>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/work/dev/design/site-v1">
+                        <img src="/assets/images/work/site-v1.png" />
+                        <h2>Personal Site v1</h2>
+                        <p></p>
+                    </a>
+                </li>
+            
+        </ul>
 
-</article>
-    </div>
-
+    </article>
 
 </div>
 
+    
 <div class="credits-panel">
     <div class="wrapper">
         <p class="no-margin">
-            &copy; 2014 <a href="http://twitter.com/tomsturge" title="Twitter - Tomsturge">Thomas Sturge</a>. Built with <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a> and <a href="https://github.com/tomsturge/tomsturge.github.com" title="Github">hosted on GitHub</a>.
+            &copy; 2014 <a href="http://twitter.com/tomsturge" title="Twitter - Tomsturge">Thomas Sturge</a>. Built with <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a> and hosted on <a href="https://github.com/tomsturge/tomsturge.github.com" title="Github">GitHub</a>.
         </p>
     </div>
-    <!-- /.wrapper -->
 </div>
 <!-- /.credits-panel -->
 
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+// Cache the Window object
+$window = $(window);
+
+$('[data-type="background"]').each(function(){
+    var $bgobj = $(this); // assigning the object
+
+    $(window).scroll(function() {
+
+        // Scroll the background at var speed
+        // the yPos is a negative value because we're scrolling it UP!
+        var yPos = -( ($window.scrollTop() - $bgobj.offset().top) / $bgobj.data('speed'));
+
+        // Put together our final background position
+        var coords = '50% '+ yPos + 'px';
+
+        // Move the background
+        $bgobj.css({ backgroundPosition: coords });
+
+    }); // window scroll Ends
+});
+
+$('.main-nav > a').click(function(e){
+    e.preventDefault();
+
+    $(".main-nav").toggleClass("menu-open");
+    $(".container").toggleClass("menu-open");
+});
+
+});
+
+document.createElement("article");
+document.createElement("section");
+</script>
 </body>
 </html>

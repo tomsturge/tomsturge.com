@@ -59,74 +59,138 @@
       media="all">
 </head>
 
-<body>
+<body class="page--home">
 
-<div>
 <nav class="main-nav">
-  <ul class="menu">
-    <li><a href="/" title="Home">Home</a></li>
-    <li><a href="/post" title="Posts">Posts</a></li>
-    <li><a href="/work" title="Work">Work</a></li>
-    <li><a href="/demo" title="Demos">Demos</a></li>
-  </ul>
-</nav>
+    <a href="/" title="Menu" class=""><span></span></a>
 
+    <div class="main-nav__content">
 
+        <ul class="main-nav__menu">
+            <li><a href="/" class="icon-home">Home</a></li>
+            <li><a href="/post" class="icon-posts">Posts</a></li>
+            <li><a href="/work" class="icon-work">Work</a></li>
+        </ul>
 
-    <div class="intro-panel">
-        <div class="wrapper">
-    <div class="page-lead">
-        <h1 class="page-lead__text">
-            Thomas Sturge
-            <span>
-                UX designer and Front-end architect.
-            </span>
-        </h1>
-
-        <h2 class="page-lead__hire">
-            <a href="http://tomsturge.co.uk/work" data-hover="Find out more">
-                Available for new projects.
-                <span>Booking for April 2014</span>
-            </a>
-        </h2>
-    </div>
-    <!-- /.page-lead -->
-</div>
-
-    </div>
-
-    <div class="post-panel">
-        <div class="wrapper">
-            <div class="post-list post-list--home">
-                <ul>
-                    
-                        <li class="post-list__post">
-                            <a href="/post/site-update-a-journey-with-jekyll" title="Site update - A journey with Jekyll">
-                              <h2 class="post-list__title">Site update - A journey with Jekyll</h2>
-                              <time datetime="2013-04-07">
-                                07 Apr, 2013
-                              </time>
-                            </a>
-                        </li>
-                    
-                </ul>
+        <div class="main-nav__about">
+            <div class="main-nav__heading">
+                <h3 class="icon-lightbulb">About</h3>
             </div>
-            <!-- /.post-box -->
+
+            <p>Focused on crafting great experiences, making everything I touch better, smarter and easier to use. I specialize in responsive front-end design, HTML/CSS and web typography. <em>I believe simple is beautiful.</em></p>
         </div>
     </div>
+</nav>
 
+<div class="container">
 
+    <div class="page__intro">
+    <div>
+        <div class="wrapper">
+            <h1>Thomas Sturge</h1>
+            <p>A <a href="/work#dev">front-end arcitect</a>, <a href="/work#design">designer</a> and <a href="/work#teaching">volunteer educator</a></p>
+        </div>
+    </div>
 </div>
 
+<div class="post-panel">
+    <div class="heading-wrapper">
+        <h2 class="heading--lined heading--post">
+            <a href="/post" data-hover="The desire to write grows with writing">Recent Articles</a>
+        </h2>
+    </div>
+
+    <div class="wrapper">
+        <div class="post-list post-list--home">
+            <ul>
+                
+                    <li class="post-list__post">
+                        <a href="/post/site-update-a-journey-with-jekyll" title="Site update - A journey with Jekyll">
+                            <h2 class="post-list__title">Site update - A journey with Jekyll</h2>
+                            <p>An overview of the update to my site and what it means going forward </p>
+                            <time datetime="2013-04">
+                                Apr, 2013
+                            </time>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.post-box -->
+    </div>
+</div>
+
+<div class="work-panel">
+    <div class="heading-wrapper">
+        <h2 class="heading--lined heading--work">
+            <a href="/work" data-hover="By the work one knows the workman">Recent Project</a>
+        </h2>
+    </div>
+
+    <div class="test-panel test1" data-type="background" data-speed="2" >
+        <div class="panel__cover">
+            <div class="wrapper">
+                <div class="panel__title">
+                    <h3>Recruitment Genius</h3>
+                    <blockquote>
+                        The site wouldn't look half as good as it does now without Tom. He has a fantastic eye for details and UX. 
+
+                        <cite>Geoff Newman, Director</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 <div class="credits-panel">
     <div class="wrapper">
         <p class="no-margin">
-            &copy; 2014 <a href="http://twitter.com/tomsturge" title="Twitter - Tomsturge">Thomas Sturge</a>. Built with <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a> and <a href="https://github.com/tomsturge/tomsturge.github.com" title="Github">hosted on GitHub</a>.
+            &copy; 2014 <a href="http://twitter.com/tomsturge" title="Twitter - Tomsturge">Thomas Sturge</a>. Built with <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a> and hosted on <a href="https://github.com/tomsturge/tomsturge.github.com" title="Github">GitHub</a>.
         </p>
     </div>
-    <!-- /.wrapper -->
 </div>
 <!-- /.credits-panel -->
 
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+// Cache the Window object
+$window = $(window);
+
+$('[data-type="background"]').each(function(){
+    var $bgobj = $(this); // assigning the object
+
+    $(window).scroll(function() {
+
+        // Scroll the background at var speed
+        // the yPos is a negative value because we're scrolling it UP!
+        var yPos = -( ($window.scrollTop() - $bgobj.offset().top) / $bgobj.data('speed'));
+
+        // Put together our final background position
+        var coords = '50% '+ yPos + 'px';
+
+        // Move the background
+        $bgobj.css({ backgroundPosition: coords });
+
+    }); // window scroll Ends
+});
+
+$('.main-nav > a').click(function(e){
+    e.preventDefault();
+
+    $(".main-nav").toggleClass("menu-open");
+    $(".container").toggleClass("menu-open");
+});
+
+});
+
+document.createElement("article");
+document.createElement("section");
+</script>
 </body>
 </html>

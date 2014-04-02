@@ -33,9 +33,12 @@ p {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
-  &:hover { text-decoration: underline;}
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 i,em { font-style: italic; }

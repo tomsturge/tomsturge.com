@@ -3,7 +3,7 @@ date: 2013-04-11
 layout: work
 slug: skyblu-logo
 title: Skyblu Studios
-image: /assets/images/logo/skybluStudios.png
+image: /assets/images/work/skybluStudios-logo.png
 fb_image: 
 categories:
 - work
@@ -13,7 +13,5 @@ tags:
 - Security
 - Logo
 ---
-
-![Skyblu Studios Logo](/assets/images/logo/skybluStudios.png)
 
 A logo for a project management company.

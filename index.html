@@ -3,21 +3,61 @@ layout: default
 type: home
 ---
 
-<div class="wrapper">
-    <div class="page-lead">
-        <h1 class="page-lead__text">
-            Thomas Sturge
-            <span>
-                UX designer and Front-end architect.
-            </span>
-        </h1>
+<div class="page__intro">
+    <div>
+        <div class="wrapper">
+            <h1>Thomas Sturge</h1>
+            <p>A <a href="/work#dev">front-end arcitect</a>, <a href="/work#design">designer</a> and <a href="/work#teaching">volunteer educator</a></p>
+        </div>
+    </div>
+</div>
 
-        <h2 class="page-lead__hire">
-            <a href="http://tomsturge.co.uk/work" data-hover="Find out more">
-                Available for new projects.
-                <span>Booking for April 2014</span>
-            </a>
+<div class="post-panel">
+    <div class="heading-wrapper">
+        <h2 class="heading--lined heading--post">
+            <a href="/post" data-hover="The desire to write grows with writing">Recent Articles</a>
         </h2>
     </div>
-    <!-- /.page-lead -->
+
+    <div class="wrapper">
+        <div class="post-list post-list--home">
+            <ul>
+                {% for post in site.categories.post limit:3 %}
+                    <li class="post-list__post">
+                        <a href="{{ post.url }}" title="{{ post.title }}">
+                            <h2 class="post-list__title">{{ post.title }}</h2>
+                            <p>{{ post.intro }} </p>
+                            <time datetime="{{ post.date | date: "%Y-%m" }}">
+                                {{ post.date | date: "%b, %Y" }}
+                            </time>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <!-- /.post-box -->
+    </div>
+</div>
+
+<div class="work-panel">
+    <div class="heading-wrapper">
+        <h2 class="heading--lined heading--work">
+            <a href="/work" data-hover="By the work one knows the workman">Recent Project</a>
+        </h2>
+    </div>
+
+    <div class="test-panel test1" data-type="background" data-speed="2" >
+        <div class="panel__cover">
+            <div class="wrapper">
+                <div class="panel__title">
+                    <h3>Recruitment Genius</h3>
+                    <blockquote>
+                        The site wouldn't look half as good as it does now without Tom. He has a fantastic eye for details and UX. 
+
+                        <cite>Geoff Newman, Director</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

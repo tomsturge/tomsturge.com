@@ -3,30 +3,41 @@ layout: default
 type: work-single
 ---
 
-<article class="wrapper">
 
-  <h1>{{ page.title }}</h1>
+<div id="work-single">
 
-  <img src="{% if page.full_image %}{{ page.full_image }}{% else %}/assets/images/placeholder.png{% endif %}" alt="{{ page.title }}" />
+    <div class="page__intro" style="background-image: url(/assets/images/work/headers/{{ page.header }});">
+        <div>
+            <div class="wrapper">
+                <h1>{{ page.title }}</h1>
+            </div>
+        </div>
+    </div>
 
-  <div>
+    <article class="wrapper">
 
-  	{{ content }}
+        <img src="{% if page.full_image %}{{ page.full_image }}{% else %}/assets/images/placeholder.png{% endif %}" alt="{{ page.title }}" />
 
-    <ul>
-      {% for tag in page.tags %}
-      <li>{{ tag }}</li>
-      {% endfor %}
-    </ul>
+        <div>
+      	    {{ content }}
+            <ul>
+                {% for tag in page.tags %}
+                    <li>{{ tag }}</li>
+                {% endfor %}
+            </ul>
 
-    {% for client in page.client %}
-    <p>
-      For: <a href="{{ page.client_url }}">{{ page.client }}</a>
-    </p>
-    {% endfor %}
+            {% for client in page.client %}
+                <p>
+                  For: <a href="{{ page.client_url }}">{{ page.client }}</a>
+                </p>
+            {% endfor %}
 
-    <a class="site-link" href="{{ page.site_url }}" title="{{ page.title }}"><span class="ss-icon">link</span>{{ page.site_name }}</a>
+            <a class="site-link" href="{{ page.site_url }}" title="{{ page.title }}">
+                <span class="ss-icon">link</span>{{ page.site_name }}
+            </a>
 
-  </div>
+        </div>
 
-</article>
+    </article>
+
+</div>

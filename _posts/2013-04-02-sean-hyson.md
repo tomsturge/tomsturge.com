@@ -5,20 +5,18 @@ slug: sean-hyson
 title: Sean Hyson
 site_name: seanhyson.com
 site_url: http://seanhyson.com/
-image: /assets/images/web/seanHyson.png
+image: /assets/images/work/seanHyson.png
 fb_image: 
 client: Copter Lab
 client_url: http://copterlab.com
 categories:
 - work
-- web
+- dev
 meta: Site Description
 tags: 
 - HTML5
 - CSS3
 - Custom CMS
 ---
-
-![Sean Hyson](/assets/images/web/seanHyson.png)
 
 Site Description

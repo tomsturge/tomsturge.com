@@ -59,61 +59,109 @@
       media="all">
 </head>
 
-<body>
+<body class="page--posts">
 
-<div>
 <nav class="main-nav">
-  <ul class="menu">
-    <li><a href="/" title="Home">Home</a></li>
-    <li><a href="/post" title="Posts">Posts</a></li>
-    <li><a href="/work" title="Work">Work</a></li>
-    <li><a href="/demo" title="Demos">Demos</a></li>
-  </ul>
+    <a href="/" title="Menu" class=""><span></span></a>
+
+    <div class="main-nav__content">
+
+        <ul class="main-nav__menu">
+            <li><a href="/" class="icon-home">Home</a></li>
+            <li><a href="/post" class="icon-posts">Posts</a></li>
+            <li><a href="/work" class="icon-work">Work</a></li>
+        </ul>
+
+        <div class="main-nav__about">
+            <div class="main-nav__heading">
+                <h3 class="icon-lightbulb">About</h3>
+            </div>
+
+            <p>Focused on crafting great experiences, making everything I touch better, smarter and easier to use. I specialize in responsive front-end design, HTML/CSS and web typography. <em>I believe simple is beautiful.</em></p>
+        </div>
+    </div>
 </nav>
 
-
+<div class="container">
 
     <div id="posts-page">
-        <div class="wrapper">
 
-  <h1>Posts</h1>
-
-  <p>
-    Here is an archive of my attempts to communicate my thoughts and understandings of a wide range of different topics, from Web technologies to my developing skills in arts and crafts.
-  </p>
-
-  <p>
-    I also try to share some of my knowledge and experiences via tutorials, quick tips and helpful code snippets.
-  </p>
-
-  <ul class="archive-list">
-    
-      <li>
-        <a href="/post/site-update-a-journey-with-jekyll">
-          <h2>Site update - A journey with Jekyll</h2>
-          <time datetime="2013-04-07">
-            07 April, 2013
-          </time>
-        </a>
-      </li>
-    
-  </ul>
-
-</div>
+    <div class="page__intro" style="background-image: url(/assets/images/headers/postsIntro.png);">
+        <div>
+            <div class="wrapper">
+                <h1>Posts</h1>
+            </div>
+        </div>
     </div>
 
+    <div class="wrapper">
+        <div class="post-list">
+            <ul>
+                
+                    <li class="post-list__post">
+                        <a href="/post/site-update-a-journey-with-jekyll">
+                            <h2 class="post-list__title">Site update - A journey with Jekyll</h2>
+                            <time datetime="2013-04">
+                                Apr, 2013
+                            </time>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+
+    </div>
 
 </div>
 
+    
 <div class="credits-panel">
     <div class="wrapper">
         <p class="no-margin">
-            &copy; 2014 <a href="http://twitter.com/tomsturge" title="Twitter - Tomsturge">Thomas Sturge</a>. Built with <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a> and <a href="https://github.com/tomsturge/tomsturge.github.com" title="Github">hosted on GitHub</a>.
+            &copy; 2014 <a href="http://twitter.com/tomsturge" title="Twitter - Tomsturge">Thomas Sturge</a>. Built with <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a> and hosted on <a href="https://github.com/tomsturge/tomsturge.github.com" title="Github">GitHub</a>.
         </p>
     </div>
-    <!-- /.wrapper -->
 </div>
 <!-- /.credits-panel -->
 
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+// Cache the Window object
+$window = $(window);
+
+$('[data-type="background"]').each(function(){
+    var $bgobj = $(this); // assigning the object
+
+    $(window).scroll(function() {
+
+        // Scroll the background at var speed
+        // the yPos is a negative value because we're scrolling it UP!
+        var yPos = -( ($window.scrollTop() - $bgobj.offset().top) / $bgobj.data('speed'));
+
+        // Put together our final background position
+        var coords = '50% '+ yPos + 'px';
+
+        // Move the background
+        $bgobj.css({ backgroundPosition: coords });
+
+    }); // window scroll Ends
+});
+
+$('.main-nav > a').click(function(e){
+    e.preventDefault();
+
+    $(".main-nav").toggleClass("menu-open");
+    $(".container").toggleClass("menu-open");
+});
+
+});
+
+document.createElement("article");
+document.createElement("section");
+</script>
 </body>
 </html>

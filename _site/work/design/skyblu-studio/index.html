@@ -59,106 +59,116 @@
       media="all">
 </head>
 
-<body>
+<body class="page--work-single">
 
-<div>
 <nav class="main-nav">
-  <ul class="menu">
-    <li><a href="/" title="Home">Home</a></li>
-    <li><a href="/post" title="Posts">Posts</a></li>
-    <li><a href="/work" title="Work">Work</a></li>
-    <li><a href="/demo" title="Demos">Demos</a></li>
-  </ul>
+    <a href="/" title="Menu" class=""><span></span></a>
+
+    <div class="main-nav__content">
+
+        <ul class="main-nav__menu">
+            <li><a href="/" class="icon-home">Home</a></li>
+            <li><a href="/post" class="icon-posts">Posts</a></li>
+            <li><a href="/work" class="icon-work">Work</a></li>
+        </ul>
+
+        <div class="main-nav__about">
+            <div class="main-nav__heading">
+                <h3 class="icon-lightbulb">About</h3>
+            </div>
+
+            <p>Focused on crafting great experiences, making everything I touch better, smarter and easier to use. I specialize in responsive front-end design, HTML/CSS and web typography. <em>I believe simple is beautiful.</em></p>
+        </div>
+    </div>
 </nav>
 
-
+<div class="container">
 
     <div id="work-single">
-        <article class="wrapper">
 
-  <h1>Skyblu Studios</h1>
+    <div class="page__intro" style="background-image: url(/assets/images/work/headers/);">
+        <div>
+            <div class="wrapper">
+                <h1>Skyblu Studios</h1>
+            </div>
+        </div>
+    </div>
 
-  <img src="/assets/images/placeholder.png" alt="Skyblu Studios" />
+    <article class="wrapper">
 
-  <div>
+        <img src="/assets/images/placeholder.png" alt="Skyblu Studios" />
 
-  	<p><img src="/assets/images/logo/skybluStudios.png" alt="Skyblu Studios Logo" /></p>
+        <div>
+      	    <p>A logo for a project management company.</p>
 
-<p>A logo for a project management company.</p>
+            <ul>
+                
+                    <li>Security</li>
+                
+                    <li>Logo</li>
+                
+            </ul>
 
+            
 
-    <ul>
-      
-      <li>Security</li>
-      
-      <li>Logo</li>
-      
-    </ul>
+            <a class="site-link" href="" title="Skyblu Studios">
+                <span class="ss-icon">link</span>
+            </a>
+
+        </div>
+
+    </article>
+
+</div>
 
     
-
-    <a class="site-link" href="" title="Skyblu Studios"><span class="ss-icon">link</span></a>
-
-  </div>
-
-</article>
-    </div>
-
-    <div class="contact-panel">
-    <div class="wrapper">
-        <div class="contact-panel__email fl">
-          <h3>Send me a message</h3>
-          <p>
-            Want to hire me? We can talk about your project you need my skills for. I'd love to hear from you.
-          </p>
-          <ul class="social-icons">
-            <li class="gmail ss-icon">
-              <a href="mailto:mail@tomsturge.co.uk?subject=Let%E2%80%99s%20work%20together" title="Email" class="email">Email</a>
-            </li>
-            <li class="skype ss-icon">
-              <a href="callto:tomsturge" title="Skype">Skype</a>
-            </li>
-          </ul>
-        </div>
-        <!-- /.contact-panel__email -->
-
-        <div class="contact-panel__social fr">
-          <h3>Network with me</h3>
-          <p>
-            Follow my various ramblings and postings all over the internet, you can find me on these sites.
-          </p>
-          <ul class="social-icons">
-            <li class="twitter ss-icon">
-              <a href="http://twitter.com/tomsturge" title="Twiter">Twitter</a>
-            </li>
-            <li class="gplus ss-icon">
-              <a href="http://gplus.to/tomsturge" title="Google Plus">Google+</a>
-            </li>
-            <li class="dribbble ss-icon">
-              <a href="http://dribbble.com/tomsturge" title="Dribbble">Dribbble</a>
-            </li>
-            <li class="github ss-icon">
-              <a href="http://github.com/tomsturge" title="Github">Octocat</a>
-            </li>
-          </ul>
-        </div>
-        <!-- /.contact-panel__social-->
-    </div>
-</div>
-<!-- /.contact-panel -->
-
-
-</div>
-
 <div class="credits-panel">
     <div class="wrapper">
         <p class="no-margin">
-            &copy; 2014 <a href="http://twitter.com/tomsturge" title="Twitter - Tomsturge">Thomas Sturge</a>. Built with <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a> and <a href="https://github.com/tomsturge/tomsturge.github.com" title="Github">hosted on GitHub</a>.
+            &copy; 2014 <a href="http://twitter.com/tomsturge" title="Twitter - Tomsturge">Thomas Sturge</a>. Built with <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a> and hosted on <a href="https://github.com/tomsturge/tomsturge.github.com" title="Github">GitHub</a>.
         </p>
     </div>
-    <!-- /.wrapper -->
 </div>
 <!-- /.credits-panel -->
 
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+// Cache the Window object
+$window = $(window);
+
+$('[data-type="background"]').each(function(){
+    var $bgobj = $(this); // assigning the object
+
+    $(window).scroll(function() {
+
+        // Scroll the background at var speed
+        // the yPos is a negative value because we're scrolling it UP!
+        var yPos = -( ($window.scrollTop() - $bgobj.offset().top) / $bgobj.data('speed'));
+
+        // Put together our final background position
+        var coords = '50% '+ yPos + 'px';
+
+        // Move the background
+        $bgobj.css({ backgroundPosition: coords });
+
+    }); // window scroll Ends
+});
+
+$('.main-nav > a').click(function(e){
+    e.preventDefault();
+
+    $(".main-nav").toggleClass("menu-open");
+    $(".container").toggleClass("menu-open");
+});
+
+});
+
+document.createElement("article");
+document.createElement("section");
+</script>
 </body>
 </html>

@@ -3,44 +3,92 @@ layout: default
 type: work-page
 ---
 
-<article class="wrapper">
+<div id="work-page">
 
-  <h1>Work</h1>
-  {% case site.catogories %}
+    <div class="page__intro" style="background-image: url(/assets/images/headers/workIntro.png);">
+        <div>
+            <div class="wrapper">
+                <h1>Work</h1>
+            </div>
+        </div>
+    </div>
 
-    {% when web %}
-    <section>
-      <h2>Web</h2>
-      <p>A few of the sites I've made whilst working with various agencies or as part of solo projects.</p>
-      <ul>
-        {% for post in site.categories.web %}
-        <li>
-          <a href="{{ post.url }}" title="{{ post.title }}">
-            <img src="{{ post.image }}" alt="{{ post.title }}" />
-            <h3>{{ post.title }}</h3>
-            <p>{{ post.meta }}</p>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </section>
+    {% case site.catogories %}
 
-    {% when design %}
-    <section>
-      <h2>Design</h2>
-      <p>A collection of designs I've created for different projects.</p>
-     <ul>
-        {% for post in site.categories.design %}
-        <li>
-          <a href="{{ post.url }}" title="{{ post.title }}">
-            <img src="{{ post.image }}" alt="{{ post.title }}" />
-            <h3>{{ post.title }}</h3>
-            <p>{{ post.meta }}</p>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </section>
-    {% endcase %}
+        {% when dev %}
+            <div id="dev" class="heading-wrapper">
+                <h2 class="heading--lined heading--work">
+                    <span data-hover="HTML/(S)CSS, JS &amp; PHP">Development</span>
+                </h2>
+            </div>
 
-</article>
+            <div class="wrapper">
+
+                <ul class="work-items">
+                    {% for post in site.categories.dev %}
+                        <li class="{% if site.categories == dev %}dev-item{% endif %}">
+                            <img src="{{ post.image }}" alt="{{ post.title }}" />
+
+                            <div class="item-mask">
+                                <h3>{{ post.title }}</h3>
+                                {{ post.content }}
+                                <a href="{{ post.url }}" title="{{ post.title }}">View Project</a>
+                            </div>
+                        </li>
+
+                    {% endfor %}
+                </ul>
+            </div>
+
+        {% when design %}
+            <div id="design" class="heading-wrapper">
+                <h2 class="heading--lined heading--work">
+                    <span data-hover="Web design, UX and branding">Design</span>
+                </h2>
+            </div>
+
+            <div class="wrapper">
+
+                <ul class="work-items">
+                    {% for post in site.categories.design %}
+                    <li>
+                        <img src="{{ post.image }}" alt="{{ post.title }}" />
+
+                        <div class="item-mask">
+                            <h3>{{ post.title }}</h3>
+                            <p>{{ post.content }}</p>
+                            <a href="{{ post.url }}" title="{{ post.title }}">View Project</a>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+
+        {% when teaching %}
+            <div id="teaching" class="heading-wrapper">
+                <h2 class="heading--lined heading--work">
+                    <span data-hover="Education and community">Teaching</span>
+                </h2>
+            </div>
+
+            <div class="wrapper">
+
+                <ul class="work-items">
+                    {% for post in site.categories.teaching %}
+                        <li>
+                            <img src="{{ post.image }}" alt="{{ post.title }}" />
+
+                            <div class="item-mask">
+                                <h3>{{ post.title }}</h3>
+                                <p>{{ post.content }}</p>
+                                <a href="{{ post.url }}" title="{{ post.title }}">View Project</a>
+                            </div>
+                        </li>
+
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endcase %}
+    </div>
+</div>

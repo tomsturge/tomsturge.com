@@ -2,221 +2,81 @@
 //  INTRO SECTION
 //----------------------
 
-.intro-panel {
-    background-color: $blue;
-    position: relative;
+.page--home .page__intro {
+    background-image: url(/assets/images/headers/homeIntro.png);
 
-    &:after {
-        content: " ";
-        display: block;
-        width: 101%;
-        height: 52px;
-        background: #FFF;
-        -webkit-transform: rotate(-2deg);
-        bottom: -26px;
-        position: absolute;
-    }
-}
+    > div {
+        background: rgba(82, 140, 197, .35); }
 
-.page-lead {
-    @extend %cf;
-
-    margin: 0 0 60px;
-    color: #fff;
-    font-family: $heading-font; }
-
-.page-lead__text {
-    $base-size: 68px;
-    @extend %fl;
-    @extend %no-margin;
-
-    width: calc-em(468px, $base-size);
-    margin-left: 15px;
-    font-size: calc-em($base-size);
-    line-height: 120%;
-    color: #fff;
-
-    span {
-        display: block;
-        margin: -5px 0 0 13px;
-        font: {
-            family: $body-font;
-            size: calc-em(22px, $base-size);
-            weight: 400;
-        }
+    h1 {
         line-height: 100%;
-        text-shadow: none; }
-}
-
-.page-lead__hire {
-    $base-size: 29px;
-    @extend %fr;
-    @extend %no-margin;
-
-    text-align: center;
-    font-size: calc-em($base-size);
-    line-height: calc-em($base-size * 2.4);
-    color: #fff;
-    -webkit-perspective: 1590px;
-    margin-right: 15px;
-
-    a {
-        display: block;
-        background-color: shade($blue, 20%);
-        padding: calc-em(28px, $base-size) calc-em(35px, $base-size);
-        line-height: 140%;
-        -webkit-transform-style: preserve-3d;
-        -webkit-transform-origin: 0% 0%;
-        -webkit-transition: -webkit-transform .3s;
+        color: #fff;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        position: relative;
 
         &:after {
-            content: attr(data-hover);
+            content: " ";
+            background: white;
+            display: block;
+            height: 2px;
+            width: 250px;
+            margin-left: -125px;
             position: absolute;
-            box-sizing: border-box;
-            top: 100%;
-            left: 0;
-            font-size: 20px;
-            width: 100%;
-            background: #355C82;
-            display: block;
-            padding: calc-em(2px, $base-size) calc-em(35px, $base-size);
-            text-transform: uppercase;
-            -webkit-transform-origin: 0% 0%;
-            -webkit-transform: rotateX(-90deg);
-        }
-
-        &:hover {
-            text-decoration: none;
-            -webkit-transform: rotateX(45deg);
-        }
+            left: 50%;
+            bottom: 0; }
     }
 
-    span {
-        display: block;
-        font: {
-            family: $body-font;
-            size: calc-em(16px, $base-size);
-            weight: 400;
-        }
-        text-shadow: none;
-        line-height: 100%;
-    }
-}
-
-.post-list {
-
-    ul {
-        margin: 0;
-        list-style-type: none;
-    }
-
-    li {
-        $base-size: 22px;
-        margin-bottom: 0;
-        border-top: 1px solid #ebebeb;
-        font-size: calc-em($base-size);
-        transition: border 0.5s, border-color 0.5s;
-
-        &:hover, &:hover + li {
-            border-top: 1px solid $black;
-        }
-
-        &:last-of-type {
-            border-bottom: 1px solid #ebebeb;
-
-            &:hover {
-                border-color: $black;
-            }
-        }
-
-        a {
-            display: block;
-            width: auto; height: 100%;
-            padding: calc-em(15px, $base-size);
-            overflow: hidden;
-
-            &:hover {
-                text-decoration: none; }
-        }
-
-        .post-list__title {
-            @extend %fl;
-            width: 90%;
-            margin-bottom: 0;
-            font: {
-                family: $heading-font;
-                size: $base-size;
-                weight: 600;
-            }
-            line-height: 130%;
-            border-bottom: none; }
-
-        time {
-            @extend %fr;
-            font-size: calc-em(16px, $base-size);
-            line-height: calc-em($base-size + 10);
-        }
-    }
+    p {
+        font-size: 21px;
+        font-family: $body-font;
+        margin: 0 auto; }
 }
 
 
-//----------------------
-//  CONTACT SECTION
-//----------------------
+.test-panel {
+    background-size: cover;
 
+    &.test1 {
+        background: url(/assets/images/picjumbo.com_IMG_1732.jpg) top center fixed #444 no-repeat;
+        background-size: cover;
 
-.contact-panel__email, .contact-panel__social {
-    width: 26em;
-    overflow: hidden; }
+        .panel__cover {  }
+    }
+    &.test2 {
+        background: url(/assets/images/americanroundup.jpg) top center fixed #444 no-repeat;
+        background-size: cover;
 
+        .panel__cover {  }
+    }
+    &.test3 {
+        background: url(/assets/images/picjumbo.com_IMG_6772.jpg) top center fixed #444 no-repeat;
+        background-size: cover;
 
-//*****************
-//  SOCIAL ICONS
-//*****************
-
-
-.social-icons {
-    margin: 0;
-    text-align: center;
-    list-style: none outside none;
-
-    a {
-        $base-size: 36px;
-        @include flat-text-shadow(shade($purple, 15%), calc-em(-1px, $base-size), calc-em(2px, $base-size));
-        height: 1em;
-        margin: calc-em(16px, $base-size) calc-em(16px, $base-size) 0;
-        font: {
-            size: calc-em($base-size);
-            style: normal;
-            weight: normal; }
-        transition: color .5s;
-        float: left;
-
-        &:hover {
-            text-decoration: none; }
+        .panel__cover {  }
     }
 
-    li.facebook a:hover {
-        @include social-hover($facebook); }
 
-    li.twitter a:hover {
-        @include social-hover($twitter); }
+    .panel__cover {
+        padding: 60px 0; }
+}
 
-    li.instagram a:hover {
-        @include social-hover($instagram); }
+.panel__title {
 
-    li.github a:hover {
-        @include social-hover($github); }
+    h3 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 30px;
+        margin:0;
+        color: white; }
+}
 
-    li.dribbble a:hover {
-        @include social-hover($dribbble); }
+.page--home {
 
-    li.gplus a:hover {
-        @include social-hover($gplus); }
+    .work-panel .heading-wrapper {
+        margin-bottom: 60px; }
 
-    li.skype a:hover {
-        @include social-hover($skype); }
-
-    li.gmail a:hover {
-        @include social-hover($gmail); }
+    .credits-panel {
+        background: $blue; }
 }

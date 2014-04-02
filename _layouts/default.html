@@ -43,97 +43,54 @@
       media="all">
 </head>
 
-<body>
+<body class="page--{{page.type}}">
 
-<div>
 {% include nav.html %}
 
-{% case page.type %}
+<div class="container">
 
-{% when 'home' %}
+    {{ content }}
 
-    <div class="intro-panel">
-        {{ content }}
-    </div>
+    {% include credits.html %}
 
-    <div class="post-panel">
-        <div class="wrapper">
-            <div class="post-list post-list--home">
-                <ul>
-                    {% for post in site.categories.post limit:3 %}
-                        <li class="post-list__post">
-                            <a href="{{ post.url }}" title="{{ post.title }}">
-                              <h2 class="post-list__title">{{ post.title }}</h2>
-                              <time datetime="{{ post.date | date: "%Y-%m-%d" }}">
-                                {{ post.date | date: "%d %b, %Y" }}
-                              </time>
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <!-- /.post-box -->
-        </div>
-    </div>
-
-{% when 'posts' %}
-
-    <div id="posts-page">
-        {{ content }}
-    </div>
-
-{% when 'post' %}
-
-    <div id="post-single">
-        {{ content }}
-    </div>
-
-    {% include social.html %}
-
-{% when 'demos' %}
-
-    <div id="demos-page">
-        {{ content }}
-    </div>
-
-{% when 'demo' %}
-
-    <div id="demo-single">
-        {{ content }}
-    </div>
-
-{% when 'work-single' %}
-
-    <div id="work-single">
-        {{ content }}
-    </div>
-
-    {% include contact.html %}
-
-{% when 'work-page' %}
-
-    <div id="work-page">
-        {{ content }}
-    </div>
-
-{% when 'work-category' %}
-
-    <div id="work-category">
-        {{ content }}
-    </div>
-
-{% endcase %}
 </div>
 
-<div class="credits-panel">
-    <div class="wrapper">
-        <p class="no-margin">
-            &copy; {{ site.time | date: '%Y' }} <a href="http://twitter.com/tomsturge" title="Twitter - Tomsturge">Thomas Sturge</a>. Built with <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a> and <a href="https://github.com/tomsturge/tomsturge.github.com" title="Github">hosted on GitHub</a>.
-        </p>
-    </div>
-    <!-- /.wrapper -->
-</div>
-<!-- /.credits-panel -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
+<script>
+$(document).ready(function(){
+// Cache the Window object
+$window = $(window);
+
+$('[data-type="background"]').each(function(){
+    var $bgobj = $(this); // assigning the object
+
+    $(window).scroll(function() {
+
+        // Scroll the background at var speed
+        // the yPos is a negative value because we're scrolling it UP!
+        var yPos = -( ($window.scrollTop() - $bgobj.offset().top) / $bgobj.data('speed'));
+
+        // Put together our final background position
+        var coords = '50% '+ yPos + 'px';
+
+        // Move the background
+        $bgobj.css({ backgroundPosition: coords });
+
+    }); // window scroll Ends
+});
+
+$('.main-nav > a').click(function(e){
+    e.preventDefault();
+
+    $(".main-nav").toggleClass("menu-open");
+    $(".container").toggleClass("menu-open");
+});
+
+});
+
+document.createElement("article");
+document.createElement("section");
+</script>
 </body>
 </html>

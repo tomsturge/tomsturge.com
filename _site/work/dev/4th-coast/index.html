@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<!--
+=================================================
+  The sexy portfolio site for Thomas Sturge
+
+  Author: Thomas Sturge / Arrowhead Desgin
+  Version: 2.5
+  URL: http://tomsturge.co.uk/
+=================================================
+-->
+
+<html class="page"
+      xmlns:og="http://ogp.me/ns#" lang="en-US"
+      xmlns:fb="https://www.facebook.com/2008/fbml" >
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, height=device-height" />
+<meta name="keywords"
+      content="Web, Design, Website, Designer, Developer" />
+<meta name="description"
+      content="Thomas Sturge. Web designer, front-end and back-end developer." />
+
+<!--
+  Facebook SocialGraph meta settings for those nice looking site previews
+-->
+<meta property="og:title" content="Thomas Sturge" />
+<meta property="og:url" content="http://tomsturge.co.uk/work/dev/4th-coast" />
+<meta property="og:site_name" content="Thomas Sturge" />
+<meta property="og:image" content="http://tomsturge.co.uk/og_image.png"/>
+<meta property="og:description" content=""/>
+<meta property="og:type" content="website"/>
+<!--
+  Twitter Card meta settings for rich link generation
+-->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@tomsturge">
+<meta name="twitter:url" content="http://tomsturge.co.uk/work/dev/4th-coast">
+<meta name="twitter:title" content="Thomas Sturge">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://tomsturge.co.uk/og_image.png">
+
+<link rel="shortcut icon" href="/icon.png">
+<link rel="apple-touch-icon-precomposed" href="/icon.png">
+
+<title>Thomas Sturge // Designer + Developer</title>
+
+<!-- Typekit Fonts -->
+<script type="text/javascript" src="//use.typekit.net/sok1fkn.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<!-- Icons font -->
+<link href="/assets/fonts/ss-social-regular.css" rel="stylesheet"
+      type="text/css" media="all">
+
+<!-- Global stylesheet -->
+<link href="/assets/css/screen.css" rel="stylesheet" type="text/css"
+      media="all">
+</head>
+
+<body class="page--work-single">
+
+<nav class="main-nav">
+    <a href="/" title="Menu" class=""><span></span></a>
+
+    <div class="main-nav__content">
+
+        <ul class="main-nav__menu">
+            <li><a href="/" class="icon-home">Home</a></li>
+            <li><a href="/post" class="icon-posts">Posts</a></li>
+            <li><a href="/work" class="icon-work">Work</a></li>
+        </ul>
+
+        <div class="main-nav__about">
+            <div class="main-nav__heading">
+                <h3 class="icon-lightbulb">About</h3>
+            </div>
+
+            <p>Focused on crafting great experiences, making everything I touch better, smarter and easier to use. I specialize in responsive front-end design, HTML/CSS and web typography. <em>I believe simple is beautiful.</em></p>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div id="work-single">
+
+    <div class="page__intro" style="background-image: url(/assets/images/work/headers/);">
+        <div>
+            <div class="wrapper">
+                <h1>4th Coast Fitness</h1>
+            </div>
+        </div>
+    </div>
+
+    <article class="wrapper">
+
+        <img src="/assets/images/placeholder.png" alt="4th Coast Fitness" />
+
+        <div>
+      	    <p>Site Description</p>
+
+            <ul>
+                
+                    <li>HTML5</li>
+                
+                    <li>CSS3</li>
+                
+                    <li>Custom CMS</li>
+                
+            </ul>
+
+            
+                <p>
+                  For: <a href="http://copterlab.com">Copter Lab</a>
+                </p>
+            
+
+            <a class="site-link" href="http://www.4thcoastfitness.com/" title="4th Coast Fitness">
+                <span class="ss-icon">link</span>4thcoastfitness.com
+            </a>
+
+        </div>
+
+    </article>
+
+</div>
+
+    
+<div class="credits-panel">
+    <div class="wrapper">
+        <p class="no-margin">
+            &copy; 2014 <a href="http://twitter.com/tomsturge" title="Twitter - Tomsturge">Thomas Sturge</a>. Built with <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a> and hosted on <a href="https://github.com/tomsturge/tomsturge.github.com" title="Github">GitHub</a>.
+        </p>
+    </div>
+</div>
+<!-- /.credits-panel -->
+
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+// Cache the Window object
+$window = $(window);
+
+$('[data-type="background"]').each(function(){
+    var $bgobj = $(this); // assigning the object
+
+    $(window).scroll(function() {
+
+        // Scroll the background at var speed
+        // the yPos is a negative value because we're scrolling it UP!
+        var yPos = -( ($window.scrollTop() - $bgobj.offset().top) / $bgobj.data('speed'));
+
+        // Put together our final background position
+        var coords = '50% '+ yPos + 'px';
+
+        // Move the background
+        $bgobj.css({ backgroundPosition: coords });
+
+    }); // window scroll Ends
+});
+
+$('.main-nav > a').click(function(e){
+    e.preventDefault();
+
+    $(".main-nav").toggleClass("menu-open");
+    $(".container").toggleClass("menu-open");
+});
+
+});
+
+document.createElement("article");
+document.createElement("section");
+</script>
+</body>
+</html>
