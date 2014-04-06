@@ -1,0 +1,36 @@
+//
+//===============================================
+//  $POSTS
+//===============================================
+//
+
+#post-content {
+    background-color: white;
+    width: 100%;
+    font-weight: 300;
+    color: #444;
+
+    h2 {
+
+        @include media-query(palm) {
+            @include font-size(26px);
+
+            line-height: 1.2; }
+    }
+
+    a {
+        font-weight: 400;
+        color: $brand-color; }
+
+    b,strong {
+        font-weight: normal }
+
+    img {
+
+        &.fr {
+            margin: 0 0 14px 24px; }
+
+        &.fl {
+            margin: 0 24px 14px 0; }
+    }
+}

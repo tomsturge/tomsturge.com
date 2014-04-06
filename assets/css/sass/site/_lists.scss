@@ -1,0 +1,83 @@
+//
+//===============================================
+//  $LISTS
+//===============================================
+//
+
+
+.post-list {
+
+    ul {
+        margin: 0;
+        list-style-type: none; }
+
+    li {
+        $base-size: 22px;
+
+        @include font-size($base-size);
+
+        margin-bottom: 0;
+        border-top: 2px solid #ddd;
+        transition: border 0.5s, border-color 0.5s;
+        position: relative;
+
+        &:hover, &:hover + li {
+            border-top: 2px solid $black; }
+
+        &:last-of-type {
+            border-bottom: 2px solid #ddd;
+
+            &:hover {
+                border-color: $black; }
+        }
+
+        a {
+            display: block;
+            width: auto; height: 100%;
+            padding: 15px;
+            overflow: hidden;
+            border: none;
+            box-shadow: none;
+            color: $black;
+
+            &:hover {
+                text-decoration: none;
+                box-shadow: none; }
+        }
+
+        .post-list__title {
+            @extend %fl;
+            margin-bottom: 0;
+            font: {
+                family: $heading-font;
+                weight: 600; }
+            line-height: 1.3;
+            border-bottom: none;
+
+            @include media-query(palm) {
+                @include font-size(18px); }
+        }
+
+        p {
+            clear: both;
+            color: #bbb;
+            font-size: 18px;
+
+            @include media-query(palm) {
+                @include font-size(14px); }
+
+            margin: 0; }
+
+        time {
+            @extend %fr;
+
+            @include font-size(16px);
+            @include media-query(palm) {
+                display: none; }
+
+            line-height: 1.3;
+            position: absolute;
+            top: 15px;
+            right: 15px; }
+    }
+}

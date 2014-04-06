@@ -1,6 +1,6 @@
 ---
 date: 2013-04-13
-layout: work
+layout: portfolio
 slug: arrowhead-logo
 title: Arrowhead Design
 intro: A logo created for a company that specialised in print and web design. The concept is a mouse point made out of folded paper.

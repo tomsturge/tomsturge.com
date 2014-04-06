@@ -1,6 +1,6 @@
 ---
 date: 2013-04-12
-layout: work
+layout: portfolio
 slug: sbsecurity-logo
 title: SB Security
 intro: A logo for a security company.

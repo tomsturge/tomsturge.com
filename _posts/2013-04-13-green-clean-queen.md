@@ -1,6 +1,6 @@
 ---
 date: 2013-04-13
-layout: work
+layout: portfolio
 slug: green-clean
 title: Green Clean Queen
 intro: A WordPress site for a small residential cleaning business operating in the Portland, US.

@@ -22,6 +22,14 @@
 <meta name="description"
       content="Thomas Sturge. Web designer, front-end and back-end developer." />
 
+<!-- Icons font -->
+<link href="/assets/fonts/ss-social-regular.css" rel="stylesheet"
+      type="text/css" media="all">
+
+<!-- Global stylesheet -->
+<link href="/assets/css/screen.css" rel="stylesheet" type="text/css"
+      media="all">
+
 {% include facebook-head.html %}
 {% include twitter-head.html %}
 
@@ -34,13 +42,6 @@
 <script type="text/javascript" src="//use.typekit.net/sok1fkn.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-<!-- Icons font -->
-<link href="/assets/fonts/ss-social-regular.css" rel="stylesheet"
-      type="text/css" media="all">
-
-<!-- Global stylesheet -->
-<link href="/assets/css/screen.css" rel="stylesheet" type="text/css"
-      media="all">
 </head>
 
 <body class="page--{{page.type}}">
@@ -57,40 +58,7 @@
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-<script>
-$(document).ready(function(){
-// Cache the Window object
-$window = $(window);
+<script type="text/javascript" src="/assets/js/init.min.js"></script>
 
-$('[data-type="background"]').each(function(){
-    var $bgobj = $(this); // assigning the object
-
-    $(window).scroll(function() {
-
-        // Scroll the background at var speed
-        // the yPos is a negative value because we're scrolling it UP!
-        var yPos = -( ($window.scrollTop() - $bgobj.offset().top) / $bgobj.data('speed'));
-
-        // Put together our final background position
-        var coords = '50% '+ yPos + 'px';
-
-        // Move the background
-        $bgobj.css({ backgroundPosition: coords });
-
-    }); // window scroll Ends
-});
-
-$('.main-nav > a').click(function(e){
-    e.preventDefault();
-
-    $(".main-nav").toggleClass("menu-open");
-    $(".container").toggleClass("menu-open");
-});
-
-});
-
-document.createElement("article");
-document.createElement("section");
-</script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 ---
 date: 2013-04-11
-layout: work
+layout: portfolio
 slug: skyblu-logo
 title: Skyblu Studios
 intro: A logo for a project management company.

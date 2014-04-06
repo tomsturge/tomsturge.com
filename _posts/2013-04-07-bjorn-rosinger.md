@@ -1,6 +1,6 @@
 ---
 date: 2013-04-07
-layout: work
+layout: portfolio
 slug: bjorn-rosinger
 title: Bjorn Rosinger
 intro: A site based on a custom CMS for a German fitness trainer and writer

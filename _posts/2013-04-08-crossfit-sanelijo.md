@@ -1,6 +1,6 @@
 ---
 date: 2013-04-08
-layout: work
+layout: portfolio
 slug: crossfit-san-elijo
 title: Crossfit San Elijo
 intro: A site based on a custom CMS for a CrossFit organised specialized in easing you into a new way of experiencing fitness.

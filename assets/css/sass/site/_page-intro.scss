@@ -1,0 +1,80 @@
+//
+//===============================================
+//  $PAGE-INTRO
+//===============================================
+//
+
+.page__intro {
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: $heading-font;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+
+    h2 {
+        @include font-size(32px);
+
+        color: white;
+        line-height: 1.2;
+        clear: both;
+        transition: font-size .3s ease-out;
+
+        @media screen and (min-height: 28em) and (min-width: $lap-start) {
+            @include font-size(42px);
+        }
+
+        @media screen and (min-height: 38em) and (min-width: $desk-start) {
+            @include font-size(52px);
+        }
+    }
+
+
+    time {
+        @include font-size(16px);
+
+        margin: 0 0 15px;
+        padding: 5px 10px;
+        line-height: 1;
+        border: 2px solid white;
+        float: right; }
+
+    > div {
+        background-color: fade-out($brand-color, .65);
+
+        &:before, &:after {
+            content: " ";
+            display: block;
+            width: 52%;
+            height: 60px;
+            background: white;
+            bottom: -40px;
+            position: absolute; }
+
+        &:after {
+            transform: rotate(-3deg);
+            right: -5px; }
+
+        &:before {
+            transform: rotate(3deg);
+            left: -5px; }
+    }
+
+    a {
+        color: white; }
+}
+
+.page__intro .wrapper {
+    padding-top: 150px;
+    padding-bottom: 100px;
+
+    @include media-query(portable) {
+        padding-top: 100px;
+        padding-bottom: 100px; }
+
+    @include media-query(palm) {
+        padding-top: 76px;
+        padding-bottom: 76px; }
+}

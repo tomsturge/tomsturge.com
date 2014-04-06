@@ -3,49 +3,34 @@
 //  The sexy portfolio site for Thomas Sturge
 //
 //  Author: Thomas Sturge / Arrowhead Desgin
-//  Version: 2.5
+//  Version: 3.0
 //  URL: http://tomsturge.co.uk/
 //===============================================
 //
 
-//
-//===============================================
-//  ROOT
-//===============================================
-//
+//------------------------------------
+//  $SETUP
+//------------------------------------
 
 // Variables, Functions and Mixins
-@import 'custom';
 
-// Reset
-@import 'reset';
+@import 'defaults';
 
-// Animations for lovely interactions
-// @import 'animations';
 
-//
-//===============================================
-//  LAYOUT
-//===============================================
-//
+// Framework
 
-// Site wide styles (html, body etc)
-@import 'site';
+@import 'framework/init';
 
-//
-//===============================================
-//  MEDIA QUERIES
-//===============================================
-//
+//------------------------------------
+//  $UI
+//------------------------------------
 
-// 980px and below
-@media only screen and (max-width: 980px) { }
-
-// 800px to 980px
-@media only screen and (min-width: 800px) and (max-width: 980px) { }
-
-// 480px to 800px
-@media only screen and (min-width: 480px) and (max-width: 800px) { }
-
-// 320px to 480px
-@media only screen and (max-width: 480px) { }
+@import 'site/page',
+        'site/typography',
+        'site/page-intro',
+        'site/page-foot',
+        'site/site-nav',
+        'site/posts',
+        'site/icons',
+        'site/lists',
+        'site/misc';
