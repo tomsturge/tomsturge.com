@@ -1,6 +1,6 @@
 ---
 date: 2013-04-04
-layout: work
+layout: portfolio
 slug: bodyfat-meltdown
 title: Bodyfat Meltdown
 intro: A promo site based on a custom CMS for Jared Meacham, a fitness trainer in Okalhoma, US 

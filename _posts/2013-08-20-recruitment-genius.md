@@ -1,6 +1,6 @@
 ---
 date: 2013-08-20
-layout: work
+layout: portfolio
 slug: recruitment-genius
 title: Recruitment Genius
 intro: A recruitment services for companies looking to advertise roles that require better feedback about applicants with a number of automatic tools

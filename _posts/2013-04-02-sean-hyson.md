@@ -1,6 +1,6 @@
 ---
 date: 2013-04-02
-layout: work
+layout: portfolio
 slug: sean-hyson
 title: Sean Hyson
 intro: A magazine like site based on a custom CMS for the fitness editor at Men's Fitness magazine

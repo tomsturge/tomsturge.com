@@ -1,6 +1,6 @@
 ---
 date: 2013-04-13
-layout: work
+layout: portfolio
 slug: roman-fitness
 title: Roman Fitness System
 intro: The WordPress site for John Romaniello. New York Times bestselling fitness author, super hero fitness geek, lover of Intermittent Fasting, and defender of cheat days.

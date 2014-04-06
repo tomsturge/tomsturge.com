@@ -22,6 +22,14 @@
 <meta name="description"
       content="Thomas Sturge. Web designer, front-end and back-end developer." />
 
+<!-- Icons font -->
+<link href="/assets/fonts/ss-social-regular.css" rel="stylesheet"
+      type="text/css" media="all">
+
+<!-- Global stylesheet -->
+<link href="/assets/css/screen.css" rel="stylesheet" type="text/css"
+      media="all">
+
 <!--
   Facebook SocialGraph meta settings for those nice looking site previews
 -->
@@ -50,46 +58,33 @@
 <script type="text/javascript" src="//use.typekit.net/sok1fkn.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-<!-- Icons font -->
-<link href="/assets/fonts/ss-social-regular.css" rel="stylesheet"
-      type="text/css" media="all">
-
-<!-- Global stylesheet -->
-<link href="/assets/css/screen.css" rel="stylesheet" type="text/css"
-      media="all">
 </head>
 
-<body class="page--work-single">
+<body class="page--portfolio-piece">
 
 <nav class="main-nav">
     <a href="/" title="Menu" class=""><span></span></a>
 
     <div class="main-nav__content">
 
+        <h1><a href="/">Thomas Sturge</a></h1>
+
         <ul class="main-nav__menu">
             <li><a href="/" class="icon-home">Home</a></li>
             <li><a href="/post" class="icon-posts">Posts</a></li>
-            <li><a href="/work" class="icon-work">Work</a></li>
+            <li><a href="/portfolio" class="icon-work">Portfolio</a></li>
         </ul>
-
-        <div class="main-nav__about">
-            <div class="main-nav__heading">
-                <h3 class="icon-lightbulb">About</h3>
-            </div>
-
-            <p>Focused on crafting great experiences, making everything I touch better, smarter and easier to use. I specialize in responsive front-end design, HTML/CSS and web typography. <em>I believe simple is beautiful.</em></p>
-        </div>
     </div>
 </nav>
 
 <div class="container">
 
-    <div id="work-single">
+    <div id="portfolio-piece">
 
     <div class="page__intro" style="background-image: url(/assets/images/work/headers/arrowheadLogo.png);">
         <div>
             <div class="wrapper">
-                <h1>Arrowhead Design</h1>
+                <h2>Arrowhead Design</h2>
             </div>
         </div>
     </div>
@@ -128,7 +123,7 @@
     
 <div class="credits-panel">
     <div class="wrapper">
-        <p class="no-margin">
+        <p>
             &copy; 2014 <a href="http://twitter.com/tomsturge" title="Twitter - Tomsturge">Thomas Sturge</a>. Built with <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a> and hosted on <a href="https://github.com/tomsturge/tomsturge.github.com" title="Github">GitHub</a>.
         </p>
     </div>
@@ -139,40 +134,7 @@
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-<script>
-$(document).ready(function(){
-// Cache the Window object
-$window = $(window);
+<script type="text/javascript" src="/assets/js/init.min.js"></script>
 
-$('[data-type="background"]').each(function(){
-    var $bgobj = $(this); // assigning the object
-
-    $(window).scroll(function() {
-
-        // Scroll the background at var speed
-        // the yPos is a negative value because we're scrolling it UP!
-        var yPos = -( ($window.scrollTop() - $bgobj.offset().top) / $bgobj.data('speed'));
-
-        // Put together our final background position
-        var coords = '50% '+ yPos + 'px';
-
-        // Move the background
-        $bgobj.css({ backgroundPosition: coords });
-
-    }); // window scroll Ends
-});
-
-$('.main-nav > a').click(function(e){
-    e.preventDefault();
-
-    $(".main-nav").toggleClass("menu-open");
-    $(".container").toggleClass("menu-open");
-});
-
-});
-
-document.createElement("article");
-document.createElement("section");
-</script>
 </body>
 </html>

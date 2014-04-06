@@ -1,6 +1,6 @@
 ---
 date: 2013-04-12
-layout: work
+layout: portfolio
 slug: phase-five
 title: Phase Five Fitness
 intro: A WordPress site for a CrossFit gym based in Brandon, Florida, specializing in fitness

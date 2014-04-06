@@ -1,6 +1,6 @@
 ---
 date: 2013-04-10
-layout: work
+layout: portfolio
 slug: jhh-logo
 title: Joes Holiday Home
 intro: A logo for a home letting site.

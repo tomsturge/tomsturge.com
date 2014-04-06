@@ -1,0 +1,43 @@
+---
+layout: default
+type: portfolio-piece
+---
+
+
+<div id="portfolio-piece">
+
+    <div class="page__intro" style="background-image: url(/assets/images/work/headers/{{ page.header }});">
+        <div>
+            <div class="wrapper">
+                <h2>{{ page.title }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <article class="wrapper">
+
+        <img src="{% if page.full_image %}{{ page.full_image }}{% else %}/assets/images/placeholder.png{% endif %}" alt="{{ page.title }}" />
+
+        <div>
+      	    {{ content }}
+            <ul>
+                {% for tag in page.tags %}
+                    <li>{{ tag }}</li>
+                {% endfor %}
+            </ul>
+
+            {% for client in page.client %}
+                <p>
+                  For: <a href="{{ page.client_url }}">{{ page.client }}</a>
+                </p>
+            {% endfor %}
+
+            <a class="site-link" href="{{ page.site_url }}" title="{{ page.title }}">
+                <span class="ss-icon">link</span>{{ page.site_name }}
+            </a>
+
+        </div>
+
+    </article>
+
+</div>

@@ -1,0 +1,21 @@
+//
+//===============================================
+//  $PAGE-FOOT
+//===============================================
+//
+
+.credits-panel {
+    background: $brand-color;
+    font-family: $heading-font;
+    color: white;
+
+    p {
+        @include media-query(palm) {
+            @include font-size(14px); }
+
+        margin: 0;
+        padding: 0 15px; }
+
+    a {
+        color: white; }
+}

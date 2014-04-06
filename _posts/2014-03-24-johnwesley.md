@@ -1,6 +1,6 @@
 ---
 date: 2013-04-01
-layout: work
+layout: portfolio
 slug: johnwesley
 title: The John Wesley School
 intro: My second Code Club, a great opportunity to expand my chance to teach more kids and help teach them how to code.
