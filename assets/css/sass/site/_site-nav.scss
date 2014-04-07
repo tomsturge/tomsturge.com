@@ -144,8 +144,6 @@
         color: white;
         font-family: $heading-font;
         margin: 0;
-        position: relative;
-        left: 0;
         transition: background-color .3s, padding .3s;
 
         &:hover {
@@ -249,13 +247,12 @@
             border-top: none; }
 
         &:hover a {
-            background-color: transparent;
-            left: 10px; }
+            background-color: transparent; }
     }
 
     a {
         padding: 20px 15px;
-        transition: border .3s, left .3s; }
+        transition: border .3s; }
 }
 }
 

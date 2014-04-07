@@ -181,11 +181,10 @@ body {
 
 
 .feature-panel {
-    background: url(/assets/images/headers/homeFeature.png) top center fixed $black no-repeat;
     background-size: cover;
 
-    .panel__cover {
-        padding: 60px 0; }
+    > div {
+        background-color: fade-out($brand-color, .65); }
 }
 
 .panel__title {
@@ -197,21 +196,43 @@ body {
             @include font-size(20px); }
 
         display: inline-block;
-        padding: 10px 15px;
-        background: #fbc70f;
+        background: $brand-color;
         text-align: center;
         text-transform: uppercase;
-        margin:0;
-        color: white; }
+        margin:0 0 25px;
+        color: white;
 
-    a {
-        box-shadow: none; }
+        a {
+            display: block;
+            padding: 10px 15px;
+            box-shadow: none; }
+    }
+
+    p {
+        color: white;
+        width: 75%;
+        margin: 0 auto 25px; }
+
+    > a {
+        display: inline-block;
+        margin: 0 auto;
+        width:  auto;
+        box-shadow: none;
+        color: white;
+        background: $brand-color;
+        text-transform: uppercase;
+        padding: 15px 10px;
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: $brand-color-darken; }
+    }
 }
 
 .page--home {
 
     .portfolio-panel .heading-wrapper {
-        margin-bottom: 60px; }
+        margin: 0 0 60px; }
 }
 
 
@@ -273,10 +294,11 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: fade-out($brand-color, .5);
+    background-color: fade-out($brand-color, .65);
     height: 100%;
     width: 100%;
     text-align: center;
+    color: white;
     opacity: 0;
     overflow: hidden;
     transition: opacity .3s;
@@ -285,7 +307,6 @@ body {
         @include font-size(16px);
 
         background: $brand-color;
-        color: white;
         padding: 10px 15px;
         margin: 15px 0;
         text-transform: uppercase;
@@ -297,7 +318,6 @@ body {
 
         margin: 0 0 15px;
         padding: 0 20px;
-        color: white;
         line-height: 1.2;
         transform: translateY(140px);
         opacity: 0;
@@ -311,12 +331,15 @@ body {
         width:  auto;
         box-shadow: none;
         color: white;
-        background: $brand-color-darken;
+        background: $brand-color;
         text-transform: uppercase;
-        font-weight: 700;
         padding: 5px 10px;
         opacity: 0;
-        transition: opacity .5s; }
+        transition: opacity .5s, background-color .3s;
+
+        &:hover {
+            background-color: $brand-color-darken; }
+    }
 }
 
 #portfolio-category {
