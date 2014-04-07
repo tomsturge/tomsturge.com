@@ -9,7 +9,7 @@ header: skyblu.png
 full_image: /assets/images/work/skybluStudios-logo.png
 fb_image: 
 categories:
-- work
+- portfolio
 - design
 meta: A logo for a project management company.
 tags: 

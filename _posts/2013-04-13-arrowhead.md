@@ -10,7 +10,7 @@ full_image: /assets/images/work/arrowheadDesign-logo.png
 client: Arrowhead Design
 client_url: http://arrowheaddesign.com
 categories:
-- work
+- portfolio
 - design
 meta: A logo for a print and web design company.
 tags: 

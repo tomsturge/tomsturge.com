@@ -12,7 +12,7 @@ header: recruitment-genius.png
 full_image: /assets/images/work/full/recruitment-genius.png
 fb_image: 
 categories:
-- work
+- portfolio
 - dev
 meta: 
 tags: 

@@ -1,9 +1,9 @@
 ---
-date: 2013-04-01
+date: 2014-03-24
 layout: portfolio
 slug: johnwesley
 title: The John Wesley School
-intro: My second Code Club, a great opportunity to expand my chance to teach more kids and help teach them how to code.
+intro: My second Code Club; a great opportunity to expand my chance to teach more kids and help them learn how to code.
 site_name: john-wesley.kent.sch.uk
 site_url: http://www.john-wesley.kent.sch.uk
 image: /assets/images/work/john-wesley.jpg
@@ -13,7 +13,7 @@ fb_image:
 client: Code Club
 client_url: http://codeclub.org.uk
 categories:
-- work
+- portfolio
 - teaching
 meta: Site Description
 tags: 

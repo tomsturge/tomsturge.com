@@ -9,7 +9,7 @@ header: jhh.png
 full_image: /assets/images/work/joesHoliday-logo.png
 fb_image: 
 categories:
-- work
+- portfolio
 - design
 meta: A logo for a home letting site.
 tags: 

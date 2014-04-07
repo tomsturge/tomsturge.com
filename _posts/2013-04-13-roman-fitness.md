@@ -14,7 +14,7 @@ fb_image:
 client: Copter Lab
 client_url: http://copterlab.com
 categories:
-- work
+- portfolio
 - dev
 meta: A WordPress site for a US cleaning company.
 tags: 
