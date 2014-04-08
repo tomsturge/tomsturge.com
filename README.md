@@ -17,7 +17,7 @@ The big additions to the front-end of the site are the posts and demos features,
 
 # Change Log
 
-### 2.5 / 04-04-2014
+### 2.5 / 04-04-2014 ([tomsturge.co.uk](http://tomsturge.co.uk/ "Site v2.5"))
 - Updated to a cleaner layout, reduced and focused the use of colours
 - Replaced fonts for nicer reading experience
 - New two stage menu for better responsiveness
@@ -34,7 +34,7 @@ The big additions to the front-end of the site are the posts and demos features,
 - Made the site responsive and mobile friendly.
 - Removed the curtain effect for a simplier scroll animation.
 
-### 2.0 / 17-08-12 ([tomsturge.co.uk](http://tomsturge.co.uk/ "Site v2"))
+### 2.0 / 17-08-12 ([v2.tomsturge.co.uk](http://v2.tomsturge.co.uk/ "Site v2"))
 - Full portfolio.
 - Work showcase.
 - Longer biography.
