@@ -260,6 +260,16 @@ body {
             height: 220px;
             margin: 20px 0 0 0; }
 
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            box-shadow: none; }
+
         &:nth-child(3n) {
             margin-right: 0; }
 
@@ -278,8 +288,6 @@ body {
             p {
                 opacity: 1;
                 transform: translateY(0); }
-            a {
-                opacity: 1; }
         }
     }
 

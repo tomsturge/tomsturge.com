@@ -18,12 +18,12 @@ type: portfolio
         <ul class="portfolio-items">
             {% for post in site.categories.portfolio %}
                 <li class="{% if site.categories == dev %}dev-item{% endif %}">
-                    <img src="{{ post.image }}" alt="{{ post.title }}" />
+                    <a href="{{ post.url }}" title="{{ post.title }}"></a>
+                        <img src="{{ post.image }}" alt="{{ post.title }}" />
 
                     <div class="item-mask">
                         <h3>{{ post.title }}</h3>
                         <p>{{ post.intro }}</p>
-                        <a href="{{ post.url }}" title="{{ post.title }}">View Project</a>
                     </div>
                 </li>
 
