@@ -276,7 +276,7 @@ body {
         &:hover {
 
             img {
-                transform: scale(1.1,1.1);
+                transform: scale(1.2,1.2);
                 filter: blur(2px); }
 
             .item-mask {
@@ -302,7 +302,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: fade-out($brand-color, .65);
+    background-color: rgba(0,0,0,.65);
     height: 100%;
     width: 100%;
     text-align: center;
