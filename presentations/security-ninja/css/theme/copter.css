@@ -40,13 +40,14 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #1a1918;
-  font: normal 20px/1 "freight-sans-pro-1","freight-sans-pro-2",sans-serif;
+  font: 700 20px/1 "freight-sans-pro-1","freight-sans-pro-2",sans-serif;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-shadow: none; }
 
 .reveal h1 {
-  text-shadow: none; }
+    font-size: 100px;
+    text-shadow: none; }
 
 /*********************************************
  * LINKS
