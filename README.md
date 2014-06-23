@@ -17,7 +17,7 @@ The big additions to the front-end of the site are the posts and demos features,
 
 # Change Log
 
-### 2.5 / 04-04-2014 ([tomsturge.co.uk](http://tomsturge.co.uk/ "Site v2.5"))
+### 3.0 / 04-04-2014 ([tomsturge.co.uk](http://tomsturge.co/ "Site v3"))
 - Updated to a cleaner layout, reduced and focused the use of colours
 - Replaced fonts for nicer reading experience
 - New two stage menu for better responsiveness
@@ -67,6 +67,6 @@ The big additions to the front-end of the site are the posts and demos features,
 ## Tools:
 
 [Jekyll](http://jekyllrb.com/ "Jekyll") & [Liquid](https://github.com/Shopify/liquid "Liquid")  
-[SASS](http://sass-lang.com/ "SASS") & [Compass](http://compass-style.org/ "Compass")
+[SASS](http://sass-lang.com/ "SASS")
 
 [jQuery](http://jquery.com "jquery")  
