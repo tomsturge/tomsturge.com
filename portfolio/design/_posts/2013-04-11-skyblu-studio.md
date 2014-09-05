@@ -7,12 +7,12 @@ intro: A logo for a project management company.
 image: /assets/images/work/skybluStudios-logo.png
 header: skyblu.png
 full_image: /assets/images/work/skybluStudios-logo.png
-fb_image: 
+fb_image:
 categories:
 - portfolio
 - design
 meta: A logo for a project management company.
-tags: 
+tags:
 - Security
 - Logo
 ---

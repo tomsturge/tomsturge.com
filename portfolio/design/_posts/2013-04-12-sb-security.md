@@ -7,12 +7,12 @@ intro: A logo for a security company.
 image: /assets/images/work/sbSecurity-logo.png
 header: sb-security.png
 full_image: /assets/images/work/sbSecurity-logo.png
-fb_image: 
+fb_image:
 categories:
 - portfolio
 - design
 meta: A logo for a security company.
-tags: 
+tags:
 - Security
 - Logo
 ---

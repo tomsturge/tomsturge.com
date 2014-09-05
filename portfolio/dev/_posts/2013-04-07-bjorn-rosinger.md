@@ -10,14 +10,14 @@ site_url: http://www.bjornrosinger.com/
 image: /assets/images/work/bjornRos.png
 header: bjorn-rosinger.png
 full_image: /assets/images/work/full/bjorn-rosinger.png
-fb_image: 
+fb_image:
 client: Copter Lab
 client_url: http://copterlab.com
 categories:
 - portfolio
 - dev
 meta: Site Description
-tags: 
+tags:
 - HTML5
 - CSS3
 - Custom CMS

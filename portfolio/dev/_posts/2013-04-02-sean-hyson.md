@@ -9,14 +9,14 @@ site_url: http://seanhyson.com/
 image: /assets/images/work/seanHyson.png
 header: seanHyson.png
 full_image: /assets/images/work/full/sean-hyson.png
-fb_image: 
+fb_image:
 client: Copter Lab
 client_url: http://copterlab.com
 categories:
 - portfolio
 - dev
 meta: Site Description
-tags: 
+tags:
 - HTML5
 - CSS3
 - Custom CMS

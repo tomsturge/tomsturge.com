@@ -9,14 +9,14 @@ site_url: http://www.john-wesley.kent.sch.uk
 image: /assets/images/work/john-wesley.jpg
 header: john-wesley.png
 full_image: /assets/images/work/full/john-wesley.jpg
-fb_image: 
+fb_image:
 client: Code Club
 client_url: http://codeclub.org.uk
 categories:
 - portfolio
 - teaching
 meta: Site Description
-tags: 
+tags:
 - Education
 - Volunteer
 - Children

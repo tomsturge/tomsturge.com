@@ -13,7 +13,7 @@ categories:
 - portfolio
 - design
 meta: A logo for a print and web design company.
-tags: 
+tags:
 - Design Agency
 - Logo
 ---

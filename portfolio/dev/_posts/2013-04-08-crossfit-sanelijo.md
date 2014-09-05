@@ -10,14 +10,14 @@ site_url: http://www.crossfitsanelijo.com.com/
 image: /assets/images/work/crossfitElijo.png
 header: crossfit-sanelijo.png
 full_image: /assets/images/work/full/crossfit-sanelijo.png
-fb_image: 
+fb_image:
 client: Copter Lab
 client_url: http://copterlab.com
 categories:
 - portfolio
 - dev
 meta: Site Description
-tags: 
+tags:
 - HTML5
 - CSS3
 - Custom CMS

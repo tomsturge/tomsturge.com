@@ -9,14 +9,14 @@ site_url: http://www.phase5fitness.com/
 image: /assets/images/work/phaseFive.png
 header: phase-five.png
 full_image: /assets/images/work/full/phase-five.png
-fb_image: 
+fb_image:
 client: Copter Lab
 client_url: http://copterlab.com
 categories:
 - portfolio
 - dev
 meta: Fitness site
-tags: 
+tags:
 - HTML5
 - CSS3
 - jQuery

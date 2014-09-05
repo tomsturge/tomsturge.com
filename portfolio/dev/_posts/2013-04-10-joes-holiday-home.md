@@ -7,12 +7,12 @@ intro: A logo for a home letting site.
 image: /assets/images/work/joesHoliday-logo.png
 header: jhh.png
 full_image: /assets/images/work/joesHoliday-logo.png
-fb_image: 
+fb_image:
 categories:
 - portfolio
 - design
 meta: A logo for a home letting site.
-tags: 
+tags:
 - Home Letting
 - Logo
 ---

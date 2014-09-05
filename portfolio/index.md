@@ -16,8 +16,8 @@ type: portfolio
     <div class="wrapper">
 
         <ul class="portfolio-items">
-            {% for post in site.categories.portfolio %}
-                <li class="{% if site.categories == dev %}dev-item{% endif %}">
+            {% for post in site.portfolio | sort_by: 'date' %}
+                <li class="{% if site.portfolio.categories == dev %}dev-item{% endif %}">
                     <a href="{{ post.url }}" title="{{ post.title }}"></a>
                         <img src="{{ post.image }}" alt="{{ post.title }}" />
 

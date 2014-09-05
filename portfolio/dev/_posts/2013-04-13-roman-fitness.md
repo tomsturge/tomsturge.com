@@ -10,14 +10,14 @@ site_url: http://www.romanfitnesssystem.com/
 image: /assets/images/work/romanFitness.png
 header: roman-fitness.png
 full_image: /assets/images/work/full/roman-fitness.jpg
-fb_image: 
+fb_image:
 client: Copter Lab
 client_url: http://copterlab.com
 categories:
 - portfolio
 - dev
 meta: A WordPress site for a US cleaning company.
-tags: 
+tags:
 - HTML5
 - CSS3
 - WordPress
