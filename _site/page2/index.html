@@ -9,18 +9,18 @@
 =================================================
 -->
 
-<html class="page"
-      xmlns:og="http://ogp.me/ns#" lang="en-US"
-      xmlns:fb="https://www.facebook.com/2008/fbml" >
+<html class="page" itemscope itemtype="http://schema.org/Article" >
 <head>
+
+<title>Thomas Sturge - Front-end Architect, UX designer and educator</title>
 
 <meta charset="UTF-8">
 <meta name="viewport"
       content="width=device-width, height=device-height" />
 <meta name="keywords"
-      content="Web, Design, Website, Designer, Developer" />
+      content="Front-end architect, UX designer, educator" />
 <meta name="description"
-      content="Thomas Sturge. Web designer, front-end and back-end developer." />
+      content="Thomas Sturge. Front-end architect, UX designer and educator." />
 
 <!-- Icons font -->
 <link href="/assets/fonts/ss-social-regular.css" rel="stylesheet"
@@ -30,32 +30,39 @@
 <link href="/assets/css/screen.css" rel="stylesheet" type="text/css"
       media="all">
 
-<!--
-  Facebook SocialGraph meta settings for those nice looking site previews
--->
-<meta property="og:title" content="Thomas Sturge" />
-<meta property="og:url" content="http://tomsturge.co.uk/page2/index.html" />
-<meta property="og:site_name" content="Thomas Sturge" />
-<meta property="og:image" content="http://tomsturge.co.uk/og_image.png"/>
-<meta property="og:description" content="Web designer, front-end and back-end developer."/>
-<meta property="og:type" content="website"/>
-<!--
-  Twitter Card meta settings for rich link generation
--->
-<meta name="twitter:card" content="summary">
+<!-- Google Authorship and Publisher Markup -->
+<link rel="author" href="https://plus.google.com/+tomsturge/posts/">
+<link rel="publisher" href="https://plus.google.com/+tomsturge/">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Thomas Sturge">
+<meta itemprop="description" content="Frontend Architect, UX designer and educator.">
+<meta itemprop="image" content="http://tomsturge.co.uk/og_image.png">
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@tomsturge">
-<meta name="twitter:url" content="http://tomsturge.co.uk/page2/index.html">
-<meta name="twitter:title" content="Thomas Sturge">
-<meta name="twitter:description" content="Web designer, front-end and back-end developer.">
-<meta name="twitter:image" content="http://tomsturge.co.uk/og_image.png">
+<meta name="twitter:title" content="Portfolio site of Thomas Sturge">
+<meta name="twitter:description" content="Front-end Architect, UX designer and educator.">
+<meta name="twitter:creator" content="@tomsturge">
+<!-- Twitter summary card with large image must be at least 280x150px -->
+<meta name="twitter:image:src" content="http://tomsturge.co.uk/tw_image.png">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Thomas Sturge" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://tomsturge.co.uk/page2/index.html" />
+<meta property="og:image" content="http://tomsturge.co.uk/og_image.png" />
+<meta property="og:description" content="Front-end Architect, UX designer and educator." />
+<meta property="og:site_name" content="Portfolio site of Thomas Sturge" />
+<meta property="article:published_time" content="2013-09-17T05:59:00+01:00" />
 
 <link rel="shortcut icon" href="/icon.png">
 <link rel="apple-touch-icon-precomposed" href="/icon.png">
 
-<title>Thomas Sturge // Designer + Developer</title>
 
 <!-- Typekit Fonts -->
-<script type="text/javascript" src="//use.typekit.net/sok1fkn.js"></script>
+<script type="text/javascript" src="http://use.typekit.net/sok1fkn.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 </head>
@@ -72,7 +79,7 @@
         <ul class="main-nav__menu">
             <li><a href="/" class="icon-home">Home</a></li>
             <li><a href="/post" class="icon-posts">Posts</a></li>
-            <li><a href="/portfolio" class="icon-work">Portfolio</a></li>
+            <li><a href="/portfolio" class="icon-portfolio">Portfolio</a></li>
         </ul>
     </div>
 </nav>
@@ -90,7 +97,7 @@
 <div class="post-panel">
     <div class="heading-wrapper">
         <h2 class="heading--lined heading--post">
-            <a href="/post" data-hover="The desire to write grows with writing">Recent Articles</a>
+            <a href="/post" data-hover="The desire to write grows with writing">Articles</a>
         </h2>
     </div>
 
@@ -117,18 +124,60 @@
 <div class="portfolio-panel">
     <div class="heading-wrapper">
         <h2 class="heading--lined heading--portfolio">
-            <a href="/portfolio" data-hover="By the work one knows the workman">Recent Project</a>
+            <a href="/portfolio" data-hover="By the work one knows the workman">Projects</a>
         </h2>
     </div>
 
-    <div class="feature-panel" data-type="background" data-speed="2" >
-        <div class="panel__cover">
-            <div class="wrapper">
-                <div class="panel__title">
-                    <h3><a href="/portfolio/dev/recruitment-genius">Recruitment Genius</a></h3>
+
+    
+        <div class="feature-panel" style="background-image: url(/assets/images/work/headers/john-wesley.png);">
+            <div class="panel__cover">
+                <div class="wrapper">
+                    <div class="panel__title">
+                        <h3><a href="/portfolio/teaching/johnwesley" title="The John Wesley School">The John Wesley School</a></h3>
+                        <p>My second Code Club; a great opportunity to expand my chance to teach more kids and help them learn how to code.</p>
+                        <a href="/portfolio/teaching/johnwesley" title="The John Wesley School">View Project</a>
+                    </div>
                 </div>
             </div>
         </div>
+    
+
+    <div class="wrapper">
+
+        <ul class="portfolio-items">
+            
+                <li>
+                    <img src="/assets/images/work/bodsham.jpg" alt="Bodsham School" />
+
+                    <div class="item-mask">
+                        <h3>Bodsham School</h3>
+                        <p>A Code Club I setup to start teaching kids aged 9-11 at the beginning of 2014.</p>
+                        <a href="/portfolio/teaching/bodsham" title="Bodsham School">View Project</a>
+                    </div>
+                </li>
+            
+                <li>
+                    <img src="/assets/images/work/recruitmentGenius.png" alt="Recruitment Genius" />
+
+                    <div class="item-mask">
+                        <h3>Recruitment Genius</h3>
+                        <p>A recruitment services for companies looking to advertise roles that require better feedback about applicants with a number of automatic tools</p>
+                        <a href="/portfolio/dev/recruitment-genius" title="Recruitment Genius">View Project</a>
+                    </div>
+                </li>
+            
+                <li>
+                    <img src="/assets/images/work/site-v2.png" alt="Personal Site v2" />
+
+                    <div class="item-mask">
+                        <h3>Personal Site v2</h3>
+                        <p>The second iteration of my personal site. Featuring more focused writing platform and a showcase for my working experience.</p>
+                        <a href="/portfolio/dev/site-v2" title="Personal Site v2">View Project</a>
+                    </div>
+                </li>
+            
+        </ul>
     </div>
 </div>
 
@@ -148,6 +197,17 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
 <script type="text/javascript" src="/assets/js/init.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-7385039-2', 'tomsturge.co.uk');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>

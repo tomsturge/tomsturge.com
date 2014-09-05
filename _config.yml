@@ -3,3 +3,5 @@ permalink: /:categories/:title
 paginate: 10
 exclude: [sass, CNAME]
 url: http://tomsturge.co.uk
+collections:
+- portfolio
