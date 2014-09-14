@@ -1,5 +1,12 @@
-markdown: rdiscount
-permalink: /:categories/:title
+# Site settings
+title: "Thomas Sturge - Front-end Architect, UX designer and educator"
+email: mail@tomsturge.co
+description: "Thomas Sturge - Front-end architect, UX designer and educator."
+baseurl: ""
+url: http://tomsturge.co
+
+# Build settings
+markdown: kramdown
+permalink: :year/:month/:title
 paginate: 10
 exclude: [sass, CNAME]
-url: http://tomsturge.co.uk

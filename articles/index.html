@@ -1,6 +1,6 @@
 ---
 layout: default
-type: posts
+type: articles
 ---
 
 <div id="posts-page">
@@ -8,7 +8,7 @@ type: posts
     <div class="page__intro" style="background-image: url(/assets/images/headers/postsIntro.png);">
         <div>
             <div class="wrapper">
-                <h2>Posts</h2>
+                <h2>Articles</h2>
             </div>
         </div>
     </div>
@@ -16,7 +16,7 @@ type: posts
     <div class="wrapper">
         <div class="post-list">
             <ul>
-                {% for post in site.categories.post %}
+                {% for post in site.categories.article %}
                     <li class="post-list__post">
                         <a href="{{ post.url }}">
                             <h2 class="post-list__title">{{ post.title }}</h2>

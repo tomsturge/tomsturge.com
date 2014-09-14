@@ -1,12 +1,12 @@
 ---
 date: 2013-04-07
-layout: post
+layout: article
 slug: site-update-a-journey-with-jekyll
 title: Site update - A journey with Jekyll 
 intro: An overview of the update to my site and what it means going forward
 header: jekyllJourney.png
 categories:
-- post
+- article
 meta: A huge site update, rewritten from the ground up with Jekyll and Liquid templating. This first post is an introduction to the new site and what is in store.
 comments: true
 ---
