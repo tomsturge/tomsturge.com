@@ -17,5 +17,9 @@
         padding: 0 15px; }
 
     a {
-        color: white; }
+        color: white;
+
+        &:hover {
+            text-shadow: 0 0 2px $brand-color; }
+    }
 }
