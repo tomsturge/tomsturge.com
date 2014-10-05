@@ -5,14 +5,14 @@
 //
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
+    text-shadow: 0 0 2px white;
     color: inherit;
 
     &:hover,
     &:active,
     &:focus {
-        text-decoration: underline;
-        text-shadow: 0 0 2px white; }
+        text-decoration: none; }
 }
 
 

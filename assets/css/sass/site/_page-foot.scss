@@ -18,8 +18,5 @@
 
     a {
         color: white;
-
-        &:hover {
-            text-shadow: 0 0 2px $brand-color; }
-    }
+        text-shadow: 0 0 2px $brand-color; }
 }
