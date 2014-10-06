@@ -10,9 +10,10 @@ code {
     top: -2px;
     white-space: nowrap;
     border-radius: .25rem;
-    background-color: #444;
+    background-color: $black;
+    font-size: 75%;
     font-family: $code-font;
-    color: #f8f8f8;
+    color: #fff;
 }
 
 pre{
