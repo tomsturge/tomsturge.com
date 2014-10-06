@@ -115,6 +115,7 @@ body {
         padding: 10px 0;
         color: white;
         box-shadow: none;
+        text-decoration: none;
         transform-style: preserve-3d;
         transform-origin: 0% 50%;
         transition: transform .3s;
@@ -204,6 +205,7 @@ body {
 
         a {
             display: block;
+            text-decoration: none;
             padding: 10px 15px;
             box-shadow: none; }
     }
@@ -218,6 +220,7 @@ body {
         margin: 0 auto;
         width:  auto;
         box-shadow: none;
+        text-decoration: none;
         color: white;
         background: $brand-color;
         text-transform: uppercase;
