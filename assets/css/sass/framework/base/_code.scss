@@ -4,6 +4,16 @@
 //===============================================
 //
 
+code {
+    padding: .25rem .5rem;
+    position: relative;
+    top: -2px;
+    white-space: nowrap;
+    border-radius: .25rem;
+    background-color: #444;
+    font-family: $code-font;
+    color: #f8f8f8;
+}
 
 pre{
     overflow:auto;
