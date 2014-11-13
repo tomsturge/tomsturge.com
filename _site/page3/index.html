@@ -36,14 +36,14 @@
 
 <!-- Schema.org markup for Google+ -->
 <meta itemprop="name" content="Thomas Sturge">
-<meta itemprop="description" content="">
+<meta itemprop="description" content="Frontend Architect, UX designer and educator.">
 <meta itemprop="image" content="http://tomsturge.co.uk/og_image.png">
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@tomsturge">
 <meta name="twitter:title" content="Portfolio site of Thomas Sturge">
-<meta name="twitter:description" content="">
+<meta name="twitter:description" content="Front-end Architect, UX designer and educator.">
 <meta name="twitter:creator" content="@tomsturge">
 <!-- Twitter summary card with large image must be at least 280x150px -->
 <meta name="twitter:image:src" content="http://tomsturge.co.uk/tw_image.png">
@@ -51,9 +51,9 @@
 <!-- Open Graph data -->
 <meta property="og:title" content="Thomas Sturge" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tomsturge.co.uk/post/index.html" />
+<meta property="og:url" content="http://tomsturge.co.uk/page3/index.html" />
 <meta property="og:image" content="http://tomsturge.co.uk/og_image.png" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Front-end Architect, UX designer and educator." />
 <meta property="og:site_name" content="Portfolio site of Thomas Sturge" />
 <meta property="article:published_time" content="2013-09-17T05:59:00+01:00" />
 
@@ -67,7 +67,7 @@
 
 </head>
 
-<body class="page--posts">
+<body class="page--home">
 
 <nav class="main-nav">
     <a href="/" title="Menu" class=""><span></span></a>
@@ -86,22 +86,27 @@
 
 <div class="container">
 
-    <div id="posts-page">
-
-    <div class="page__intro" style="background-image: url(/assets/images/headers/postsIntro.png);">
-        <div>
-            <div class="wrapper">
-                <h2>Posts</h2>
-            </div>
+    <div class="page__intro">
+    <div>
+        <div class="wrapper">
+            <h2><a href="/work#dev">front-end architect</a>, <a href="/work#design">UX designer</a> and <a href="/work#teaching">educator</a></h2>
         </div>
+    </div>
+</div>
+
+<div class="post-panel">
+    <div class="heading-wrapper">
+        <h2 class="heading--lined heading--post">
+            <a href="/post" data-hover="The desire to write grows with writing">Articles</a>
+        </h2>
     </div>
 
     <div class="wrapper">
-        <div class="post-list">
+        <div class="post-list post-list--home">
             <ul>
                 
                     <li class="post-list__post">
-                        <a href="/post/site-update-a-journey-with-jekyll">
+                        <a href="/post/site-update-a-journey-with-jekyll" title="Site update - A journey with Jekyll">
                             <h2 class="post-list__title">Site update - A journey with Jekyll</h2>
                             <p>An overview of the update to my site and what it means going forward </p>
                             <time datetime="2013-04">
@@ -112,11 +117,69 @@
                 
             </ul>
         </div>
-
+        <!-- /.post-box -->
     </div>
-
 </div>
 
+<div class="portfolio-panel">
+    <div class="heading-wrapper">
+        <h2 class="heading--lined heading--portfolio">
+            <a href="/portfolio" data-hover="By the work one knows the workman">Projects</a>
+        </h2>
+    </div>
+
+
+    
+        <div class="feature-panel" style="background-image: url(/assets/images/work/headers/john-wesley.png);">
+            <div class="panel__cover">
+                <div class="wrapper">
+                    <div class="panel__title">
+                        <h3><a href="/portfolio/teaching/johnwesley" title="The John Wesley School">The John Wesley School</a></h3>
+                        <p>My second Code Club; a great opportunity to expand my chance to teach more kids and help them learn how to code.</p>
+                        <a href="/portfolio/teaching/johnwesley" title="The John Wesley School">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    <div class="wrapper">
+
+        <ul class="portfolio-items">
+            
+                <li>
+                    <img src="/assets/images/work/bodsham.jpg" alt="Bodsham School" />
+
+                    <div class="item-mask">
+                        <h3>Bodsham School</h3>
+                        <p>A Code Club I setup to start teaching kids aged 9-11 at the beginning of 2014.</p>
+                        <a href="/portfolio/teaching/bodsham" title="Bodsham School">View Project</a>
+                    </div>
+                </li>
+            
+                <li>
+                    <img src="/assets/images/work/recruitmentGenius.png" alt="Recruitment Genius" />
+
+                    <div class="item-mask">
+                        <h3>Recruitment Genius</h3>
+                        <p>A recruitment services for companies looking to advertise roles that require better feedback about applicants with a number of automatic tools</p>
+                        <a href="/portfolio/dev/recruitment-genius" title="Recruitment Genius">View Project</a>
+                    </div>
+                </li>
+            
+                <li>
+                    <img src="/assets/images/work/site-v2.png" alt="Personal Site v2" />
+
+                    <div class="item-mask">
+                        <h3>Personal Site v2</h3>
+                        <p>The second iteration of my personal site. Featuring more focused writing platform and a showcase for my working experience.</p>
+                        <a href="/portfolio/dev/site-v2" title="Personal Site v2">View Project</a>
+                    </div>
+                </li>
+            
+        </ul>
+    </div>
+</div>
 
 
     
@@ -141,11 +204,7 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<<<<<<< HEAD
-  ga('create', 'UA-7385039-2', 'tomsturge.co');
-=======
   ga('create', 'UA-7385039-2', 'tomsturge.co.uk');
->>>>>>> ce91bce611b1787349ff9b8260527d24453e463f
   ga('send', 'pageview');
 
 </script>
