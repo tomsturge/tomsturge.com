@@ -5,7 +5,7 @@
 //
 
 .main-nav {
-    background-color: rgba(0,0,0,.65);
+    background-color: transparent;
     width: 100%;
     position: fixed;
     top: 0;
@@ -51,6 +51,9 @@
             transition: opacity .3s; }
     }
 
+    &.notTop {
+        background-color: rgba(0,0,0,0.65); }
+
     &.menu-open {
         transform: translate(-410px,0);
 
@@ -69,7 +72,6 @@
 }
 
 .main-nav__content {
-    width: 990px;
     color: white;
     padding: 0;
     margin: 0 auto;
@@ -149,11 +151,7 @@
         transition: background-color .3s, padding .3s;
 
         &:hover {
-            background-color: fade-out($brand-color, .65); }
-
-        &:before {
-            margin-right: 25px;
-            transition: margin-right .3s; }
+            border-bottom: 5px solid white; }
 
     }
 }
