@@ -52,18 +52,30 @@ module.exports = function(grunt) {
             }
         },
 
+        shell : {
+            jekyllBuild : {
+                command : 'jekyll build'
+            },
+            jekyllServe : {
+                command : 'jekyll serve'
+            }
+        },
+
         watch: {
-            files: ['assets/js/*.js',
-                    'assets/**/*.scss',
-                    'assets/css/screen.css' ],
-            tasks: ['concat',
-                    'uglify',
-                    'sass',
-                    'autoprefixer',
-                    'shell:jekyllServe' ],
+            scripts: {
+                files: ['assets/js/*.js'],
+                tasks: ['concat', 'uglify']
+            },
+            css: {
+                files: ['assets/**/*.scss'],
+                tasks: ['sass']
+            },
+            styles: {
+                files: ['assets/css/screen.css'],
+                tasks: ['autoprefixer']
+            },
             options : {
-                spawn : false,
-                interrupt : true,
+                spawn : false
             }
         }
 
