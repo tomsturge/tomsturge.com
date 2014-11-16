@@ -239,8 +239,14 @@ body {
 
 .page--home {
 
-    .portfolio-panel .heading-wrapper {
-        margin: 0 0 60px; }
+    .portfolio-panel {
+
+        .heading-wrapper {
+            margin-bottom: 60px; }
+
+        > .wrapper {
+            padding-bottom: 0; }
+    }
 }
 
 
