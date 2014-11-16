@@ -13,6 +13,8 @@
     color: white;
     text-align: center;
     overflow: hidden;
+    animation: fadeInDown .5s ease-in 1s;
+    animation-fill-mode: both;
 
     h2 {
         @include font-size(32px);
@@ -68,6 +70,7 @@
 
     a {
         text-decoration: none;
+        text-shadow: none;
         color: white; }
 }
 

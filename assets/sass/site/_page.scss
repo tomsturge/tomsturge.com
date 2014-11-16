@@ -40,6 +40,8 @@ body {
     background: white;
     opacity: 1;
     transition: transform .3s, opacity .3s;
+    animation: fadeIn .5s ease-in 1s;
+    animation-fill-mode: both;
     perspective: 1200px;
 
     &.menu-open {
@@ -115,13 +117,14 @@ body {
         padding: 10px 0;
         color: white;
         box-shadow: none;
+        text-shadow: none;
         text-decoration: none;
         transform-style: preserve-3d;
         transform-origin: 0% 50%;
-        transition: transform .3s;
+        transition: transform .3s cubic-bezier(.6,-0.45,.45,1.5);
 
         &:after {
-            @include font-size(20px);
+            @include font-size(18px);
 
             background-color: $brand-color-darken;
             content: attr(data-hover);
@@ -206,6 +209,7 @@ body {
         a {
             display: block;
             text-decoration: none;
+            text-shadow: none;
             padding: 10px 15px;
             box-shadow: none; }
     }
@@ -221,6 +225,7 @@ body {
         width:  auto;
         box-shadow: none;
         text-decoration: none;
+        text-shadow: none;
         color: white;
         background: $brand-color;
         text-transform: uppercase;

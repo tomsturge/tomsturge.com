@@ -4,6 +4,10 @@
 //===============================================
 //
 
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
 ::selection {
     background: $brand-color;
     color: white; }
