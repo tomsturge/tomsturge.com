@@ -21,17 +21,6 @@ module.exports = function(grunt) {
             }
         },
 
-        imagemin: {
-            dynamic: {
-                files: [{
-                    expand: true,
-                    cwd: 'assets/images/',
-                    src: ['**/*.{png,jpg,gif}'],
-                    dest: 'assets/images/'
-                }]
-            }
-        },
-
         sass: {
             dist: {
                 options: {
@@ -52,27 +41,28 @@ module.exports = function(grunt) {
             }
         },
 
-        shell : {
-            jekyllBuild : {
-                command : 'jekyll build'
-            },
-            jekyllServe : {
-                command : 'jekyll serve'
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: 'assets/images/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'assets/images/'
+                }]
             }
         },
 
         watch: {
             scripts: {
                 files: ['assets/js/*.js'],
-                tasks: ['concat', 'uglify']
+                tasks: ['concat',
+                        'uglify']
             },
             css: {
-                files: ['assets/**/*.scss'],
-                tasks: ['sass']
-            },
-            styles: {
-                files: ['assets/css/screen.css'],
-                tasks: ['autoprefixer']
+                files: ['assets/**/*.scss',
+                        'assets/css/screen.css'],
+                tasks: ['sass',
+                        'autoprefixer']
             },
             options : {
                 spawn : false
@@ -90,6 +80,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('deploy', ['concat', 'uglify', 'imagemin', 'sass', 'autoprefixer']);
+    grunt.registerTask('deploy', ['concat', 'uglify', 'sass', 'autoprefixer', 'imagemin']);
 
 };
