@@ -277,6 +277,8 @@
     right: 0;
     left: 0;
     padding: 0;
+    animation: fadeIn .3s ease-in 1.5s;
+    animation-fill-mode: both;
 
     &.notTop {
         background-color: transparent; }
