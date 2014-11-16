@@ -43,6 +43,7 @@ module.exports = function(grunt) {
                 }
             }
         },
+
         autoprefixer: {
             dist: {
                 files: {
@@ -52,17 +53,17 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            scripts: {
-                files: ['assets/js/*.js'],
-                tasks: ['concat', 'uglify']
-            },
-            css: {
-                files: ['assets/**/*.scss'],
-                tasks: ['sass']
-            },
-            styles: {
-                files: ['assets/css/screen.css'],
-                tasks: ['autoprefixer']
+            files: ['assets/js/*.js',
+                    'assets/**/*.scss',
+                    'assets/css/screen.css' ],
+            tasks: ['concat',
+                    'uglify',
+                    'sass',
+                    'autoprefixer',
+                    'shell:jekyllServe' ],
+            options : {
+                spawn : false,
+                interrupt : true,
             }
         }
 
@@ -77,6 +78,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'sass', 'autoprefixer', 'watch']);
+    grunt.registerTask('deploy', ['concat', 'uglify', 'imagemin', 'sass', 'autoprefixer']);
 
 };
