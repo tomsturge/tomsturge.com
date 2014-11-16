@@ -5,3 +5,5 @@ exclude: [sass, CNAME]
 url: http://tomsturge.co.uk
 collections:
 - portfolio
+gems:
+  - jekyll-sitemap
