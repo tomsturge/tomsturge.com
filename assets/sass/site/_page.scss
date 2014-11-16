@@ -42,16 +42,7 @@ body {
     transition: transform .3s, opacity .3s;
     animation: fadeIn .5s ease-in 1s;
     animation-fill-mode: both;
-    perspective: 1200px;
-
-    &.menu-open {
-        transform: translate3d(-410px, 0, 0);
-        opacity: .5;
-
-        @include media-query(portable) {
-            transform: translate3d(-240px, 0, 0); }
-    }
-}
+    perspective: 1200px; }
 
 
 .wrapper,

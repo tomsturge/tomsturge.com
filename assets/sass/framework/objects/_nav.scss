@@ -27,8 +27,9 @@
         padding: 8px;
         color: white;
         position: absolute;
-        top: 30px;
-        right: 50px;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
 
         &:before, &:after, span {
             content: " ";
@@ -57,7 +58,10 @@
         padding: 0; }
 
     &.menu-open {
-        transform: translate(100%,0);
+        height: 100%;
+
+        .main-nav__content {
+            transform: translate(0,0); }
 
         > a {
 
@@ -266,13 +270,16 @@
 
 @include media-query(portable) {
 .main-nav {
-    height: 100%;
-    width: auto;
+    background: transparent;
+    height: 0%;
+    width: 100%;
     position: fixed;
     right: 0;
-    left: auto;
-    transform: translate(0,0);
-    transition: transform .3s cubic-bezier(.6,-0.45,.45,1.5);
+    left: 0;
+    padding: 0;
+
+    &.notTop {
+        background-color: transparent; }
 
     > a {
         display: block; }
@@ -284,8 +291,10 @@
 .main-nav__content {
     background: $black;
     height: 100%;
-    width: 410px;
-    padding: 0 40px;
+    width: 100%;
+    padding: 40px 40px 0;
+    transition: transform .3s;
+    transform: translate(0,-100%);
     position: absolute;
     top: 0;
 
@@ -295,13 +304,15 @@
 }
 
 .main-nav__menu {
-    margin: 25px 0;
+    margin: 0;
     float: none;
 
     li {
         margin: 0;
         display: block;
         clear: both;
+        float: none;
+        text-align: center;
         border-top: 2px solid #bbb;
 
         &:first-of-type {
@@ -321,20 +332,11 @@
 .main-nav {
 
     > a {
-        top: 20px;
-        right: 20px; }
-
-    &.menu-open {
-        transform: translate(100%,0); }
-}
-
-.main-nav__content {
-    width: 240px;
-    padding: 0 10px;
+        top: 10px;
+        right: 10px; }
 }
 
 .main-nav__menu {
-    margin: 10px 0 0;
 
     a {
         padding: 15px; }
