@@ -2,7 +2,7 @@ markdown: rdiscount
 permalink: /:categories/:title
 paginate: 10
 exclude: [sass, CNAME]
-url: http://tomsturge.co.uk
+url: http://tomsturge.co
 collections:
 - portfolio
 gems:
