@@ -10,6 +10,22 @@
     font-weight: 300;
     color: #444;
 
+     > .wrapper p:first-of-type {
+        @include font-size(32px);
+
+        &:first-letter {
+            float: left;
+            margin: -0.25rem .5rem 0 0;
+            padding: inherit;
+            font-size: 6.6rem;
+            font-family: inherit;
+            line-height: .9;
+            text-indent: 0;
+            background: 0 0;
+            color: #528cc5;
+        }
+     }
+
     h2 {
 
         @include media-query(palm) {
