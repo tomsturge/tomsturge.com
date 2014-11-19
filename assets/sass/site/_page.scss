@@ -183,6 +183,10 @@ body {
         p:first-of-type {
             @include font-size(28px);
 
+            @include media-query(portable) {
+                @include font-size(24px);
+                line-height: 1.3; }
+
             &:first-letter {
                 float: left;
                 margin: -0.25rem .5rem 0 0;
@@ -193,6 +197,9 @@ body {
                 text-indent: 0;
                 background: 0 0;
                 color: #528cc5;
+
+                @include media-query(portable) {
+                    font-size: 4.5rem; }
             }
         }
 
