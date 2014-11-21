@@ -18,7 +18,7 @@ meta:
 tags:
 - HTML
 - SCSS
-- jQuery
+- Javascript
 - Design
 - UX
 - AngularJS
