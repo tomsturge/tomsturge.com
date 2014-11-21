@@ -21,6 +21,7 @@ tags:
 - jQuery
 - Design
 - UX
+- AngularJS
 ---
 
 A recruitment services for companies looking to advertise roles that require better feedback about applicants with a number of automatic tools
