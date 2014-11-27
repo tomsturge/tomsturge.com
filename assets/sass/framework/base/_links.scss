@@ -5,9 +5,9 @@
 //
 
 a {
-    text-decoration: underline;
-    text-shadow: 0 0 2px white;
     color: inherit;
+    text-decoration: underline;
+    text-shadow: 0 0 2px #fff;
 
     &:hover,
     &:active,
@@ -22,7 +22,7 @@ a {
 //     <li><a href=#>Home</a></li>
 //     <li class=current><a href=#>About</a></li>
 // </ul>
-.current a{
-    cursor:text;
-    text-decoration:underline;
+.current a {
+    cursor: text;
+    text-decoration: underline;
 }

@@ -5,12 +5,12 @@
 //
 
 #post-content {
-    background-color: white;
-    width: 100%;
-    font-weight: 300;
+    background-color: #fff;
     color: #444;
+    font-weight: 300;
+    width: 100%;
 
-     > .wrapper p:first-of-type {
+    > .wrapper p:first-of-type {
         @include font-size(32px);
 
         @include media-query(portable) {
@@ -18,15 +18,15 @@
             line-height: 1.3; }
 
         &:first-letter {
-            float: left;
-            margin: -0.25rem .5rem 0 0;
-            padding: inherit;
-            font-size: 6.6rem;
-            font-family: inherit;
-            line-height: .9;
-            text-indent: 0;
             background: 0 0;
             color: #528cc5;
+            float: left;
+            font-family: inherit;
+            font-size: 6.6rem;
+            line-height: .9;
+            margin: -.25rem .5rem 0 0;
+            padding: inherit;
+            text-indent: 0;
 
             @include media-query(portable) {
                 font-size: 4.5rem; }
@@ -41,7 +41,8 @@
             line-height: 1.2; }
     }
 
-    b,strong {
+    b,
+    strong {
         font-weight: normal }
 
     img {

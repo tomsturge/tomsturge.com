@@ -9,10 +9,10 @@
 //
 // `@include font-size(10px);`
 
-@mixin font-size($font-size){
-    font-size:$font-size;
-    font-size:($font-size / $base-font-size)*1rem;
-    line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size); }
+@mixin font-size($font-size) {
+    font-size: $font-size;
+    font-size: ($font-size / $base-font-size) * 1rem;
+    line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size); }
 
 // PX to EM conversion
 //
@@ -28,11 +28,11 @@
 //
 // `@include truncate(100%);`
 
-@mixin truncate($truncation-boundary){
-    max-width:$truncation-boundary;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis; }
+@mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
 
 
 
@@ -45,17 +45,17 @@
 // will create a red triangle with a black border which sits at the bottom
 // center of the element. Call the mixin thus:
 
-@mixin arrow($arrow-edge, $arrow-location, $arrow-color, $border-color: $arrow-color){
+@mixin arrow($arrow-edge, $arrow-location, $arrow-color, $border-color: $arrow-color) {
 
     @if $arrow-edge == top{
 
         @extend %arrow--top;
 
-        &:before{
-            border-bottom-color:$border-color; }
+        &:before {
+            border-bottom-color: $border-color; }
 
-        &:after{
-            border-bottom-color:$arrow-color; }
+        &:after {
+            border-bottom-color: $arrow-color; }
 
         @if $arrow-location == left{
             @extend %arrow--left; }
@@ -71,11 +71,11 @@
 
         @extend %arrow--far;
 
-        &:before{
-            border-left-color:$border-color; }
+        &:before {
+            border-left-color: $border-color; }
 
-        &:after{
-            border-left-color:$arrow-color; }
+        &:after {
+            border-left-color: $arrow-color; }
 
         @if $arrow-location == top{
             @extend %arrow--upper; }
@@ -91,11 +91,11 @@
 
         @extend %arrow--bottom;
 
-        &:before{
-            border-top-color:$border-color; }
+        &:before {
+            border-top-color: $border-color; }
 
-        &:after{
-            border-top-color:$arrow-color; }
+        &:after {
+            border-top-color: $arrow-color; }
 
         @if $arrow-location == left{
             @extend %arrow--left; }
@@ -111,11 +111,11 @@
 
         @extend %arrow--near;
 
-        &:before{
-            border-right-color:$border-color; }
+        &:before {
+            border-right-color: $border-color; }
 
-        &:after{
-            border-right-color:$arrow-color; }
+        &:after {
+            border-right-color: $arrow-color; }
 
         @if $arrow-location == top{
             @extend %arrow--upper; }
@@ -131,10 +131,10 @@
 
 // Media queries
 
-$palm-end:              $lap-start - 0.063em;
-$lap-end:               $desk-start - 0.063em;
+$palm-end:  $lap-start - .063em;
+$lap-end:   $desk-start - .063em;
 
-@mixin media-query($media-query){
+@mixin media-query($media-query) {
 
     @if $media-query == palm{
         @media only screen and (max-width:$palm-end) {

@@ -5,23 +5,37 @@
 //
 
 .page__intro {
-    position: relative;
+    animation: fadeInDown .5s ease-in 1s;
+    animation-fill-mode: both;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    color: #fff;
     font-family: $heading-font;
-    color: white;
-    text-align: center;
     overflow: hidden;
-    animation: fadeInDown .5s ease-in 1s;
-    animation-fill-mode: both;
+    position: relative;
+    text-align: center;
+
+    .wrapper {
+        padding-bottom: 100px;
+        padding-top: 150px;
+
+        @include media-query(portable) {
+            padding-bottom: 100px;
+            padding-top: 100px; }
+
+        @include media-query(palm) {
+            padding-bottom: 76px;
+            padding-top: 76px; }
+    }
+
 
     h2 {
         @include font-size(32px);
 
-        color: white;
-        line-height: 1.2;
         clear: both;
+        color: #fff;
+        line-height: 1.2;
         transition: font-size .3s ease-out;
 
         @media screen and (min-height: 28em) and (min-width: $lap-start) {
@@ -34,55 +48,43 @@
     }
 
     .post--length {
-        margin: 0 10px 0 0;
+        float: right;
         line-height: 30px;
-        float: right; }
+        margin: 0 10px 0 0;}
 
     time {
         @include font-size(16px);
 
-        margin: 0 0 15px;
-        padding: 5px 10px;
+        border: 2px solid #fff;
+        float: right;
         line-height: 1;
-        border: 2px solid white;
-        float: right; }
+        margin: 0 0 15px;
+        padding: 5px 10px; }
 
     > div {
         background-color: fade-out($brand-color, .65);
 
-        &:before, &:after {
-            content: " ";
-            display: block;
-            width: 52%;
-            height: 60px;
-            background: white;
+        &:before,
+        &:after {
+            background: #fff;
             bottom: -34px;
-            position: absolute; }
+            content: ' ';
+            display: block;
+            height: 60px;
+            position: absolute;
+            width: 52%; }
 
         &:after {
-            transform: rotate(-3deg);
-            right: -5px; }
+            right: -5px;
+            transform: rotate(-3deg);}
 
         &:before {
-            transform: rotate(3deg);
-            left: -5px; }
+            left: -5px;
+            transform: rotate(3deg); }
     }
 
     a {
+        color: #fff;
         text-decoration: none;
-        text-shadow: none;
-        color: white; }
-}
-
-.page__intro .wrapper {
-    padding-top: 150px;
-    padding-bottom: 100px;
-
-    @include media-query(portable) {
-        padding-top: 100px;
-        padding-bottom: 100px; }
-
-    @include media-query(palm) {
-        padding-top: 76px;
-        padding-bottom: 76px; }
+        text-shadow: none; }
 }

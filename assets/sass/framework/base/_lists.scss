@@ -4,12 +4,13 @@
 //===============================================
 //
 
-li{
+li {
     > ul,
-    > ol{
-         margin-bottom:0; }
+    > ol {
+        margin-bottom: 0; }
 }
 
 
-.numbered-list{
-    list-style-type:decimal; }
+.numbered-list {
+    list-style-type: decimal; }
+    

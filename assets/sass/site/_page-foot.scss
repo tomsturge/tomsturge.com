@@ -6,17 +6,17 @@
 
 .credits-panel {
     background: $brand-color;
+    color: #fff;
     font-family: $heading-font;
-    color: white;
 
     p {
-        @include media-query(palm) {
-            @include font-size(14px); }
-
         margin: 0;
-        padding: 0 15px; }
+        padding: 0 15px;
+
+        @include media-query(palm) {
+            @include font-size(14px); }}
 
     a {
-        color: white;
+        color: #fff;
         text-shadow: 0 0 2px $brand-color; }
 }

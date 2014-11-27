@@ -8,20 +8,21 @@
 .post-list {
 
     ul {
-        margin: 0;
-        list-style-type: none; }
+        list-style-type: none;
+        margin: 0; }
 
     li {
         $base-size: 22px;
 
         @include font-size($base-size);
 
-        margin-bottom: 0;
         border-top: 2px solid #ddd;
-        transition: border 0.5s, border-color 0.5s;
+        margin-bottom: 0;
         position: relative;
+        transition: border .5s, border-color .5s;
 
-        &:hover, &:hover + li {
+        &:hover,
+        &:hover + li {
             border-top: 2px solid $black; }
 
         &:last-of-type {
@@ -32,18 +33,18 @@
         }
 
         a {
-            display: block;
-            width: auto; height: 100%;
-            padding: 15px;
-            overflow: hidden;
-            border: none;
-            text-decoration: none;
+            border: 0;
             box-shadow: none;
             color: $black;
+            display: block;height: 100%;
+            overflow: hidden;
+            padding: 15px;
+            text-decoration: none;
+            width: auto;
 
             &:hover {
-                text-decoration: none;
-                box-shadow: none; }
+                box-shadow: none;
+                text-decoration: none;}
         }
 
         .post-list__title {
@@ -51,10 +52,10 @@
 
             @include font-size(22px);
 
-            margin-bottom: 0;
+            border-bottom: 0;
             font-family: $heading-font;
             line-height: 1.3;
-            border-bottom: none;
+            margin-bottom: 0;
 
             @include media-query(palm) {
                 @include font-size(18px); }
@@ -64,22 +65,22 @@
             clear: both;
             color: #bbb;
             font-size: 18px;
+            margin: 0;
 
             @include media-query(palm) {
-                @include font-size(14px); }
-
-            margin: 0; }
+                @include font-size(14px); } }
 
         time {
             @extend %fr;
 
             @include font-size(16px);
-            @include media-query(palm) {
-                display: none; }
 
             line-height: 1.3;
             position: absolute;
+            right: 15px;
             top: 15px;
-            right: 15px; }
+
+            @include media-query(palm) {
+                display: none; }}
     }
 }
