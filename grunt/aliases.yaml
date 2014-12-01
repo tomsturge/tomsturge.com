@@ -1,0 +1,18 @@
+default:
+    - img
+    - prod
+
+dev:
+    - 'concurrent:preBuild'
+    - 'concurrent:devBuild'
+
+prod:
+    - 'concurrent:preBuild'
+    - 'concurrent:production'
+
+img:
+    - 'concurrent:imgMin'
+
+devmin:
+    - img
+    - dev

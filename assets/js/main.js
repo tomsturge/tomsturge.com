@@ -6,5 +6,5 @@ require.config({
 });
 
 define(["jquery"], function($) {
-    require(["helper/global"])
+    require(["helper/global.min"])
 });
