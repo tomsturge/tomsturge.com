@@ -24,6 +24,7 @@
 
         p:first-of-type {
             @include font-size(28px);
+            line-height: 150%;
 
             @include media-query(portable) {
                 @include font-size(24px);
@@ -34,7 +35,7 @@
                 color: #528cc5;
                 float: left;
                 font-family: inherit;
-                font-size: 6.6rem;
+                font-size: 5.9rem;
                 line-height: .9;
                 margin: -.25rem .5rem 0 0;
                 padding: inherit;

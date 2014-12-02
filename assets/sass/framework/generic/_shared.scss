@@ -13,7 +13,7 @@ h6,
 hgroup,
 ul,
 ol,
-dl,
+dl,  
 blockquote,
 p,
 address,
@@ -37,10 +37,8 @@ pre,
 hr {
     margin-bottom: $base-spacing-unit - 2px;
     margin-bottom: (($base-spacing-unit - 2px) / $base-font-size) * 1rem; }
-
 ul,
 ol,
 dd {
     margin-left: 2 * $base-spacing-unit;
     margin-left: (2 * $base-spacing-unit / $base-font-size) * 1rem; }
-    
