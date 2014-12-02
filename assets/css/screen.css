@@ -1156,7 +1156,7 @@ body {
     margin: 0 0 15px;
     padding: 5px 10px; }
   .page__intro > div {
-    background-color: rgba(82, 140, 197, 0.35); }
+    background-color: rgba(82, 140, 197, 0.5); }
     .page__intro > div:before, .page__intro > div:after {
       background: #fff;
       bottom: -34px;
