@@ -3,16 +3,15 @@ module.exports = {
     scripts: {
         files: ['assets/js/*.js'],
         tasks: ['concat',
-        'uglify']
+                'uglify']
     },
 
     css: {
-        files: ['assets/**/*.scss',
-        'assets/css/screen.css'],
-        tasks: ['sass',
-        'autoprefixer']
+        files: ['assets/**/*.scss'],
+        tasks: ['autoprefixer',
+                'sass']
     },
-    
+
     options : {
         spawn : false
     }

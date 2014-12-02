@@ -5,10 +5,11 @@ default:
 dev:
     - 'concurrent:preBuild'
     - 'concurrent:devBuild'
+    - 'watch'
 
 prod:
     - 'concurrent:preBuild'
-    - 'concurrent:production'
+    - 'concurrent:devBuild'
 
 img:
     - 'concurrent:imgMin'
