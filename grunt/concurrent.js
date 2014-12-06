@@ -6,12 +6,15 @@ module.exports = {
     },
 
     preBuild: [
-    'uglify',
-    'autoprefixer'
+    'uglify'
     ],
 
     devBuild: [
     'sass'
+    ],
+
+    prodBuild: [
+    'autoprefixer'
     ],
 
     // Image tasks

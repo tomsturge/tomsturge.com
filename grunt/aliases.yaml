@@ -10,6 +10,7 @@ dev:
 prod:
     - 'concurrent:preBuild'
     - 'concurrent:devBuild'
+    - 'concurrent:prodBuild'
 
 img:
     - 'concurrent:imgMin'
