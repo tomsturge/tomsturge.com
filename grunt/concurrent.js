@@ -6,8 +6,8 @@ module.exports = {
     },
 
     preBuild: [
-    'uglify'
-    //'autoprefixer'
+    'uglify',
+    'autoprefixer'
     ],
 
     devBuild: [
