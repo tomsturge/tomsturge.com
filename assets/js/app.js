@@ -10,9 +10,9 @@ $(document).ready(function(){
 
     // Reading time calculator
     var regex = /\s+/gi;
-        word = $("section#post-content > div").text().trim().replace(regex, ' ').split(' ').length,
-        length = word / 60,
-        time = Math.round(length).toFixed(0);
+    word = $("section#post-content > div").text().trim().replace(regex, ' ').split(' ').length,
+    length = word / 60,
+    time = Math.round(length).toFixed(0);
 
     $('<p class="post--length">'+time+' min</p>').insertAfter('#post-single .page__intro time');
 });
