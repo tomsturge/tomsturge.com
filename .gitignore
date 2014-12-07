@@ -2,10 +2,9 @@ node_modules
 dist
 .tmp
 .sass-cache
-
 config
 compass_app_log.txt
 fire_app_log.txt
 config.rb
-
 _site/
+bower_components
