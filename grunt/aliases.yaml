@@ -8,6 +8,7 @@ dev:
     - 'watch'
 
 prod:
+    - 'shell:bowerupdate'
     - 'concurrent:preBuild'
     - 'concurrent:devBuild'
     - 'concurrent:prodBuild'
