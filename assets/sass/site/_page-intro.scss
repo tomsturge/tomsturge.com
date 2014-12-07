@@ -68,19 +68,19 @@
         &:before,
         &:after {
             background: #fff;
-            bottom: -34px;
+            bottom: -12%;
             content: ' ';
             display: block;
-            height: 60px;
+            height: 18%;
             position: absolute;
             width: 52%; }
 
         &:after {
-            right: -5px;
+            right: -1%;
             transform: rotate(-3deg);}
 
         &:before {
-            left: -5px;
+            left: -1%;
             transform: rotate(3deg); }
     }
 
