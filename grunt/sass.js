@@ -1,7 +1,8 @@
 module.exports = {
-    dist: {
+    compress: {
         options: {
-            style: 'compressed'
+            style: 'compressed',
+            sourcemap: 'none'
         },
         files: {
             'assets/css/screen.css': 'assets/sass/screen.scss'

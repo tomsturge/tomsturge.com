@@ -1,6 +1,10 @@
 module.exports = {
-    build: {
-        src: 'assets/js/helper/global.js',
-        dest: 'assets/js/helper/global.min.js'
+    prod: {
+        options: {
+            sourceMap: true
+        },
+        files: {
+            'assets/js/global.min.js': 'assets/js/global.js'
+        }
     }
 }

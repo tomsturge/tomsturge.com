@@ -1,9 +1,15 @@
 module.exports = {
-    dist: {
+    prod: {
+        nonull: true,
+        dest: 'assets/js/global.js',
         src: [
-        'assets/js/libs/*.js', // All JS in the libs folder
-        'assets/js/global.js'  // This specific file
-        ],
-        dest: 'assets/js/init.js',
+            'bower_components/loader.js/loader.js',
+            'bower_components/jquery/jquery.js',
+            'bower_components/moment/moment.js',
+            'bower_components/keymaster/keymaster.js',
+            'bower_components/fastclick/lib/fastclick.js',
+
+            'assets/js/app.js'
+        ]
     }
 }

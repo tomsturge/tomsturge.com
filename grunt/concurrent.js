@@ -6,6 +6,7 @@ module.exports = {
     },
 
     preBuild: [
+    'concat',
     'uglify'
     ],
 
