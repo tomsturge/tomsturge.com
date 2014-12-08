@@ -1,100 +1,91 @@
 <!DOCTYPE HTML>
 <!--
 =================================================
-  The portfolio site for Tom Sturge
+The portfolio site for Tom Sturge
 
-  Author: Tom Sturge
-  Version: 3.1
-  URL: http://tomsturge.co/
+Author: Tom Sturge
+Version: 3.1
+URL: http://tomsturge.co/
 =================================================
 
-                                                    /
-                                                  .7
-                                       \       , //
-                                       |\.--._/|//
-                                      /\ ) ) ).'/
-                                     /(  \  // /
-                                    /(   J`((_/ \
-                                   / ) | _\     /
-                                  /|)  \  eJ    L
-                                 |  \ L \   L   L
-                                /  \  J  `. J   L
-                                |  )   L   \/   \
-                               /  \    J   (\   /
-             _....___         |  \      \   \```
-      ,.._.-'        '''--...-||\     -. \   \
-    .'.=.'                    `         `.\ [ Y
-   /   /                                  \]  J
-  Y / Y                                    Y   L
-  | | |          \                         |   L
-  | | |           Y                        A  J
-  |   I           |                       /I\ /
-  |    \          I             \        ( |]/|
-  J     \         /._           /        -tI/ |
-   L     )       /   /'-------'J           `'-:.
-   J   .'      ,'  ,' ,     \   `'-.__          \
-    \ T      ,'  ,'   )\    /|        ';'---7   /
-     \|    ,'L  Y...-' / _.' /         \   /   /
-      J   Y  |  J    .'-'   /         ,--.(   /
-       L  |  J   L -'     .'         /  |    /\
-       |  J.  L  J     .-;.-/       |    \ .' /
-       J   L`-J   L____,.-'`        |  _.-'   |
-        L  J   L  J                  ``  J    |
-        J   L  |   L                     J    |
-         L  J  L    \                    L    \
-         |   L  ) _.'\                    ) _.'\
-         L    \('`    \                  ('`    \
-          ) _.'\`-....'                   `-....'
-         ('`    \
-          `-.___/
+                                                   /
+                                                 .7
+                                      \       , //
+                                      |\.--._/|//
+                                     /\ ) ) ).'/
+                                    /(  \  // /
+                                   /(   )`((_/ \
+                                  / ) | _\     /
+                                 /|)  \  @\    |
+                                |  \|  \   |   |
+                               /  \  \  `. |   |
+                              |  )  |    \/    \
+                             /  \    \   (\    /
+            _....___         |  \      \   \```
+     ,.._.-'        '''--...-||\     -. \   \
+   .'.=.'                    `         `.\ [ |
+  /   /                                  \]  \
+ | / /                                    |   |
+ | | |          \                         |   |
+ | | |           |                        ^   |
+ |   \           |                       /|\ /
+ |    \          |             \        ( |]/|
+ \     \         /._           /         \|/ |
+ |     )       /   /'-------'/           `'-:.
+ \   .'      ,'  ,' ,     \   `'-.__          \
+  \ /      ,'  ,'   )\    /|        ';'---    /
+   \|    ,'|  /...-' / _.' /         \   /   /
+    \   /  |  |    .'-'   /         ,--.(   /
+    |  |  \  |---'     .'          / |    /\
+    |  \.  |  \     .-;.-/        |   \ .' /
+    |   |`-\   |____,.-'`         | _.-'  |
+    |    \ |   \                   ` |    |
+    \    | |    |                    |    |
+     |   ( |    \                    \    \
+     |   |  ) _.'\                    ) _.'\
+     |   \ ('`    \                  ('`    \
+     )  _.'\`-....'                   `-....'
+     ('`    \
+      `-.___/
 
 -->
 
 <html class="page" itemscope itemtype="http://schema.org/Article" >
 <head>
 
-<title>{% if page.type == 'post' %}{{ page.title }} - {% endif %}Tom Sturge - Front-end Architect, UX designer and educator</title>
+    <title>{% if page.type == 'post' %}{{ page.title }} - {% endif %}Tom Sturge - Front-end Architect, UX designer and educator</title>
 
-<meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, height=device-height" />
-<meta name="keywords"
-      content="Front-end architect, UX designer, educator" />
-<meta name="description"
-      content="Tom Sturge. Front-end architect, UX designer and educator." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height" />
+    <meta name="keywords" content="Front-end architect, UX designer, educator" />
+    <meta name="description" content="Tom Sturge. Front-end architect, UX designer and educator." />
 
-<script src="/assets/js/global.min.js"></script>
+    <!-- Global stylesheet -->
+    <link href="/assets/css/screen.min.css" rel="stylesheet" type="text/css" media="all">
 
-<!-- Google Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab:700,400|Source+Code+Pro' rel='stylesheet' type='text/css'>
+    {% include social-head %}
 
-<!-- Icons font -->
-<link href="/assets/fonts/ss-social-regular.css" rel="stylesheet"
-      type="text/css" media="all">
-
-<!-- Global stylesheet -->
-<link href="/assets/css/screen.min.css" rel="stylesheet" type="text/css"
-      media="all">
-
-{% include social-head %}
-
-<link rel="shortcut icon" href="/icon.png">
-<link rel="apple-touch-icon-precomposed" href="/icon.png">
-<link rel="favicon" href="/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="/icon.png">
+    <link rel="apple-touch-icon-precomposed" href="/icon.png">
+    <link rel="favicon" href="/assets/images/favicon.ico">
 
 </head>
 
 <body class="page--{{page.type}}">
 
-{% include nav %}
+    {% include nav %}
 
-<div class="container">
+    <div class="container">
 
-    {{ content }}
+        {{ content }}
 
-</div>
+    </div>
+
+</body>
+
+<!-- Concatenated and minified scripts -->
+<script src="/assets/js/global.min.js"></script>
 
 {% include analytics %}
 
-</body>
 </html>
