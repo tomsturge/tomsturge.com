@@ -4,8 +4,8 @@
 The portfolio site for Tom Sturge
 
 Author: Tom Sturge
-Version: 3.1
-URL: http://tomsturge.co/
+Version: {{ site.ver }}
+URL: {{ site.url }}
 =================================================
 
                                                    /
@@ -53,32 +53,32 @@ URL: http://tomsturge.co/
 <html class="page" itemscope itemtype="http://schema.org/Article" >
 <head>
 
-    <title>{% if page.type == 'post' %}{{ page.title }} - {% endif %}Tom Sturge - Front-end Architect, UX designer and educator</title>
+<title>{% if page.type == 'post' %}{{ page.title }} - {% endif %}Tom Sturge - Front-end Architect, UX designer and educator</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, height=device-height" />
-    <meta name="keywords" content="Front-end architect, UX designer, educator" />
-    <meta name="description" content="Tom Sturge. Front-end architect, UX designer and educator." />
-    
-    {% include social-head %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, height=device-height" />
+<meta name="keywords" content="Front-end architect, UX designer, educator" />
+<meta name="description" content="Tom Sturge. Front-end architect, UX designer and educator." />
 
-    <link href="/assets/css/screen.min.css" rel="stylesheet" type="text/css" media="all">
+{% include social-head %}
 
-    <link rel="shortcut icon" href="/icon.png">
-    <link rel="apple-touch-icon-precomposed" href="/icon.png">
-    <link rel="favicon" href="/assets/images/favicon.ico">
+<link href="/assets/css/screen.min.css" rel="stylesheet" type="text/css" media="all">
+
+<link rel="shortcut icon" href="/icon.png">
+<link rel="apple-touch-icon-precomposed" href="/icon.png">
+<link rel="favicon" href="/assets/images/favicon.ico">
 
 </head>
 
 <body class="page--{{page.type}}">
 
-    {% include nav %}
+{% include nav %}
 
-    <div class="container">
+<div class="container">
 
-        {{ content }}
+    {{ content }}
 
-    </div>
+</div>
 
 </body>
 
