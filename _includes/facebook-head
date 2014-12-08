@@ -1,9 +1,0 @@
-<!--
-  Facebook SocialGraph meta settings for those nice looking site previews
--->
-<meta property="og:title" content="{% if page.type == 'post' %}{{ page.title }} // {% endif %}Thomas Sturge" />
-<meta property="og:url" content="http://tomsturge.co.uk{{ page.url }}" />
-<meta property="og:site_name" content="Thomas Sturge" />
-<meta property="og:image" content="{% if page.fb_image %}http://tomsturge.co.uk{{ page.fb_image }}{% else %}http://tomsturge.co.uk/og_image.png{% endif %}"/>
-<meta property="og:description" content="{% if page.type == 'post' %}{{ page.meta }}{% elsif page.type == 'home' %}Frontend Architect, UX designer and educator.{% endif %}"/>
-<meta property="og:type" content="website"/>

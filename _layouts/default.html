@@ -53,12 +53,12 @@ URL: {{ site.url }}
 <html class="page" itemscope itemtype="http://schema.org/Article" >
 <head>
 
-<title>{% if page.type == 'post' %}{{ page.title }} - {% endif %}Tom Sturge - Front-end Architect, UX designer and educator</title>
+<title>{% if page.type == 'post' %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, height=device-height" />
 <meta name="keywords" content="Front-end architect, UX designer, educator" />
-<meta name="description" content="Tom Sturge. Front-end architect, UX designer and educator." />
+<meta name="description" content="{{ site.title }}." />
 
 {% include social-head %}
 
