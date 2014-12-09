@@ -5,13 +5,14 @@ default:
 dev:
     - 'concurrent:preBuild'
     - 'concurrent:devBuild'
-    - 'watch'
 
 prod:
-    - 'shell:bowerupdate'
     - 'concurrent:preBuild'
     - 'concurrent:devBuild'
     - 'concurrent:prodBuild'
+
+bower:
+    - 'shell:bowerupdate'
 
 img:
     - 'concurrent:imgMin'
@@ -19,3 +20,4 @@ img:
 devmin:
     - img
     - dev
+    

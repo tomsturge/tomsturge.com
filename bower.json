@@ -7,6 +7,7 @@
     "keymaster": "git://github.com/madrobby/keymaster#564ea42e07de40da8113a571f17ceae8802672ff",
     "loader.js": "git://github.com/stefanpenner/loader.js#1.0.0",
     "moment": "2.8.3",
-    "symbolset-sass": "~0.2.1"
+    "symbolset-sass": "~0.2.1",
+    "reveal.js": "~2.6.2"
   }
 }

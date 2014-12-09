@@ -4,8 +4,10 @@
 
 // Fonts
 
-@import '../../bower_components/symbolset-sass/ss-social-regular';
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro|Montserrat:700|Roboto+Slab:400,700);
+@import '../../bower_components/symbolset-sass/symbolset';
+
+@include ss-social-regular( $fontsDir: 'fonts');
 
 //------------------------------------
 //  $SETUP

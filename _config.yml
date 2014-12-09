@@ -6,7 +6,12 @@ desc: Making beautiful responsive and semantic user experiences for over 10 year
 markdown: rdiscount
 permalink: /:categories/:title
 paginate: 10
-exclude: [sass, CNAME]
+exclude:
+    - sass
+    - CNAME
+    - Gruntfile.js
+    - bower.json
+    - package.json
 
 collections:
 - portfolio
