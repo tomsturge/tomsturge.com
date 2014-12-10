@@ -7,7 +7,7 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro|Montserrat:700|Roboto+Slab:400,700);
 @import '../../bower_components/symbolset-sass/symbolset';
 
-@include ss-social-regular( $fontsDir: 'fonts');
+@include ss-social-regular($fontsDir: 'fonts');
 
 //------------------------------------
 //  $SETUP
@@ -33,3 +33,10 @@
 @import 'site/icons';
 @import 'site/lists';
 @import 'site/misc';
+
+
+//------------------------------------
+//  $PRESENTATIONS
+//------------------------------------
+
+@import '../../bower_components/reveal.js/css/theme/default.css';
