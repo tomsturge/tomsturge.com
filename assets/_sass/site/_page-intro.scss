@@ -17,16 +17,16 @@
     text-align: center;
 
     .wrapper {
-        padding-bottom: 100px;
-        padding-top: 150px;
+        padding-bottom: 80px;
+        padding-top: 120px;
 
         @include media-query(portable) {
-            padding-bottom: 100px;
-            padding-top: 100px; }
+            padding-bottom: 80px;
+            padding-top: 70px; }
 
         @include media-query(palm) {
-            padding-bottom: 76px;
-            padding-top: 76px; }
+            padding-bottom: 65px;
+            padding-top: 55px; }
     }
 
 
@@ -63,26 +63,7 @@
         padding: 5px 10px; }
 
     > div {
-        background-color: fade-out($brand-color, .5);
-
-        &:before,
-        &:after {
-            background: #fff;
-            bottom: -12%;
-            content: ' ';
-            display: block;
-            height: 18%;
-            position: absolute;
-            width: 52%; }
-
-        &:after {
-            right: -1%;
-            transform: rotate(-3deg);}
-
-        &:before {
-            left: -1%;
-            transform: rotate(3deg); }
-    }
+        background-color: fade-out($brand-color, .5); }
 
     a {
         color: #fff;
