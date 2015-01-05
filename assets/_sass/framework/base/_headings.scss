@@ -10,9 +10,10 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $body-font;
+    font-family: $heading-font;
     font-weight: 700;
     text-transform: uppercase;
+    line-height: 1.5 !important;
 }
 
 h1,
