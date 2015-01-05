@@ -3,10 +3,11 @@ default:
     - prod
 
 dev:
-    - 'concurrent:preBuild'
-    - 'concurrent:devBuild'
+    - prod
+    - 'watch'
 
 prod:
+    - bower
     - 'concurrent:preBuild'
     - 'concurrent:devBuild'
     - 'concurrent:prodBuild'
@@ -20,4 +21,4 @@ img:
 devmin:
     - img
     - dev
-    
+

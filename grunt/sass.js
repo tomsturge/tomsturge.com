@@ -5,7 +5,7 @@ module.exports = {
             sourcemap: 'none'
         },
         files: {
-            'assets/css/screen.css': 'assets/sass/screen.scss'
+            'assets/css/screen.css': 'assets/_sass/screen.scss'
         }
     }
 }

@@ -8,8 +8,8 @@ module.exports = {
 
     css: {
         files: ['assets/**/*.scss'],
-        tasks: ['autoprefixer',
-                'sass']
+        tasks: ['sass',
+                'autoprefixer']
     },
 
     options : {
