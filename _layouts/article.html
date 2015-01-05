@@ -9,9 +9,11 @@ type: article
     <div class="page__intro" style="background-image: url(/assets/images/headers/posts/{{ page.header }});">
         <div>
             <div class="wrapper">
+                {% if page.date %}
                 <time datetime="{{ page.date | date: "%Y-%m" }}">
                     {{ page.date | date: "%b, %Y" }}
                 </time>
+                {% endif %}
 
                 <h2>{{ page.title }}</h2>
         	</div>
