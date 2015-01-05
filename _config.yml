@@ -1,19 +1,16 @@
 url: http://tomsturge.co
 ver: 3.1.5
-title: Tom Sturge - Front-end Architect, UX Designer and Educator
-desc: Making beautiful responsive and semantic user experiences for over 10 years. Specialising in front-end development, utilising modern JS technologies and agile workflows.
+title: "Tom Sturge - Front-end Architect, UX Designer and Educator"
+desc: "Making beautiful responsive and semantic user experiences for over 10 years. Specialising in front-end development, utilising modern JS technologies and agile workflows."
 
 markdown: rdiscount
-permalink: /:categories/:title
+permalink: /:year/:month/:title
 paginate: 10
 exclude:
-    - sass
     - CNAME
     - Gruntfile.js
     - bower.json
     - package.json
 
-collections:
-- portfolio
 gems:
   - jekyll-sitemap
