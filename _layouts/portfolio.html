@@ -32,8 +32,8 @@ type: portfolio-piece
                 </p>
             {% endfor %}
 
-            <a class="site-link" href="{{ page.site_url }}" title="{{ page.title }}">
-                <span class="ss-icon">link</span>{{ page.site_name }}
+            <a class="site-link" href="{% if page.site_url %}{{ page.site_url }}{% else %}#{% endif %}" title="{{ page.title }}">
+                <span class="ss-icon">link</span>{% if page.site_url %}{{ page.site_name }}{% else %}Unavailable{% endif %}
             </a>
 
         </div>
