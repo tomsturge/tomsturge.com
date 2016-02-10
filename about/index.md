@@ -6,7 +6,7 @@ header: about.png
 
 Front-end Architect, UX Designer, and huge nerd from the UK. My industry expereince spans over 10 years of making effective, manageable and scalable sites for clients from all over the world, such as Recruitment Genius, Visit Kent and Love & Company.
 
-I like clean and simple, user-centric design. My primary focus is perfecting user experineces and optimising workflows - if Sass, BEM, Grunt, or Critical Rendering Path mean anything to you then we can be friends.
+I like clean and simple, user-centric design. My primary focus is perfecting user experiences and optimising workflows - if Sass, BEM, Grunt, or Critical Rendering Path mean anything to you then we can be friends.
 
 ## About this site
 
