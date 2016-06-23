@@ -10,10 +10,10 @@
   },
   "dependencies": {
     "downsize": "0.0.5",
-    "express": "4.10.2",
-    "moment": "2.8.3",
+    "express": "4.14.0",
+    "moment": "2.11.2",
     "rss": "1.0.0",
-    "semver": "4.1.0"
+    "semver": "4.3.2"
   },
   "devDependencies": {
     "blanket": "~1.1.6",
