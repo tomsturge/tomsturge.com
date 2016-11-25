@@ -1,0 +1,24 @@
+default:
+    - img
+    - prod
+
+dev:
+    - prod
+    - 'watch'
+
+prod:
+    - bower
+    - 'concurrent:preBuild'
+    - 'concurrent:devBuild'
+    - 'concurrent:prodBuild'
+
+bower:
+    - 'shell:bowerupdate'
+
+img:
+    - 'concurrent:imgMin'
+
+devmin:
+    - img
+    - dev
+
