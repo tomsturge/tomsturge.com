@@ -68,8 +68,6 @@ URL: {{ site.url }}
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 {% include social-head %}
-
-<link href="/assets/css/screen.min.css" rel="stylesheet" type="text/css" media="all">
 </head>
 
 <body class="page--{{page.type}}">
@@ -77,14 +75,12 @@ URL: {{ site.url }}
 {% include nav %}
 
 <div class="container">
-
     {{ content }}
-
 </div>
-
 </body>
+
+<link href="/assets/css/screen.min.css" rel="stylesheet" type="text/css" media="all">
 
 <!-- Concatenated and minified scripts -->
 <script src="/assets/js/global.min.js"></script>
-
 </html>
