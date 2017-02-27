@@ -70,7 +70,7 @@ URL: {{ site.url }}
 {% include social-head %}
 </head>
 
-<body class="page--{{page.type}}">
+<body class="page--{{page.type}}" style="display:none">
 
 {% include nav %}
 
@@ -83,4 +83,9 @@ URL: {{ site.url }}
 
 <!-- Concatenated and minified scripts -->
 <script src="/assets/js/global.min.js"></script>
+<script async>
+    window.onload = () => {
+        document.body.removeAttribute('style')
+    }
+</script>
 </html>

@@ -59,6 +59,13 @@ URL: http://tomsturge.co
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="keywords" content="Tom Sturge - Front-end Architect, UX Designer and Educator" />
 <meta name="description" content="Making beautiful responsive and semantic user experiences for over 10 years. Specialising in front-end development, utilising modern JS technologies and agile workflows.." />
+<meta name="theme-color" content="#ffffff">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" content="summary_large_image">
@@ -87,16 +94,9 @@ URL: http://tomsturge.co
 <link rel="author" href="https://plus.google.com/+tomsturge/posts/">
 <link rel="publisher" href="https://plus.google.com/+tomsturge/">
 
-
-<link href="/assets/css/screen.min.css" rel="stylesheet" type="text/css" media="all">
-
-<link rel="shortcut icon" href="/icon.png">
-<link rel="apple-touch-icon-precomposed" href="/icon.png">
-<link rel="favicon" href="/assets/images/favicon.ico">
-
 </head>
 
-<body class="page--articles">
+<body class="page--articles" style="display:none;" onload="">
 
 <nav class="main-nav">
     <a href="/" title="Menu" class=""><span></span></a>
@@ -117,7 +117,6 @@ URL: http://tomsturge.co
 
 
 <div class="container">
-
     <div id="posts-page">
 
     <div class="page__intro" style="background-image: url(/assets/images/headers/postsIntro.png);">
@@ -148,12 +147,15 @@ URL: http://tomsturge.co
     </div>
 
 </div>
-
 </div>
-
 </body>
 
+<link href="/assets/css/screen.min.css" rel="stylesheet" type="text/css" media="all">
 <!-- Concatenated and minified scripts -->
 <script src="/assets/js/global.min.js"></script>
-
+<script async>
+    window.onload = () => {
+        document.body.removeAttribute('style')
+    }
+</script>
 </html>
