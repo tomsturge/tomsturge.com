@@ -5,8 +5,6 @@
 //
 
 .page__intro {
-    animation: fadeInDown .5s ease-in 1s;
-    animation-fill-mode: both;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,11 +20,13 @@
 
         @include media-query(portable) {
             padding-bottom: 80px;
-            padding-top: 70px; }
+            padding-top: 70px;
+        }
 
         @include media-query(palm) {
             padding-bottom: 65px;
-            padding-top: 55px; }
+            padding-top: 55px;
+        }
     }
 
 
@@ -51,7 +51,8 @@
     .post--length {
         float: right;
         line-height: 30px;
-        margin: 0 10px 0 0;}
+        margin: 0 10px 0 0;
+    }
 
     time {
         @include font-size(16px);
@@ -60,13 +61,16 @@
         float: right;
         line-height: 1;
         margin: 0 0 15px;
-        padding: 5px 10px; }
+        padding: 5px 10px;
+    }
 
     > div {
-        background-color: fade-out($brand-color, .5); }
+        background-color: fade-out($brand-color, .5);
+    }
 
     a {
         color: #fff;
         text-decoration: none;
-        text-shadow: none; }
+        text-shadow: none;
+    }
 }
