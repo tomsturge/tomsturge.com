@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "downsize": "0.0.5",
-    "express": "4.15.3",
+    "express": "4.16.0",
     "moment": "2.15.2",
     "rss": "1.0.0",
     "semver": "4.3.2",
