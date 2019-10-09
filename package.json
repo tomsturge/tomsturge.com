@@ -14,7 +14,7 @@
     "moment": "2.19.3",
     "rss": "1.0.0",
     "semver": "4.3.2",
-    "snyk": "^1.25.1"
+    "snyk": "^1.234.0"
   },
   "devDependencies": {
     "blanket": "~1.1.6",
