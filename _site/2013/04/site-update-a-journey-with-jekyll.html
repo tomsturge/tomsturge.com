@@ -1,55 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-=================================================
-The portfolio site for Tom Sturge
-
-Author: Tom Sturge
-Version: 3.1.5
-URL: http://tomsturge.co
-=================================================
-
-                                                   /
-                                                 .7
-                                      \       , //
-                                      |\.--._/|//
-                                     /\ ) ) ).'/
-                                    /(  \  // /
-                                   /(   )`((_/ \
-                                  / ) | _\     /
-                                 /|)  \  @\    |
-                                |  \|  \   |   |
-                               /  \  \  `. |   |
-                              |  )  |    \/    \
-                             /  \    \   (\    /
-            _....___         |  \      \   \```
-     ,.._.-'        '''--...-||\     -. \   \
-   .'.=.'                    `         `.\ [ |
-  /   /                                  \]  \
- | / /                                    |   |
- | | |          \                         |   |
- | | |           |                        ^   |
- |   \           |                       /|\ /
- |    \          |             \        ( |]/|
- \     \         /._           /         \|/ |
- |     )       /   /'-------'/           `'-:.
- \   .'      ,'  ,' ,     \   `'-.__          \
-  \ /      ,'  ,'   )\    /|        ';'---    /
-   \|    ,'|  /...-' / _.' /         \   /   /
-    \   /  |  |    .'-'   /         ,--.(   /
-    |  |   \  |---'     .'         / |    /\
-    |  \.  |  \     .-;.-/        |   \ .' /
-    |   |`-\   |____,.-'`         | _.-'  |
-    |    \ |   \                   ` |    |
-    \    | |    |                    |    |
-     |   ( |    \                    \    \
-     |   |  ) _.'\                    ) _.'\
-     |   \ ('`    \                  ('`    \
-     )  _.'\`-....'                   `-....'
-     ('`    \
-      `-.___/
-
--->
-
 <html class="page" itemscope itemtype="http://schema.org/Article" >
 <head>
 
@@ -96,7 +45,7 @@ URL: http://tomsturge.co
 
 </head>
 
-<body class="page--" style="display:none;" onload="">
+<body class="page--" style="display:none">
 
 <nav class="main-nav">
     <a href="/" title="Menu" class=""><span></span></a>
@@ -110,7 +59,7 @@ URL: http://tomsturge.co
             <li><a href="/portfolio">Portfolio</a></li>
             <li><a href="/articles">Articles</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="https://github.com/tomsturge/feedback/issues/new" target="_blank">Questions</a></li>
+            <li><a href="https://github.com/tomsturge/feedback/issues/new" target="_blank" rel="noopener">Questions</a></li>
         </ul>
     </div>
 </nav>
@@ -118,26 +67,24 @@ URL: http://tomsturge.co
 
 <div class="container">
     <div id="post-single">
+  <div class="page__intro" style="background-image: url(/assets/images/headers/posts/jekyllJourney.png);">
+    <div>
+      <div class="wrapper">
+        
+          <time datetime="2013-04">
+            Apr, 2013
+          </time>
+        
 
-    <div class="page__intro" style="background-image: url(/assets/images/headers/posts/jekyllJourney.png);">
-        <div>
-            <div class="wrapper">
-                
-                <time datetime="2013-04">
-                    Apr, 2013
-                </time>
-                
-
-                <h2>Site update - A journey with Jekyll</h2>
-        	</div>
-        </div>
+        <h2>Site update - A journey with Jekyll</h2>
+      </div>
     </div>
+  </div>
 
-
-    <article>
-    	<section id="post-content">
-    		<div class="wrapper">
-    	  	    <p>This update has been coming for a long time, I’ve been talking about going over my site for a while. The aim was to add this very feature, the ability to start writing articles and try my hand at doing it in some professional capcity.</p>
+  <article>
+    <section id="post-content">
+      <div class="wrapper">
+        <p>This update has been coming for a long time, I’ve been talking about going over my site for a while. The aim was to add this very feature, the ability to start writing articles and try my hand at doing it in some professional capcity.</p>
 
 <p>The platform I’ve chosen to provide this update is <a href="http://jekyllrb.com/" title="Jekyll">Jekyll</a>, which is a static site generator that uses the <a href="https://github.com/Shopify/liquid" title="Liquid">Liquid</a> templating engine. It was fun learning how to use these technologies and isn’t that the point of what we do as developers? To have fun and challenge ourselves, especially in our side projects.</p>
 
@@ -155,7 +102,7 @@ URL: http://tomsturge.co
   <li>Added recent posts/demos widget for the front page</li>
 </ul>
 
-<p>The update meant a full recode to implement the Jekyll/Liquid structuring I wanted to achieve. It was really interesting going over my old code and seeing the different ways I used to do things. For instance; I didn’t understand how to use the <code class="highlighter-rouge">&lt;section&gt;</code> element at all and used it as a shiney new <code class="highlighter-rouge">&lt;div&gt;</code> and not as the “sections” of articles within an <code class="highlighter-rouge">&lt;article&gt;</code> block, which is the correct use for them. Silly me…</p>
+<p>The update meant a full recode to implement the Jekyll/Liquid structuring I wanted to achieve. It was really interesting going over my old code and seeing the different ways I used to do things. For instance; I didn’t understand how to use the <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code> element at all and used it as a shiney new <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> and not as the “sections” of articles within an <code class="language-plaintext highlighter-rouge">&lt;article&gt;</code> block, which is the correct use for them. Silly me…</p>
 
 <p>The <a href="http://sass-lang.com" title="SASS">SASS</a> was in a bit of a state too, again this goes down to me growing as a developer and finding my stride with the arrangement of CSS. Before I just put it in any order and didn’t regard the need to maintaining it, <strong>big mistake</strong>. I’ll follow this topic up with a post about my Personal Style Guide and why reasonings behind the styles I’ve documented.</p>
 
@@ -185,15 +132,16 @@ URL: http://tomsturge.co
 
 <p><strong>Thank you for stopping by and come back soon for future articles</strong></p>
 
-    	    </div>
-    	</section>
-    </article>
+      </div>
+    </section>
+  </article>
 </div>
 
 </div>
 </body>
 
 <link href="/assets/css/screen.min.css" rel="stylesheet" type="text/css" media="all">
+
 <!-- Concatenated and minified scripts -->
 <script src="/assets/js/global.min.js"></script>
 <script async>

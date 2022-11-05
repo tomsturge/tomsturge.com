@@ -1,55 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-=================================================
-The portfolio site for Tom Sturge
-
-Author: Tom Sturge
-Version: 3.1.5
-URL: http://tomsturge.co
-=================================================
-
-                                                   /
-                                                 .7
-                                      \       , //
-                                      |\.--._/|//
-                                     /\ ) ) ).'/
-                                    /(  \  // /
-                                   /(   )`((_/ \
-                                  / ) | _\     /
-                                 /|)  \  @\    |
-                                |  \|  \   |   |
-                               /  \  \  `. |   |
-                              |  )  |    \/    \
-                             /  \    \   (\    /
-            _....___         |  \      \   \```
-     ,.._.-'        '''--...-||\     -. \   \
-   .'.=.'                    `         `.\ [ |
-  /   /                                  \]  \
- | / /                                    |   |
- | | |          \                         |   |
- | | |           |                        ^   |
- |   \           |                       /|\ /
- |    \          |             \        ( |]/|
- \     \         /._           /         \|/ |
- |     )       /   /'-------'/           `'-:.
- \   .'      ,'  ,' ,     \   `'-.__          \
-  \ /      ,'  ,'   )\    /|        ';'---    /
-   \|    ,'|  /...-' / _.' /         \   /   /
-    \   /  |  |    .'-'   /         ,--.(   /
-    |  |   \  |---'     .'         / |    /\
-    |  \.  |  \     .-;.-/        |   \ .' /
-    |   |`-\   |____,.-'`         | _.-'  |
-    |    \ |   \                   ` |    |
-    \    | |    |                    |    |
-     |   ( |    \                    \    \
-     |   |  ) _.'\                    ) _.'\
-     |   \ ('`    \                  ('`    \
-     )  _.'\`-....'                   `-....'
-     ('`    \
-      `-.___/
-
--->
-
 <html class="page" itemscope itemtype="http://schema.org/Article" >
 <head>
 
@@ -96,7 +45,7 @@ URL: http://tomsturge.co
 
 </head>
 
-<body class="page--" style="display:none;" onload="">
+<body class="page--" style="display:none">
 
 <nav class="main-nav">
     <a href="/" title="Menu" class=""><span></span></a>
@@ -110,7 +59,7 @@ URL: http://tomsturge.co
             <li><a href="/portfolio">Portfolio</a></li>
             <li><a href="/articles">Articles</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="https://github.com/tomsturge/feedback/issues/new" target="_blank">Questions</a></li>
+            <li><a href="https://github.com/tomsturge/feedback/issues/new" target="_blank" rel="noopener">Questions</a></li>
         </ul>
     </div>
 </nav>
@@ -118,22 +67,20 @@ URL: http://tomsturge.co
 
 <div class="container">
     <div id="post-single">
+  <div class="page__intro" style="background-image: url(/assets/images/headers/posts/about.png);">
+    <div>
+      <div class="wrapper">
+        
 
-    <div class="page__intro" style="background-image: url(/assets/images/headers/posts/about.png);">
-        <div>
-            <div class="wrapper">
-                
-
-                <h2>A little bit about Me</h2>
-        	</div>
-        </div>
+        <h2>A little bit about Me</h2>
+      </div>
     </div>
+  </div>
 
-
-    <article>
-    	<section id="post-content">
-    		<div class="wrapper">
-    	  	    <p>Front-end Architect, UX Designer, and huge nerd from the UK. My industry expereince spans over 10 years of making effective, manageable and scalable sites for clients from all over the world, such as Recruitment Genius, Visit Kent and Love &amp; Company.</p>
+  <article>
+    <section id="post-content">
+      <div class="wrapper">
+        <p>Front-end Architect, UX Designer, and huge nerd from the UK. My industry expereince spans over 10 years of making effective, manageable and scalable sites for clients from all over the world, such as Recruitment Genius, Visit Kent and Love &amp; Company.</p>
 
 <p>I like clean and simple, user-centric design. My primary focus is perfecting user experiences and optimising workflows - if Sass, BEM, Grunt, or Critical Rendering Path mean anything to you then we can be friends.</p>
 
@@ -156,15 +103,16 @@ URL: http://tomsturge.co
 
 <p>For comments or questions, feel free to <a href="https://github.com/tomsturge/feedback">ask me on GitHub</a>, on <a href="http://twitter.com/tomsturge">Twitter</a>, and of course, if you must, via email at tom at sturge dot co.</p>
 
-    	    </div>
-    	</section>
-    </article>
+      </div>
+    </section>
+  </article>
 </div>
 
 </div>
 </body>
 
 <link href="/assets/css/screen.min.css" rel="stylesheet" type="text/css" media="all">
+
 <!-- Concatenated and minified scripts -->
 <script src="/assets/js/global.min.js"></script>
 <script async>

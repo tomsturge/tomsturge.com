@@ -7,8 +7,6 @@ permalink: /:year/:month/:title
 paginate: 10
 exclude:
     - CNAME
-    - Gruntfile.js
-    - bower.json
     - package.json
 
 gems:
