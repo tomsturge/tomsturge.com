@@ -1,14 +1,16 @@
 ---
 date: 2014-09-16
 layout: article
+type: article
 slug: getting-started-with-gruntjs
 title: Getting started with gruntjs
 intro: An intro to gruntjs and how to setup a simple automation
-header: jekyllJourney.png
+header: jekyllJourney
 categories:
 - article
 meta: An intro to gruntjs and how to setup a simple automation
-published: false
+tags: 
+- Tools
 ---
 
 First of all Grunt is not the confusing tool that it might look like on the surface, the learning curve is a little sharp but it quickly becomes simple and easy to config a very powerful test and deployment process with Gruntjs.

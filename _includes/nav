@@ -7,10 +7,8 @@
 
         <ul class="main-nav__menu">
             <li class="portable-only"><a href="/">Home</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
             <li><a href="/articles">Articles</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="https://github.com/tomsturge/feedback/issues/new" target="_blank" rel="noopener">Questions</a></li>
         </ul>
     </div>
 </nav>

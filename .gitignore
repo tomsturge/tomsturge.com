@@ -1,9 +1,8 @@
 node_modules
 dist
 .tmp
-.sass-cache
 config
-compass_app_log.txt
-fire_app_log.txt
 config.rb
-bower_components
+_site
+scss-lint.xml
+.jekyll-cache

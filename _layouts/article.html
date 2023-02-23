@@ -5,23 +5,21 @@ type: article
 
 
 <div id="post-single">
-  <div class="page__intro" style="background-image: url(/assets/images/headers/posts/{{ page.header }});">
-    <div>
-      <div class="wrapper">
-        {% if page.date %}
-          <time datetime="{{ page.date | date: "%Y-%m" }}">
-            {{ page.date | date: "%b, %Y" }}
-          </time>
-        {% endif %}
-
-        <h2>{{ page.title }}</h2>
-      </div>
+    <div class="wrapper">
+      {% if page.date %}
+      <time datetime="{{ page.date | date: "%Y-%m" }}">
+        {{ page.date | date: "%b, %Y" }}
+      </time>
+      {% endif %}
+      
+      <h2>{{ page.title }}</h2>
     </div>
-  </div>
+</div>
 
-  <article>
-    <section id="post-content">
+<article>
+  <section id="post-content">
       <div class="wrapper">
+      <img src="/assets/images/headers/posts/{{ page.header }}.jpg" />
         {{ content }}
       </div>
     </section>

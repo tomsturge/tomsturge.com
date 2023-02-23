@@ -1,0 +1,41 @@
+//
+//===============================================
+//  $TYPOGRAPHY
+//===============================================
+//
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: $brand-color;
+  color: #fff; 
+}
+
+::-moz-selection {
+  background: $brand-color;
+  color: #fff; 
+}
+
+%leading-paragraph {
+  text-align: justify;
+
+  .wrapper {
+    padding-bottom: 0;
+
+    p:first-of-type {
+      &:first-letter {
+        background: 0 0;
+        color: #528cc5;
+        float: left;
+        font-family: inherit;
+        font-size: 3.75rem;
+        line-height: .9;
+        margin: .5rem 0 0 0;
+        padding: inherit;
+        text-indent: 0;
+      }
+    }
+  }
+}

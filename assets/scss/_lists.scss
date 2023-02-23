@@ -1,0 +1,126 @@
+//
+//===============================================
+//  $LISTS
+//===============================================
+//
+
+
+.post-list {
+  > ul {
+    list-style-type: none;
+    margin: 0; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  
+    > li {
+      @include font-size(22px);
+
+      margin-bottom: 0;
+      position: relative;
+      transition: border .5s, border-color .5s;
+
+      a {
+        display: grid;
+        grid-template-rows: [image] 1fr [content] auto; 
+        row-gap: 20px;
+        border: 0;
+        box-shadow: none;
+        color: $black;
+        height: 100%;
+        overflow: hidden;
+        padding: 0;
+        text-decoration: none;
+        width: auto;
+
+        &:hover {
+          box-shadow: none;
+
+          .post-list__title {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .post-list__title {
+        @include font-size(18px);
+        border-bottom: 0;
+        font-family: $heading-font;
+        line-height: 1.1;
+        margin-bottom: .5rem;
+
+        @include media-query(palm) {
+          @include font-size(18px); 
+        }
+      }
+
+      p {
+        @include font-size(16px);
+        clear: both;
+        color: #555;
+        line-height: 1.2;
+        margin: 0 0 .5rem;
+      }
+
+      .post-list__meta {
+        @include font-size(12px);
+        line-height: 1.2;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        time {
+          @extend %fr;
+          color: #888;
+
+          @include media-query(palm) {
+            display: none; 
+          }
+        }
+      }
+
+      .post-list__tags {
+        @include font-size(16px);
+        list-style: none;
+        margin: 0 0 .25rem;
+        padding: 0;
+        color: $brand-color;
+        font-family: $heading-font;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.post-list__featured {
+  margin-bottom: 20px;
+
+  a { 
+    display: grid;
+    grid-template-columns: [image] 1fr [content] 1fr; 
+    row-gap: 20px;
+  }
+
+  .post-list__title {
+    @include font-size(52px);
+    border-bottom: 0;
+    font-family: $heading-font;
+    line-height: 1.1;
+    margin-bottom: .5rem;
+
+    @include media-query(palm) {
+      @include font-size(18px); 
+    }
+  }
+}
+
+.post-list__image {
+  grid-area: image;
+}
+
+.post-list__content {
+  grid-area: content;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

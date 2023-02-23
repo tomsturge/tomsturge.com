@@ -1,27 +1,51 @@
 
 <div class="post-panel">
-    <div class="heading-wrapper">
-        <h2 class="heading--lined heading--post">
-            <a href="/articles" data-hover="The desire to write grows with writing">Articles</a>
-        </h2>
-    </div>
+  <div class="wrapper">
+    <div class="post-list post-list--home">
+      <div class="post-list__featured">
+        {% for article in site.categories.article limit:1 %}
+          <a href="{{ article.url }}" title="{{ article.title }}">
+            <img class="post-list__image" src="/assets/images/headers/posts/{{ article.header }}.jpg" />
+            <div class="post-list__content">
+              <div class="post-list__meta">
+                <ul class="post-list__tags">
+                  {% for tag in article.tags %}
+                    <li>{{tag}}</li>
+                  {% endfor %}
+                </ul>
+                </div>
 
-    <div class="wrapper">
-        <div class="post-list post-list--home">
-            <ul>
-                {% for post in site.categories.article limit:3 %}
-                    <li class="post-list__post">
-                        <a href="{{ post.url }}" title="{{ post.title }}">
-                            <h2 class="post-list__title">{{ post.title }}</h2>
-                            <p>{{ post.intro }} </p>
-                            <time datetime="{{ post.date | date: "%Y-%m" }}">
-                                {{ post.date | date: "%b, %Y" }}
-                            </time>
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-        <!-- /.post-box -->
+              <h2 class="post-list__title">{{ article.title }}</h2>
+              <p>{{ article.intro }} </p>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+
+      <ul>
+        {% for article in site.categories.article limit:4 offset: 1 %}
+          <li class="post-list__post">
+            <a href="{{ article.url }}" title="{{ article.title }}">
+              <img class="post-list__image" src="/assets/images/headers/posts/{{ article.header }}.jpg" />
+              <div class="post-list__content">
+                <h3 class="post-list__title">{{ article.title }}</h3>
+                <p>{{ article.intro }} </p>
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+         {% for article in site.categories.article limit:4 offset: 1 %}
+          <li class="post-list__post">
+            <a href="{{ article.url }}" title="{{ article.title }}">
+              <img class="post-list__image" src="/assets/images/headers/posts/{{ article.header }}.jpg" />
+              <div class="post-list__content">
+                <h3 class="post-list__title">{{ article.title }}</h3>
+                <p>{{ article.intro }} </p>
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
+  </div>
 </div>

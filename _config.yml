@@ -4,10 +4,13 @@ title: "Tom Sturge - Front-end Architect, UX Designer and Educator"
 desc: "Making beautiful responsive and semantic user experiences for over 10 years. Specialising in front-end development, utilising modern JS technologies and agile workflows."
 
 permalink: /:year/:month/:title
-paginate: 10
 exclude:
     - CNAME
     - package.json
 
 gems:
   - jekyll-sitemap
+
+sass:
+  sass_dir: /assets/scss
+  style: :compressed

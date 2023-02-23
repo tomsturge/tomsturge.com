@@ -4,7 +4,7 @@ type: articles
 ---
 
 <div id="posts-page">
-  <div class="page__intro" style="background-image: url(/assets/images/headers/postsIntro.png);">
+  <div class="page__intro" style="background-image: url(/assets/images/headers/postsIntro.png)">
     <div>
       <div class="wrapper">
         <h2>Articles</h2>
@@ -15,13 +15,13 @@ type: articles
   <div class="wrapper">
     <div class="post-list">
       <ul>
-        {% for post in site.categories.article %}
+        {% for post in site.data.contentful.articles %}
           <li class="post-list__post">
             <a href="{{ post.url }}">
               <h2 class="post-list__title">{{ post.title }}</h2>
               <p>{{ post.intro }} </p>
-              <time datetime="{{ post.date | date: "%Y-%m" }}">
-                {{ post.date | date: "%b, %Y" }}
+              <time datetime="{{ post.publish_date | date: "%Y-%m" }}">
+                {{ post.publish_date | date: "%b, %Y" }}
               </time>
             </a>
           </li>
