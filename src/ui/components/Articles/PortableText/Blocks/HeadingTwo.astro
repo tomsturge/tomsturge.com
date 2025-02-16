@@ -1,0 +1,29 @@
+---
+const { node } = Astro.props as {
+  node: {
+    children: {
+      text: string;
+    }[];
+  };
+};
+
+const [child] = node.children;
+---
+
+<h2
+  id={`${child.text
+    .replace(/([a-z])([A-Z])/g, '$1-$2')
+    .replace(/[\s_:]+/g, '-')
+    .toLowerCase()}`}
+>
+  {child.text}
+</h2>
+
+<style lang="scss">
+  h2 {
+    font-size: var(--fontSizeContentHeadingTwo);
+    font-family: var(--fontFamilyMontserrat);
+    margin: 0 0 1rem;
+    padding-top: 1rem;
+  }
+</style>

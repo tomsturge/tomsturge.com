@@ -1,0 +1,201 @@
+---
+import { sanityClient } from "sanity:client";
+
+import { getCategories } from "@/ui/queries";
+
+import { ArticleList } from "@/ui/components";
+
+const { headings } = Astro.props;
+
+const categories = await sanityClient.fetch(getCategories);
+---
+
+<div class="article-content__sidebar">
+  {
+    headings != undefined && (
+      <div class="sidebar-section section-toc">
+        <p class="sidebar__title">Table of Contents</p>
+        <ul class="section-list">
+          {headings &&
+            headings.map(({ children, style }) => {
+              if (style === "h2") {
+                const text = children[0].text;
+                return (
+                  <li class="section-list__item">
+                    <a
+                      href={`#${text
+                        .replace(/([a-z])([A-Z])/g, "$1-$2")
+                        .replace(/[\s_:]+/g, "-")
+                        .toLowerCase()}`}
+                    >
+                      {text}
+                    </a>
+                  </li>
+                );
+              }
+            })}
+        </ul>
+      </div>
+    )
+  }
+
+  <div class="sidebar-section">
+    <ul class="categories-list">
+      {
+        categories.map(({ title, slug, articleCount }) => (
+          <>
+            {articleCount > 0 && (
+              <li
+                class:list={[
+                  "categories-item",
+                  title.toLowerCase().split(" ").join("-"),
+                ]}
+              >
+                <a href={`/category/${slug.current}`}>
+                  <p>{title}</p>{" "}
+                  <span class={title.toLowerCase()}>{articleCount}</span>
+                </a>
+              </li>
+            )}
+          </>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div class="sidebar-section">
+    <p class="sidebar__title">Recent articles</p>
+
+    <ArticleList limit={2} compact={true} featured={true} />
+  </div>
+</div>
+
+<style lang="scss">
+  .article-content__sidebar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    @media screen and (max-width: 81rem) {
+      display: none;
+    }
+  }
+
+  .categories-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.75rem;
+    flex-direction: column;
+  }
+
+  .categories-item {
+    background-color: gray;
+    border-radius: 3rem;
+
+    a {
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      color: white;
+    }
+
+    p {
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.025rem;
+      font-family: var(--fontFamilyCondensed);
+    }
+
+    span {
+      background-color: white;
+      border-radius: 1rem;
+      min-width: 1.675rem;
+      padding: 0.25rem 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--colorBlack);
+      font-size: 14px;
+      transform: translateX(0.5rem);
+    }
+
+    &.leadership {
+      background-color: var(--colorCategoryLeadership);
+    }
+
+    &.culture {
+      background-color: var(--colorCategoryCulture);
+    }
+
+    &.technology {
+      background-color: var(--colorCategoryTechnology);
+    }
+
+    &.book-review {
+      background-color: var(--colorCategoryBookReview);
+    }
+
+    &.sustainability {
+      background-color: var(--colorCategorySustainability);
+    }
+  }
+
+  .sidebar-section {
+    margin-bottom: 2rem;
+    padding: 0;
+    width: 100%;
+  }
+
+  .sidebar__title {
+    font-weight: var(--fontWeightBold);
+    font-family: var(--fontFamilyHeading);
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+  }
+
+  .section-list {
+    list-style: none;
+    margin: 0;
+    padding: 1.5rem 0;
+    border: 1px solid #cbcbcb;
+    border-top: none;
+
+    li {
+      font-family: var(--fontFamilyHeading);
+      font-size: 0.9375rem;
+      line-height: 1.2;
+      padding: 0 1.25rem;
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+
+  a {
+    &:hover {
+      color: #d21545;
+    }
+  }
+
+  .section-toc {
+    align-self: start;
+    background-color: var(--colorWhite);
+    position: sticky;
+    top: 1rem;
+    z-index: 10;
+    width: 100%;
+
+    .sidebar__title {
+      background-color: #d21545;
+      color: var(--colorWhite);
+      border-color: #d21545;
+    }
+  }
+</style>

@@ -1,0 +1,34 @@
+---
+export const prerender = true;
+import { DefaultLayout } from "@/ui/layouts";
+---
+
+<DefaultLayout>
+  <div class="container">
+    <h1>Page not found</h1>
+    <p>Sorry, that page is unavailable</p>
+  </div>
+</DefaultLayout>
+
+<style lang="scss">
+  .container {
+    margin: 10rem auto 4rem;
+    padding: 6.25rem 0;
+    background-color: var(--colorWhite);
+    box-shadow: var(--boxShadow);
+    text-align: center;
+
+    @media screen and (max-width: 750px) {
+      padding: 2.5rem 0;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+</style>

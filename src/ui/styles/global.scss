@@ -1,0 +1,133 @@
+$aos-distance: 24px; // It has to be above import
+@import "node_modules/aos/src/sass/aos.scss";
+
+html,
+body {
+  font-family: var(--fontFamilyBody);
+  font-weight: var(--fontWeightNormal);
+  margin: 0;
+  width: 100vw;
+  scroll-behavior: smooth;
+
+  ::selection {
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
+  }
+}
+
+.mobile-only {
+  display: none;
+
+  @media screen and (max-width: 48rem) {
+    display: block;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.text-light {
+  font-weight: var(--fontWeightLight);
+}
+
+.text-bold {
+  font-weight: var(--fontWeightBold);
+}
+
+.text-extraBold {
+  font-weight: var(--fontWeightBlack);
+}
+
+.text-white {
+  color: var(--colorWhite);
+}
+
+button,
+.button {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.625rem 1rem;
+  border-radius: var(--borderRadius);
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: var(--colorBlack);
+  border: 1px solid var(--colorBlack);
+  color: var(--colorWhite);
+  transition: all 0.1s;
+  box-shadow: 0 1px 0 #ededed;
+
+  &:hover {
+    transition: all 0.3s;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 0 #ededed;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+
+  &.outlined {
+    background: white;
+    border-color: var(--colorBlack);
+    color: var(--colorBlack);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.025);
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--colorBlack);
+}
+
+.no-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--fontFamilyHeading);
+  font-weight: var(--fontWeightBold);
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 2.75rem;
+  margin-top: 4rem;
+
+  @media screen and (max-width: 750px) {
+    font-size: 1.75rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  @media screen and (max-width: 750px) {
+    font-size: 1.25rem;
+  }
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+
+  @media screen and (max-width: 750px) {
+    font-size: 1.125rem;
+  }
+}
+
+p {
+  margin: 0 0 1rem;
+}

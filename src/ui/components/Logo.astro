@@ -1,0 +1,22 @@
+---
+const { theme } = Astro.props;
+---
+
+<a href="/" aria-label="Tom Sturge" class:list={[theme]}>Tom Sturge</a>
+
+<style lang="scss">
+  a {
+    display: block;
+    text-decoration: none;
+    color: var(--colorBlack);
+    font-family: var(--fontFamilyHeading);
+    font-size: 2.1em;
+    font-weight: 800;
+    text-transform: capitalize;
+    letter-spacing: -1px;
+
+    &.dark {
+      color: var(--colorWhite);
+    }
+  }
+</style>

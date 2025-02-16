@@ -1,0 +1,94 @@
+---
+const { length, currentUrl, currentPage, rootPath, prevUrl, nextUrl, lastUrl } =
+  Astro.props;
+
+const paginationList = Array.from({ length: length }, (_, i) => i + 1);
+---
+
+<>
+  {
+    length > 1 ? (
+      <div class="pagination">
+        {prevUrl && (
+          <a class="arrow arrow--left" href={prevUrl}>
+            Back
+          </a>
+        )}
+        {paginationList.map((num) => (
+          <a
+            href={`${rootPath}/${num == 1 ? "" : num}`}
+            class={`pagination__link ${
+              currentPage == num ? "disabled active" : ""
+            }`}
+          >
+            {num}
+          </a>
+        ))}
+        {nextUrl && (
+          <a class="arrow arrow--right" href={nextUrl}>
+            Next
+          </a>
+        )}
+      </div>
+    ) : null
+  }
+</>
+
+<style lang="scss">
+  .pagination {
+    margin: 2rem auto 0;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    a {
+      margin: 0 0.25rem;
+      padding: 0 0.5rem;
+      transition: all 0.2s;
+      border-radius: 4px;
+      line-height: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      height: 32px;
+      color: var(--colorDarkGrey);
+      border: 1px solid #eaeaed;
+
+      &.active {
+        cursor: default;
+        background-color: var(--colorBrandPurple);
+        pointer-events: none;
+        color: var(--colorWhite);
+      }
+
+      &:hover {
+        background-color: var(--colorLightGrey);
+        text-decoration: none;
+      }
+
+      &.disabled {
+        background-color: var(--colorBrandPurple);
+        color: var(--colorWhite);
+      }
+    }
+
+    .arrow {
+      position: absolute;
+
+      &:hover {
+        text-decoration: none;
+        background-color: var(--colorLightGrey);
+      }
+    }
+
+    .arrow--right {
+      right: -3.75rem;
+    }
+
+    .arrow--left {
+      left: -3.75rem;
+    }
+  }
+</style>

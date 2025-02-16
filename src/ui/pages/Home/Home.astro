@@ -1,0 +1,167 @@
+---
+import { getArticles } from "@/ui/queries";
+
+import { FeaturedList, Sidebar } from "@/ui/components";
+
+import { RecentList } from "./RecentList";
+
+const articles = await getArticles({ limit: 10 });
+
+function extractFeatured(arr) {
+  const featured = [];
+  const remaining = [];
+
+  for (let item of arr) {
+    if (item.featured && featured.length < 5) {
+      featured.push(item);
+    } else {
+      remaining.push(item);
+    }
+  }
+
+  return { featured, remaining };
+}
+
+function extractCurrentMonth(arr) {
+  const currentDate = new Date();
+  const currentYear = currentDate.getUTCFullYear();
+  const currentMonth = currentDate.getUTCMonth();
+
+  const currentMonthItems = [];
+  const otherItems = [];
+
+  for (let item of arr) {
+    const itemDate = new Date(item.publishedAt);
+
+    if (
+      itemDate.getUTCFullYear() === currentYear &&
+      itemDate.getUTCMonth() === currentMonth
+    ) {
+      currentMonthItems.push(item);
+    } else {
+      otherItems.push(item);
+    }
+  }
+
+  return { currentMonthItems, otherItems };
+}
+
+const { featured: featuredArticles, remaining } = extractFeatured(articles);
+
+const { currentMonthItems: recentArticles, otherItems: remainingArticles } =
+  extractCurrentMonth(remaining);
+
+console.log(remainingArticles);
+---
+
+<>
+  <FeaturedList articles={featuredArticles} />
+
+  <!-- <div class="newsletter-wrapper">
+    <h2>
+      <span>Free Weekly</span>
+      <br />Leadership Newsletter
+    </h2>
+    <div class="newsletter-content">
+      <div>
+        <ul>
+          <li>Interesting information and links from around the web</li>
+          <li>Worthwhile highlights from books I've been reading</li>
+          <li>Things on my mind or musings about various topics</li>
+          <li>Insights from conversations with industry experts</li>
+        </ul>
+      </div>
+
+      <form>
+        <input type="text" placeholder="Email address" />
+        <button>Subscribe</button>
+      </form>
+    </div>
+  </div> -->
+</>
+
+<RecentList articles={recentArticles} />
+
+<div class="container">
+  <div class="content">
+    {remainingArticles.map((item) => <>{item.title}</>)}
+  </div>
+
+  <div class="sidebar">
+    <Sidebar />
+  </div>
+</div>
+
+<style lang="scss">
+  .newsletter-wrapper {
+    max-width: var(--widthMainContainer);
+    width: 100%;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 16px;
+
+    h2 {
+      margin: 0 0 1.5rem;
+      font-weight: var(--fontWeightBold);
+      font-family: var(--fontFamilyBodySans);
+      font-size: 4rem;
+      line-height: 1.1;
+
+      span {
+        color: var(--colorCategoryLeadership);
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0 0 1.5rem;
+      padding: 0;
+    }
+
+    li {
+      margin: 0 0 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+
+      input {
+        margin-bottom: 1rem;
+        padding: 0.75rem 0.5rem;
+      }
+
+      button {
+        all: initial;
+        background-color: gray;
+        padding: 0.75rem 0.5rem;
+        text-align: center;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .newsletter-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    max-width: var(--widthMainContainer);
+    width: 100%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .content {
+    grid-column: span 2;
+  }
+</style>

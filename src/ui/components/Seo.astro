@@ -1,0 +1,45 @@
+---
+const { title, description, url, image, type, author, publishedAt } =
+  Astro.props;
+---
+
+<meta property="og:locale" content="en_GB" />
+<meta
+  name="description"
+  content={description ||
+    'Digital Performance Marketing | Comprehensive marketing consultancy where expertise meets innovation'}
+/>
+<meta property="og:site_name" content="CodeForge Software" />
+<meta property="og:url" content={url} />
+<link rel="canonical" href={url} />
+<meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+
+{
+  (title || description) && (
+    <>
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+    </>
+  )
+}
+{
+  image && (
+    <>
+      <meta property="og:image" content={image} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+    </>
+  )
+}
+
+{
+  author && (
+    <>
+      <meta property="article:author" content={author} />
+      <meta property="article:published_time" content={publishedAt} />
+    </>
+  )
+}

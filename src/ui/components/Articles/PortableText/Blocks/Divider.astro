@@ -1,0 +1,19 @@
+---
+const { small, class: className } = Astro.props;
+---
+
+<hr class:list={[small && 'small', className]} />
+
+<style lang="scss">
+  hr {
+    border: none;
+    height: 2px;
+    background-color: #cbcbcb;
+    margin: 1.75rem 0 1rem;
+    padding: 0;
+
+    &.small {
+      margin: 0;
+    }
+  }
+</style>

@@ -1,0 +1,23 @@
+---
+const { node } = Astro.props as {
+  node: {
+    children: {
+      text: string;
+    }[];
+  };
+};
+
+const [child] = node.children;
+---
+
+<h4>
+  {child.text}
+</h4>
+
+<style lang="scss">
+  h4 {
+    font-size: var(--fontSizeContentHeadingFour);
+    font-family: var(--fontFamilyMontserrat);
+    margin: 0 0 1rem;
+  }
+</style>

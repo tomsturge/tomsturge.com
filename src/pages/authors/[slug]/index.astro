@@ -1,0 +1,265 @@
+---
+// @ts-ignore
+import { sanityClient } from "sanity:client";
+import type { GetStaticPaths } from "astro";
+import { format } from "date-fns";
+import { Icon } from "astro-icon/components";
+import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+
+import { urlForImage } from "@/sanity/urlForImage";
+
+import { getAuthor } from "@/ui/queries";
+import { DefaultLayout } from "@/ui/layouts";
+
+import { PortableText, Seo, ArticleItem } from "@/ui/components";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const author = await sanityClient.fetch(getAuthor);
+
+  return author.map(({ name, slug, bio, image, linkedin, website, posts }) => {
+    return {
+      props: { name, bio, image, linkedin, website, posts },
+      params: { slug: slug.current },
+    };
+  });
+};
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+type Props = {
+  name: string;
+  bio: any;
+  image: SanityImageSource;
+  linkedin: string;
+  website: string;
+  posts: any[];
+};
+
+const { name, bio, image, linkedin, website, posts } = Astro.props;
+---
+
+<DefaultLayout type="article">
+  <Fragment slot="seo">
+    <Seo url={canonicalURL} />
+  </Fragment>
+
+  <div class="wrapper">
+    <header class="author-header">
+      <div class="author-header__container">
+        <img
+          class="author-header__image"
+          src={urlForImage(image).width(200).height(200).url()}
+          alt=""
+        />
+
+        <div class="author-header__details">
+          <h1 class="author-header__title">{name}</h1>
+          <div class="author-header__bio">
+            {bio && <PortableText value={bio} />}
+          </div>
+          <ul class="author-header__links">
+            <li>
+              <a href={website}> <Icon name="mdi:world" /></a>
+            </li>
+            <li>
+              <a href={linkedin}> <Icon name="mdi:linkedin" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="articles-container">
+      <ul class="articles__list">
+        {posts.map((article) => <ArticleItem {...article} />)}
+      </ul>
+    </div>
+  </div>
+</DefaultLayout>
+
+<style lang="scss">
+  .wrapper {
+    margin: 0 auto 2rem;
+  }
+
+  .author-header {
+    display: grid;
+    grid-template-rows: 1fr;
+    margin: 0 0 2rem;
+    position: relative;
+
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 2rem;
+      padding: 10rem 0 3rem;
+      margin: 0 auto;
+      max-width: var(--widthMainContainer);
+      z-index: 1;
+
+      @media screen and (max-width: 40rem) {
+        padding: 6rem 0 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+        text-align: center;
+        grid-gap: 1rem;
+      }
+    }
+
+    &__image {
+      border-radius: 10rem;
+
+      @media screen and (max-width: 40rem) {
+        margin: 0 auto;
+      }
+    }
+
+    &__details {
+      max-width: 24rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__title {
+      font-family: var(--fontFamilyMontserrat);
+      font-size: 2rem;
+      line-height: 1.15;
+      margin: 0 0 0.75rem;
+    }
+
+    &__bio {
+      font-size: 1.125rem;
+      line-height: 1.2;
+    }
+
+    &__links {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-gap: 0.5rem;
+      width: fit-content;
+
+      @media screen and (max-width: 40rem) {
+        margin: 0 auto;
+      }
+
+      li {
+        border: 1px solid #e7e8eb;
+        border-radius: 4px;
+        padding: 0.5rem;
+        width: fit-content;
+
+        a {
+          display: block;
+          line-height: 12px;
+        }
+
+        svg {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  .articles-container {
+    max-width: var(--widthMainContainer);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 2rem;
+    padding: 2rem 0;
+
+    @media screen and (max-width: 72rem) {
+      max-width: none;
+      margin: 0 1rem;
+    }
+
+    @media screen and (max-width: 62rem) {
+      grid-template-columns: 1fr;
+      padding: 2rem 0;
+    }
+
+    @media screen and (max-width: 57rem) {
+      padding-top: 1rem;
+    }
+  }
+
+  .articles__list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 2rem;
+    justify-content: center;
+
+    @media screen and (max-width: 57rem) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .articles__list-item {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+    background-color: var(--colorBackground);
+    border: 1px solid #eaeaed;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--colorWhite);
+
+    h3 {
+      margin: 0 0 0.75rem;
+      font-family: var(--fontFamilyHeading);
+      font-weight: var(--fontWeightBold);
+      font-size: 1.25rem;
+    }
+
+    p {
+      color: #010f1c;
+      margin: 0 0 1.5rem;
+    }
+
+    .articles__item-container {
+      display: grid;
+      grid-template-columns: 180px auto;
+      height: 100%;
+
+      @media screen and (max-width: 37.5rem) {
+        grid-template-columns: initial;
+        grid-template-rows: 240px auto;
+      }
+    }
+
+    .articles__item-content {
+      padding: 2.5rem 2rem;
+    }
+
+    .author--draft-tag {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      background-color: yellow;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.875rem;
+      border-radius: 0.5rem;
+    }
+
+    .article__date {
+      font-weight: var(--fontWeightBold);
+    }
+  }
+  .articles__item-image {
+    height: 100%;
+    width: 180px;
+    object-fit: cover;
+
+    @media screen and (max-width: 37.5rem) {
+      height: 240px;
+      width: 100%;
+    }
+  }
+</style>

@@ -1,0 +1,81 @@
+{
+  "name": "tom.sturge.co",
+  "version": "4.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "sanity:dev": "sanity dev",
+    "sanity:start": "sanity start",
+    "sanity:build": "sanity build",
+    "sanity:deploy": "sanity deploy",
+    "sanity:deploy-graphql": "sanity graphql deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomsturge/tom.sturge.co.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomsturge/tom.sturge.co/issues"
+  },
+  "homepage": "https://github.com/tomsturge/tom.sturge.co#readme",
+  "dependencies": {
+    "@astrojs/prism": "^3.1.0",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/sitemap": "^3.1.6",
+    "@fontsource-variable/inter": "^5.0.20",
+    "@fontsource-variable/lora": "^5.0.18",
+    "@fontsource-variable/roboto-condensed": "^5.0.3",
+    "@fontsource-variable/source-serif-4": "^5.0.19",
+    "@fontsource/lato": "^5.0.18",
+    "aos": "^2.3.4",
+    "astro": "^4.15.10",
+    "astro-icon": "^1.1.0",
+    "astro-portabletext": "^0.10.0",
+    "date-fns": "^3.6.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.77.2",
+    "sharp": "^0.33.4",
+    "styled-components": "^6.1.11"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.24.6",
+    "@iconify-json/mdi": "^1.1.66",
+    "@sanity/astro": "^3.1.1",
+    "@sanity/client": "^6.18.3",
+    "@sanity/code-input": "^4.1.4",
+    "@sanity/dashboard": "^3.1.6",
+    "@sanity/eslint-config-studio": "^4.0.0",
+    "@sanity/image-url": "^1.0.2",
+    "@tabler/icons-react": "^3.5.0",
+    "@typescript-eslint/parser": "^7.10.0",
+    "eslint": "^8.36.0",
+    "eslint-plugin-astro": "^1.2.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.14.0",
+    "sanity": "^3.43.0",
+    "sanity-plugin-asset-source-unsplash": "^3.0.1",
+    "sanity-plugin-dashboard-widget-document-list": "^1.0.1",
+    "sanity-plugin-dashboard-widget-netlify": "^2.0.1",
+    "sanity-plugin-media": "^2.2.5",
+    "schema-dts": "^1.1.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  },
+  "overrides": {
+    "vite": {
+      "rollup": "npm:@rollup/wasm-node"
+    },
+    "sanity-plugin-dashboard-widget-netlify": {
+      "styled-components": "^6.1.0"
+    }
+  }
+}
