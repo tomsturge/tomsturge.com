@@ -3,6 +3,7 @@
   "version": "4.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -12,7 +13,9 @@
     "sanity:start": "sanity start",
     "sanity:build": "sanity build",
     "sanity:deploy": "sanity deploy",
-    "sanity:deploy-graphql": "sanity graphql deploy"
+    "sanity:deploy-graphql": "sanity graphql deploy",
+    "lint": "eslint 'src/**/*.{js,astro}'",
+    "lint:ci": "npm run lint -- --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif"
   },
   "repository": {
     "type": "git",
@@ -57,7 +60,7 @@
     "@tabler/icons-react": "^3.5.0",
     "@typescript-eslint/parser": "^7.10.0",
     "eslint": "^8.36.0",
-    "eslint-plugin-astro": "^1.2.0",
+    "eslint-plugin-astro": "^1.3.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.14.0",
