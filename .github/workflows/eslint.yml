@@ -36,9 +36,7 @@ jobs:
       - name: Run ESLint
         env:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
-        run: npm run lint
-          --format @microsoft/eslint-formatter-sarif
-          --output-file eslint-results.sarif
+        run: npm run lint:ci
         continue-on-error: true
 
       - name: Upload analysis results to GitHub

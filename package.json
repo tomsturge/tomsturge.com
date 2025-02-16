@@ -14,7 +14,8 @@
     "sanity:build": "sanity build",
     "sanity:deploy": "sanity deploy",
     "sanity:deploy-graphql": "sanity graphql deploy",
-    "lint": "eslint 'src/**/*.{js,astro}'"
+    "lint": "eslint 'src/**/*.{js,astro}'",
+    "lint:ci": "npm run lint -- --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif"
   },
   "repository": {
     "type": "git",
