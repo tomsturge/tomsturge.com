@@ -1,0 +1,144 @@
+---
+import type { GetStaticPaths } from "astro";
+
+import { getArticles } from "@/ui/queries";
+
+import { DefaultLayout } from "@/ui/layouts";
+
+import { Seo, Sidebar, Pagination, ArticleItem } from "@/ui/components";
+
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  const posts = await getArticles();
+
+  return paginate(posts, {
+    pageSize: 9,
+  });
+};
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+type Props = {
+  page: {
+    data: any[];
+    lastPage: string;
+    url: {
+      next: string;
+      prev: string;
+    };
+    current: string;
+    currentPage: string;
+  };
+};
+
+const { page } = Astro.props;
+
+const pathname = new URL(Astro.request.url).pathname.split("/");
+const rootPath = `${pathname[0]}/${pathname[1]}`;
+---
+
+<DefaultLayout type="article">
+  <Fragment slot="seo">
+    <Seo url={canonicalURL} />
+  </Fragment>
+
+  <div class="wrapper">
+    <header class="article-header">
+      <div class="article-header__container">
+        <div class="article-header__title">
+          <h1>Articles</h1>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="articles-container">
+        <ul class="articles__list">
+          {page.data.map((article) => <ArticleItem {...article} />)}
+        </ul>
+
+        <Pagination
+          firstUrl={`/${rootPath}`}
+          lastUrl={`/${rootPath}/${page.lastPage}`}
+          rootPath={rootPath}
+          nextUrl={page.url.next}
+          prevUrl={page.url.prev}
+          length={page.lastPage}
+          currentUrl={page.current}
+          currentPage={page.currentPage}
+        />
+      </div>
+
+      <Sidebar type="list" />
+    </div>
+  </div>
+</DefaultLayout>
+
+<style lang="scss">
+  .wrapper {
+    margin: 0 auto;
+  }
+
+  .article-header {
+    display: grid;
+    grid-template-rows: 1fr;
+    margin: 0 0 2rem;
+    position: relative;
+    background-color: #d21545;
+
+    &__container {
+      padding: 6rem 0 0;
+      margin: 0 auto;
+      width: 100%;
+      max-width: var(--widthMainContainer);
+      color: var(--colorWhite);
+
+      @media screen and (max-width: 81rem) {
+        margin: 0 2rem;
+      }
+    }
+
+    &__title h1 {
+      font-family: var(--fontFamilyHeading);
+      font-size: 8rem;
+      line-height: 1;
+      margin: 0 0 -2.5rem;
+
+      @media screen and (max-width: 64rem) {
+        font-size: 4rem;
+        margin: 0 0 -1rem;
+      }
+    }
+  }
+
+  .container {
+    max-width: var(--widthMainContainer);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 16rem;
+    gap: 1rem;
+    padding: 2rem 0;
+
+    @media screen and (max-width: 81rem) {
+      margin: 0 2rem;
+    }
+
+    @media screen and (max-width: 64rem) {
+      grid-template-columns: initial;
+      grid-template-rows: repeat(2, auto);
+    }
+  }
+
+  .articles__list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(2, minmax(300px, 480px));
+    justify-content: center;
+
+    @media screen and (max-width: 48rem) {
+      grid-template-columns: repeat(1, minmax(240px, 480px));
+    }
+  }
+</style>

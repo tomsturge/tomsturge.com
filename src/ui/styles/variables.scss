@@ -1,0 +1,70 @@
+@import "@fontsource-variable/lora";
+@import "@fontsource-variable/roboto-condensed";
+@import "@fontsource-variable/source-serif-4";
+@import "@fontsource-variable/inter";
+
+:root {
+  --colorBlack: #181818;
+  --colorWhite: #fff;
+  --colorLightGrey: #f1f2f6;
+  --colorGrey: #929292;
+  --colorDarkGrey: #232323;
+  --colorBackground: #d0d0d0;
+  --colorBrandPurple: #7d3995;
+  --colorBrandTeal: #2d8186;
+
+  --colorCategoryLeadership: #d25353;
+  --colorCategoryCulture: #6175ce;
+  --colorCategoryTechnology: #6cb566;
+  --colorCategoryBookReview: #dd8650;
+  --colorCategorySustainability: #a973d7;
+
+  --borderRadius: 0.5rem;
+
+  --fontFamilyHeading: "Source Serif 4 Variable", serif;
+  --fontFamilyBody: "Lora Variable", sans-serif;
+  --fontFamilyCondensed: "Roboto Condensed Variable", sans-serif;
+  --fontFamilyBodySans: "Inter Variable", sans-serif;
+
+  --fontWeightLight: 300;
+  --fontWeightNormal: 400;
+  --fontWeightMedium: 500;
+  --fontWeightSemiBold: 600;
+  --fontWeightBold: 700;
+  --fontWeightExtraBold: 800;
+  --fontWeightBlack: 900;
+
+  --fontSizeHero: 4.25rem;
+  --fontSizeHeading: 2.5rem;
+  --fontSizeTitle: 1.5rem;
+  --fontSizeContentTitle: 3rem;
+  --fontSizeContentHeadingTwo: 2.25rem;
+  --fontSizeContentHeadingThree: 1.75rem;
+  --fontSizeContentHeadingFour: 1.25rem;
+  --fontSizeContentBody: 1.125rem;
+  --fontSizeMicro: 0.75rem;
+
+  --boxShadow: 0 0 1rem rgba(0, 0, 0, 0.125);
+
+  --widthMainContainer: 75rem;
+  --widthArticleContainer: 50rem;
+
+  @media screen and (max-width: 65rem) {
+    --fontSizeHero: 4rem;
+    --fontSizeHeading: 2.5rem;
+    --fontSizeContentTitle: 3.25rem;
+    --fontSizeContentHeadingTwo: 1.75rem;
+    --fontSizeContentHeadingThree: 1.25rem;
+    --fontSizeContentHeadingFour: 1rem;
+    --fontSizeContentBody: 1rem;
+    --fontSizeMicro: 0.675rem;
+  }
+
+  @media screen and (max-width: 48rem) {
+    --fontSizeContentTitle: 2.75rem;
+  }
+
+  @media screen and (max-width: 27rem) {
+    --fontSizeHero: 3rem;
+  }
+}

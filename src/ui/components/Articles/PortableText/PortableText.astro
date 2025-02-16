@@ -1,0 +1,25 @@
+---
+import { PortableText as AstroPortableText } from "astro-portabletext";
+
+import { HeadingTwo, HeadingThree, HeadingFour, Divider } from "./Blocks";
+
+const { value } = Astro.props;
+
+const components = {
+  type: {
+    divider: Divider,
+  },
+  block: {
+    h2: HeadingTwo,
+    h3: HeadingThree,
+    h4: HeadingFour,
+  },
+} as any;
+
+const portableTextProps = {
+  value: value,
+  components,
+};
+---
+
+<AstroPortableText {...portableTextProps} />

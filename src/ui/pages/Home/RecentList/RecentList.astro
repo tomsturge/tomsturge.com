@@ -1,0 +1,27 @@
+---
+import { ArticleList } from "@/ui/components";
+
+const date = new Date();
+const monthName = date.toLocaleString("default", { month: "long" });
+
+const { articles } = Astro.props;
+---
+
+<div class="container" data-aos="fade-up">
+  <h2>{monthName} highlights</h2>
+
+  <ArticleList articles={articles} />
+</div>
+
+<style lang="scss">
+  .container {
+    background-color: #f4f4f4;
+    padding: 2rem 0;
+
+    h2 {
+      max-width: var(--widthMainContainer);
+      font-size: 2rem;
+      margin: 0 auto 2rem;
+    }
+  }
+</style>

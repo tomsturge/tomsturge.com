@@ -1,0 +1,36 @@
+---
+import type { Article, Graph, WithContext } from 'schema-dts';
+
+const { schema } = Astro.props;
+
+const websiteSchema = {
+  '@type': 'WebSite',
+  '@id': 'https://littledotmarketing.com/',
+  url: 'https://littledotmarketing.com/',
+  name: 'Little Dot Marketing Articles',
+  description: '',
+  inLanguage: 'en-GB',
+};
+
+const combinedSchema: WithContext<Article & Graph> = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': 'https://littledotmarketing.com/articles/',
+      url: 'https://littledotmarketing.com/articles/',
+      name: 'SEO Blog SE Ranking with the Latest News and Best Practices',
+      isPartOf: { '@id': 'https://littledotmarketing.com' },
+      description:
+        'In SE Ranking SEO blog we talk about search engine optimization, digital marketing, and business processes: tutorials, case studies, and trends by SEO experts.',
+      breadcrumb: {
+        '@id': 'https://littledotmarketing.com/articles/#breadcrumb',
+      },
+      inLanguage: 'en-GB',
+    },
+    { ...websiteSchema },
+  ],
+});
+---
+
+<script type="application/ld+json" set:html={combinedSchema} />

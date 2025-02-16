@@ -1,0 +1,65 @@
+---
+import { ViewTransitions } from "astro:transitions";
+
+import "@/ui/styles/variables.scss";
+import "@/ui/styles/global.scss";
+
+import { Footer, Masthead } from "@/ui/components";
+
+const { title, type, theme } = Astro.props;
+
+const pageTitle = `${title ? `${title} » ` : ""}Tom Sturge`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{pageTitle}</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Discover insights on leadership, technology, sustainability, and culture. Explore articles and resources that inspire innovation and drive positive change."
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="apple-mobile-web-app-title" content="CodeForge Software" />
+    <meta name="application-name" content="CodeForge Software" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' https://cdn.sanity.io/; child-src 'none'; style-src 'unsafe-inline' 'self'; worker-src 'self'; style-src-elem 'unsafe-inline' 'self'; script-src-elem 'self' 'unsafe-inline'; font-src 'self' data:"
+    />
+
+    <slot name="seo" />
+
+    <ViewTransitions />
+
+    <script>
+      import { aosInit } from "@/ui/scripts/aos";
+
+      aosInit();
+    </script>
+  </head>
+
+  <body>
+    <Masthead type={type} theme={theme} />
+
+    <slot />
+
+    <Footer />
+  </body>
+</html>
