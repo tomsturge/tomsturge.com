@@ -1,7 +1,7 @@
 ---
 import { getArticles } from "@/ui/queries";
 
-import { FeaturedList, Sidebar } from "@/ui/components";
+import { FeaturedList, ArticleList, Sidebar } from "@/ui/components";
 
 import { RecentList } from "./RecentList";
 
@@ -50,8 +50,6 @@ const { featured: featuredArticles, remaining } = extractFeatured(articles);
 
 const { currentMonthItems: recentArticles, otherItems: remainingArticles } =
   extractCurrentMonth(remaining);
-
-console.log(remainingArticles);
 ---
 
 <>
@@ -84,7 +82,7 @@ console.log(remainingArticles);
 
 <div class="container">
   <div class="content">
-    {remainingArticles.map((item) => <>{item.title}</>)}
+    <ArticleList itemsPerRow="2" articles={remainingArticles} />
   </div>
 
   <div class="sidebar">
