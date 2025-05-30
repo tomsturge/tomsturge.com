@@ -79,6 +79,9 @@
     },
     "sanity-plugin-dashboard-widget-netlify": {
       "styled-components": "^6.1.0"
+    },
+    "@sanity/astro": {
+      "astro": "^5.8.1"
     }
   }
 }
