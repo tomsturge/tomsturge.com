@@ -26,7 +26,7 @@ const posts = articles
         <a href={`/articles/${slug.current}`}>
           <img
             class="image"
-            transition:name={`article ${slug.current} image`}
+            transition:name={`article-${slug.current}-image`}
             src={urlForImage(mainImage).height(480).quality(100).url()}
           />
 
@@ -34,20 +34,20 @@ const posts = articles
             <div class="category">
               <CategoryLabel
                 name={category.title}
-                transition={`article ${slug.current} category-${category.title.toLowerCase()}`}
+                transition={`article-${slug.current}-category-${category.title.toLowerCase()}`}
               />
             </div>
 
             <h2
               class:list={["title", theme]}
-              transition:name={`article ${slug.current} title`}
+              transition:name={`article-${slug.current}-title`}
             >
               {title}
             </h2>
 
             <p
               class="excerpt"
-              transition:name={`article ${slug.current} excerpt`}
+              transition:name={`article-${slug.current}-excerpt`}
             >
               {excerpt}
             </p>

@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 import "@/ui/styles/variables.scss";
 import "@/ui/styles/global.scss";
@@ -42,7 +42,7 @@ const pageTitle = `${title ? `${title} » ` : ""}Tom Sturge`;
 
     <slot name="seo" />
 
-    <ViewTransitions />
+    <ClientRouter />
 
     <script>
       import { aosInit } from "@/ui/scripts/aos";
