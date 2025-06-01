@@ -38,7 +38,13 @@ const categories = await sanityClient.fetch(getCategories);
 
     <div>
       <h3>Recent Articles</h3>
-      <ArticleList limit={3} compact={true} theme="dark" featured={true} />
+      <ArticleList
+        limit={3}
+        compact={true}
+        theme="dark"
+        featured={true}
+        transitions={false}
+      />
     </div>
 
     <div>
