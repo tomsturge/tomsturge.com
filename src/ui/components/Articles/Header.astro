@@ -8,6 +8,11 @@ import { CategoryLabel } from "./CategoryLabel";
 
 const { title, readingTime, publishedAt, excerpt, image, categories, slug } =
   Astro.props;
+
+console.log({
+  slug: slug.current,
+  full: `article-${slug.current}-title`,
+});
 ---
 
 <header class="article-header">

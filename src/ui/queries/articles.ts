@@ -14,6 +14,7 @@ export const getArticles = async ({
   articleMonth?: number;
 } = {}) => {
   const year = new Date().getFullYear();
+  const today = new Date().toJSON().slice(0, 10);
 
   const params = [
     drafts
@@ -22,6 +23,7 @@ export const getArticles = async ({
     category && `&& '${category}' in categories[]->slug.current`,
     articleMonth &&
       `&& (publishedAt >= "${year}-${articleMonth}-01" && publishedAt <= "${year}-${articleMonth}-31")`,
+    `&& publishedAt <= "${today}"`,
   ]
     .filter(Boolean)
     .join(" ");
