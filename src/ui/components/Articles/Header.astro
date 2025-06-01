@@ -24,7 +24,7 @@ console.log({
             <CategoryLabel
               name={category.title}
               link={category.slug}
-              transition={`article ${slug.current} category-${category.title.toLowerCase()}`}
+              transition={`article-${slug.current}-category-${category.title.toLowerCase()}`}
             />
           </li>
         ))}
@@ -34,14 +34,14 @@ console.log({
 
   <h1
     class="article-header__title"
-    transition:name={`article ${slug.current} title`}
+    transition:name={`article-${slug.current}-title`}
   >
     {title}
   </h1>
 
   <p
     class="article-header__excerpt"
-    transition:name={`article ${slug.current} excerpt`}
+    transition:name={`article-${slug.current}-excerpt`}
   >
     {excerpt}
   </p>
@@ -63,7 +63,7 @@ console.log({
   <img
     class="article-header__image"
     src={urlForImage(image).width(800).url()}
-    transition:name={`article ${slug.current} image`}
+    transition:name={`article-${slug.current}-image`}
   />
 </header>
 

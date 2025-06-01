@@ -18,21 +18,21 @@ const { articles } = Astro.props;
                 ? urlForImage(mainImage).height(512).quality(100).url()
                 : urlForImage(mainImage).height(256).quality(100).url()
             }
-            transition:name={`article ${slug.current} image`}
+            transition:name={`article-${slug.current}-image`}
           />
 
           <div class="container">
             <div class="category">
               <CategoryLabel
                 name={category.title}
-                transition={`article ${slug.current} category-${category.title.toLowerCase()}`}
+                transition={`article-${slug.current}-category-${category.title.toLowerCase()}`}
               />
             </div>
 
             <div class="content">
               <h2
                 class="text"
-                transition:name={`article ${slug.current} title`}
+                transition:name={`article-${slug.current}-title`}
               >
                 {title}
               </h2>
