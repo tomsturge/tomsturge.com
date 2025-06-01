@@ -1,57 +1,16 @@
 ---
 import { ArticleList } from "@/ui/components";
 
-const date = new Date();
-const monthName = date.toLocaleString("default", { month: "long" });
+const monthName = new Date().toLocaleString("default", { month: "long" });
 
 const { articles } = Astro.props;
 ---
 
 <div class="container" data-aos="fade-up">
-  <h2>{monthName} highlights</h2>{
-    !!articles.length ? (
-      <ArticleList articles={articles} />
-    ) : (
-      <div class="empty-content">
-        <ul class="empty-list">
-          <li>
-            <div class="empty-list__image" />
-            <div class="empty-list__title">
-              <span />
-              <span />
-            </div>
-
-            <div class="empty-list__excerpt">
-              <span />
-              <span />
-            </div>
-          </li>
-          <li>
-            <div class="empty-list__image" />
-            <div class="empty-list__title">
-              <span />
-              <span />
-            </div>
-            <div class="empty-list__excerpt">
-              <span />
-              <span />
-            </div>
-          </li>
-          <li>
-            <div class="empty-list__image" />
-            <div class="empty-list__title">
-              <span />
-              <span />
-            </div>
-            <div class="empty-list__excerpt">
-              <span />
-              <span />
-            </div>
-          </li>
-        </ul>
-      </div>
-    )
-  }
+  <h2>{monthName} highlights</h2><ArticleList
+    articles={articles}
+    minCount="3"
+  />
 </div>
 
 <style lang="scss">
@@ -63,74 +22,6 @@ const { articles } = Astro.props;
       max-width: var(--widthMainContainer);
       font-size: 2rem;
       margin: 0 auto 2rem;
-    }
-  }
-
-  .empty-content {
-    display: flex;
-    justify-content: middle;
-    align-items: center;
-    flex-direction: column;
-    font-size: 1.5rem;
-    font-family: var(--fontFamilyBodySans);
-    color: var(--colorGrey);
-    text-align: center;
-  }
-
-  .empty-list {
-    max-width: var(--widthMainContainer);
-    width: 100%;
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(3, 1fr);
-
-    &__image {
-      width: 100%;
-      height: 14.375rem;
-      margin-bottom: 1rem;
-      border-radius: 0.625rem;
-      box-shadow: inset 0 0 0 0.5rem rgba(0, 0, 0, 0.05);
-    }
-
-    &__title {
-      margin-bottom: 1rem;
-      span {
-        display: block;
-        height: 24px;
-        background-color: rgba(0, 0, 0, 0.05);
-        margin-bottom: 0.25rem;
-
-        &:nth-child(1) {
-          width: 90%;
-        }
-
-        &:nth-child(2) {
-          width: 80%;
-        }
-      }
-    }
-    &__excerpt {
-      span {
-        display: block;
-        height: 16px;
-        background-color: rgba(0, 0, 0, 0.05);
-        margin-bottom: 0.25rem;
-
-        &:nth-child(1) {
-          width: 90%;
-        }
-
-        &:nth-child(2) {
-          width: 98%;
-        }
-
-        &:nth-child(3) {
-          width: 95%;
-        }
-      }
     }
   }
 </style>
