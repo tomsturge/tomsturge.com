@@ -22,7 +22,7 @@ export const getArticles = async ({
       `&& (publishedAt >= "${year}-${articleMonth}-01" && publishedAt <= "${year}-${articleMonth}-31")`,
     ``,
     drafts
-      ? '_type == "article"'
+      ? `_type == "article" && !(_id in path('drafts.**')) && publishedAt <= "${today}"`
       : `_type == 'article' && !(_id in path('drafts.**')) && publishedAt <= "${today}"`,
   ]
     .filter(Boolean)
