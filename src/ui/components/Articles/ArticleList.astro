@@ -21,10 +21,6 @@ const posts = articles
   : await getArticles({ limit, featured, articleMonth });
 
 const fillCount = minCount - posts.length;
-
-console.log({
-  fillCount,
-});
 ---
 
 <ul class:list={["wrapper", compact && "compact", `rowCount--${itemsPerRow}`]}>
@@ -80,7 +76,6 @@ console.log({
       fillCount > 0 &&
         [...Array(fillCount)].map((_) => (
           <li>
-            {console.log("rendered")}
             <div class="empty-list__image">
               <span />
             </div>

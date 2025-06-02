@@ -14,7 +14,7 @@ export const getArticles = async ({
   articleMonth?: number;
 } = {}) => {
   const year = new Date().getFullYear();
-  const today = new Date().toJSON().slice(0, 10);
+  const month = new Date().toJSON().slice(0, 10).split("-");
 
   const params = [
     category && `&& '${category}' in categories[]->slug.current`,
@@ -22,8 +22,8 @@ export const getArticles = async ({
       `&& (publishedAt >= "${year}-${articleMonth}-01" && publishedAt <= "${year}-${articleMonth}-31")`,
     ``,
     drafts
-      ? `_type == "article" && !(_id in path('drafts.**')) && publishedAt <= "${today}"`
-      : `_type == 'article' && !(_id in path('drafts.**')) && publishedAt <= "${today}"`,
+      ? `_type == 'article'`
+      : `_type == 'article' && publishedAt <= "${month[0]}-${month[1]}-${parseInt(month[2]) + 1}" && !(_id in path('drafts.**'))`,
   ]
     .filter(Boolean)
     .join(" ");
