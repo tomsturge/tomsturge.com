@@ -105,6 +105,18 @@ const categories = await sanityClient.fetch(getCategories);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+
+    @media screen and (max-width: 79rem) {
+      gap: 1rem;
+      width: calc(100% - 4rem);
+      margin: 0 2rem;
+    }
+
+    @media screen and (max-width: 62rem) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, auto);
+      gap: 2rem;
+    }
   }
 
   .about-content {
@@ -210,7 +222,7 @@ const categories = await sanityClient.fetch(getCategories);
 
     @media screen and (max-width: 72rem) {
       max-width: none;
-      padding: 5rem 1.5rem;
+      padding: 2rem;
     }
   }
 </style>

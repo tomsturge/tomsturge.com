@@ -7,8 +7,10 @@ const { articles } = Astro.props;
 ---
 
 <div class="container" data-aos="fade-up">
-  <h2>{monthName} highlights</h2>
-  <ArticleList articles={articles} />
+  <div class="content">
+    <h2>{monthName} highlights</h2>
+    <ArticleList articles={articles} />
+  </div>
 </div>
 
 <style lang="scss">
@@ -16,10 +18,21 @@ const { articles } = Astro.props;
     background-color: #f4f4f4;
     padding: 2rem 0;
 
-    h2 {
+    .content {
       max-width: var(--widthMainContainer);
+      margin: 0 auto;
+
+      @media screen and (max-width: 79rem) {
+        margin-right: 2rem;
+        margin-left: 2rem;
+        width: calc(100% - 4rem);
+        gap: 1rem;
+      }
+    }
+
+    h2 {
       font-size: 2rem;
-      margin: 0 auto 2rem;
+      margin: 0;
     }
   }
 </style>

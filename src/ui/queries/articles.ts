@@ -22,8 +22,8 @@ export const getArticles = async ({
       `&& (publishedAt >= "${year}-${articleMonth}-01" && publishedAt <= "${year}-${articleMonth}-31")`,
     ``,
     drafts
-      ? `_type == 'article'`
-      : `_type == 'article' && publishedAt <= "${month[0]}-${month[1]}-${parseInt(month[2]) + 1}" && !(_id in path('drafts.**'))`,
+      ? `_type == 'article' && publishedAt < "${month[0]}-${month[1]}-${parseInt(month[2]) + 1}"`
+      : `_type == 'article' && publishedAt < "${month[0]}-${month[1]}-${parseInt(month[2]) + 1}" && !(_id in path('drafts.**'))`,
   ]
     .filter(Boolean)
     .join(" ");
