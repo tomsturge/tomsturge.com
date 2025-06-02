@@ -7,10 +7,8 @@ const { articles } = Astro.props;
 ---
 
 <div class="container" data-aos="fade-up">
-  <h2>{monthName} highlights</h2><ArticleList
-    articles={articles}
-    minCount="3"
-  />
+  <h2>{monthName} highlights</h2>
+  <ArticleList articles={articles} />
 </div>
 
 <style lang="scss">
