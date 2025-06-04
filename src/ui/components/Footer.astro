@@ -52,14 +52,18 @@ const categories = await sanityClient.fetch(getCategories);
       <ul class="categories-list">
         {
           categories.map(({ title, slug, articleCount }) => (
-            <li class="categories-item">
-              <a href={`/category/${slug.current}`}>
-                <p>{title}</p>{" "}
-                <span class={title.toLowerCase().split(" ").join("-")}>
-                  {articleCount}
-                </span>
-              </a>
-            </li>
+            <>
+              {articleCount > 0 && (
+                <li class="categories-item">
+                  <a href={`/category/${slug.current}`}>
+                    <p>{title}</p>{" "}
+                    <span class={title.toLowerCase().split(" ").join("-")}>
+                      {articleCount}
+                    </span>
+                  </a>
+                </li>
+              )}
+            </>
           ))
         }
       </ul>
@@ -191,6 +195,10 @@ const categories = await sanityClient.fetch(getCategories);
       border-radius: 50%;
       background-color: gray;
 
+      &.growth {
+        background-color: var(--colorCategoryGrowth);
+      }
+
       &.leadership {
         background-color: var(--colorCategoryLeadership);
       }
@@ -199,8 +207,8 @@ const categories = await sanityClient.fetch(getCategories);
         background-color: var(--colorCategoryCulture);
       }
 
-      &.technology {
-        background-color: var(--colorCategoryTechnology);
+      &.communication {
+        background-color: var(--colorCategoryCommunication);
       }
 
       &.book-review {

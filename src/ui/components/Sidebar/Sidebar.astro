@@ -124,6 +124,10 @@ const categories = await sanityClient.fetch(getCategories);
       transform: translateX(0.5rem);
     }
 
+    &.growth {
+      background-color: var(--colorCategoryGrowth);
+    }
+
     &.leadership {
       background-color: var(--colorCategoryLeadership);
     }
