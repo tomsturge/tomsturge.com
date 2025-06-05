@@ -159,7 +159,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     transform: translateY(-80px);
     transition: all 0.5s;
     height: 70px;
-    background-color: var(--colorWhite);
+    background-color: var(--colorThemeMainBackground);
     box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.1);
     z-index: 100;
     display: flex;
@@ -230,7 +230,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 <style lang="scss" is:global>
   .article-content {
-    color: var(--colorBlack);
+    color: var(--colorThemeText);
     font-weight: 300;
     padding-bottom: 3rem;
 

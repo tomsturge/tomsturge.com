@@ -8,6 +8,8 @@ body {
   margin: 0;
   width: 100vw;
   scroll-behavior: smooth;
+  background-color: var(--colorThemeMainBackground);
+  color: var(--colorThemeText);
 
   ::selection {
     background-color: var(--colorBlack);

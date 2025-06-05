@@ -6,7 +6,7 @@
 :root {
   --colorBlack: #181818;
   --colorWhite: #fff;
-  --colorLightGrey: #f1f2f6;
+  --colorLightGrey: #f4f4f4;
   --colorGrey: #929292;
   --colorDarkGrey: #232323;
   --colorBackground: #d0d0d0;
@@ -19,6 +19,10 @@
   --colorCategoryBookReview: #b8660d;
   --colorCategorySustainability: #4a7c59;
   --colorCategoryGrowth: #a973d7;
+
+  --colorThemeMainBackground: var(--colorWhite);
+  --colorThemeAccentBackground: var(--colorLightGrey);
+  --colorThemeText: var(--colorBlack);
 
   --borderRadius: 0.5rem;
 
