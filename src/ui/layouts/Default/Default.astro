@@ -37,6 +37,45 @@ const pageTitle = `${title ? `${title} » ` : ""}Tom Sturge`;
 
     <ClientRouter />
 
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia?.(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        const isDark = stored === "dark" || (!stored && prefersDark);
+
+        if (isDark) {
+          document.documentElement.classList.add("dark");
+          document.documentElement.style.setProperty(
+            "--colorThemeMainBackground",
+            "var(--colorBlack)",
+          );
+          document.documentElement.style.setProperty(
+            "--colorThemeAccentBackground",
+            "var(--colorDarkGrey)",
+          );
+          document.documentElement.style.setProperty(
+            "--colorThemeText",
+            "var(--colorWhite)",
+          );
+        } else {
+          document.documentElement.style.setProperty(
+            "--colorThemeMainBackground",
+            "var(--colorWhite)",
+          );
+          document.documentElement.style.setProperty(
+            "--colorThemeAccentBackground",
+            "var(--colorLightGrey)",
+          );
+          document.documentElement.style.setProperty(
+            "--colorThemeText",
+            "var(--colorBlack)",
+          );
+        }
+      })();
+    </script>
+
     <script>
       import { aosInit } from "@/ui/scripts/aos";
 

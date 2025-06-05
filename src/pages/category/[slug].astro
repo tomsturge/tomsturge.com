@@ -1,12 +1,10 @@
 ---
 import { sanityClient } from "sanity:client";
 
-import { getArticles } from "@/ui/queries";
 import { ArticleList, Sidebar, Seo } from "@/ui/components";
 import { DefaultLayout } from "@/ui/layouts";
 
 export async function getStaticPaths() {
-  // Single query to get all categories with their articles
   const data = await sanityClient.fetch(`
     {
       "categories": *[_type == "category"] {

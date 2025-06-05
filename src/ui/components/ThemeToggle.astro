@@ -1,0 +1,181 @@
+---
+// Simple ThemeToggle.astro
+---
+
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+  <svg
+    class="sun-icon"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="5"></circle>
+    <path
+      d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+    ></path>
+  </svg>
+  <svg
+    class="moon-icon"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+
+<style>
+  .theme-toggle {
+    position: relative;
+    background: var(--colorBlack);
+    border: 1px solid var(--colorBlack);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .theme-toggle:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+
+  .theme-toggle:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+
+  .sun-icon,
+  .moon-icon {
+    position: absolute;
+    transition: all 0.3s ease;
+    color: var(--colorWhite);
+  }
+
+  /* Light mode - show moon (will switch to dark) */
+  .sun-icon {
+    opacity: 0;
+    transform: rotate(180deg) scale(0.5);
+  }
+
+  .moon-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+
+  /* Dark mode - show sun (will switch to light) */
+  html.dark .theme-toggle {
+    background: var(--colorWhite);
+    border-color: var(--colorWhite);
+  }
+
+  html.dark .sun-icon,
+  html.dark .moon-icon {
+    color: var(--colorBlack);
+  }
+
+  html.dark .sun-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+
+  html.dark .moon-icon {
+    opacity: 0;
+    transform: rotate(180deg) scale(0.5);
+  }
+</style>
+
+<script>
+  // Simple theme script that runs on every page
+  function initTheme() {
+    // Get stored theme or system preference
+    const stored = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    const isDark = stored === "dark" || (!stored && prefersDark);
+
+    // Apply theme
+    const html = document.documentElement;
+    if (isDark) {
+      html.classList.add("dark");
+      html.style.setProperty("--colorThemeMainBackground", "var(--colorBlack)");
+      html.style.setProperty(
+        "--colorThemeAccentBackground",
+        "var(--colorDarkGrey)",
+      );
+      html.style.setProperty("--colorThemeText", "var(--colorWhite)");
+    } else {
+      html.classList.remove("dark");
+      html.style.setProperty("--colorThemeMainBackground", "var(--colorWhite)");
+      html.style.setProperty(
+        "--colorThemeAccentBackground",
+        "var(--colorLightGrey)",
+      );
+      html.style.setProperty("--colorThemeText", "var(--colorBlack)");
+    }
+  }
+
+  function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.classList.contains("dark");
+
+    if (isDark) {
+      html.classList.remove("dark");
+      html.style.setProperty("--colorThemeMainBackground", "var(--colorWhite)");
+      html.style.setProperty(
+        "--colorThemeAccentBackground",
+        "var(--colorLightGrey)",
+      );
+      html.style.setProperty("--colorThemeText", "var(--colorBlack)");
+      localStorage.setItem("theme", "light");
+    } else {
+      html.classList.add("dark");
+      html.style.setProperty("--colorThemeMainBackground", "var(--colorBlack)");
+      html.style.setProperty(
+        "--colorThemeAccentBackground",
+        "var(--colorDarkGrey)",
+      );
+      html.style.setProperty("--colorThemeText", "var(--colorWhite)");
+      localStorage.setItem("theme", "dark");
+    }
+  }
+
+  // Initialize theme immediately
+  initTheme();
+
+  // Add click handler
+  document
+    .getElementById("theme-toggle")
+    ?.addEventListener("click", toggleTheme);
+
+  // Re-run on Astro page loads
+  document.addEventListener("astro:page-load", () => {
+    initTheme();
+    document
+      .getElementById("theme-toggle")
+      ?.addEventListener("click", toggleTheme);
+  });
+
+  // Listen for system changes
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      if (!localStorage.getItem("theme")) {
+        initTheme();
+      }
+    });
+</script>

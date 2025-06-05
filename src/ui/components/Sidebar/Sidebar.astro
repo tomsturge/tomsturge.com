@@ -160,6 +160,7 @@ const categories = await sanityClient.fetch(getCategories);
     font-family: var(--fontFamilyHeading);
     font-size: 1.5rem;
     margin: 0 0 1rem;
+    color: var(--colorThemeText);
   }
 
   .section-list {
@@ -175,6 +176,10 @@ const categories = await sanityClient.fetch(getCategories);
       line-height: 1.2;
       padding: 0 1.25rem;
       margin-bottom: 0;
+
+      .title {
+        color: var(--colorThemeText);
+      }
 
       &:not(:last-child) {
         margin-bottom: 0.75rem;
@@ -198,7 +203,7 @@ const categories = await sanityClient.fetch(getCategories);
 
     .sidebar__title {
       background-color: #d21545;
-      color: var(--colorWhite);
+      color: var(--colorThemeText);
       border-color: #d21545;
     }
   }
