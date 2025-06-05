@@ -1,10 +1,63 @@
 ---
-import { DefaultLayout } from "@/ui/layouts";
-import { HomePage } from "@/ui/pages";
+import { getArticles } from "@/ui/queries";
 
-import { Seo } from "@/ui/components";
+import {
+  FeaturedList,
+  ArticleList,
+  Sidebar,
+  RecentList,
+  Seo,
+} from "@/ui/components";
+
+import { DefaultLayout } from "@/ui/layouts";
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const articles = await getArticles({ limit: 16 });
+
+function extractFeatured(arr) {
+  const featured = [];
+  const remaining = [];
+
+  for (let item of arr) {
+    if (item.featured && featured.length < 5) {
+      featured.push(item);
+    } else {
+      remaining.push(item);
+    }
+  }
+
+  return { featured, remaining };
+}
+
+function extractCurrentMonth(arr) {
+  const currentDate = new Date();
+  const currentYear = currentDate.getUTCFullYear();
+  const currentMonth = currentDate.getUTCMonth();
+
+  const currentMonthItems = [];
+  const otherItems = [];
+
+  for (let item of arr) {
+    const itemDate = new Date(item.publishedAt);
+
+    if (
+      itemDate.getUTCFullYear() === currentYear &&
+      itemDate.getUTCMonth() === currentMonth
+    ) {
+      currentMonthItems.push(item);
+    } else {
+      otherItems.push(item);
+    }
+  }
+
+  return { currentMonthItems, otherItems };
+}
+
+const { featured: featuredArticles, remaining } = extractFeatured(articles);
+
+const { currentMonthItems: recentArticles, otherItems: remainingArticles } =
+  extractCurrentMonth(remaining);
 ---
 
 <DefaultLayout>
@@ -12,5 +65,46 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <Seo url={canonicalURL} />
   </Fragment>
 
-  <HomePage />
+  <FeaturedList articles={featuredArticles} />
+
+  <RecentList articles={recentArticles} />
+
+  <div class="container">
+    <div class="content">
+      <ArticleList
+        itemsPerRow="2"
+        articles={remainingArticles.slice(0, 8)}
+        limit={null}
+      />
+    </div>
+
+    <Sidebar />
+  </div>
 </DefaultLayout>
+
+<style lang="scss">
+  .container {
+    max-width: var(--widthMainContainer);
+    width: 100%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @media screen and (max-width: 79rem) {
+      margin-right: 2rem;
+      margin-left: 2rem;
+      width: calc(100% - 4rem);
+      gap: 1rem;
+    }
+
+    @media screen and (max-width: 62rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .content {
+    grid-column: span 2;
+    margin-top: -2rem;
+  }
+</style>

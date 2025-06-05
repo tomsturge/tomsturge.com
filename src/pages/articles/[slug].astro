@@ -1,5 +1,4 @@
 ---
-// @ts-ignore
 import { sanityClient } from "sanity:client";
 import type { Article, WithContext } from "schema-dts";
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
@@ -9,7 +8,7 @@ import { urlForImage } from "@/sanity/urlForImage";
 import { getArticle } from "@/ui/queries";
 import { DefaultLayout } from "@/ui/layouts";
 
-import { Seo, PortableText, Sidebar, Header, Logo } from "@/ui/components";
+import { Seo, PortableText, Header, Logo } from "@/ui/components";
 
 export const getStaticPaths = async () => {
   const posts = await sanityClient.fetch(getArticle);

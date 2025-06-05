@@ -1,0 +1,122 @@
+---
+import { sanityClient } from "sanity:client";
+
+import { getArticles } from "@/ui/queries";
+import { ArticleList, Sidebar, Seo } from "@/ui/components";
+import { DefaultLayout } from "@/ui/layouts";
+
+export async function getStaticPaths() {
+  // Single query to get all categories with their articles
+  const data = await sanityClient.fetch(`
+    {
+      "categories": *[_type == "category"] {
+        _id,
+        title,
+        slug,
+        description,
+        "articles": *[_type == "article" && references(^._id)] | order(publishedAt desc) {
+          _id,
+          title,
+          slug,
+          excerpt,
+          publishedAt,
+          mainImage {
+            asset-> {
+              _id,
+              url
+            },
+            alt
+          },
+          author-> {
+            name,
+            slug
+          },
+          "category": categories[0]-> {
+            title,
+            slug,
+          }
+        }
+      }
+    }
+  `);
+
+  return data.categories.map((category) => ({
+    params: { slug: category.slug.current },
+    props: {
+      category,
+      articles: category.articles,
+    },
+  }));
+}
+
+const { category, articles } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<DefaultLayout>
+  <Fragment slot="seo">
+    <Seo url={canonicalURL} />
+  </Fragment>
+
+  <div class="title">
+    <h2>{category.title}</h2>
+    <p>{category.description}</p>
+  </div>
+
+  <div class="container">
+    <div class="content">
+      <ArticleList
+        itemsPerRow="2"
+        articles={articles}
+        limit={null}
+        minCount={0}
+      />
+    </div>
+
+    <Sidebar />
+  </div>
+</DefaultLayout>
+
+<style lang="scss">
+  .title {
+    max-width: var(--widthMainContainer);
+    width: 100%;
+    margin: 0 auto 0;
+
+    p {
+      margin: 0;
+    }
+
+    @media screen and (max-width: 79rem) {
+      margin-right: 2rem;
+      margin-left: 2rem;
+      width: calc(100% - 4rem);
+    }
+  }
+
+  .container {
+    max-width: var(--widthMainContainer);
+    width: 100%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @media screen and (max-width: 79rem) {
+      margin-right: 2rem;
+      margin-left: 2rem;
+      width: calc(100% - 4rem);
+      gap: 1rem;
+    }
+
+    @media screen and (max-width: 62rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .content {
+    grid-column: span 2;
+    margin-top: -2rem;
+  }
+</style>

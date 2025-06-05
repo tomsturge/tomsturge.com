@@ -10,7 +10,12 @@ export const getArticles = async ({
   limit?: number;
   drafts?: boolean;
   featured?: boolean;
-  category?: "leadership" | "culture" | "technology" | "sustainability";
+  category?:
+    | "leadership"
+    | "culture"
+    | "communication"
+    | "sustainability"
+    | "growth";
   articleMonth?: number;
 } = {}) => {
   const year = new Date().getFullYear();
