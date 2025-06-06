@@ -64,7 +64,6 @@
     "sanity": "^3.91.0",
     "sanity-plugin-asset-source-unsplash": "^3.0.1",
     "sanity-plugin-dashboard-widget-document-list": "^2.1.0",
-    "sanity-plugin-media": "^3.0.3",
     "schema-dts": "^1.1.2",
     "typescript": "^5.4.5",
     "vite": "^6.0.0"
@@ -72,9 +71,6 @@
   "overrides": {
     "@sanity/astro": {
       "astro": "^5.8.1",
-      "@sanity/client": "^7.5.0"
-    },
-    "sanity-plugin-media": {
       "@sanity/client": "^7.5.0"
     }
   }
