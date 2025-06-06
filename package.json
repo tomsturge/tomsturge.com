@@ -41,8 +41,8 @@
     "astro-icon": "^1.1.0",
     "astro-portabletext": "^0.11.0",
     "date-fns": "^4.1.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "sass": "^1.77.2",
     "sharp": "^0.33.4",
     "styled-components": "^6.1.11"
@@ -71,6 +71,9 @@
   },
   "overrides": {
     "@sanity/client": "^7.5.0",
+    "@types/node": "^22.15.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "vite": {
       "rollup": "npm:@rollup/wasm-node"
     }
