@@ -69,10 +69,6 @@
     "vite": "^6.0.0"
   },
   "overrides": {
-    "@sanity/client": "7.5.0",
-    "@sanity/astro": {
-      "astro": "^5.8.1",
-      "@sanity/client": "^7.5.0"
-    }
+    "@sanity/client": "^7.5.0"
   }
 }
