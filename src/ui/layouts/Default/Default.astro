@@ -6,7 +6,7 @@ import "@/ui/styles/global.scss";
 
 import { Footer, Masthead } from "@/ui/components";
 
-const { title, type, theme } = Astro.props;
+const { title, type } = Astro.props;
 
 const pageTitle = `${title ? `${title} » ` : ""}Tom Sturge`;
 ---
@@ -47,31 +47,6 @@ const pageTitle = `${title ? `${title} » ` : ""}Tom Sturge`;
 
         if (isDark) {
           document.documentElement.classList.add("dark");
-          document.documentElement.style.setProperty(
-            "--colorThemeMainBackground",
-            "var(--colorBlack)",
-          );
-          document.documentElement.style.setProperty(
-            "--colorThemeAccentBackground",
-            "var(--colorDarkGrey)",
-          );
-          document.documentElement.style.setProperty(
-            "--colorThemeText",
-            "var(--colorWhite)",
-          );
-        } else {
-          document.documentElement.style.setProperty(
-            "--colorThemeMainBackground",
-            "var(--colorWhite)",
-          );
-          document.documentElement.style.setProperty(
-            "--colorThemeAccentBackground",
-            "var(--colorLightGrey)",
-          );
-          document.documentElement.style.setProperty(
-            "--colorThemeText",
-            "var(--colorBlack)",
-          );
         }
       })();
     </script>
@@ -84,7 +59,7 @@ const pageTitle = `${title ? `${title} » ` : ""}Tom Sturge`;
   </head>
 
   <body>
-    <Masthead type={type} theme={theme} />
+    <Masthead type={type} />
 
     <slot />
 

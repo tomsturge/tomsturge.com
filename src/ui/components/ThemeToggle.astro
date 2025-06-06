@@ -1,5 +1,5 @@
 ---
-// Simple ThemeToggle.astro
+
 ---
 
 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
@@ -99,62 +99,29 @@
 </style>
 
 <script>
-  // Simple theme script that runs on every page
-  function initTheme() {
-    // Get stored theme or system preference
+  // Super simple - just toggle the CSS class!
+  function getInitialTheme() {
     const stored = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    const isDark = stored === "dark" || (!stored && prefersDark);
+    if (stored) return stored;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  }
 
-    // Apply theme
-    const html = document.documentElement;
-    if (isDark) {
-      html.classList.add("dark");
-      html.style.setProperty("--colorThemeMainBackground", "var(--colorBlack)");
-      html.style.setProperty(
-        "--colorThemeAccentBackground",
-        "var(--colorDarkGrey)",
-      );
-      html.style.setProperty("--colorThemeText", "var(--colorWhite)");
-    } else {
-      html.classList.remove("dark");
-      html.style.setProperty("--colorThemeMainBackground", "var(--colorWhite)");
-      html.style.setProperty(
-        "--colorThemeAccentBackground",
-        "var(--colorLightGrey)",
-      );
-      html.style.setProperty("--colorThemeText", "var(--colorBlack)");
-    }
+  function initTheme() {
+    const theme = getInitialTheme();
+    document.documentElement.classList.toggle("dark", theme === "dark");
   }
 
   function toggleTheme() {
     const html = document.documentElement;
-    const isDark = html.classList.contains("dark");
+    const newTheme = html.classList.contains("dark") ? "light" : "dark";
 
-    if (isDark) {
-      html.classList.remove("dark");
-      html.style.setProperty("--colorThemeMainBackground", "var(--colorWhite)");
-      html.style.setProperty(
-        "--colorThemeAccentBackground",
-        "var(--colorLightGrey)",
-      );
-      html.style.setProperty("--colorThemeText", "var(--colorBlack)");
-      localStorage.setItem("theme", "light");
-    } else {
-      html.classList.add("dark");
-      html.style.setProperty("--colorThemeMainBackground", "var(--colorBlack)");
-      html.style.setProperty(
-        "--colorThemeAccentBackground",
-        "var(--colorDarkGrey)",
-      );
-      html.style.setProperty("--colorThemeText", "var(--colorWhite)");
-      localStorage.setItem("theme", "dark");
-    }
+    html.classList.toggle("dark", newTheme === "dark");
+    localStorage.setItem("theme", newTheme);
   }
 
-  // Initialize theme immediately
+  // Initialize
   initTheme();
 
   // Add click handler
@@ -162,7 +129,7 @@
     .getElementById("theme-toggle")
     ?.addEventListener("click", toggleTheme);
 
-  // Re-run on Astro page loads
+  // Re-run on page loads
   document.addEventListener("astro:page-load", () => {
     initTheme();
     document
@@ -170,10 +137,10 @@
       ?.addEventListener("click", toggleTheme);
   });
 
-  // Listen for system changes
+  // System preference changes
   window
     .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
+    .addEventListener("change", () => {
       if (!localStorage.getItem("theme")) {
         initTheme();
       }

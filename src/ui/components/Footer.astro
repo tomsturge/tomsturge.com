@@ -4,7 +4,7 @@ import { sanityClient } from "sanity:client";
 
 import { getCategories } from "@/ui/queries";
 
-import { ArticleList } from "@/ui/components";
+import { ArticleList } from "./Articles";
 
 const categories = await sanityClient.fetch(getCategories);
 ---
@@ -175,7 +175,7 @@ const categories = await sanityClient.fetch(getCategories);
     padding: 0.25rem 1rem 0.5rem;
 
     &:not(:last-child) {
-      border-bottom: 1px solid #2d2d2d;
+      border-bottom: 1px solid var(--colorBorderDark);
     }
 
     a {
@@ -225,7 +225,7 @@ const categories = await sanityClient.fetch(getCategories);
     max-width: var(--widthMainContainer);
     margin: 0 auto;
     padding: 2rem 0;
-    border-top: 2px solid #2d2d2d;
+    border-top: 2px solid var(--colorBorderDark);
     width: 100%;
 
     @media screen and (max-width: 72rem) {
@@ -234,7 +234,9 @@ const categories = await sanityClient.fetch(getCategories);
     }
   }
 
-  html.dark .wrapper {
-    background-color: #141414;
+  html.dark {
+    .wrapper {
+      background-color: var(--colorThemeBackgroundAccent);
+    }
   }
 </style>

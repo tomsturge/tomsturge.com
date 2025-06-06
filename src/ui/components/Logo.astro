@@ -1,14 +1,14 @@
 ---
-const { theme } = Astro.props;
+
 ---
 
-<a href="/" aria-label="Tom Sturge" class:list={[theme]}>Tom Sturge</a>
+<a href="/" aria-label="Tom Sturge">Tom Sturge</a>
 
 <style lang="scss">
   a {
     display: block;
     text-decoration: none;
-    color: var(--colorThemeText);
+    color: var(--colorThemeTextMain);
     font-family: var(--fontFamilyHeading);
     font-size: 2.1em;
     font-weight: 800;
