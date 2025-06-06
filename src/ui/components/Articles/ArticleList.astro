@@ -157,14 +157,14 @@ const fillCount = minCount - posts.length;
 
   .title {
     font-size: 1.5rem;
-    line-height: 1.4375rem;
+    line-height: 1.55rem;
     margin: 0 0 1rem;
-    color: var(--colorThemeText);
+    color: var(--colorThemeTextMain);
   }
 
   .excerpt {
     margin-bottom: 0;
-    color: #888;
+    color: var(--colorThemeTextShaded);
   }
 
   .wrapper.compact {
@@ -199,7 +199,7 @@ const fillCount = minCount - posts.length;
     }
 
     .title {
-      color: var(--colorThemeText);
+      color: var(--colorThemeTextMain);
       margin-bottom: 0.5rem;
       font-size: 1.125rem;
       overflow: hidden;
@@ -207,14 +207,10 @@ const fillCount = minCount - posts.length;
       display: -webkit-box;
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
-
-      &.dark {
-        color: var(--colorWhite);
-      }
     }
 
     .excerpt {
-      color: #999;
+      color: var(--colorThemeTextShaded);
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
@@ -235,7 +231,7 @@ const fillCount = minCount - posts.length;
       padding-bottom: 63%;
       margin-bottom: 1.5rem;
       border-radius: 0.625rem;
-      background-color: rgba(0, 0, 0, 0.05);
+      background-color: var(--colorThemeBackgroundShaded);
       position: relative;
 
       span {
@@ -244,7 +240,7 @@ const fillCount = minCount - posts.length;
         left: 1rem;
         height: 22px;
         border-radius: 0.5rem;
-        background-color: var(--colorThemeAccentBackground);
+        background-color: var(--colorThemeBackgroundAccent);
         width: 72px;
       }
     }
@@ -254,7 +250,7 @@ const fillCount = minCount - posts.length;
       span {
         display: block;
         height: 26px;
-        background-color: rgba(0, 0, 0, 0.05);
+        background-color: var(--colorThemeBackgroundShaded);
         margin-bottom: 0.25rem;
 
         &:nth-child(1) {
@@ -270,7 +266,7 @@ const fillCount = minCount - posts.length;
       span {
         display: block;
         height: 16px;
-        background-color: rgba(0, 0, 0, 0.05);
+        background-color: var(--colorThemeBackgroundShaded);
         margin-bottom: 0.25rem;
 
         &:nth-child(1) {

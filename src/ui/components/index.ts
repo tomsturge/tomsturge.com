@@ -4,5 +4,6 @@ export { default as Masthead } from "./Masthead.astro";
 export { default as Pagination } from "./Pagination.astro";
 export { default as Schema } from "./Schema.astro";
 export { default as Seo } from "./Seo.astro";
-export { Sidebar } from "./Sidebar";
+export { default as Sidebar } from "./Sidebar.astro";
+export { default as ThemeToggle } from "./ThemeToggle.astro";
 export * from "./Articles";
