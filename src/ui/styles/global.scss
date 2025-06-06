@@ -1,5 +1,5 @@
 $aos-distance: 24px; // It has to be above import
-@import "node_modules/aos/src/sass/aos.scss";
+@use "node_modules/aos/src/sass/aos.scss";
 
 html,
 body {
