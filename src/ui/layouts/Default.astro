@@ -8,7 +8,9 @@ import { Footer, Masthead } from "@/ui/components";
 
 const { title, type } = Astro.props;
 
-const pageTitle = `${title ? `${title} » ` : ""}Tom Sturge`;
+const siteName = "Tom Sturge";
+
+const pageTitle = `${title ? `${title} » ` : ""}${siteName}`;
 ---
 
 <!doctype html>
@@ -25,6 +27,13 @@ const pageTitle = `${title ? `${title} » ` : ""}Tom Sturge`;
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Tom Sturge" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={`RSS Feed - ${siteName}`}
+      href="/rss.xml"
+    />
 
     <link rel="sitemap" href="/sitemap-index.xml" />
 
