@@ -1,9 +1,7 @@
 import { defineConfig, type Config } from "sanity";
 import { dashboardTool, projectUsersWidget } from "@sanity/dashboard";
 import { structureTool } from "sanity/structure";
-import { media } from "sanity-plugin-media";
 import { documentListWidget } from "sanity-plugin-dashboard-widget-document-list";
-import { netlifyWidget } from "sanity-plugin-dashboard-widget-netlify";
 import { unsplashImageAsset } from "sanity-plugin-asset-source-unsplash";
 
 import { config } from "./src/sanity/config";
@@ -19,18 +17,6 @@ export const sanityStudioConfig: Config = {
   plugins: [
     dashboardTool({
       widgets: [
-        netlifyWidget({
-          title: "Netlify deploys",
-          sites: [
-            {
-              title: "Site",
-              apiId: "d65ae022-1e39-40b0-b2ab-ea258f836e4a",
-              buildHookId: "649d5dbc2bcf4f60e9d4928b",
-              name: "tomsturge",
-              url: "https://tom.sturge.co",
-            },
-          ],
-        }),
         projectUsersWidget(),
         documentListWidget({
           title: "Articles",
@@ -41,7 +27,6 @@ export const sanityStudioConfig: Config = {
       ],
     }),
     structureTool({ structure: deskStructure }),
-    media(),
     unsplashImageAsset(),
   ],
 

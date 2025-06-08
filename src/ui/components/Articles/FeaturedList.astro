@@ -15,27 +15,27 @@ const { articles } = Astro.props;
             class="image"
             src={
               index === 0
-                ? urlForImage(mainImage).height(512).quality(100).url()
-                : urlForImage(mainImage).height(256).quality(100).url()
+                ? urlForImage(mainImage)
+                    .height(584)
+                    .width(584)
+                    .quality(100)
+                    .url()
+                : urlForImage(mainImage)
+                    .height(276)
+                    .width(276)
+                    .quality(100)
+                    .url()
             }
-            transition:name={`article-${slug.current}-image`}
+            alt={mainImage.alt}
           />
 
           <div class="container">
             <div class="category">
-              <CategoryLabel
-                name={category.title}
-                transition={`article-${slug.current}-category-${category.title.toLowerCase()}`}
-              />
+              <CategoryLabel name={category.title} />
             </div>
 
             <div class="content">
-              <h2
-                class="text"
-                transition:name={`article-${slug.current}-title`}
-              >
-                {title}
-              </h2>
+              <h2 class="text">{title}</h2>
             </div>
           </div>
         </a>
