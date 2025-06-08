@@ -9,8 +9,9 @@ export async function GET(context) {
   });
 
   return rss({
-    title: context.title,
-    description: context.description,
+    title: "Tom Sturge",
+    description:
+      "Thoughtful leadership content exploring professional growth, team culture, effective communication, and sustainable practices for today's leaders.",
     site: context.site,
     items: articles.map((article) => ({
       title: article.title,
