@@ -45,7 +45,7 @@ const fillCount = minCount - posts.length;
 
               <h2 class:list={["title", theme]}>{title}</h2>
 
-              <p class="excerpt">{excerpt}</p>
+              <p class:list={["excerpt", theme]}>{excerpt}</p>
             </div>
           </a>
         </li>
@@ -187,6 +187,10 @@ const fillCount = minCount - posts.length;
       display: -webkit-box;
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
+
+      &.dark {
+        color: var(--colorWhite);
+      }
     }
 
     .excerpt {
@@ -197,6 +201,10 @@ const fillCount = minCount - posts.length;
       font-size: 0.875rem;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
+
+      &.dark {
+        color: #969696;
+      }
     }
   }
 

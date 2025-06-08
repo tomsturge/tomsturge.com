@@ -6,7 +6,7 @@ import { urlForImage } from "@/sanity/urlForImage";
 import { Icon } from "astro-icon/components";
 import { CategoryLabel } from "./CategoryLabel";
 
-const { title, readingTime, publishedAt, excerpt, image, categories, slug } =
+const { title, readingTime, publishedAt, excerpt, image, categories } =
   Astro.props;
 ---
 
@@ -48,6 +48,7 @@ const { title, readingTime, publishedAt, excerpt, image, categories, slug } =
   <img
     class="article-header__image"
     src={urlForImage(image).width(800).url()}
+    alt={image.alt}
   />
 </header>
 
