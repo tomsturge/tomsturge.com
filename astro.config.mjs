@@ -9,6 +9,9 @@ import { config } from "./src/sanity/config";
 
 export default defineConfig({
   site: "https://tomsturge.com",
+  title: "Tom Sturge",
+  description:
+    "Leadership reflections and practical advice from decades of experience building teams, fostering growth, and creating productive work cultures.",
 
   trailingSlash: "ignore",
   integrations: [
