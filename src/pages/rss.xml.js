@@ -1,72 +1,48 @@
-// src/pages/rss.xml.js - Enhanced version with full content
+// src/pages/rss.xml.js
 import rss from "@astrojs/rss";
 import { getArticles } from "@/ui/queries";
 import { urlForImage } from "@/sanity/urlForImage";
-import { toHTML } from "@portabletext/to-html";
 
 export async function GET(context) {
-  // Fetch published articles with full body content
+  // Fetch published articles from Sanity (exclude drafts for RSS)
   const articles = await getArticles({
-    limit: 50,
-    drafts: false,
+    limit: 50, // Adjust as needed
+    drafts: false, // Only published articles in RSS
   });
 
   return rss({
+    // Basic RSS feed info
     title: "Your Blog Title",
     description: "Your blog description",
     site: context.site,
 
-    items: articles.map((article) => {
-      // Convert Portable Text body to HTML
-      let htmlContent = article.excerpt || "";
+    // RSS feed items from your Sanity articles
+    items: articles.map((article) => ({
+      title: article.title,
+      description: article.excerpt || "",
+      link: `/articles/${article.slug.current}`,
+      pubDate: new Date(article.publishedAt),
 
-      if (article.body) {
-        try {
-          htmlContent = toHTML(article.body);
-        } catch (error) {
-          console.warn(
-            `Failed to convert body for article: ${article.title}`,
-            error,
-          );
-          htmlContent = article.excerpt || "";
-        }
-      }
+      // Add category (using the first category from your query structure)
+      categories: article.category ? [article.category.title] : [],
 
-      return {
-        title: article.title,
-        description: article.excerpt || "",
-        link: `/articles/${article.slug.current}`,
-        pubDate: new Date(article.publishedAt),
+      // Add featured image as enclosure
+      enclosure: article.mainImage
+        ? {
+            url: urlForImage(article.mainImage).width(1200).height(630).url(),
+            type: "image/jpeg",
+            length: 0,
+          }
+        : undefined,
 
-        // Add category
-        categories: article.category ? [article.category.title] : [],
-
-        // Full content in RSS
-        content: htmlContent,
-
-        // Enhanced custom data with full content
-        customData: `
-          <content:encoded><![CDATA[
-            ${
-              article.mainImage
-                ? `
-              <img 
-                src="${urlForImage(article.mainImage).width(800).url()}" 
-                alt="${article.title}"
-                style="max-width: 100%; height: auto; margin-bottom: 1rem;"
-              />
-            `
-                : ""
-            }
-            ${htmlContent}
-          ]]></content:encoded>
-        `,
-      };
-    }),
+      // Include just the excerpt in content (image is handled by enclosure)
+      customData: `
+        <content:encoded><![CDATA[${article.excerpt || ""}]]></content:encoded>
+      `,
+    })),
 
     xmlns: {
       content: "http://purl.org/rss/1.0/modules/content/",
-      atom: "http://www.w3.org/2005/Atom",
     },
   });
 }
