@@ -12,7 +12,6 @@ const {
   featured = false,
   articles = null,
   itemsPerRow = 3,
-  transitions = true,
   minCount = 3,
 } = Astro.props;
 
@@ -31,41 +30,22 @@ const fillCount = minCount - posts.length;
           <a href={`/articles/${slug.current}`}>
             <img
               class="image"
-              transition:name={
-                transitions ? `article-${slug.current}-image` : null
-              }
-              src={urlForImage(mainImage).height(480).quality(100).url()}
+              src={urlForImage(mainImage)
+                .height(237)
+                .width(379)
+                .quality(100)
+                .url()}
+              alt={mainImage.alt}
             />
 
             <div class="content-wrapper">
               <div class="category">
-                <CategoryLabel
-                  name={category.title}
-                  transition={
-                    transitions
-                      ? `article-${slug.current}-category-${category.title.toLowerCase()}`
-                      : null
-                  }
-                />
+                <CategoryLabel name={category.title} />
               </div>
 
-              <h2
-                class:list={["title", theme]}
-                transition:name={
-                  transitions ? `article-${slug.current}-title` : null
-                }
-              >
-                {title}
-              </h2>
+              <h2 class:list={["title", theme]}>{title}</h2>
 
-              <p
-                class="excerpt"
-                transition:name={
-                  transitions ? `article-${slug.current}-excerpt` : null
-                }
-              >
-                {excerpt}
-              </p>
+              <p class="excerpt">{excerpt}</p>
             </div>
           </a>
         </li>

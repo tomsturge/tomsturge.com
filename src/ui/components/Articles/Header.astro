@@ -16,28 +16,18 @@ const { title, readingTime, publishedAt, excerpt, image, categories, slug } =
       <ul class="article-header__categories">
         {categories.map((category) => (
           <li>
-            <CategoryLabel
-              name={category.title}
-              link={category.slug}
-              transition={`article-${slug.current}-category-${category.title.toLowerCase()}`}
-            />
+            <CategoryLabel name={category.title} link={category.slug} />
           </li>
         ))}
       </ul>
     )
   }
 
-  <h1
-    class="article-header__title"
-    transition:name={`article-${slug.current}-title`}
-  >
+  <h1 class="article-header__title">
     {title}
   </h1>
 
-  <p
-    class="article-header__excerpt"
-    transition:name={`article-${slug.current}-excerpt`}
-  >
+  <p class="article-header__excerpt">
     {excerpt}
   </p>
 
@@ -58,7 +48,6 @@ const { title, readingTime, publishedAt, excerpt, image, categories, slug } =
   <img
     class="article-header__image"
     src={urlForImage(image).width(800).url()}
-    transition:name={`article-${slug.current}-image`}
   />
 </header>
 

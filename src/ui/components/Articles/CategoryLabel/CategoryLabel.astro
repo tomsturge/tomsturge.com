@@ -1,11 +1,8 @@
 ---
-const { name, transition } = Astro.props;
+const { name } = Astro.props;
 ---
 
-<span
-  class:list={["wrapper", name.toLowerCase().split(" ").join("-")]}
-  transition:name={transition}
->
+<span class:list={["wrapper", name.toLowerCase().split(" ").join("-")]}>
   {name}
 </span>
 

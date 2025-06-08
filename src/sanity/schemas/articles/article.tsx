@@ -62,6 +62,13 @@ export const articleSchemaType = defineType({
       options: {
         hotspot: true,
       },
+      fields: [
+        {
+          name: "alt",
+          type: "string",
+          validation: (Rule) => Rule.required(),
+        },
+      ],
       validation: (Rule) => [Rule.required()],
     }),
     defineField({

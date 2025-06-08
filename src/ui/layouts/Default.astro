@@ -1,6 +1,4 @@
 ---
-import { ClientRouter } from "astro:transitions";
-
 import "@/ui/styles/variables.scss";
 import "@/ui/styles/global.scss";
 
@@ -47,8 +45,6 @@ const pageTitle = `${title ? `${title} » ` : ""}${siteName}`;
     />
 
     <slot name="seo" />
-
-    <ClientRouter />
 
     <script is:inline>
       (function () {
