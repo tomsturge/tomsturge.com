@@ -4,21 +4,20 @@ import "@/ui/styles/global.scss";
 
 import { Footer, Masthead } from "@/ui/components";
 
+import { getSiteSettings } from "@/ui/queries";
+
 const { title, type } = Astro.props;
 
-const siteName = "Tom Sturge";
+const siteSettings = await getSiteSettings();
 
-const pageTitle = `${title ? `${title} » ` : ""}${siteName}`;
+const pageTitle = `${title ? `${title} » ` : ""}${siteSettings.title}`;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <title>{pageTitle}</title>
-    <meta
-      name="description"
-      content="Thoughtful leadership content exploring professional growth, team culture, effective communication, and sustainable practices for today's leaders."
-    />
+    <meta name="description" content={siteSettings.description} />
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,7 +32,7 @@ const pageTitle = `${title ? `${title} » ` : ""}${siteName}`;
     <link
       rel="alternate"
       type="application/rss+xml"
-      title={`RSS Feed - ${siteName}`}
+      title={`RSS Feed - ${siteSettings.title}`}
       href="/rss.xml"
     />
 
