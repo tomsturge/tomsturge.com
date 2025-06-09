@@ -6,13 +6,13 @@ import { unsplashImageAsset } from "sanity-plugin-asset-source-unsplash";
 
 import { config } from "./src/sanity/config";
 import { schema } from "./src/sanity/schemas";
-import { deskStructure } from "./src/sanity/deskStructure";
+import { deskStructure, documentNode } from "./src/sanity/desk";
 
 export const sanityStudioConfig: Config = {
   name: "default",
   title: "tom.sturge.co",
-  projectId: config.projectId,
-  dataset: config.dataset,
+  dataset: process.env.SANITY_PROJECT_ID,
+  projectId: process.env.SANITY_DATASET,
 
   plugins: [
     dashboardTool({
@@ -26,7 +26,10 @@ export const sanityStudioConfig: Config = {
         }),
       ],
     }),
-    structureTool({ structure: deskStructure }),
+    structureTool({
+      documentNode,
+      structure: deskStructure,
+    }),
     unsplashImageAsset(),
   ],
 

@@ -1,9 +1,9 @@
-import { IconAdjustments } from '@tabler/icons-react';
-import { defineField, defineType } from 'sanity';
+import { IconAdjustments } from "@tabler/icons-react";
+import { defineField, defineType } from "sanity";
 
-export const siteSettingsSchemaType = defineType({
+export const siteSettings = defineType({
   name: `siteSettings`,
-  title: `Site Settings`,
+  title: `Settings`,
   type: `document`,
   icon: () => <IconAdjustments size={33} />,
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -21,17 +21,9 @@ export const siteSettingsSchemaType = defineType({
       type: `text`,
     }),
     defineField({
-      name: `url`,
-      title: `URL`,
-      type: `string`,
-    }),
-    defineField({
-      name: `seoImage`,
-      title: `SEO Image`,
-      type: `image`,
-      options: {
-        hotspot: true,
-      },
+      name: `bio`,
+      title: `Bio (used in footer)`,
+      type: `text`,
     }),
   ],
 });

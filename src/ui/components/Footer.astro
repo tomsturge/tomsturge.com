@@ -2,11 +2,12 @@
 import { Icon } from "astro-icon/components";
 import { sanityClient } from "sanity:client";
 
-import { getCategories } from "@/ui/queries";
+import { getCategories, getSiteSettings } from "@/ui/queries";
 
 import { ArticleList } from "./Articles";
 
 const categories = await sanityClient.fetch(getCategories);
+const siteSettings = await getSiteSettings();
 ---
 
 <footer class="wrapper">
@@ -15,10 +16,7 @@ const categories = await sanityClient.fetch(getCategories);
       <div class="about-content">
         <h3>About me</h3>
         <p>
-          25 years of experience supporting aspiring leaders, non-technical
-          founders, and championing DEI initiatives in tech. Bringing practical
-          insights from start-up and scale-up environments to help build more
-          effective, inclusive teams.
+          {siteSettings.bio}
         </p>
       </div>
       <ul class="social">

@@ -4,8 +4,12 @@ import sanity from "@sanity/astro";
 import { loadEnv } from "vite";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
-const { SANITY_TOKEN } = loadEnv(import.meta.env.MODE, process.cwd(), "");
-import { config } from "./src/sanity/config";
+
+const { SANITY_TOKEN, SANITY_PROJECT_ID, SANITY_DATASET } = loadEnv(
+  import.meta.env.MODE,
+  process.cwd(),
+  "",
+);
 
 export default defineConfig({
   site: "https://tomsturge.com",
@@ -13,8 +17,8 @@ export default defineConfig({
   integrations: [
     react(),
     sanity({
-      projectId: config.projectId,
-      dataset: config.dataset,
+      projectId: SANITY_PROJECT_ID,
+      dataset: SANITY_DATASET,
       token: SANITY_TOKEN,
       useCdn: false,
     }),
