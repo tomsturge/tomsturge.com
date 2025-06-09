@@ -52,8 +52,7 @@ const categories = await sanityClient.fetch(getCategories);
                 ]}
               >
                 <a href={`/category/${slug.current}`}>
-                  <p>{title}</p>{" "}
-                  <span class={title.toLowerCase()}>{articleCount}</span>
+                  <p>{title}</p> <span>{articleCount}</span>
                 </a>
               </li>
             )}
@@ -122,6 +121,7 @@ const categories = await sanityClient.fetch(getCategories);
       color: var(--colorBlack);
       font-size: 14px;
       transform: translateX(0.5rem);
+      font-weight: 700;
     }
 
     &.growth {
@@ -146,6 +146,10 @@ const categories = await sanityClient.fetch(getCategories);
 
     &.sustainability {
       background-color: var(--colorCategorySustainability);
+    }
+
+    &.people {
+      background-color: var(--colorCategoryPeople);
     }
   }
 

@@ -6,4 +6,4 @@ export const getCategories = `*[_type == "category"]{
     ${import.meta.env.DEV ? "_type == 'article'" : "_type == 'article' && !(_id in path('drafts.**'))"} 
     && references(^._id )
   ])
-}`;
+} | order(articleCount desc)`;
