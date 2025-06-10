@@ -1,6 +1,6 @@
 import rss from "@astrojs/rss";
 import { getArticles } from "@/ui/queries";
-import { urlForImage } from "@/sanity/urlForImage";
+import { urlForImage } from "@/scripts/urlForImage";
 
 export async function GET(context) {
   const articles = await getArticles({
