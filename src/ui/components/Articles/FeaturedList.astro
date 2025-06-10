@@ -18,12 +18,14 @@ const { articles } = Astro.props;
                 ? urlForImage(mainImage)
                     .height(584)
                     .width(584)
-                    .quality(100)
+                    .quality(80)
+                    .format("webp")
                     .url()
                 : urlForImage(mainImage)
                     .height(276)
                     .width(276)
-                    .quality(100)
+                    .quality(80)
+                    .format("webp")
                     .url()
             }
             alt={mainImage.alt}
