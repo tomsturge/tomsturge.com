@@ -5,9 +5,9 @@ import { urlForImage } from "@/sanity/urlForImage";
 
 import { Icon } from "astro-icon/components";
 
-import { ViewCounter, CategoryLabel } from "@/ui/components";
+import { CategoryLabel } from "@/ui/components";
 
-const { title, readingTime, publishedAt, excerpt, image, categories, views } =
+const { title, readingTime, publishedAt, excerpt, image, categories } =
   Astro.props;
 ---
 
@@ -40,8 +40,6 @@ const { title, readingTime, publishedAt, excerpt, image, categories, views } =
         {readingTime} minute read
       </li>
     </ul>
-
-    <ViewCounter views={views} />
   </div>
 
   <img
