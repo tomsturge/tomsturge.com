@@ -5,7 +5,7 @@ const { title, slug, categories, mainImage, draft } = Astro.props;
 ---
 
 <li class="articles__list-item">
-  <img src={urlForImage(mainImage).height(480).quality(100).url()} />
+  <img src={urlForImage(mainImage).height(480).url()} />
 
   <a class="articles__item-container" href={`/articles/${slug.current}`}>
     <div class="articles__item-content">

@@ -30,12 +30,7 @@ const fillCount = minCount - posts.length;
           <a href={`/articles/${slug.current}`}>
             <img
               class="image"
-              src={urlForImage(mainImage)
-                .height(237)
-                .width(379)
-                .quality(80)
-                .format("webp")
-                .url()}
+              src={urlForImage(mainImage).height(237).width(379).url()}
               alt={mainImage.alt}
             />
 
