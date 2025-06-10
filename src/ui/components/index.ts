@@ -6,5 +6,4 @@ export { default as Schema } from "./Schema.astro";
 export { default as Seo } from "./Seo.astro";
 export { default as Sidebar } from "./Sidebar.astro";
 export { default as ThemeToggle } from "./ThemeToggle.astro";
-export { default as ViewCounter } from "./ViewCounter.astro";
 export * from "./Articles";

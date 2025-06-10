@@ -2,14 +2,13 @@
 import { sanityClient } from "sanity:client";
 import type { Article, WithContext } from "schema-dts";
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
-import { createClient } from "@supabase/supabase-js";
 
 import { urlForImage } from "@/sanity/urlForImage";
 
 import { getArticle } from "@/ui/queries";
 import { DefaultLayout } from "@/ui/layouts";
 
-import { Seo, PortableText, Header, Logo, ViewCounter } from "@/ui/components";
+import { Seo, PortableText, Header, Logo } from "@/ui/components";
 
 export const getStaticPaths = async () => {
   const posts = await sanityClient.fetch(getArticle);
@@ -82,24 +81,6 @@ const {
   title,
 } = Astro.props;
 
-const supabase = createClient(
-  import.meta.env.PUBLIC_SUPABASE_URL,
-  import.meta.env.PUBLIC_SUPABASE_ANON_KEY,
-);
-
-let views = 0;
-try {
-  const { data: viewData } = await supabase
-    .from("ts_article_views")
-    .select("views")
-    .eq("sanity_document_id", _id)
-    .single();
-
-  views = viewData?.views || 0;
-} catch (error) {
-  console.warn("Could not fetch build-time view count:", error.message);
-}
-
 const schema: WithContext<Article> = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -165,7 +146,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       publishedAt={publishedAt}
       image={mainImage}
       slug={slug}
-      views={views}
     />
 
     <div class="article-content">
@@ -173,8 +153,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </div>
   </div>
 
-  <!-- Hidden elements to store data for the script -->
-  <div style="display: none;" data-document-id={_id} data-slug={slug}></div>
+  <div style="display: none;" data-document-id={_id} data-slug={slug.current}>
+  </div>
 </DefaultLayout>
 
 <script>
@@ -185,70 +165,40 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     import.meta.env.PUBLIC_SUPABASE_ANON_KEY,
   );
 
-  async function loadAndIncrementViews() {
+  async function trackPageView() {
     const documentId = document
       .querySelector("[data-document-id]")
       ?.getAttribute("data-document-id");
     const slug = document
       .querySelector("[data-slug]")
       ?.getAttribute("data-slug");
-    const viewCountElement = document.getElementById("view-count");
-
-    if (!documentId || !slug || !viewCountElement) {
-      console.warn("Missing required elements for view counter", {
-        documentId,
-        slug,
-        viewCountElement,
-      });
-      return;
-    }
 
     try {
-      const initialCount = parseInt(
-        viewCountElement.getAttribute("data-initial") || "0",
-      );
-
-      const { data: currentData, error: fetchError } = await supabase
-        .from("ts_article_views")
-        .select("views")
-        .eq("sanity_document_id", documentId)
-        .single();
-
-      if (!fetchError && currentData && currentData.views !== initialCount) {
-        viewCountElement.textContent = currentData.views.toString();
-      }
-
-      const { error: incrementError } = await supabase.rpc("increment_view", {
+      await supabase.rpc("increment_view", {
         doc_id: documentId,
         article_slug: slug,
       });
-
-      if (incrementError) {
-        console.error("Error incrementing views:", incrementError);
-        return;
-      }
     } catch (error) {
-      console.error("Failed to load/increment view count:", error);
+      // Silently fail - don't log errors in production to avoid console noise
+      // console.error("Failed to track page view:", error);
     }
   }
 
-  let hasIncrementedViews = false;
+  let hasTrackedView = false;
 
-  const handleViewIncrement = () => {
-    if (!hasIncrementedViews) {
-      hasIncrementedViews = true;
-      loadAndIncrementViews();
+  const handleViewTracking = () => {
+    if (!hasTrackedView) {
+      hasTrackedView = true;
+      trackPageView();
     }
   };
 
-  // Increment views when the page loads
-  document.addEventListener("DOMContentLoaded", handleViewIncrement);
+  document.addEventListener("DOMContentLoaded", handleViewTracking);
 
-  // Fallback for cases where DOMContentLoaded already fired
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", handleViewIncrement);
+    document.addEventListener("DOMContentLoaded", handleViewTracking);
   } else {
-    handleViewIncrement();
+    handleViewTracking();
   }
 </script>
 
