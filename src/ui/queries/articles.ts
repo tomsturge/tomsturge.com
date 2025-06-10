@@ -49,6 +49,7 @@ export const getArticles = async ({
 };
 
 export const getArticle = `*[_type == "article"]{
+  _id,
   title,
   slug,
   body,
