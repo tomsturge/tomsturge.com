@@ -4,9 +4,10 @@ import { format } from "date-fns";
 import { urlForImage } from "@/sanity/urlForImage";
 
 import { Icon } from "astro-icon/components";
-import { CategoryLabel } from "./CategoryLabel";
 
-const { title, readingTime, publishedAt, excerpt, image, categories } =
+import { ViewCounter, CategoryLabel } from "@/ui/components";
+
+const { title, readingTime, publishedAt, excerpt, image, categories, views } =
   Astro.props;
 ---
 
@@ -31,19 +32,17 @@ const { title, readingTime, publishedAt, excerpt, image, categories } =
     {excerpt}
   </p>
 
-  <ul class="article-header__meta">
-    <li>
-      By <a href={`#`}>Tom Sturge</a>
-    </li>
+  <div class="article-header__meta">
+    <ul class="article-header__details">
+      <li>
+        {format(publishedAt, "MMM d, yyyy")}
+        <Icon name="mdi:dot" height={17} />
+        {readingTime} minute read
+      </li>
+    </ul>
 
-    <li class="list--separator">|</li>
-
-    <li>
-      {format(publishedAt, "MMM d, yyyy")}
-      <Icon name="mdi:dot" height={17} />
-      {readingTime} minute read
-    </li>
-  </ul>
+    <ViewCounter views={views} />
+  </div>
 
   <img
     class="article-header__image"
@@ -105,13 +104,17 @@ const { title, readingTime, publishedAt, excerpt, image, categories } =
     }
 
     &__meta {
-      // grid-area: meta;
-      margin: 0.5rem 0;
-      font-size: 14px;
       display: flex;
-      align-items: center;
-      list-style: none;
-      padding: 0;
+      justify-content: space-between;
+
+      ul {
+        margin: 0.5rem 0;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+      }
 
       .list--separator {
         margin: 0 0.5rem;

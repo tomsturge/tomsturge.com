@@ -6,7 +6,7 @@ const monthName = new Date().toLocaleString("default", { month: "long" });
 const { articles } = Astro.props;
 ---
 
-<div class="container" data-aos="fade-up">
+<div class="container">
   <div class="content">
     <h2>{monthName} highlights</h2>
     <ArticleList articles={articles} />

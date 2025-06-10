@@ -38,7 +38,7 @@
     "@fontsource-variable/source-serif-4": "^5.0.19",
     "@fontsource/lato": "^5.2.5",
     "@portabletext/to-html": "^2.0.14",
-    "aos": "^2.3.4",
+    "@supabase/supabase-js": "^2.50.0",
     "astro": "^5.8.1",
     "astro-icon": "^1.1.0",
     "astro-portabletext": "^0.11.0",

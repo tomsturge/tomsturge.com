@@ -2,19 +2,21 @@
 import { sanityClient } from "sanity:client";
 import type { Article, WithContext } from "schema-dts";
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import { createClient } from "@supabase/supabase-js";
 
 import { urlForImage } from "@/sanity/urlForImage";
 
 import { getArticle } from "@/ui/queries";
 import { DefaultLayout } from "@/ui/layouts";
 
-import { Seo, PortableText, Header, Logo } from "@/ui/components";
+import { Seo, PortableText, Header, Logo, ViewCounter } from "@/ui/components";
 
 export const getStaticPaths = async () => {
   const posts = await sanityClient.fetch(getArticle);
 
   return posts.map(
     ({
+      _id,
       body,
       headings,
       categories,
@@ -29,6 +31,7 @@ export const getStaticPaths = async () => {
     }) => {
       return {
         props: {
+          _id,
           body,
           headings,
           categories,
@@ -48,6 +51,7 @@ export const getStaticPaths = async () => {
 };
 
 type Post = {
+  _id: string;
   body: any;
   slug: {
     current: string;
@@ -65,6 +69,7 @@ type Post = {
 type Props = Post;
 
 const {
+  _id,
   body,
   headings,
   slug,
@@ -76,6 +81,24 @@ const {
   readingTime,
   title,
 } = Astro.props;
+
+const supabase = createClient(
+  import.meta.env.PUBLIC_SUPABASE_URL,
+  import.meta.env.PUBLIC_SUPABASE_ANON_KEY,
+);
+
+let views = 0;
+try {
+  const { data: viewData } = await supabase
+    .from("ts_article_views")
+    .select("views")
+    .eq("sanity_document_id", _id)
+    .single();
+
+  views = viewData?.views || 0;
+} catch (error) {
+  console.warn("Could not fetch build-time view count:", error.message);
+}
 
 const schema: WithContext<Article> = {
   "@context": "https://schema.org",
@@ -142,13 +165,92 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       publishedAt={publishedAt}
       image={mainImage}
       slug={slug}
+      views={views}
     />
 
     <div class="article-content">
       <PortableText value={body} />
     </div>
   </div>
+
+  <!-- Hidden elements to store data for the script -->
+  <div style="display: none;" data-document-id={_id} data-slug={slug}></div>
 </DefaultLayout>
+
+<script>
+  import { createClient } from "@supabase/supabase-js";
+
+  const supabase = createClient(
+    import.meta.env.PUBLIC_SUPABASE_URL,
+    import.meta.env.PUBLIC_SUPABASE_ANON_KEY,
+  );
+
+  async function loadAndIncrementViews() {
+    const documentId = document
+      .querySelector("[data-document-id]")
+      ?.getAttribute("data-document-id");
+    const slug = document
+      .querySelector("[data-slug]")
+      ?.getAttribute("data-slug");
+    const viewCountElement = document.getElementById("view-count");
+
+    if (!documentId || !slug || !viewCountElement) {
+      console.warn("Missing required elements for view counter", {
+        documentId,
+        slug,
+        viewCountElement,
+      });
+      return;
+    }
+
+    try {
+      const initialCount = parseInt(
+        viewCountElement.getAttribute("data-initial") || "0",
+      );
+
+      const { data: currentData, error: fetchError } = await supabase
+        .from("ts_article_views")
+        .select("views")
+        .eq("sanity_document_id", documentId)
+        .single();
+
+      if (!fetchError && currentData && currentData.views !== initialCount) {
+        viewCountElement.textContent = currentData.views.toString();
+      }
+
+      const { error: incrementError } = await supabase.rpc("increment_view", {
+        doc_id: documentId,
+        article_slug: slug,
+      });
+
+      if (incrementError) {
+        console.error("Error incrementing views:", incrementError);
+        return;
+      }
+    } catch (error) {
+      console.error("Failed to load/increment view count:", error);
+    }
+  }
+
+  let hasIncrementedViews = false;
+
+  const handleViewIncrement = () => {
+    if (!hasIncrementedViews) {
+      hasIncrementedViews = true;
+      loadAndIncrementViews();
+    }
+  };
+
+  // Increment views when the page loads
+  document.addEventListener("DOMContentLoaded", handleViewIncrement);
+
+  // Fallback for cases where DOMContentLoaded already fired
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", handleViewIncrement);
+  } else {
+    handleViewIncrement();
+  }
+</script>
 
 <style lang="scss">
   .article-masthead {
