@@ -16,13 +16,13 @@
   --colorBorder: #cbcbcb;
   --colorBorderDark: #3c3c3c;
 
-  --colorCategoryLeadership: #a22a2a;
-  --colorCategoryCulture: #3850b7;
-  --colorCategoryCommunication: #1e3a5f;
-  --colorCategoryBookReview: #424242;
-  --colorCategorySustainability: #27633b;
-  --colorCategoryGrowth: #7732b3;
-  --colorCategoryPeople: #7f4e06;
+  --colorCategoryLeadership: #ff6b6b;
+  --colorCategoryCulture: #64b5f6;
+  --colorCategoryCommunication: #80cbc4;
+  --colorCategoryBookReview: #bdbdbd;
+  --colorCategorySustainability: #81c784;
+  --colorCategoryGrowth: #ce93d8;
+  --colorCategoryPeople: #ffb74d;
 
   --colorThemeBackgroundMain: var(--colorWhite);
   --colorThemeBackgroundAccent: var(--colorLightGrey);
@@ -84,4 +84,12 @@ html.dark:root {
   --colorThemeBackgroundShaded: var(--colorShadedDark);
   --colorThemeTextMain: var(--colorIvory);
   --colorThemeTextShaded: var(--colorLightGrey);
+
+  --colorCategoryLeadership: #a22a2a;
+  --colorCategoryCulture: #3850b7;
+  --colorCategoryCommunication: #1e3a5f;
+  --colorCategoryBookReview: #424242;
+  --colorCategorySustainability: #27633b;
+  --colorCategoryGrowth: #7732b3;
+  --colorCategoryPeople: #7f4e06;
 }
