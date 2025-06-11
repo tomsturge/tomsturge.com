@@ -5,47 +5,60 @@ import { ArticleList, Sidebar, Seo } from "@/ui/components";
 import { DefaultLayout } from "@/ui/layouts";
 
 export async function getStaticPaths() {
-  const data = await sanityClient.fetch(`
-    {
-      "categories": *[_type == "category"] {
+  const categories = await sanityClient.fetch(`
+    *[_type == "category"] {
+      _id,
+      title,
+      slug,
+      description,
+      "articles": *[_type == "article" && references(^._id)] | order(publishedAt desc) {
         _id,
         title,
         slug,
-        description,
-        "articles": *[_type == "article" && references(^._id)] | order(publishedAt desc) {
-          _id,
+        excerpt,
+        publishedAt,
+        mainImage {
+          asset-> {
+            _id,
+            url
+          },
+          alt
+        },
+        author-> {
+          name,
+          slug
+        },
+        "category": categories[0]-> {
           title,
           slug,
-          excerpt,
-          publishedAt,
-          mainImage {
-            asset-> {
-              _id,
-              url
-            },
-            alt
-          },
-          author-> {
-            name,
-            slug
-          },
-          "category": categories[0]-> {
-            title,
-            slug,
-          }
         }
       }
     }
   `);
 
-  return data.categories.map((category) => ({
-    params: { slug: category.slug.current },
+  return categories.map((category) => ({
+    params: { category: category.slug.current },
     props: {
       category,
       articles: category.articles,
     },
   }));
 }
+
+type CategoryType = {
+  _id: string;
+  title: string;
+  slug: {
+    current: string;
+  };
+  description: string;
+  articles: any[];
+};
+
+type Props = {
+  category: CategoryType;
+  articles: any[];
+};
 
 const { category, articles } = Astro.props;
 
