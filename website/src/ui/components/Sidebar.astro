@@ -51,7 +51,7 @@ const categories = await sanityClient.fetch(getCategories);
                   title.toLowerCase().split(" ").join("-"),
                 ]}
               >
-                <a href={`/category/${slug.current}`}>
+                <a href={`/${slug.current}`}>
                   <p>{title}</p> <span>{articleCount}</span>
                 </a>
               </li>

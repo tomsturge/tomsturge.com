@@ -48,7 +48,7 @@ const siteSettings = await getSiteSettings();
             <>
               {articleCount > 0 && (
                 <li class="categories-item">
-                  <a href={`/category/${slug.current}`}>
+                  <a href={`/${slug.current}`}>
                     <p>{title}</p>{" "}
                     <span class={title.toLowerCase().split(" ").join("-")}>
                       {articleCount}

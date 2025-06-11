@@ -10,7 +10,7 @@ const { articles } = Astro.props;
   {
     articles.map(({ title, slug, mainImage, category }, index) => (
       <li class:list={["item", `item-${index}`]}>
-        <a href={`/articles/${slug.current}`}>
+        <a href={`/${category.slug.current}/${slug.current}`}>
           {index === 0 ? (
             <img
               class="image"

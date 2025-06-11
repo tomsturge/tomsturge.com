@@ -27,7 +27,7 @@ const fillCount = minCount - posts.length;
     {
       posts.map(({ title, slug, excerpt, mainImage, category }) => (
         <li class="item">
-          <a href={`/articles/${slug.current}`}>
+          <a href={`/${category.slug.current}/${slug.current}`}>
             <img
               class="image"
               src={urlForImage(mainImage).height(237).width(379).url()}

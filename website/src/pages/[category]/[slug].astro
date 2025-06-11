@@ -11,45 +11,59 @@ import { DefaultLayout } from "@/ui/layouts";
 import { Seo, PortableText, Header, Logo } from "@/ui/components";
 
 export const getStaticPaths = async () => {
-  const posts = await sanityClient.fetch(getArticle);
+  // Get articles and their categories
+  const articles = await sanityClient.fetch(getArticle);
 
-  return posts.map(
-    ({
+  const categories = await sanityClient.fetch(`
+    *[_type == "category"] {
       _id,
-      body,
-      headings,
-      categories,
-      excerpt,
-      publishedAt,
-      readingTime,
-      mainImage,
-      socialImage,
-      slug,
       title,
-      author,
-    }) => {
+      slug,
+      "articles": *[_type == "article" && references(^._id)] {
+        _id,
+        slug
+      }
+    }
+  `);
+
+  return articles
+    .map((article) => {
+      // Find which category this article belongs to
+      const articleCategory = categories.find((cat) =>
+        cat.articles.some((catArticle) => catArticle._id === article._id),
+      );
+
+      if (!articleCategory) {
+        console.warn(`No category found for article: ${article.title}`);
+        return null;
+      }
+
       return {
-        props: {
-          _id,
-          body,
-          headings,
-          categories,
-          excerpt,
-          publishedAt,
-          mainImage,
-          socialImage,
-          readingTime,
-          title,
-          slug,
-          author,
+        params: {
+          category: articleCategory.slug.current,
+          slug: article.slug.current,
         },
-        params: { slug: slug.current },
+        props: {
+          _id: article._id,
+          body: article.body,
+          headings: article.headings,
+          categories: article.categories,
+          excerpt: article.excerpt,
+          publishedAt: article.publishedAt,
+          readingTime: article.readingTime,
+          mainImage: article.mainImage,
+          socialImage: article.socialImage,
+          slug: article.slug,
+          title: article.title,
+          author: article.author,
+          category: articleCategory,
+        },
       };
-    },
-  );
+    })
+    .filter(Boolean); // Remove any null entries
 };
 
-type Post = {
+type ArticleProps = {
   _id: string;
   body: any;
   slug: {
@@ -63,9 +77,15 @@ type Post = {
   publishedAt: Date;
   readingTime: number;
   title: string;
+  author: any;
+  category: {
+    _id: string;
+    title: string;
+    slug: {
+      current: string;
+    };
+  };
 };
-
-type Props = Post;
 
 const {
   _id,
@@ -79,7 +99,7 @@ const {
   publishedAt,
   readingTime,
   title,
-} = Astro.props;
+} = Astro.props as ArticleProps;
 
 const schema: WithContext<Article> = {
   "@context": "https://schema.org",
