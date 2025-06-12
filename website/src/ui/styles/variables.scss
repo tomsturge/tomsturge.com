@@ -1,8 +1,3 @@
-@use "@fontsource-variable/lora";
-@use "@fontsource-variable/roboto-condensed";
-@use "@fontsource-variable/source-serif-4";
-@use "@fontsource-variable/inter";
-
 :root {
   --colorBlack: #181818;
   --colorWhite: #fff;
@@ -30,10 +25,15 @@
   --colorThemeTextMain: var(--colorBlack);
   --colorThemeTextShaded: var(--colorGrey);
 
-  --fontFamilyHeading: "Source Serif 4 Variable", serif;
-  --fontFamilyBody: "Lora Variable", sans-serif;
-  --fontFamilyCondensed: "Roboto Condensed Variable", sans-serif;
-  --fontFamilyBodySans: "Inter Variable", sans-serif;
+  --fontFamilyHeading:
+    "Source Serif 4 Variable", "Times New Roman", Georgia, serif;
+  --fontFamilyBody: "Lora Variable", Georgia, "Times New Roman", serif;
+  --fontFamilyCondensed:
+    "Roboto Condensed Variable", "Arial Narrow", "Helvetica Condensed",
+    sans-serif;
+  --fontFamilyBodySans:
+    "Inter Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
 
   --fontWeightLight: 300;
   --fontWeightNormal: 400;

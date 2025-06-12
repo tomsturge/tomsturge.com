@@ -1,4 +1,9 @@
 ---
+import "@fontsource-variable/lora/wght.css";
+import "@fontsource-variable/roboto-condensed/wght.css";
+import "@fontsource-variable/source-serif-4/wght.css";
+import "@fontsource-variable/inter/wght.css";
+
 import "@/ui/styles/variables.scss";
 import "@/ui/styles/global.scss";
 
@@ -17,16 +22,36 @@ const pageTitle = `${title ? `${title} » ` : ""}${siteSettings.title}`;
 <html lang="en">
   <head>
     <title>{pageTitle}</title>
-    <meta name="description" content={siteSettings.description} />
 
+    <!-- Critical fonts (load first) -->
+    <link
+      rel="preload"
+      href="/fonts/inter-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/lora-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <meta name="description" content={siteSettings.description} />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-title" content="Tom Sturge" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' https://cdn.sanity.io/; child-src 'none'; style-src 'unsafe-inline' 'self'; worker-src 'self'; style-src-elem 'unsafe-inline' 'self'; script-src-elem 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://cloud.umami.is; font-src 'self' data:; connect-src https://eoiotibojpqmpbtbxkba.supabase.co https://api-gateway.umami.dev https://tomsturge.com ws:"
+    />
 
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Tom Sturge" />
     <link rel="manifest" href="/site.webmanifest" />
 
     <link
@@ -37,11 +62,6 @@ const pageTitle = `${title ? `${title} » ` : ""}${siteSettings.title}`;
     />
 
     <link rel="sitemap" href="/sitemap-index.xml" />
-
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self' https://cdn.sanity.io/; child-src 'none'; style-src 'unsafe-inline' 'self'; worker-src 'self'; style-src-elem 'unsafe-inline' 'self'; script-src-elem 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://cloud.umami.is; font-src 'self' data:; connect-src https://eoiotibojpqmpbtbxkba.supabase.co https://api-gateway.umami.dev https://tomsturge.com ws:"
-    />
 
     <slot name="seo" />
 
@@ -63,6 +83,22 @@ const pageTitle = `${title ? `${title} » ` : ""}${siteSettings.title}`;
       defer
       src="https://cloud.umami.is/script.js"
       data-website-id="e3b0c157-4236-4e9a-9832-a456fd1981c9"></script>
+
+    <!-- Secondary fonts (can load slightly later) -->
+    <link
+      rel="preload"
+      href="/fonts/source-serif-4-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/roboto-condensed-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
   </head>
 
   <body>
