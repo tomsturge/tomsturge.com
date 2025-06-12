@@ -13,9 +13,9 @@ import { DefaultLayout } from "@/ui/layouts";
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const articles = await getArticles({ limit: 16 });
+const articles = await getArticles({ limit: 24 });
 
-function extractFeatured(arr) {
+const extractFeatured = (arr) => {
   const featured = [];
   const remaining = [];
 
@@ -28,9 +28,9 @@ function extractFeatured(arr) {
   }
 
   return { featured, remaining };
-}
+};
 
-function extractCurrentMonth(arr) {
+const extractCurrentMonth = (arr) => {
   const currentDate = new Date();
   const currentYear = currentDate.getUTCFullYear();
   const currentMonth = currentDate.getUTCMonth();
@@ -43,7 +43,8 @@ function extractCurrentMonth(arr) {
 
     if (
       itemDate.getUTCFullYear() === currentYear &&
-      itemDate.getUTCMonth() === currentMonth
+      itemDate.getUTCMonth() === currentMonth &&
+      currentMonthItems.length < 3
     ) {
       currentMonthItems.push(item);
     } else {
@@ -52,7 +53,7 @@ function extractCurrentMonth(arr) {
   }
 
   return { currentMonthItems, otherItems };
-}
+};
 
 const { featured: featuredArticles, remaining } = extractFeatured(articles);
 
@@ -76,6 +77,8 @@ const { currentMonthItems: recentArticles, otherItems: remainingArticles } =
         articles={remainingArticles.slice(0, 8)}
         limit={null}
       />
+
+      <a href="/archive">View Archive</a>
     </div>
 
     <Sidebar />

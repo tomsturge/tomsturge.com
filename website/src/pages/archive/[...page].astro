@@ -1,0 +1,102 @@
+---
+import type { Page } from "astro";
+
+import { ArticleList, Seo, Pagination } from "@/ui/components";
+import { DefaultLayout } from "@/ui/layouts";
+import { getArticles } from "@/ui/queries";
+
+export async function getStaticPaths({ paginate }) {
+  const allArticles = await getArticles({
+    limit: 0,
+    drafts: import.meta.env.DEV,
+  });
+
+  return paginate(allArticles, {
+    pageSize: 15,
+  });
+}
+
+type Props = {
+  page: Page<any>;
+};
+
+const { page } = Astro.props as Props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const totalPages = Math.ceil(page.total / page.size);
+const currentPage = page.currentPage;
+---
+
+<DefaultLayout>
+  <Fragment slot="seo">
+    <Seo
+      url={canonicalURL}
+      title={`Archives - Page ${currentPage}`}
+      description={`Browse all articles - Page ${currentPage} of ${totalPages}`}
+    />
+  </Fragment>
+
+  <div class="title">
+    <h2>Archive</h2>
+  </div>
+
+  <div class="container">
+    <div class="content">
+      <ArticleList
+        itemsPerRow="3"
+        articles={page.data}
+        limit={null}
+        minCount={0}
+      />
+
+      {
+        totalPages > 1 && (
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            baseUrl="/archive"
+          />
+        )
+      }
+    </div>
+  </div>
+</DefaultLayout>
+
+<style lang="scss">
+  .title {
+    max-width: var(--widthMainContainer);
+    width: 100%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 79rem) {
+      margin-right: 2rem;
+      margin-left: 2rem;
+      width: calc(100% - 4rem);
+    }
+  }
+
+  .container {
+    max-width: var(--widthMainContainer);
+    width: 100%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @media screen and (max-width: 79rem) {
+      margin-right: 2rem;
+      margin-left: 2rem;
+      width: calc(100% - 4rem);
+      gap: 1rem;
+    }
+
+    @media screen and (max-width: 62rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .content {
+    margin-top: -2rem;
+    grid-column: span 2;
+  }
+</style>

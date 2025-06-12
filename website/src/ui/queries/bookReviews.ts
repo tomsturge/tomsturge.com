@@ -26,7 +26,7 @@ export const getBookReviews = async ({
     excerpt,
     publishedAt,
     featured,
-    "genre": genre[0] -> {title, slug},
+    "category": genre[0] -> {title, slug},
     mainImage,
     "draft": _id in path("drafts.**")}`;
 
@@ -42,5 +42,5 @@ export const getBookReview = `*[_type == "bookReview"]{
     publishedAt,
     mainImage,
     socialImage,
-    "genre": genre[] -> {title, slug},
+    "category": genre[] -> {title, slug},
   }`;

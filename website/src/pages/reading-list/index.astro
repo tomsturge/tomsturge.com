@@ -1,7 +1,7 @@
 ---
 import { getBookReviews } from "@/ui/queries";
 import { DefaultLayout } from "@/ui/layouts";
-import { Seo, Sidebar, ArticleList } from "@/ui/components";
+import { Seo, Sidebar, ReadingList } from "@/ui/components";
 
 const bookReviews = await getBookReviews();
 
@@ -14,7 +14,7 @@ type BookReview = {
   excerpt: string;
   publishedAt: string;
   featured?: boolean;
-  genre?: {
+  category?: {
     title: string;
     slug: {
       current: string;
@@ -46,7 +46,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   <div class="container">
     <div class="content">
-      <ArticleList
+      <ReadingList
         itemsPerRow="2"
         articles={bookReviews.slice(0, 8)}
         limit={null}
@@ -105,5 +105,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   .content {
     grid-column: span 2;
+    margin-top: -2rem;
   }
 </style>
