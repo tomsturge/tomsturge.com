@@ -1,7 +1,10 @@
 {
-  "name": "tomsturge",
+  "name": "tomsturge-website",
   "compatibility_date": "2025-06-02",
   "assets": {
     "directory": "./dist",
   },
+  "analytics_engine_datasets": [
+    { "binding": "ANALYTICS_ENGINE", "dataset": "analytics" },
+  ],
 }
