@@ -1,47 +1,41 @@
 ---
 import { sanityClient } from "sanity:client";
-import type { Article, WithContext } from "schema-dts";
+import type { Review, WithContext } from "schema-dts";
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 import { urlForImage } from "@/scripts/urlForImage";
 
-import { getArticle } from "@/ui/queries";
+import { getBookReview } from "@/ui/queries";
 import { DefaultLayout } from "@/ui/layouts";
 
 import { Seo, PortableText, Header, Logo } from "@/ui/components";
 
 export const getStaticPaths = async () => {
-  const posts = await sanityClient.fetch(getArticle);
+  const bookReviews = await sanityClient.fetch(getBookReview);
 
-  return posts.map(
+  return bookReviews.map(
     ({
       _id,
       body,
-      headings,
-      categories,
+      genre,
       excerpt,
       publishedAt,
-      readingTime,
       mainImage,
       socialImage,
       slug,
       title,
-      author,
     }) => {
       return {
         props: {
           _id,
           body,
-          headings,
-          categories,
+          genre,
           excerpt,
           publishedAt,
           mainImage,
           socialImage,
-          readingTime,
           title,
           slug,
-          author,
         },
         params: { slug: slug.current },
       };
@@ -55,35 +49,22 @@ type Post = {
   slug: {
     current: string;
   };
-  headings: any;
-  categories: any[];
+  genre: any[];
   excerpt: string;
   mainImage: SanityImageSource;
   socialImage: SanityImageSource;
   publishedAt: Date;
-  readingTime: number;
   title: string;
 };
 
 type Props = Post;
 
-const {
-  _id,
-  body,
-  headings,
-  slug,
-  categories,
-  excerpt,
-  mainImage,
-  socialImage,
-  publishedAt,
-  readingTime,
-  title,
-} = Astro.props;
+const { _id, body, slug, excerpt, mainImage, socialImage, publishedAt, title } =
+  Astro.props;
 
-const schema: WithContext<Article> = {
+const schema: WithContext<Review> = {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "Review",
   headline: title,
   image: urlForImage(socialImage).width(1200).height(630).url(),
   datePublished: `${publishedAt}`,
@@ -91,7 +72,7 @@ const schema: WithContext<Article> = {
     {
       "@type": "Person",
       name: "Tom Sturge",
-      url: "https://tom.sturge.co/about",
+      url: "https://tomsturge.com/about",
     },
   ],
 };
@@ -139,10 +120,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   <div class="wrapper">
     <Header
-      categories={categories}
       excerpt={excerpt}
       title={title}
-      readingTime={readingTime}
       publishedAt={publishedAt}
       image={mainImage}
       slug={slug}

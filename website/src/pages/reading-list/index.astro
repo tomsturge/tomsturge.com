@@ -1,59 +1,56 @@
 ---
-import { sanityClient } from "sanity:client";
-
-import { ArticleList, Sidebar, Seo } from "@/ui/components";
+import { getBookReviews } from "@/ui/queries";
 import { DefaultLayout } from "@/ui/layouts";
-import { getCategory } from "@/ui/queries";
+import { Seo, Sidebar, ArticleList } from "@/ui/components";
 
-export async function getStaticPaths() {
-  const categories = await sanityClient.fetch(getCategory);
+const bookReviews = await getBookReviews();
 
-  return categories.map((category) => ({
-    params: { category: category.slug.current },
-    props: {
-      category,
-      articles: category.articles,
-    },
-  }));
-}
-
-type CategoryType = {
-  _id: string;
+type BookReview = {
   title: string;
   slug: {
     current: string;
   };
-  description: string;
-  articles: any[];
+  body: any;
+  excerpt: string;
+  publishedAt: string;
+  featured?: boolean;
+  genre?: {
+    title: string;
+    slug: {
+      current: string;
+    };
+  };
+  mainImage: any;
+  draft?: boolean;
 };
 
 type Props = {
-  category: CategoryType;
-  articles: any[];
+  bookReviews: BookReview[];
 };
-
-const { category, articles } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
-<DefaultLayout>
+<DefaultLayout title="Reading List">
   <Fragment slot="seo">
-    <Seo url={canonicalURL} />
+    <Seo
+      title="Reading List - Book Reviews & Recommendations"
+      description="Discover my thoughts on books I've read, from fiction to non-fiction, with honest reviews and recommendations."
+      url={canonicalURL}
+    />
   </Fragment>
 
   <div class="title">
-    <h2>{category.title}</h2>
-    <p>{category.description}</p>
+    <h2>Reading List</h2>
   </div>
 
   <div class="container">
     <div class="content">
       <ArticleList
         itemsPerRow="2"
-        articles={articles}
+        articles={bookReviews.slice(0, 8)}
         limit={null}
-        minCount={0}
+        minCount={null}
       />
     </div>
 
@@ -65,10 +62,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   .title {
     max-width: var(--widthMainContainer);
     width: 100%;
-    margin: 0 auto 0;
+    margin: 0 auto 3rem;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--colorThemeTextMain);
+    }
 
     p {
-      margin: 0;
+      font-size: 1.2rem;
+      color: var(--colorThemeTextSecondary);
+      margin: 0 0 1.5rem;
     }
 
     @media screen and (max-width: 79rem) {
@@ -81,7 +86,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   .container {
     max-width: var(--widthMainContainer);
     width: 100%;
-    margin: 2rem auto;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
@@ -100,6 +105,5 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   .content {
     grid-column: span 2;
-    margin-top: -2rem;
   }
 </style>

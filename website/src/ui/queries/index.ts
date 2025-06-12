@@ -1,4 +1,4 @@
 export { getArticles, getArticle } from "./articles";
-export { getAuthor } from "./authors";
-export { getCategories } from "./categories";
+export { getBookReviews, getBookReview } from "./bookReviews";
+export { getCategories, getCategory } from "./categories";
 export { getSiteSettings } from "./siteSettings";
