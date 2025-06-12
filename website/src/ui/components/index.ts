@@ -7,3 +7,5 @@ export { default as Seo } from "./Seo.astro";
 export { default as Sidebar } from "./Sidebar.astro";
 export { default as ThemeToggle } from "./ThemeToggle.astro";
 export * from "./Articles";
+export { default as ReadingList } from "./ReadingList.astro";
+export { CategoryLabel } from "./CategoryLabel";

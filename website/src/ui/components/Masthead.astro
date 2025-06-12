@@ -7,8 +7,17 @@ const { theme } = Astro.props;
 
 <div class:list={["masthead", theme]}>
   <div class:list={["container", theme]}>
-    <div class="logo">
-      <Logo theme={theme} />
+    <div class="masthead-wrapper">
+      <div class="logo">
+        <Logo theme={theme} />
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="/archive">Archive</a></li>
+          <li><a href="/reading-list">Reading List</a></li>
+        </ul>
+      </nav>
     </div>
 
     <ThemeToggle />
@@ -41,25 +50,30 @@ const { theme } = Astro.props;
 
   .masthead-wrapper {
     display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2rem;
 
     nav {
       margin: auto;
+      align-self: bottom;
 
       ul {
         list-style: none;
         margin: 0;
-        padding: 1rem 0;
+        padding: 0;
         display: flex;
         flex-direction: row;
-        font-weight: var(--fontWeightSemiBold);
-        font-family: var(--fontFamilyHeading);
-        font-size: 1.25rem;
+        font-weight: var(--fontWeightMedium);
+        font-family: var(--fontFamilyCondensed);
+        font-size: 1.125rem;
         line-height: 1.4;
         letter-spacing: 0px;
       }
       a {
-        padding: 0.5rem 2rem;
+        padding: 0.5rem 1rem;
         color: var(--colorWhite);
+        text-transform: uppercase;
       }
     }
 
