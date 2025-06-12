@@ -27,7 +27,13 @@ const fillCount = minCount - posts.length;
     {
       posts.map(({ title, slug, excerpt, mainImage, category }) => (
         <li class="item">
-          <a href={`/${category.slug.current}/${slug.current}`}>
+          <a
+            href={
+              category
+                ? `/${category.slug.current}/${slug.current}`
+                : `/reading-list/${slug.current}`
+            }
+          >
             <img
               class="image"
               src={urlForImage(mainImage).height(237).width(379).url()}
@@ -35,9 +41,11 @@ const fillCount = minCount - posts.length;
             />
 
             <div class="content-wrapper">
-              <div class="category">
-                <CategoryLabel name={category.title} />
-              </div>
+              {category && (
+                <div class="category">
+                  <CategoryLabel name={category.title} />
+                </div>
+              )}
 
               <h2 class:list={["title", theme]}>{title}</h2>
 
