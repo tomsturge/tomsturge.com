@@ -40,7 +40,7 @@ const pageTitle = `${title ? `${title} » ` : ""}${siteSettings.title}`;
 
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self' https://cdn.sanity.io/; child-src 'none'; style-src 'unsafe-inline' 'self'; worker-src 'self'; style-src-elem 'unsafe-inline' 'self'; script-src-elem 'self' 'unsafe-inline' 'https://static.cloudflareinsights.com' 'https://cloud.umami.is'; font-src 'self' data:; connect-src https://eoiotibojpqmpbtbxkba.supabase.co ws:"
+      content="default-src 'self'; img-src 'self' https://cdn.sanity.io/; child-src 'none'; style-src 'unsafe-inline' 'self'; worker-src 'self'; style-src-elem 'unsafe-inline' 'self'; script-src-elem 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://cloud.umami.is; font-src 'self' data:; connect-src https://eoiotibojpqmpbtbxkba.supabase.co https://api-gateway.umami.dev https://tomsturge.com ws:"
     />
 
     <slot name="seo" />
