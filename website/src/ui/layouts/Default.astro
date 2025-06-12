@@ -1,8 +1,14 @@
 ---
-import "@fontsource-variable/lora/wght.css";
-import "@fontsource-variable/roboto-condensed/wght.css";
-import "@fontsource-variable/source-serif-4/wght.css";
-import "@fontsource-variable/inter/wght.css";
+import interFontUrl from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+import loraFontUrl from "@fontsource-variable/lora/files/lora-latin-wght-normal.woff2?url";
+import robotoCondensedFontUrl from "@fontsource-variable/roboto-condensed/files/roboto-condensed-latin-wght-normal.woff2?url";
+import sourceSerif4FontUrl from "@fontsource-variable/source-serif-4/files/source-serif-4-latin-wght-normal.woff2?url";
+
+// Still import the CSS
+import "@fontsource-variable/lora";
+import "@fontsource-variable/roboto-condensed";
+import "@fontsource-variable/source-serif-4";
+import "@fontsource-variable/inter";
 
 import "@/ui/styles/variables.scss";
 import "@/ui/styles/global.scss";
@@ -22,22 +28,6 @@ const pageTitle = `${title ? `${title} » ` : ""}${siteSettings.title}`;
 <html lang="en">
   <head>
     <title>{pageTitle}</title>
-
-    <!-- Critical fonts (load first) -->
-    <link
-      rel="preload"
-      href="/fonts/inter-latin-wght-normal.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/fonts/lora-latin-wght-normal.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
 
     <meta name="description" content={siteSettings.description} />
     <meta charset="utf-8" />
@@ -84,17 +74,31 @@ const pageTitle = `${title ? `${title} » ` : ""}${siteSettings.title}`;
       src="https://cloud.umami.is/script.js"
       data-website-id="e3b0c157-4236-4e9a-9832-a456fd1981c9"></script>
 
-    <!-- Secondary fonts (can load slightly later) -->
+    <!-- Font preloads with correct URLs -->
     <link
       rel="preload"
-      href="/fonts/source-serif-4-latin-wght-normal.woff2"
+      href={interFontUrl}
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="/fonts/roboto-condensed-latin-wght-normal.woff2"
+      href={loraFontUrl}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href={robotoCondensedFontUrl}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href={sourceSerif4FontUrl}
       as="font"
       type="font/woff2"
       crossorigin
