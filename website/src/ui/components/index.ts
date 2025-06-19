@@ -9,3 +9,4 @@ export { default as ThemeToggle } from "./ThemeToggle.astro";
 export * from "./Articles";
 export { default as ReadingList } from "./ReadingList.astro";
 export { CategoryLabel } from "./CategoryLabel";
+export { default as TopStories } from "./TopStories.astro";

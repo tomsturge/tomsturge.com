@@ -51,7 +51,7 @@
   --fontSizeContentHeadingThree: 1.75rem;
   --fontSizeContentHeadingFour: 1.25rem;
   --fontSizeContentBody: 1.125rem;
-  --fontSizeMicro: 0.75rem;
+  --fontSizeMicro: 0.875rem;
 
   --boxShadow: 0 0 1rem rgba(0, 0, 0, 0.125);
 
@@ -65,12 +65,11 @@
     --fontSizeContentHeadingTwo: 1.75rem;
     --fontSizeContentHeadingThree: 1.25rem;
     --fontSizeContentHeadingFour: 1rem;
-    --fontSizeContentBody: 1rem;
-    --fontSizeMicro: 0.675rem;
+    --fontSizeMicro: 0.75rem;
   }
 
   @media screen and (max-width: 48rem) {
-    --fontSizeContentTitle: 2.75rem;
+    --fontSizeContentTitle: 2rem;
   }
 
   @media screen and (max-width: 27rem) {
