@@ -3,7 +3,7 @@ import { sanityClient } from "sanity:client";
 
 import { getCategories } from "@/ui/queries";
 
-import { ArticleList } from "@/ui/components";
+import { ArticleList, TopStories } from "@/ui/components";
 
 const { headings } = Astro.props;
 
@@ -66,6 +66,8 @@ const categories = await sanityClient.fetch(getCategories);
     <p class="sidebar__title">Recent articles</p>
 
     <ArticleList limit={3} compact={true} featured={true} />
+
+    <TopStories />
   </div>
 </div>
 

@@ -5,8 +5,6 @@
 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
   <svg
     class="sun-icon"
-    width="16"
-    height="16"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -19,8 +17,6 @@
   </svg>
   <svg
     class="moon-icon"
-    width="16"
-    height="16"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -46,6 +42,21 @@
     transition:
       opacity 0.2s ease,
       transform 0.2s ease;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    @media screen and (max-width: 35rem) {
+      width: 48px;
+      height: 48px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 
   .theme-toggle:hover {

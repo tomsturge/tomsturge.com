@@ -7,20 +7,24 @@ const { theme } = Astro.props;
 
 <div class:list={["masthead", theme]}>
   <div class:list={["container", theme]}>
-    <div class="masthead-wrapper">
-      <div class="logo">
-        <Logo theme={theme} />
-      </div>
+    <div class="logo">
+      <Logo theme={theme} />
+    </div>
 
+    <input class="masthead-menu" type="checkbox" />
+
+    <div class="masthead-wrapper">
       <nav>
         <ul>
           <li><a href="/archive">Archive</a></li>
           <li><a href="/reading-list">Reading List</a></li>
         </ul>
       </nav>
-    </div>
 
-    <ThemeToggle />
+      <div class="masthead-toggle">
+        <ThemeToggle />
+      </div>
+    </div>
   </div>
 </div>
 
@@ -29,18 +33,24 @@ const { theme } = Astro.props;
   }
 
   .container {
-    display: flex;
-    padding: 0.5rem 0;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 1rem;
+    padding: 1rem 0;
     align-items: center;
     max-width: var(--widthMainContainer);
     margin: 0 auto;
     z-index: 20;
     position: relative;
     border-bottom: 1px solid var(--colorThemeTextMain);
+    position: relative;
 
     @media screen and (max-width: 79rem) {
       margin: 0 2rem;
+    }
+
+    @media screen and (max-width: 42rem) {
+      margin: 0 1.5rem;
     }
 
     &.dark {
@@ -50,14 +60,11 @@ const { theme } = Astro.props;
 
   .masthead-wrapper {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr auto;
     align-items: center;
     gap: 2rem;
 
     nav {
-      margin: auto;
-      align-self: bottom;
-
       ul {
         list-style: none;
         margin: 0;
@@ -72,13 +79,128 @@ const { theme } = Astro.props;
       }
       a {
         padding: 0.5rem 1rem;
-        color: var(--colorWhite);
+        color: var(--colorThemeTextMain);
         text-transform: uppercase;
       }
     }
 
-    &.black nav ul a {
-      color: var(--colorBlack);
+    @media screen and (max-width: 35rem) {
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      transform: translateX(100%);
+      background: var(--colorThemeBackgroundMain);
+      color: var(--colorThemeTextMain);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+
+      nav ul {
+        font-size: 2rem;
+        display: grid;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .masthead-toggle {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+      }
+    }
+  }
+
+  .masthead-menu {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    margin-left: auto;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 1.5rem;
+    z-index: 100;
+    color: var(--colorThemeTextMain);
+
+    /* Hide the default checkbox appearance */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* Position and size the hamburger */
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+
+    /* Create the top line */
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1.5rem;
+      height: 2px;
+      background-color: currentColor;
+      transition: all 0.3s ease;
+    }
+
+    /* Create the bottom line */
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1.5rem;
+      height: 2px;
+      background-color: currentColor;
+      transition: all 0.3s ease;
+    }
+
+    /* Create the middle line using a separate approach */
+    &:not(:checked) {
+      background: linear-gradient(
+        to right,
+        transparent calc(50% - 0.75rem),
+        currentColor calc(50% - 0.75rem),
+        currentColor calc(50% + 0.75rem),
+        transparent calc(50% + 0.75rem)
+      );
+      background-size: 100% 2px;
+      background-position: center calc(50% + 1px);
+      background-repeat: no-repeat;
+      transition: background 0.3s ease;
+    }
+
+    /* Transform to X when checked */
+    &:checked {
+      background: transparent; /* Hide middle line */
+    }
+
+    &:checked::before {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:checked::after {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    @media screen and (max-width: 35rem) {
+      display: block;
+
+      &:checked + .masthead-wrapper {
+        transform: translate(0);
+      }
     }
   }
 </style>

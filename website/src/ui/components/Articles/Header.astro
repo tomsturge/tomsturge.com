@@ -12,18 +12,6 @@ const { title, readingTime, publishedAt, excerpt, image, categories } =
 ---
 
 <header class="article-header">
-  {
-    categories && (
-      <ul class="article-header__categories">
-        {categories.map((category) => (
-          <li>
-            <CategoryLabel name={category.title} link={category.slug} />
-          </li>
-        ))}
-      </ul>
-    )
-  }
-
   <h1 class="article-header__title">
     {title}
   </h1>
@@ -40,6 +28,18 @@ const { title, readingTime, publishedAt, excerpt, image, categories } =
         {readingTime} minute read
       </li>
     </ul>
+
+    {
+      categories && (
+        <ul class="article-header__categories">
+          {categories.map((category) => (
+            <li>
+              <CategoryLabel name={category.title} link={category.slug} />
+            </li>
+          ))}
+        </ul>
+      )
+    }
   </div>
 
   <img
@@ -154,11 +154,10 @@ const { title, readingTime, publishedAt, excerpt, image, categories } =
 
       @media screen and (max-width: 81rem) {
         margin: 0 0 0.5rem;
-        line-height: 1;
       }
 
       @media screen and (max-width: 48rem) {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
       }
     }
   }
