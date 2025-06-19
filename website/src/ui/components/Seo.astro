@@ -1,5 +1,6 @@
 ---
 import { getSiteSettings } from "@/ui/queries";
+import { urlForImage } from "@/scripts/urlForImage";
 
 const siteSettings = await getSiteSettings();
 
@@ -13,7 +14,11 @@ const { title, description, url, image, type, author, publishedAt } =
 <meta property="og:url" content={url} />
 <link rel="canonical" href={url} />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="og:image" content={image || siteSettings.seoImage} />
+<meta
+  property="og:image"
+  content={image ||
+    urlForImage(siteSettings.seoImage).width(1200).height(630).url()}
+/>
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 
