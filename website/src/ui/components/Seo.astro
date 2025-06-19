@@ -1,18 +1,18 @@
 ---
+import { getSiteSettings } from "@/ui/queries";
+
+const siteSettings = await getSiteSettings();
+
 const { title, description, url, image, type, author, publishedAt } =
   Astro.props;
 ---
 
 <meta property="og:locale" content="en_GB" />
-<meta
-  name="description"
-  content={description ||
-    'Digital Performance Marketing | Comprehensive marketing consultancy where expertise meets innovation'}
-/>
-<meta property="og:site_name" content="CodeForge Software" />
+<meta name="description" content={description || siteSettings.description} />
+<meta property="og:site_name" content={siteSettings.title} />
 <meta property="og:url" content={url} />
 <link rel="canonical" href={url} />
-<meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+<meta name="twitter:card" content={image ? "summary_large_image" : "summary"} />
 
 {
   (title || description) && (
