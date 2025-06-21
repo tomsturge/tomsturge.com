@@ -63,10 +63,7 @@ const categories = await sanityClient.fetch(getCategories);
   </div>
 
   <div class="sidebar-section">
-    <p class="sidebar__title">Recent articles</p>
-
-    <ArticleList limit={3} compact={true} featured={true} />
-
+    <p class="sidebar__title">Top articles</p>
     <TopStories />
   </div>
 </div>
