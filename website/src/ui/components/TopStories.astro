@@ -1,247 +1,81 @@
 ---
-// components/TopStories.astro
-export interface Props {
-  limit?: number;
-  className?: string;
-}
+import { createClient } from "@supabase/supabase-js";
+import { sanityClient } from "sanity:client";
+import { ArticleList } from "./";
 
-const { limit = 5, className = "" } = Astro.props;
+// Initialize Supabase client
+const supabase = createClient(
+  import.meta.env.PUBLIC_SUPABASE_URL,
+  import.meta.env.PUBLIC_SUPABASE_ANON_KEY,
+);
+
+const { limit = 5 } = Astro.props;
+
+// Fetch top articles by view count from Supabase, then get article data from Sanity
+let topArticles = [];
+try {
+  // Step 1: Get top articles by view count from Supabase
+  const { data: topViews, error: supabaseError } = await supabase
+    .from("ts_article_views")
+    .select("sanity_document_id, slug, views")
+    .order("views", { ascending: false })
+    .limit(limit);
+
+  if (supabaseError) {
+    throw new Error(`Supabase error: ${supabaseError.message}`);
+  }
+
+  if (topViews && topViews.length > 0) {
+    // Step 2: Extract document IDs for Sanity query
+    const documentIds = topViews.map((item) => item.sanity_document_id);
+
+    // Step 3: Fetch corresponding articles from Sanity
+    const sanityQuery = `*[_id in [${documentIds.map((id) => `"${id}"`).join(", ")}]]{
+      _id,
+      title,
+      slug,
+      excerpt,
+      publishedAt,
+      mainImage,
+      "category": categories[0]-> {
+        title,
+        slug
+      },
+      author-> {
+        name,
+        slug
+      }
+    }`;
+
+    const sanityArticles = await sanityClient.fetch(sanityQuery);
+
+    // Step 4: Merge Sanity data with view counts, maintaining view count order
+    topArticles = topViews
+      .map((viewData) => {
+        const sanityData = sanityArticles.find(
+          (article) => article._id === viewData.sanity_document_id,
+        );
+        if (sanityData) {
+          return {
+            ...sanityData,
+            views: viewData.views,
+          };
+        }
+        return null;
+      })
+      .filter((article) => article !== null); // Remove any articles not found in Sanity
+  }
+} catch (error) {
+  console.warn(
+    "Could not fetch top articles data at build time:",
+    error.message,
+  );
+  // Component will render empty state
+}
 ---
 
-<aside class={`top-stories ${className}`}>
-  <h3>Most Popular</h3>
-  <div id="top-stories-content" class="loading">
-    <div class="loading-spinner"></div>
-    <span>Loading popular articles...</span>
-  </div>
-</aside>
-
-<script define:vars={{ limit }}>
-  import { createClient } from "@supabase/supabase-js";
-
-  // Initialize Supabase client
-  const supabase = createClient(
-    import.meta.env.PUBLIC_SUPABASE_URL,
-    import.meta.env.PUBLIC_SUPABASE_ANON_KEY,
-  );
-
-  async function loadTopStories() {
-    const contentElement = document.getElementById("top-stories-content");
-    if (!contentElement) return;
-
-    try {
-      // Fetch top articles by view count
-      const { data: topViews, error: viewsError } = await supabase
-        .from("ts_article_views")
-        .select("sanity_document_id, slug, views")
-        .order("views", { ascending: false })
-        .limit(limit);
-
-      if (viewsError) {
-        throw viewsError;
-      }
-
-      if (!topViews || topViews.length === 0) {
-        contentElement.innerHTML =
-          '<p class="no-articles">No popular articles yet.</p>';
-        contentElement.classList.remove("loading");
-        return;
-      }
-
-      // Create the HTML for top stories
-      // Note: In a real implementation, you might want to fetch article titles from Sanity
-      // For now, we'll create clean URLs from slugs and show view counts
-      const storiesHtml = `
-        <ul class="stories-list">
-          ${topViews
-            .map(
-              (article, index) => `
-            <li class="story-item">
-              <div class="rank">${index + 1}</div>
-              <div class="story-content">
-                <a href="/articles/${article.slug}" class="story-link">
-                  <div class="story-title">${formatSlugToTitle(article.slug)}</div>
-                  <div class="story-meta">
-                    <span class="view-count">${formatViewCount(article.views)}</span>
-                  </div>
-                </a>
-              </div>
-            </li>
-          `,
-            )
-            .join("")}
-        </ul>
-      `;
-
-      contentElement.innerHTML = storiesHtml;
-      contentElement.classList.remove("loading");
-    } catch (error) {
-      console.error("Failed to load top stories:", error);
-      contentElement.innerHTML = `
-        <div class="error-state">
-          <p>Unable to load popular articles.</p>
-          <button onclick="window.location.reload()" class="retry-button">
-            Try again
-          </button>
-        </div>
-      `;
-      contentElement.classList.remove("loading");
-    }
-  }
-
-  // Helper function to format slug to readable title
-  function formatSlugToTitle(slug) {
-    return slug
-      .split("-")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
-  }
-
-  // Helper function to format view count
-  function formatViewCount(views) {
-    if (views === 1) return "1 view";
-    if (views < 1000) return `${views} views`;
-    if (views < 1000000) return `${(views / 1000).toFixed(1)}k views`;
-    return `${(views / 1000000).toFixed(1)}M views`;
-  }
-
-  // Load top stories when the page loads
-  document.addEventListener("DOMContentLoaded", loadTopStories);
-
-  // Fallback for cases where DOMContentLoaded already fired
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", loadTopStories);
-  } else {
-    loadTopStories();
-  }
-</script>
-
-<style>
-  .top-stories {
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin: 1rem 0;
-  }
-
-  .top-stories h3 {
-    margin: 0 0 1rem 0;
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #111827;
-  }
-
-  .loading {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #6b7280;
-    font-size: 0.875rem;
-  }
-
-  .loading-spinner {
-    width: 16px;
-    height: 16px;
-    border: 2px solid #e5e7eb;
-    border-top: 2px solid #3b82f6;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-  }
-
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  .stories-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .story-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid #e5e7eb;
-  }
-
-  .story-item:last-child {
-    border-bottom: none;
-  }
-
-  .rank {
-    flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-    background: #3b82f6;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    font-weight: 600;
-  }
-
-  .story-content {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .story-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-  }
-
-  .story-link:hover .story-title {
-    color: #3b82f6;
-  }
-
-  .story-title {
-    font-weight: 500;
-    color: #111827;
-    margin-bottom: 0.25rem;
-    transition: color 0.2s ease;
-    line-height: 1.4;
-  }
-
-  .story-meta {
-    font-size: 0.75rem;
-    color: #6b7280;
-  }
-
-  .view-count {
-    font-weight: 500;
-  }
-
-  .no-articles,
-  .error-state {
-    text-align: center;
-    color: #6b7280;
-    font-style: italic;
-  }
-
-  .error-state {
-    padding: 1rem 0;
-  }
-
-  .retry-button {
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: #3b82f6;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.875rem;
-  }
-
-  .retry-button:hover {
-    background: #2563eb;
-  }
-</style>
+{
+  topArticles.length > 0 && (
+    <ArticleList articles={topArticles} compact={true} />
+  )
+}
