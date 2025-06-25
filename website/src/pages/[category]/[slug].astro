@@ -357,5 +357,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     h5 {
       font-family: var(--fontFamilyHeading);
     }
+
+    a {
+      text-decoration: none;
+      color: var(--colorThemeTextMain);
+      box-shadow: inset 0 -1px 0 0 var(--colorThemeTextMain);
+      &:hover {
+        box-shadow: inset 0 -2px 0 0 var(--colorThemeTextMain);
+      }
+    }
   }
 </style>
