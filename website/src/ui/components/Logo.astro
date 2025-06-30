@@ -1,5 +1,5 @@
 ---
-
+const isHomePage = Astro.url.pathname === "/";
 ---
 
 <a
@@ -8,7 +8,13 @@
   itemscope
   itemtype="https://schema.org/Person"
 >
-  <span itemprop="name">Tom Sturge</span></a
+  {
+    isHomePage ? (
+      <h1 itemprop="name">Tom Sturge</h1>
+    ) : (
+      <span itemprop="name">Tom Sturge</span>
+    )
+  }</a
 >
 
 <style lang="scss">
@@ -16,11 +22,16 @@
     display: block;
     text-decoration: none;
     color: var(--colorThemeTextMain);
-    font-family: var(--fontFamilyHeading);
-    font-size: 2.1em;
-    font-weight: 800;
-    text-transform: capitalize;
-    letter-spacing: -1px;
     margin-top: -6px;
+
+    h1,
+    span {
+      font-family: var(--fontFamilyHeading);
+      font-size: 2.1em;
+      text-transform: capitalize;
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
   }
 </style>
