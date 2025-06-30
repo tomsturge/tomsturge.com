@@ -1,28 +1,10 @@
 ---
-import { getBookReviews } from "@/ui/queries";
+import { getListBookReviews } from "@/ui/queries";
 import { DefaultLayout } from "@/ui/layouts";
 import { Seo, Sidebar, ReadingList } from "@/ui/components";
+import type { BookReview } from "@/ui/types";
 
-const bookReviews = await getBookReviews();
-
-type BookReview = {
-  title: string;
-  slug: {
-    current: string;
-  };
-  body: any;
-  excerpt: string;
-  publishedAt: string;
-  featured?: boolean;
-  category?: {
-    title: string;
-    slug: {
-      current: string;
-    };
-  };
-  mainImage: any;
-  draft?: boolean;
-};
+const bookReviews = await getListBookReviews();
 
 type Props = {
   bookReviews: BookReview[];
@@ -46,12 +28,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
   <div class="container">
     <div class="content">
-      <ReadingList
-        itemsPerRow="2"
-        articles={bookReviews.slice(0, 8)}
-        limit={null}
-        minCount={null}
-      />
+      <ReadingList itemsPerRow="2" articles={bookReviews.slice(0, 8)} />
     </div>
 
     <Sidebar />

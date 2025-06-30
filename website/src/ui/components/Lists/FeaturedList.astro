@@ -2,6 +2,11 @@
 import { urlForImage } from "@/scripts/urlForImage";
 
 import { CategoryLabel } from "@/ui/components";
+import type { Article } from "@/ui/types";
+
+interface Props {
+  articles: Article[];
+}
 
 const { articles } = Astro.props;
 ---

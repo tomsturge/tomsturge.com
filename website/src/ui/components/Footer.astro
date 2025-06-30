@@ -1,12 +1,11 @@
 ---
 import { Icon } from "astro-icon/components";
-import { sanityClient } from "sanity:client";
 
-import { getCategories, getSiteSettings } from "@/ui/queries";
+import { getCountedCategories, getSiteSettings } from "@/ui/queries";
 
-import { ArticleList } from "./Articles";
+import { ArticleList } from "./";
 
-const categories = await sanityClient.fetch(getCategories);
+const categories = await getCountedCategories();
 const siteSettings = await getSiteSettings();
 ---
 

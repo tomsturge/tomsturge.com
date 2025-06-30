@@ -1,29 +1,35 @@
 ---
 import { format } from "date-fns";
-
-import { urlForImage } from "@/scripts/urlForImage";
-
 import { Icon } from "astro-icon/components";
 
+import { urlForImage } from "@/scripts/urlForImage";
 import { CategoryLabel } from "@/ui/components";
+
+import type { ArticleHeaderProps } from "./types";
+
+interface Props extends ArticleHeaderProps {}
 
 const { title, readingTime, publishedAt, excerpt, image, categories } =
   Astro.props;
 ---
 
 <header class="article-header">
-  <h1 class="article-header__title">
+  <h1 class="article-header__title" itemprop="headline">
     {title}
   </h1>
 
-  <p class="article-header__excerpt">
+  <p class="article-header__excerpt" itemprop="description">
     {excerpt}
   </p>
 
   <div class="article-header__meta">
     <ul class="article-header__details">
       <li>
-        {format(publishedAt, "MMM d, yyyy")}
+        <time
+          itemprop="datePublished"
+          datetime={new Date(publishedAt).toISOString()}
+          >{format(publishedAt, "MMM d, yyyy")}</time
+        >
         <Icon name="mdi:dot" height={17} />
         {readingTime} minute read
       </li>
@@ -34,7 +40,7 @@ const { title, readingTime, publishedAt, excerpt, image, categories } =
         <ul class="article-header__categories">
           {categories.map((category) => (
             <li>
-              <CategoryLabel name={category.title} link={category.slug} />
+              <CategoryLabel name={category.title} />
             </li>
           ))}
         </ul>

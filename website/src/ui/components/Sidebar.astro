@@ -1,13 +1,10 @@
 ---
-import { sanityClient } from "sanity:client";
+import { getCountedCategories } from "@/ui/queries";
+import { TopStories } from "@/ui/components";
 
-import { getCategories } from "@/ui/queries";
-
-import { ArticleList, TopStories } from "@/ui/components";
+const categories = await getCountedCategories();
 
 const { headings } = Astro.props;
-
-const categories = await sanityClient.fetch(getCategories);
 ---
 
 <div class="article-content__sidebar">
