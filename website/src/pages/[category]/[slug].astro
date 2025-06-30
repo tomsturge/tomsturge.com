@@ -4,15 +4,14 @@ import type { Article, WithContext } from "schema-dts";
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 import { urlForImage } from "@/scripts/urlForImage";
-
-import { getArticle } from "@/ui/queries";
+import { getFullArticles } from "@/ui/queries";
 import { DefaultLayout } from "@/ui/layouts";
 
-import { Seo, PortableText, Header, Logo } from "@/ui/components";
+import { Seo, PortableText, ArticleHeader, Logo } from "@/ui/components";
 
 export const getStaticPaths = async () => {
   // Get articles and their categories
-  const articles = await sanityClient.fetch(getArticle);
+  const articles = await getFullArticles();
 
   const categories = await sanityClient.fetch(`
     *[_type == "category"] {
@@ -51,6 +50,7 @@ export const getStaticPaths = async () => {
           excerpt: article.excerpt,
           publishedAt: article.publishedAt,
           readingTime: article.readingTime,
+          wordCount: article.wordCount,
           mainImage: article.mainImage,
           socialImage: article.socialImage,
           slug: article.slug,
@@ -76,6 +76,7 @@ type ArticleProps = {
   socialImage: SanityImageSource;
   publishedAt: Date;
   readingTime: number;
+  wordCount: number;
   title: string;
   author: any;
   category: {
@@ -90,7 +91,6 @@ type ArticleProps = {
 const {
   _id,
   body,
-  headings,
   slug,
   categories,
   excerpt,
@@ -98,32 +98,40 @@ const {
   socialImage,
   publishedAt,
   readingTime,
+  wordCount,
   title,
 } = Astro.props as ArticleProps;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const { slug: categorySlug, title: categoryTitle } = categories[0];
 
 const schema: WithContext<Article> = {
   "@context": "https://schema.org",
   "@type": "Article",
+  "@id": canonicalURL.toString(),
+  url: canonicalURL.toString(),
   headline: title,
+  name: title,
+  description: excerpt,
+  author: { "@id": "https://tomsturge.com/#person" },
+  publisher: { "@id": "https://tomsturge.com/#person" },
+  isPartOf: { "@id": `https://tomsturge.com/${categorySlug.current}/` },
+  mainEntityOfPage: `https://tomsturge.com/${categorySlug.current}/${slug.current}/`,
+  datePublished: new Date(publishedAt).toISOString(),
+  inLanguage: "en-GB",
   image: urlForImage(socialImage).width(1200).height(630).url(),
-  datePublished: `${publishedAt}`,
-  author: [
-    {
-      "@type": "Person",
-      name: "Tom Sturge",
-      url: "https://tom.sturge.co/about",
-    },
-  ],
+  articleSection: categoryTitle,
+  timeRequired: `PT${readingTime}M`,
+  wordCount,
 };
-
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <script>
   document.addEventListener("astro:page-load", () => {
     const masthead = document.querySelector(".article-masthead");
 
-    addEventListener("scroll", (event) => {
+    addEventListener("scroll", () => {
       if (window.scrollY > 250) {
         masthead.classList.add("visible");
       } else {
@@ -136,7 +144,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <DefaultLayout title={title} type="article">
   <Fragment slot="seo">
     <Seo
-      type="article"
       title={title}
       description={excerpt}
       url={canonicalURL}
@@ -157,18 +164,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </div>
   </div>
 
-  <div class="wrapper">
-    <Header
+  <div class="wrapper" itemscope itemtype="https://schema.org/Article">
+    <ArticleHeader
       categories={categories}
       excerpt={excerpt}
       title={title}
       readingTime={readingTime}
       publishedAt={publishedAt}
       image={mainImage}
-      slug={slug}
     />
 
-    <div class="article-content">
+    <div class="article-content" itemprop="articleBody">
       <PortableText value={body} />
     </div>
   </div>

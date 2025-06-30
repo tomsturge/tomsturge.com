@@ -1,5 +1,5 @@
 ---
-import { getArticles } from "@/ui/queries";
+import { getHomepageArticles } from "@/ui/queries";
 
 import {
   FeaturedList,
@@ -8,57 +8,12 @@ import {
   RecentList,
   Seo,
 } from "@/ui/components";
-
 import { DefaultLayout } from "@/ui/layouts";
 
+const { featuredArticles, recentArticles, remainingArticles } =
+  await getHomepageArticles();
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
-const articles = await getArticles({ limit: 24 });
-
-const extractFeatured = (arr) => {
-  const featured = [];
-  const remaining = [];
-
-  for (let item of arr) {
-    if (item.featured && featured.length < 5) {
-      featured.push(item);
-    } else {
-      remaining.push(item);
-    }
-  }
-
-  return { featured, remaining };
-};
-
-const extractCurrentMonth = (arr) => {
-  const currentDate = new Date();
-  const currentYear = currentDate.getUTCFullYear();
-  const currentMonth = currentDate.getUTCMonth();
-
-  const currentMonthItems = [];
-  const otherItems = [];
-
-  for (let item of arr) {
-    const itemDate = new Date(item.publishedAt);
-
-    if (
-      itemDate.getUTCFullYear() === currentYear &&
-      itemDate.getUTCMonth() === currentMonth &&
-      currentMonthItems.length < 3
-    ) {
-      currentMonthItems.push(item);
-    } else {
-      otherItems.push(item);
-    }
-  }
-
-  return { currentMonthItems, otherItems };
-};
-
-const { featured: featuredArticles, remaining } = extractFeatured(articles);
-
-const { currentMonthItems: recentArticles, otherItems: remainingArticles } =
-  extractCurrentMonth(remaining);
 ---
 
 <DefaultLayout>
@@ -73,7 +28,7 @@ const { currentMonthItems: recentArticles, otherItems: remainingArticles } =
   <div class="container">
     <div class="content">
       <ArticleList
-        itemsPerRow="2"
+        itemsPerRow={2}
         articles={remainingArticles.slice(0, 8)}
         limit={null}
       />

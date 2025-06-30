@@ -1,19 +1,19 @@
 import { sanityClient } from "sanity:client";
+import { getTomorrowDateString } from "@/scripts";
 
-export const getBookReviews = async ({
+const tomorrowDate = getTomorrowDateString();
+
+export const getListBookReviews = async ({
   limit = 0,
   drafts = import.meta.env.DEV,
 }: {
   limit?: number;
   drafts?: boolean;
 } = {}) => {
-  const year = new Date().getFullYear();
-  const month = new Date().toJSON().slice(0, 10).split("-");
-
   const params = [
     drafts
-      ? `_type == 'bookReview' && publishedAt < "${month[0]}-${month[1]}-${parseInt(month[2]) + 1}"`
-      : `_type == 'bookReview' && publishedAt < "${month[0]}-${month[1]}-${parseInt(month[2]) + 1}" && !(_id in path('drafts.**'))`,
+      ? `_type == 'bookReview' && publishedAt < "${tomorrowDate}"`
+      : `_type == 'bookReview' && publishedAt < "${tomorrowDate}" && !(_id in path('drafts.**'))`,
   ]
     .filter(Boolean)
     .join(" ");
@@ -33,7 +33,7 @@ export const getBookReviews = async ({
   return await sanityClient.fetch(query);
 };
 
-export const getBookReview = `*[_type == "bookReview"]{
+export const getFullBookReviews = `*[_type == "bookReview"]{
     _id,
     title,
     slug,

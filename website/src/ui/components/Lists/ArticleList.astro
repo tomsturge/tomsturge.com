@@ -1,23 +1,24 @@
 ---
-import { getArticles } from "@/ui/queries";
+import { getListArticles } from "@/ui/queries";
 
 import { urlForImage } from "@/scripts/urlForImage";
 import { CategoryLabel } from "@/ui/components";
+
+import type { ArticleListProps } from "./types";
+
+interface Props extends ArticleListProps {}
 
 const {
   limit = 3,
   compact = false,
   theme = "light",
-  articleMonth,
   featured = false,
   articles = null,
   itemsPerRow = 3,
   minCount = 3,
 } = Astro.props;
 
-const posts = articles
-  ? articles
-  : await getArticles({ limit, featured, articleMonth });
+const posts = articles ? articles : await getListArticles({ limit, featured });
 
 const fillCount = minCount - posts.length;
 ---
@@ -26,7 +27,12 @@ const fillCount = minCount - posts.length;
   <>
     {
       posts.map(({ title, slug, excerpt, mainImage, category }) => (
-        <li class="item">
+        <li
+          class="item"
+          itemprop="mainEntity"
+          itemscope
+          itemtype="https://schema.org/Article"
+        >
           <a href={`/${category.slug.current}/${slug.current}`}>
             <img
               class="image"
@@ -39,9 +45,13 @@ const fillCount = minCount - posts.length;
                 <CategoryLabel name={category.title} />
               </div>
 
-              <h2 class:list={["title", theme]}>{title}</h2>
+              <h2 class:list={["title", theme]} itemprop="headline">
+                {title}
+              </h2>
 
-              <p class:list={["excerpt", theme]}>{excerpt}</p>
+              <p class:list={["excerpt", theme]} itemprop="description">
+                {excerpt}
+              </p>
             </div>
           </a>
         </li>

@@ -1,31 +1,19 @@
 ---
-import { getArticles } from "@/ui/queries";
-
 import { urlForImage } from "@/scripts/urlForImage";
 import { CategoryLabel } from "@/ui/components";
 
 const {
-  limit = 3,
   compact = false,
   theme = "light",
-  articleMonth,
-  featured = false,
-  articles = null,
+  articles,
   itemsPerRow = 3,
-  minCount = 3,
 } = Astro.props;
-
-const posts = articles
-  ? articles
-  : await getArticles({ limit, featured, articleMonth });
-
-const fillCount = minCount - posts.length;
 ---
 
 <ul class:list={["wrapper", compact && "compact", `rowCount--${itemsPerRow}`]}>
   <>
     {
-      posts.map(({ title, slug, excerpt, mainImage, category }) => (
+      articles.map(({ title, slug, excerpt, mainImage, category }) => (
         <li class="item">
           <a href={`/reading-list/${slug.current}`}>
             <img
@@ -46,26 +34,6 @@ const fillCount = minCount - posts.length;
           </a>
         </li>
       ))
-    }
-
-    {
-      fillCount > 0 &&
-        [...Array(fillCount)].map((_) => (
-          <li class="empty-item">
-            <div class="empty-item__image">
-              <span />
-            </div>
-            <div class="empty-item__title">
-              <span />
-              <span />
-            </div>
-
-            <div class="empty-item__excerpt">
-              <span />
-              <span />
-            </div>
-          </li>
-        ))
     }
   </>
 </ul>

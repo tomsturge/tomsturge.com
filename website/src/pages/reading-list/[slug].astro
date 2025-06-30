@@ -5,19 +5,18 @@ import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 import { urlForImage } from "@/scripts/urlForImage";
 
-import { getBookReview } from "@/ui/queries";
+import { getFullBookReviews } from "@/ui/queries";
 import { DefaultLayout } from "@/ui/layouts";
 
-import { Seo, PortableText, Header, Logo } from "@/ui/components";
+import { Seo, PortableText, ArticleHeader, Logo } from "@/ui/components";
 
 export const getStaticPaths = async () => {
-  const bookReviews = await sanityClient.fetch(getBookReview);
+  const bookReviews = await sanityClient.fetch(getFullBookReviews);
 
   return bookReviews.map(
     ({
       _id,
       body,
-      category,
       excerpt,
       publishedAt,
       mainImage,
@@ -29,7 +28,6 @@ export const getStaticPaths = async () => {
         props: {
           _id,
           body,
-          category,
           excerpt,
           publishedAt,
           mainImage,
@@ -59,17 +57,8 @@ type Post = {
 
 type Props = Post;
 
-const {
-  _id,
-  body,
-  slug,
-  category,
-  excerpt,
-  mainImage,
-  socialImage,
-  publishedAt,
-  title,
-} = Astro.props;
+const { _id, body, slug, excerpt, mainImage, socialImage, publishedAt, title } =
+  Astro.props;
 
 const schema: WithContext<Review> = {
   "@context": "https://schema.org",
@@ -93,7 +82,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   document.addEventListener("astro:page-load", () => {
     const masthead = document.querySelector(".article-masthead");
 
-    addEventListener("scroll", (event) => {
+    addEventListener("scroll", () => {
       if (window.scrollY > 250) {
         masthead.classList.add("visible");
       } else {
@@ -106,7 +95,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <DefaultLayout title={title} type="article">
   <Fragment slot="seo">
     <Seo
-      type="article"
       title={title}
       description={excerpt}
       url={canonicalURL}
@@ -128,12 +116,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </div>
 
   <div class="wrapper">
-    <Header
+    <ArticleHeader
       excerpt={excerpt}
       title={title}
       publishedAt={publishedAt}
       image={mainImage}
-      slug={slug}
     />
 
     <div class="article-content">
