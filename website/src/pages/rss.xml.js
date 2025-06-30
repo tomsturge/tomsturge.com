@@ -1,9 +1,9 @@
 import rss from "@astrojs/rss";
-import { getArticles } from "@/ui/queries";
+import { getListArticles } from "@/ui/queries";
 import { urlForImage } from "@/scripts/urlForImage";
 
 export async function GET(context) {
-  const articles = await getArticles({
+  const articles = await getListArticles({
     limit: 50,
     drafts: false,
   });
