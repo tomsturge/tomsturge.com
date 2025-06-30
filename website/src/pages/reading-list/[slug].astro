@@ -60,21 +60,6 @@ type Props = Post;
 const { _id, body, slug, excerpt, mainImage, socialImage, publishedAt, title } =
   Astro.props;
 
-const schema: WithContext<Review> = {
-  "@context": "https://schema.org",
-  "@type": "Review",
-  headline: title,
-  image: urlForImage(socialImage).width(1200).height(630).url(),
-  datePublished: `${publishedAt}`,
-  author: [
-    {
-      "@type": "Person",
-      name: "Tom Sturge",
-      url: "https://tomsturge.com/about",
-    },
-  ],
-};
-
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -102,7 +87,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       publishedAt={publishedAt}
       image={urlForImage(socialImage).width(1200).height(630).url()}
     />
-    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   </Fragment>
 
   <div class="article-masthead">
