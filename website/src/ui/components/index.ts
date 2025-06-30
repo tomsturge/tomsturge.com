@@ -9,5 +9,6 @@ export { default as ThemeToggle } from "./ThemeToggle.astro";
 export { default as TopStories } from "./TopStories.astro";
 export { PortableText } from "./PortableText";
 export { Seo } from "./Seo";
+export { Breadcrumb } from "./Breadcrumb";
 
 export * from "./Lists";

@@ -7,7 +7,13 @@ import { urlForImage } from "@/scripts/urlForImage";
 import { getFullArticles } from "@/ui/queries";
 import { DefaultLayout } from "@/ui/layouts";
 
-import { Seo, PortableText, ArticleHeader, Logo } from "@/ui/components";
+import {
+  Seo,
+  PortableText,
+  ArticleHeader,
+  Logo,
+  Breadcrumb,
+} from "@/ui/components";
 
 export const getStaticPaths = async () => {
   // Get articles and their categories
@@ -165,6 +171,8 @@ const schema: WithContext<Article> = {
   </div>
 
   <div class="wrapper" itemscope itemtype="https://schema.org/Article">
+    <Breadcrumb />
+
     <ArticleHeader
       categories={categories}
       excerpt={excerpt}

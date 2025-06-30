@@ -1,0 +1,111 @@
+---
+// Breadcrumb.astro
+export interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+interface Props {}
+
+const {} = Astro.props;
+
+// Only show breadcrumbs if we're 2+ levels deep
+const segments = Astro.url.pathname.split("/").filter(Boolean);
+const showBreadcrumbs = segments.length >= 2;
+
+// Category name mapping
+const categoryNames: Record<string, string> = {
+  culture: "Culture",
+  leadership: "Leadership",
+  communication: "Communication",
+  strategy: "Strategy",
+  growth: "Growth",
+  sustainability: "Sustainability",
+};
+
+// Auto-generate breadcrumbs from URL
+function generateBreadcrumbs(url: URL): BreadcrumbItem[] {
+  const segments = url.pathname.split("/").filter(Boolean);
+  const breadcrumbs: BreadcrumbItem[] = [{ name: "Home", url: "/" }];
+
+  if (segments.length >= 2) {
+    // Only for article pages
+    const categorySlug = segments[0];
+    const categoryName = categoryNames[categorySlug] || categorySlug;
+    breadcrumbs.push({
+      name: `${categoryName}`,
+      url: `/${categorySlug}`,
+    });
+  }
+
+  return breadcrumbs;
+}
+
+const breadcrumbItems = generateBreadcrumbs(Astro.url);
+
+// Simple JSON-LD schema (breadcrumb path only, not current page)
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: breadcrumbItems.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.name,
+    item: `${Astro.site}${item.url === "/" ? "" : item.url}`,
+  })),
+};
+---
+
+{
+  showBreadcrumbs && (
+    <nav aria-label="Breadcrumb">
+      <ol class="breadcrumb">
+        {breadcrumbItems.map((item, index) => (
+          <>
+            <li>
+              <a href={item.url}>{item.name}</a>
+            </li>
+            {index < breadcrumbItems.length - 1 && (
+              <li class="separator" aria-hidden="true">
+                &rsaquo;
+              </li>
+            )}
+          </>
+        ))}
+      </ol>
+    </nav>
+  )
+}
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+<style>
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    /* font-family: var(--fontFamilyHeading); */
+    font-size: var(--fontSizeMicro);
+  }
+
+  .breadcrumb a {
+    color: var(--colorThemeTextMain);
+  }
+
+  .breadcrumb li {
+    display: flex;
+    align-items: center;
+  }
+
+  .breadcrumb .separator {
+    display: flex;
+    align-items: center;
+    color: var(--colorThemeTextShaded);
+    margin: 0 0.5rem;
+    flex-shrink: 0;
+    font-size: 1.1em;
+    user-select: none;
+  }
+</style>
