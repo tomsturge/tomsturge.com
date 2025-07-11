@@ -1,0 +1,28 @@
+---
+import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+
+import { urlForImage } from "@/scripts/urlForImage";
+
+type Props = {
+  node: {
+    alt: string;
+    image: SanityImageSource;
+  };
+};
+
+const { node } = Astro.props;
+---
+
+<img
+  class="article-image"
+  src={urlForImage(node).width(840).dpr(2).url()}
+  alt={node.alt}
+/>
+
+<style lang="scss">
+  .article-image {
+    margin-left: -5rem;
+    margin-bottom: 1rem;
+    width: 52.5rem;
+  }
+</style>

@@ -1,18 +1,27 @@
 ---
 import { PortableText as AstroPortableText } from "astro-portabletext";
 
-import { HeadingTwo, HeadingThree, HeadingFour, Divider } from "./Blocks";
+import {
+  HeadingTwo,
+  HeadingThree,
+  HeadingFour,
+  Divider,
+  Image,
+  Blockquote,
+} from "./Blocks";
 
 const { value } = Astro.props;
 
 const components = {
   type: {
     divider: Divider,
+    image: Image,
   },
   block: {
     h2: HeadingTwo,
     h3: HeadingThree,
     h4: HeadingFour,
+    blockquote: Blockquote,
   },
 } as any;
 
