@@ -1,5 +1,5 @@
 ---
-const isHomePage = Astro.url.pathname === "/";
+const isHeading = Astro.url.pathname === "/" || Astro.url.pathname === "/about";
 ---
 
 <a
@@ -9,7 +9,7 @@ const isHomePage = Astro.url.pathname === "/";
   itemtype="https://schema.org/Person"
 >
   {
-    isHomePage ? (
+    isHeading ? (
       <h1 itemprop="name">Tom Sturge</h1>
     ) : (
       <span itemprop="name">Tom Sturge</span>

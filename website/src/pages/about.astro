@@ -1,0 +1,67 @@
+---
+import { DefaultLayout } from "@/ui/layouts";
+import { Newsletter } from "@/ui/components";
+---
+
+<DefaultLayout>
+  <div class="hero container">
+    <h2>Strategic Advisor & Inclusion Advocate</h2>
+    <p>
+      Transforming organisations through strategic thinking and inclusive
+      culture
+    </p>
+  </div>
+
+  <div class="bio container">
+    <p>
+      Tom Sturge is a strategic advisor and inclusion advocate who helps
+      organisations transform through intentional culture building and strategic
+      thinking. With 25 years of experience across startup to scale-up
+      environments, Tom specialises in organisational transformation, DEI
+      strategy, and male allyship initiatives. As a UK country ambassador for
+      DEI advocacy and active voice in inclusion work, Tom combines strategic
+      business acumen with passionate advocacy for systemic change in workplace
+      culture.
+    </p>
+
+    <Newsletter />
+  </div>
+
+  <style lang="scss">
+    .container {
+      margin: 0 auto;
+      max-width: var(--widthMainContainer);
+      color: var(--colorThemeTextMain);
+    }
+
+    .hero {
+      margin: 6rem auto 1rem;
+      background-color: var(--colorThemeBackgroundMain);
+
+      @media screen and (max-width: 750px) {
+        padding: 2.5rem 0;
+      }
+
+      h2 {
+        font-size: var(--fontSizeHero);
+        text-align: center;
+        line-height: 1.1;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    .bio {
+      margin-bottom: 6rem;
+
+      p {
+        font-size: 1.5rem;
+        color: var(--colorThemeTextShaded);
+      }
+    }
+  </style>
+</DefaultLayout>

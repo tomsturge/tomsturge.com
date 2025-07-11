@@ -1,0 +1,61 @@
+---
+const { node } = Astro.props as {
+  node: {
+    children: Array<{
+      _type: string;
+      text?: string;
+      _key?: string;
+      children?: Array<{ text: string }>;
+      markDef?: any;
+      markType?: string;
+      markKey?: string;
+    }>;
+    markDefs: Array<{
+      _key: string;
+      _type: string;
+      href: string;
+    }>;
+  };
+};
+
+const [child] = node.children;
+---
+
+<blockquote>
+  {
+    node.children.map((child) => {
+      if (child._type === "@text") {
+        return child.text;
+      }
+      if (child._type === "@span") {
+        const link = node.markDefs.find((def) => def._key === child.markKey);
+        const text = child.children.map((c) => c.text).join("");
+        return link ? (
+          <cite>
+            <a href={link.href} target="_blank">
+              {text}
+            </a>
+          </cite>
+        ) : (
+          <cite>{text}</cite>
+        );
+      }
+    })
+  }
+</blockquote>
+
+<style lang="scss">
+  blockquote {
+    margin: 0 1rem 1rem;
+    padding: 1.5rem 1rem;
+    border-left: 2px solid var(--colorThemeTextShaded);
+    font-size: var(--fontSizeContentBody);
+    font-family: var(--fontFamilyBody);
+    line-height: 1.6;
+    min-height: 1px;
+  }
+
+  cite {
+    display: block;
+  }
+</style>
