@@ -33,8 +33,8 @@ function generateBreadcrumbs(url: URL): BreadcrumbItem[] {
     const categorySlug = segments[0];
     const categoryName = categoryNames[categorySlug] || categorySlug;
     breadcrumbs.push({
-      name: categoryName,
-      url: categorySlug,
+      name: `${categoryName}`,
+      url: `/${categorySlug}`,
     });
   }
 
