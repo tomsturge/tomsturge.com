@@ -4,6 +4,7 @@ import sanity from "@sanity/astro";
 import { loadEnv } from "vite";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
+import compress from "@playform/compress";
 
 const { SANITY_TOKEN } = loadEnv(import.meta.env.MODE, process.cwd(), "");
 
@@ -20,6 +21,7 @@ export default defineConfig({
     }),
     sitemap(),
     icon(),
+    compress(),
   ],
   define: {
     global: {},
