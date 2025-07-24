@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.2.3",
+    "@playform/compress": "^0.2.0",
     "@sanity/astro": "^3.2.6",
     "@sanity/client": "^7.5.0",
     "@sanity/types": "^3.95.0",
