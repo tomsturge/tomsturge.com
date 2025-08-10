@@ -46,7 +46,7 @@
     "@playform/compress": "^0.2.0",
     "@sanity/astro": "^3.2.6",
     "@sanity/client": "^7.5.0",
-    "@sanity/types": "^3.95.0",
+    "@sanity/types": "^4.0.0",
     "@tabler/icons-react": "^3.31.0",
     "schema-dts": "^1.1.2",
     "typescript": "^5.4.5",

@@ -32,7 +32,7 @@
     "@sanity/eslint-config-studio": "^5.0.0",
     "@sanity/image-url": "^1.0.2",
     "@tabler/icons-react": "^3.31.0",
-    "sanity": "^3.91.0",
+    "sanity": "^4.0.0",
     "sanity-plugin-asset-source-unsplash": "^3.0.1",
     "sanity-plugin-dashboard-widget-document-list": "^2.1.0"
   }
