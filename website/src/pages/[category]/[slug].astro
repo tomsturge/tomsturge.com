@@ -4,8 +4,8 @@ import type { Article, WithContext } from "schema-dts";
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 import { urlForImage } from "@/scripts/urlForImage";
-import { getFullArticles } from "@/ui/queries";
-import { DefaultLayout } from "@/ui/layouts";
+import { getFullArticles, getRelatedArticles } from "@/ui/queries";
+import { ArticleLayout } from "@/ui/layouts";
 
 import {
   Seo,
@@ -112,6 +112,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { slug: categorySlug, title: categoryTitle } = categories[0];
 
+const relatedArticles = await getRelatedArticles({
+  limit: 3,
+  category: categories[0].slug.current,
+  currentSlug: slug.current,
+});
+
 const schema: WithContext<Article> = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -147,7 +153,7 @@ const schema: WithContext<Article> = {
   });
 </script>
 
-<DefaultLayout title={title} type="article">
+<ArticleLayout title={title} type="article" relatedArticles={relatedArticles}>
   <Fragment slot="seo">
     <Seo
       title={title}
@@ -189,7 +195,7 @@ const schema: WithContext<Article> = {
 
   <div style="display: none;" data-document-id={_id} data-slug={slug.current}>
   </div>
-</DefaultLayout>
+</ArticleLayout>
 
 <script>
   import { createClient } from "@supabase/supabase-js";

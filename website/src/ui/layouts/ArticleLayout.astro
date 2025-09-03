@@ -1,0 +1,37 @@
+---
+import "@/ui/styles/variables.scss";
+import "@/ui/styles/global.scss";
+
+import { ArticleList, AuthorBio, Footer, Masthead } from "@/ui/components";
+
+import { Head } from "./components";
+
+const { title, type, relatedArticles } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Head title={title} />
+
+    <slot name="seo" />
+  </head>
+
+  <body>
+    <Masthead type={type} />
+
+    <slot />
+
+    <AuthorBio />
+
+    <div class="article__related">
+      <ArticleList
+        articles={relatedArticles}
+        limit={3}
+        title="Related Articles"
+      />
+    </div>
+
+    <Footer />
+  </body>
+</html>

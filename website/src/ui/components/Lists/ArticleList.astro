@@ -15,16 +15,25 @@ const {
   featured = false,
   articles = null,
   itemsPerRow = 3,
+  category = null,
   minCount = 3,
+  excludeSlug = null,
+  title = null,
 } = Astro.props;
 
-const posts = articles ? articles : await getListArticles({ limit, featured });
+const posts = articles
+  ? articles
+  : await getListArticles({ limit, featured, category, excludeSlug });
+
+console.log(category);
 
 const fillCount = minCount - posts.length;
 ---
 
-<ul class:list={["wrapper", compact && "compact", `rowCount--${itemsPerRow}`]}>
-  <>
+<div class:list={["wrapper", compact && "compact", `rowCount--${itemsPerRow}`]}>
+  {title && <h3>{title}</h3>}
+
+  <ul>
     {
       posts.map(({ title, slug, excerpt, mainImage, category }) => (
         <li
@@ -77,20 +86,16 @@ const fillCount = minCount - posts.length;
           </li>
         ))
     }
-  </>
-</ul>
+  </ul>
+</div>
 
 <style lang="scss">
   .wrapper {
     max-width: var(--widthMainContainer);
     width: 100%;
-    list-style: none;
     margin: 2rem auto;
-    padding: 0;
-    display: grid;
-    gap: 2rem;
 
-    &.rowCount--2 {
+    &.rowCount--2 ul {
       grid-template-columns: repeat(2, 1fr);
 
       @media screen and (max-width: 48rem) {
@@ -102,7 +107,7 @@ const fillCount = minCount - posts.length;
       }
     }
 
-    &.rowCount--3 {
+    &.rowCount--3 ul {
       grid-template-columns: repeat(3, 1fr);
 
       @media screen and (max-width: 58rem) {
@@ -117,6 +122,13 @@ const fillCount = minCount - posts.length;
     @media screen and (max-width: 79rem) {
       gap: 1rem;
     }
+  }
+
+  ul {
+    display: grid;
+    list-style: none;
+    padding: 0;
+    gap: 2rem;
   }
 
   .item {
@@ -153,10 +165,10 @@ const fillCount = minCount - posts.length;
     color: var(--colorThemeTextShaded);
   }
 
-  .wrapper.compact {
+  .compact ul {
     margin: 0;
     display: grid;
-    grid-template-columns: initial;
+    grid-template-columns: initial !important;
     grid-template-rows: repeat(2, 1fr);
     gap: 1rem;
 

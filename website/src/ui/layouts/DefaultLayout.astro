@@ -1,0 +1,29 @@
+---
+import "@/ui/styles/variables.scss";
+import "@/ui/styles/global.scss";
+
+import { Footer, Masthead } from "@/ui/components";
+
+import { getSiteSettings } from "@/ui/queries";
+
+import { Head } from "./components";
+
+const { type } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <Head />
+
+    <slot name="seo" />
+  </head>
+
+  <body>
+    <Masthead type={type} />
+
+    <slot />
+
+    <Footer />
+  </body>
+</html>

@@ -1,3 +1,5 @@
+import type { CategoryType } from "@/ui/types";
+
 export interface ArticleListProps {
   limit?: number;
   compact?: boolean;
@@ -6,4 +8,7 @@ export interface ArticleListProps {
   articles?: Article[] | null;
   itemsPerRow?: number;
   minCount?: number;
+  category?: CategoryType | null;
+  excludeSlug?: string | null;
+  title?: string | null;
 }
