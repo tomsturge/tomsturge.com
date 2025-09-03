@@ -2,6 +2,7 @@ export {
   getListArticles,
   getFullArticles,
   getHomepageArticles,
+  getRelatedArticles,
 } from "./articles";
 export { getFullBookReviews, getListBookReviews } from "./bookReviews";
 export {
