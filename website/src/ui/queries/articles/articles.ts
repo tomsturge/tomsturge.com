@@ -67,7 +67,8 @@ export const getRelatedArticles = async ({
     .filter(Boolean)
     .join(" ");
 
-  const query = `*[${params}] | order(publishedAt asc)[0..${limit - 1}]{
+  // Fetch all articles matching the criteria
+  const query = `*[${params}]{
     title,
     slug,
     excerpt,
@@ -76,7 +77,22 @@ export const getRelatedArticles = async ({
     mainImage
   }`;
 
-  return await sanityClient.fetch(query);
+  const allArticles = await sanityClient.fetch(query);
+
+  // If we have fewer articles than requested, return all
+  if (allArticles.length <= limit) {
+    return allArticles;
+  }
+
+  // Fisher-Yates shuffle algorithm for better randomisation
+  const shuffled = [...allArticles];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+
+  // Return the first 'limit' articles from the shuffled array
+  return shuffled.slice(0, limit);
 };
 
 export const getHomepageArticles = async () => {
