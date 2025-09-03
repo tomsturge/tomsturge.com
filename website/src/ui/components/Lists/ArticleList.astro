@@ -25,8 +25,6 @@ const posts = articles
   ? articles
   : await getListArticles({ limit, featured, category, excludeSlug });
 
-console.log(category);
-
 const fillCount = minCount - posts.length;
 ---
 
