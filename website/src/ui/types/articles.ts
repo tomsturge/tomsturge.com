@@ -26,6 +26,5 @@ export type CategoryType =
   | "leadership"
   | "culture"
   | "communication"
-  | "sustainability"
   | "growth"
   | "strategy";

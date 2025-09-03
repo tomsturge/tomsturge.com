@@ -36,7 +36,13 @@ const siteSettings = await getSiteSettings();
 
     <div>
       <h3>Recent Articles</h3>
-      <ArticleList limit={3} compact={true} theme="dark" featured={true} />
+      <ArticleList
+        limit={2}
+        minCount={2}
+        compact={true}
+        theme="dark"
+        featured={true}
+      />
     </div>
 
     <div>

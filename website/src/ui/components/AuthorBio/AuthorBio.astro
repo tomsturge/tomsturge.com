@@ -1,0 +1,158 @@
+---
+import { Icon } from "astro-icon/components";
+
+import { getSiteSettings } from "@/ui/queries";
+
+const siteSettings = await getSiteSettings();
+---
+
+<section
+  class="author-bio"
+  itemscope
+  itemtype="https://schema.org/Person"
+  itemid="https://tomsturge.com/#person"
+>
+  <div class="author-bio__container">
+    <div class="author-bio__content">
+      <div class="author-bio__header">
+        <div class="author-bio__avatar">
+          <img
+            src="/images/tom-sturge.png"
+            alt="Tom Sturge"
+            width="80"
+            height="80"
+            itemprop="image"
+          />
+        </div>
+
+        <div>
+          <h3 class="author-bio__name" itemprop="name">Tom Sturge</h3>
+          <ul class="author-bio__links">
+            <li class="author-bio__links--linkedin">
+              <a
+                href="https://linkedin.com/in/tomsturge"
+                rel="me"
+                itemprop="sameAs"
+                aria-label="LinkedIn profile"
+                target="_new"
+                ><Icon name="mdi:linkedin" width={18} height={18} /></a
+              >
+            </li>
+            <li class="author-bio__links--youtube">
+              <a
+                href="https://youtube.com/tomsturge"
+                aria-label="Youtube channel"
+                target="_new"
+                ><Icon name="mdi:youtube" width={18} height={18} /></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="author-bio__description" itemprop="description">
+        {siteSettings.bio}
+      </p>
+
+      <!-- <a href="/about">View bio &gt;</a> -->
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .author-bio {
+    max-width: var(--widthArticleContainer);
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: var(--colorThemeBackgroundAccent);
+
+    &__container {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    &__avatar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: middle;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    &__content {
+      flex: 1;
+    }
+
+    &__header {
+      display: grid;
+      align-items: center;
+      margin-bottom: 1rem;
+      grid-template-columns: 5rem auto;
+      gap: 1rem;
+    }
+
+    &__name {
+      margin: 0 0 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-family: var(--fontFamilyBodySans);
+    }
+
+    &__description {
+      margin: 0 0 1rem 0;
+      line-height: 1.6;
+      color: var(--colorThemeTextSecondary);
+    }
+
+    &__links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1.75rem);
+      gap: 1rem;
+      justify-items: start;
+
+      li {
+        border-radius: 0.5rem;
+        height: 1.75rem;
+        width: 1.75rem;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        :hover {
+          text-decoration: underline;
+        }
+      }
+
+      &--linkedin {
+        background-color: #0073b1;
+      }
+
+      &--youtube {
+        background-color: #fe2905;
+      }
+    }
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 600px) {
+    .author-bio__container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .author-bio__avatar {
+      margin: 0 auto;
+    }
+  }
+</style>

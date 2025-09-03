@@ -1,0 +1,94 @@
+---
+import interFontUrl from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+import loraFontUrl from "@fontsource-variable/lora/files/lora-latin-wght-normal.woff2?url";
+import robotoCondensedFontUrl from "@fontsource-variable/roboto-condensed/files/roboto-condensed-latin-wght-normal.woff2?url";
+import sourceSerif4FontUrl from "@fontsource-variable/source-serif-4/files/source-serif-4-latin-wght-normal.woff2?url";
+
+// Still import the CSS
+import "@fontsource-variable/lora";
+import "@fontsource-variable/roboto-condensed";
+import "@fontsource-variable/source-serif-4";
+import "@fontsource-variable/inter";
+
+import { getSiteSettings } from "@/ui/queries";
+
+const { title } = Astro.props;
+
+const siteSettings = await getSiteSettings();
+
+const pageTitle = `${title ? `${title} | ${siteSettings.title} ` : `${siteSettings.title} | Strategic Advisor & Inclusion Advocate`}`;
+---
+
+<title>{pageTitle}</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="apple-mobile-web-app-title" content="Tom Sturge" />
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; img-src 'self' https://cdn.sanity.io/; child-src 'none'; frame-src https://tomsturge.substack.com/; style-src 'unsafe-inline' 'self'; worker-src 'self'; style-src-elem 'unsafe-inline' 'self'; script-src-elem 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://cloud.umami.is; font-src 'self' data:; connect-src https://eoiotibojpqmpbtbxkba.supabase.co https://api-gateway.umami.dev https://tomsturge.com ws:"
+/>
+
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title={`RSS Feed - ${siteSettings.title}`}
+  href="/rss.xml"
+/>
+
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+<script is:inline>
+  (function () {
+    const stored = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia?.(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    const isDark = stored === "dark" || (!stored && prefersDark);
+
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    }
+  })();
+</script>
+
+<script
+  defer
+  src="https://cloud.umami.is/script.js"
+  data-website-id="e3b0c157-4236-4e9a-9832-a456fd1981c9"></script>
+
+<!-- Font preloads with correct URLs -->
+<link
+  rel="preload"
+  href={interFontUrl}
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href={loraFontUrl}
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href={robotoCondensedFontUrl}
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href={sourceSerif4FontUrl}
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>

@@ -1,3 +1,4 @@
+export { AuthorBio } from "./AuthorBio";
 export { ArticleHeader } from "./ArticleHeader";
 export { Breadcrumb } from "./Breadcrumb";
 export { CategoryLabel } from "./CategoryLabel";
