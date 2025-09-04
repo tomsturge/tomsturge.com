@@ -1,29 +1,11 @@
 ---
-
+import { Icon } from "astro-icon/components";
 ---
 
 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-  <svg
-    class="sun-icon"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-  >
-    <circle cx="12" cy="12" r="5"></circle>
-    <path
-      d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
-    ></path>
-  </svg>
-  <svg
-    class="moon-icon"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-  >
-    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-  </svg>
+  <Icon class="sun-icon" name="mdi:weather-sunny" width={20} height={20} />
+
+  <Icon class="moon-icon" name="mdi:weather-night" width={20} height={20} />
 </button>
 
 <style>
@@ -42,21 +24,6 @@
     transition:
       opacity 0.2s ease,
       transform 0.2s ease;
-
-    svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    @media screen and (max-width: 35rem) {
-      width: 48px;
-      height: 48px;
-
-      svg {
-        width: 20px;
-        height: 20px;
-      }
-    }
   }
 
   .theme-toggle:hover {
