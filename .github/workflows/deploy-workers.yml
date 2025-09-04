@@ -28,7 +28,7 @@ jobs:
       api: ${{ steps.changes.outputs.api }}
       deploy-env: ${{ steps.env.outputs.environment }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Determine deployment environment
         id: env
@@ -59,7 +59,7 @@ jobs:
     env:
       DEPLOY_ENV: ${{ needs.detect-changes.outputs.deploy-env }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -93,7 +93,7 @@ jobs:
     env:
       DEPLOY_ENV: ${{ needs.detect-changes.outputs.deploy-env }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -127,7 +127,7 @@ jobs:
     env:
       DEPLOY_ENV: ${{ needs.detect-changes.outputs.deploy-env }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
