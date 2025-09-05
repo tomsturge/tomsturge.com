@@ -115,11 +115,9 @@ const { slug: categorySlug, title: categoryTitle } = categories[0];
 
 const relatedArticles = await getRelatedArticles({
   limit: 3,
-  category: categorySlug,
+  category: categorySlug.current,
   currentSlug: slug.current,
 });
-
-console.log(headings[0]);
 
 const schema: WithContext<Article> = {
   "@context": "https://schema.org",
