@@ -10,7 +10,12 @@ const { node } = Astro.props as {
 const [child] = node.children;
 ---
 
-<h3>
+<h3
+  id={`${child.text
+    .replace(/([a-z])([A-Z])/g, "$1-$2")
+    .replace(/[\s_:]+/g, "-")
+    .toLowerCase()}`}
+>
   {child.text}
 </h3>
 
