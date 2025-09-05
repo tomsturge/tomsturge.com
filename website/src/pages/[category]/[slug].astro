@@ -97,15 +97,16 @@ type ArticleProps = {
 const {
   _id,
   body,
-  slug,
   categories,
   excerpt,
+  headings,
   mainImage,
-  socialImage,
   publishedAt,
   readingTime,
-  wordCount,
+  slug,
+  socialImage,
   title,
+  wordCount,
 } = Astro.props as ArticleProps;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -114,9 +115,11 @@ const { slug: categorySlug, title: categoryTitle } = categories[0];
 
 const relatedArticles = await getRelatedArticles({
   limit: 3,
-  category: categories[0].slug.current,
+  category: categorySlug,
   currentSlug: slug.current,
 });
+
+console.log(headings[0]);
 
 const schema: WithContext<Article> = {
   "@context": "https://schema.org",
@@ -138,20 +141,6 @@ const schema: WithContext<Article> = {
   wordCount,
 };
 ---
-
-<script>
-  document.addEventListener("astro:page-load", () => {
-    const masthead = document.querySelector(".article-masthead");
-
-    addEventListener("scroll", () => {
-      if (window.scrollY > 250) {
-        masthead.classList.add("visible");
-      } else {
-        masthead.classList.remove("visible");
-      }
-    });
-  });
-</script>
 
 <ArticleLayout title={title} type="article" relatedArticles={relatedArticles}>
   <Fragment slot="seo">
@@ -188,14 +177,55 @@ const schema: WithContext<Article> = {
       image={mainImage}
     />
 
-    <div class="article-content" itemprop="articleBody">
-      <PortableText value={body} />
+    <div class="article__toc-wrapper">
+      <nav aria-label="Table of Contents" class="article__toc-content">
+        <p class="toc-title">Table of Contents</p>
+
+        <ul>
+          {
+            headings.map(({ style, children }) => {
+              const [child] = children;
+
+              return (
+                <li class={`toc-heading--${style}`}>
+                  <a
+                    href={`#${child.text
+                      .replace(/([a-z])([A-Z])/g, "$1-$2")
+                      .replace(/[\s_:]+/g, "-")
+                      .toLowerCase()}`}
+                  >
+                    {child.text}
+                  </a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </nav>
     </div>
+
+    <article class="article-content" itemprop="articleBody">
+      <PortableText value={body} />
+    </article>
   </div>
 
   <div style="display: none;" data-document-id={_id} data-slug={slug.current}>
   </div>
 </ArticleLayout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const masthead = document.querySelector(".article-masthead");
+
+    addEventListener("scroll", () => {
+      if (window.scrollY > 250) {
+        masthead.classList.add("visible");
+      } else {
+        masthead.classList.remove("visible");
+      }
+    });
+  });
+</script>
 
 <script>
   import { createClient } from "@supabase/supabase-js";
@@ -248,11 +278,11 @@ const schema: WithContext<Article> = {
     top: 0;
     left: 0;
     width: 100%;
-    transform: translateY(-80px);
+    transform: translateY(-5rem);
     transition: all 0.5s;
-    height: 70px;
+    height: 4.375rem;
     background-color: var(--colorThemeBackgroundMain);
-    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1rem 0px rgba(0, 0, 0, 0.2);
     z-index: 100;
     display: flex;
     align-items: center;
@@ -264,7 +294,7 @@ const schema: WithContext<Article> = {
 
   .article-masthead {
     &__logo {
-      transform: translateY(-2px);
+      transform: translateY(-0.125rem);
     }
 
     &__container {
@@ -296,6 +326,7 @@ const schema: WithContext<Article> = {
   .wrapper {
     max-width: var(--widthArticleContainer);
     margin: 0 auto;
+    position: relative;
 
     @media screen and (max-width: 81rem) {
       max-width: 43.75rem;
@@ -308,6 +339,65 @@ const schema: WithContext<Article> = {
 
     @media screen and (max-width: 42rem) {
       margin: 0 1.5rem;
+    }
+  }
+
+  .article__toc-wrapper {
+    height: calc(100% - 52rem);
+    width: 16rem;
+    font-size: var(--fontSizeMicro);
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+
+    @media screen and (max-width: 83rem) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  .article__toc-content {
+    top: 5.5rem;
+    bottom: 1rem;
+    position: sticky;
+    background-color: var(--colorThemeBackgroundShaded);
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    p {
+      font-style: italic;
+      font-weight: var(--fontWeightMedium);
+      font-size: var(--fontSizeContentBody);
+      margin: 0 0 0.5rem;
+
+      &:after {
+        content: "";
+        display: block;
+        margin: 1rem 0;
+        width: 25%;
+        height: 0.125rem;
+        background-color: var(--colorThemeBackgroundShaded);
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    li {
+      &.toc-heading--h3 {
+        padding-left: 1rem;
+      }
+
+      &:not(:last-child) {
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--colorThemeBackgroundShaded);
+      }
     }
   }
 
